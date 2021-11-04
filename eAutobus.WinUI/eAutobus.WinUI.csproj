@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C6622845-DF60-41B0-9D96-9CE312B234A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>eAutobus.WinUI</RootNamespace>
+    <AssemblyName>eAutobus.WinUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Flurl, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.3.0.2\lib\net472\Flurl.dll</HintPath>
+    </Reference>
+    <Reference Include="Flurl.Http, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.Http.3.2.0\lib\net472\Flurl.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APIService.cs" />
+    <Compile Include="Autobusi\frmAutobusiPrikaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autobusi\frmAutobusiPrikaz.Designer.cs">
+      <DependentUpon>frmAutobusiPrikaz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Autobusi\frmDodajAutobus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autobusi\frmDodajAutobus.Designer.cs">
+      <DependentUpon>frmDodajAutobus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPocetna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPocetna.Designer.cs">
+      <DependentUpon>frmPocetna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Karte\frmIzdajKartu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Karte\frmIzdajKartu.Designer.cs">
+      <DependentUpon>frmIzdajKartu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Karte\frmPrikazKarata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Karte\frmPrikazKarata.Designer.cs">
+      <DependentUpon>frmPrikazKarata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\frmKorisniciDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\frmKorisniciDodaj.Designer.cs">
+      <DependentUpon>frmKorisniciDodaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\frmKorisniciPrikaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\frmKorisniciPrikaz.Designer.cs">
+      <DependentUpon>frmKorisniciPrikaz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedVoznji\frmDodavanjeRedaVoznje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RedVoznji\frmDodavanjeRedaVoznje.Designer.cs">
+      <DependentUpon>frmDodavanjeRedaVoznje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RedVoznji\frmPregledRedaVoznji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RedVoznji\frmPregledRedaVoznji.Designer.cs">
+      <DependentUpon>frmPregledRedaVoznji.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Autobusi\frmAutobusiPrikaz.resx">
+      <DependentUpon>frmAutobusiPrikaz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autobusi\frmDodajAutobus.resx">
+      <DependentUpon>frmDodajAutobus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPocetna.resx">
+      <DependentUpon>frmPocetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Karte\frmIzdajKartu.resx">
+      <DependentUpon>frmIzdajKartu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Karte\frmPrikazKarata.resx">
+      <DependentUpon>frmPrikazKarata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\frmKorisniciDodaj.resx">
+      <DependentUpon>frmKorisniciDodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\frmKorisniciPrikaz.resx">
+      <DependentUpon>frmKorisniciPrikaz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RedVoznji\frmDodavanjeRedaVoznje.resx">
+      <DependentUpon>frmDodavanjeRedaVoznje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RedVoznji\frmPregledRedaVoznji.resx">
+      <DependentUpon>frmPregledRedaVoznji.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eAutobusModel\eAutobusModel.csproj">
+      <Project>{a9c0b81c-3737-4787-9eaf-bbf9b65d4753}</Project>
+      <Name>eAutobusModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

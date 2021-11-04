@@ -1,0 +1,10 @@
+C:\Users\x\source\repos\Seminarski\eAutobusModel\bin\Debug\netstandard2.0\eAutobusModel.deps.json
+C:\Users\x\source\repos\Seminarski\eAutobusModel\bin\Debug\netstandard2.0\eAutobusModel.dll
+C:\Users\x\source\repos\Seminarski\eAutobusModel\bin\Debug\netstandard2.0\eAutobusModel.pdb
+C:\Users\x\source\repos\Seminarski\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.csproj.AssemblyReference.cache
+C:\Users\x\source\repos\Seminarski\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.AssemblyInfoInputs.cache
+C:\Users\x\source\repos\Seminarski\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.AssemblyInfo.cs
+C:\Users\x\source\repos\Seminarski\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.csproj.CoreCompileInputs.cache
+C:\Users\x\source\repos\Seminarski\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.dll
+C:\Users\x\source\repos\Seminarski\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.pdb
+C:\Users\x\source\repos\Seminarski\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.GeneratedMSBuildEditorConfig.editorconfig

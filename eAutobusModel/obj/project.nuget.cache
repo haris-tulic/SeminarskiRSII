@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "4RWgYvsl0UD2sEzP+1MqNn0+CqIIUi5+wevRRdIjO2Vyms7lTlX75ItHcV7uCv/O+lqYhqhASnmnQnXQsOGkdg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\x\\source\\repos\\Seminarski\\eAutobusModel\\eAutobusModel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\x\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\x\\.nuget\\packages\\flurl\\3.0.2\\flurl.3.0.2.nupkg.sha512",
+    "C:\\Users\\x\\.nuget\\packages\\flurl.http\\3.2.0\\flurl.http.3.2.0.nupkg.sha512",
+    "C:\\Users\\x\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\x\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\x\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\x\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\x\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\x\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.7.0\\system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512",
+    "C:\\Users\\x\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\x\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512"
+  ],
+  "logs": []
+}
