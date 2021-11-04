@@ -39,11 +39,13 @@ namespace eAutobus.WinUI
             this.noviKorsnikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.karteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledKarataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.novaKartaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rasporedVoznjiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledRasporedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajNovuLinijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.cjenovnikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dodajNovuKartuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izdajKartuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,23 +114,20 @@ namespace eAutobus.WinUI
             // 
             this.karteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pregledKarataToolStripMenuItem,
-            this.novaKartaToolStripMenuItem});
+            this.izdajKartuToolStripMenuItem});
             this.karteToolStripMenuItem.Name = "karteToolStripMenuItem";
             this.karteToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.karteToolStripMenuItem.Text = "Karte";
             // 
             // pregledKarataToolStripMenuItem
             // 
+            this.pregledKarataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cjenovnikToolStripMenuItem,
+            this.dodajNovuKartuToolStripMenuItem});
             this.pregledKarataToolStripMenuItem.Name = "pregledKarataToolStripMenuItem";
             this.pregledKarataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pregledKarataToolStripMenuItem.Text = "Pregled karata";
             this.pregledKarataToolStripMenuItem.Click += new System.EventHandler(this.pregledKarataToolStripMenuItem_Click);
-            // 
-            // novaKartaToolStripMenuItem
-            // 
-            this.novaKartaToolStripMenuItem.Name = "novaKartaToolStripMenuItem";
-            this.novaKartaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.novaKartaToolStripMenuItem.Text = "Nova karta";
             // 
             // rasporedVoznjiToolStripMenuItem
             // 
@@ -153,6 +152,25 @@ namespace eAutobus.WinUI
             this.dodajNovuLinijuToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.dodajNovuLinijuToolStripMenuItem.Text = "Dodaj novu liniju";
             this.dodajNovuLinijuToolStripMenuItem.Click += new System.EventHandler(this.dodajNovuLinijuToolStripMenuItem_Click);
+            // 
+            // cjenovnikToolStripMenuItem
+            // 
+            this.cjenovnikToolStripMenuItem.Name = "cjenovnikToolStripMenuItem";
+            this.cjenovnikToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cjenovnikToolStripMenuItem.Text = "Cjenovnik";
+            this.cjenovnikToolStripMenuItem.Click += new System.EventHandler(this.cjenovnikToolStripMenuItem_Click);
+            // 
+            // dodajNovuKartuToolStripMenuItem
+            // 
+            this.dodajNovuKartuToolStripMenuItem.Name = "dodajNovuKartuToolStripMenuItem";
+            this.dodajNovuKartuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dodajNovuKartuToolStripMenuItem.Text = "Dodaj novu kartu";
+            // 
+            // izdajKartuToolStripMenuItem
+            // 
+            this.izdajKartuToolStripMenuItem.Name = "izdajKartuToolStripMenuItem";
+            this.izdajKartuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.izdajKartuToolStripMenuItem.Text = "Izdaj kartu";
             // 
             // frmPocetna
             // 
@@ -185,9 +203,11 @@ namespace eAutobus.WinUI
         private System.Windows.Forms.ToolStripMenuItem karteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rasporedVoznjiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pregledKarataToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem novaKartaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pregledRasporedaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dodajNovuLinijuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cjenovnikToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dodajNovuKartuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem izdajKartuToolStripMenuItem;
     }
 }
 

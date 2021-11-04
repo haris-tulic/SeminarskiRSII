@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FigY9D5RqUNnTj1xmuF1pJ748WkshfP6fjdlTB9uiDd/h6qEDKC5v764G9nLWZFtv9mb4eQa5Zp7Zt1wm4iQKw==",
+  "dgSpecHash": "2zdT1wyseB27chuNo7L7xN0tK6zlrwXQZC2Nb1+eY4jy18uMEJqqwrrwHUHAER8HK+/NuxulPgUh/FNgYyIXsA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\x\\source\\repos\\Seminarski\\SeminarskiAPI\\SeminarskiWebAPI.csproj",
+  "projectFilePath": "D:\\SeminarskiRSII\\SeminarskiRSII\\SeminarskiAPI\\SeminarskiWebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\x\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\x\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.0\\automapper.extensions.microsoft.dependencyinjection.8.0.0.nupkg.sha512",

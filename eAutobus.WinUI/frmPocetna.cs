@@ -153,6 +153,11 @@ namespace eAutobus.WinUI
 
         private void pregledKarataToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void cjenovnikToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             frmPrikazKarata frm = new frmPrikazKarata();
             frm.Show();
         }

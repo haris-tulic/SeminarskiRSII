@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4RWgYvsl0UD2sEzP+1MqNn0+CqIIUi5+wevRRdIjO2Vyms7lTlX75ItHcV7uCv/O+lqYhqhASnmnQnXQsOGkdg==",
+  "dgSpecHash": "04nSaakzoGRyt9lM8MsRNN4RlHEgMck+EhSbHwmtDg9ZHOx4OJwa3Du5rMrVma8feKc/jkIxCyQgsGwGRKxwCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\x\\source\\repos\\Seminarski\\eAutobusModel\\eAutobusModel.csproj",
+  "projectFilePath": "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobusModel\\eAutobusModel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\x\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\x\\.nuget\\packages\\flurl\\3.0.2\\flurl.3.0.2.nupkg.sha512",

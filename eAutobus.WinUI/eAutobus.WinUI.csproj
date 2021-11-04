@@ -78,6 +78,12 @@
     <Compile Include="frmPocetna.Designer.cs">
       <DependentUpon>frmPocetna.cs</DependentUpon>
     </Compile>
+    <Compile Include="Karte\frmDodajKartu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Karte\frmDodajKartu.Designer.cs">
+      <DependentUpon>frmDodajKartu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Karte\frmIzdajKartu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPocetna.resx">
       <DependentUpon>frmPocetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Karte\frmDodajKartu.resx">
+      <DependentUpon>frmDodajKartu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Karte\frmIzdajKartu.resx">
       <DependentUpon>frmIzdajKartu.cs</DependentUpon>

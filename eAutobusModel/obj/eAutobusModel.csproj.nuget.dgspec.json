@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\x\\source\\repos\\Seminarski\\eAutobusModel\\eAutobusModel.csproj": {}
+    "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobusModel\\eAutobusModel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\x\\source\\repos\\Seminarski\\eAutobusModel\\eAutobusModel.csproj": {
+    "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobusModel\\eAutobusModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\x\\source\\repos\\Seminarski\\eAutobusModel\\eAutobusModel.csproj",
+        "projectUniqueName": "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobusModel\\eAutobusModel.csproj",
         "projectName": "eAutobusModel",
-        "projectPath": "C:\\Users\\x\\source\\repos\\Seminarski\\eAutobusModel\\eAutobusModel.csproj",
+        "projectPath": "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobusModel\\eAutobusModel.csproj",
         "packagesPath": "C:\\Users\\x\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\x\\source\\repos\\Seminarski\\eAutobusModel\\obj\\",
+        "outputPath": "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobusModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
