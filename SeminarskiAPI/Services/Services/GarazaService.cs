@@ -48,5 +48,26 @@ namespace SeminarskiWebAPI.Services.Services
             _context.SaveChanges();
             return _mapper.Map<eAutobusModel.GarazaModel>(entity);
         }
+
+        public GarazaModel Delete(int id)
+        {
+            var entity = _context.Garaza.Find(id);
+            _context.Garaza.Remove(entity);
+            _context.SaveChanges();
+            return _mapper.Map<GarazaModel>(entity);
+        }
+        public bool IsPopunjeno(int GarazaID)
+        {
+            var entity = _context.Garaza.Find(GarazaID);
+            if (entity.IsPopunjeno==true || entity.TrenutnoAutobusa>=entity.BrojMjesta)
+            {
+                entity.IsPopunjeno = true;
+                return entity.IsPopunjeno;
+            }
+            else
+            {
+                return entity.IsPopunjeno;
+            }
+        }
     }
 }

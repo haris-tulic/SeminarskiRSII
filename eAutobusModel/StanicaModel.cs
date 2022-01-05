@@ -8,5 +8,6 @@ namespace eAutobusModel
     {
         public int StanicaID { get; set; }
         public string NazivLokacijeStanice { get; set; }
+        public string  Grad { get; set; }
     }
 }

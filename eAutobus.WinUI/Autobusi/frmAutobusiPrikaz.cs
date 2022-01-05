@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Flurl.Http;
 using Flurl;
 using eAutobusModel.Requests;
+using eAutobusModel;
 
 namespace eAutobus.WinUI.Autobusi
 {
@@ -32,16 +33,23 @@ namespace eAutobus.WinUI.Autobusi
             dgvAutobusi.DataSource = result;
         }
 
-        private void dgvAutobusi_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
 
         private void dgvAutobusi_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            var id = dgvAutobusi.SelectedRows[0].Cells[0].Value;
-            frmDodajAutobus frm = new frmDodajAutobus(int.Parse(id.ToString()));
+            var idAutobus =dgvAutobusi.SelectedRows[0].Cells[0].Value;
+            frmDodajAutobus frm = new frmDodajAutobus(int.Parse(idAutobus.ToString()));
             frm.Show();
         }
+
+        private async void frmAutobusiPrikaz_Load(object sender, EventArgs e)
+        {
+            var list = await _service.Get<List<AutobusiModel>>(null);
+            dgvAutobusi.AutoGenerateColumns = false;
+            dgvAutobusi.DataSource = list;
+
+        }
+
+       
     }
 }

@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using eAutobusModel;
 using eAutobusModel.Requests;
+using Microsoft.EntityFrameworkCore;
 using SeminarskiWebAPI.Database;
+using SeminarskiWebAPI.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +17,12 @@ namespace SeminarskiWebAPI.Services
         
         private readonly eAutobus _context;
         private readonly IMapper _mapper;
-
-        public KupacService(eAutobus context,IMapper mapper)
+        private readonly IKorisnikService _korisnik;
+        public KupacService(eAutobus context,IMapper mapper, IKorisnikService korisnik)
         {
             _context = context;
             _mapper = mapper;
+            _korisnik = korisnik;
         }
         
         public eAutobusModel.KupacModel Delete(int id)
@@ -33,8 +36,17 @@ namespace SeminarskiWebAPI.Services
         public List<eAutobusModel.KupacModel> Get(KupacGetRequest request)
         {
             var query = _context.Kupac.AsQueryable();
-            var lista = query.ToList();
-            return _mapper.Map<List<eAutobusModel.KupacModel>>(lista);
+            if (!string.IsNullOrWhiteSpace(request.Ime))
+            {
+                query = query.Where(k => k.Ime.StartsWith(request.Ime));
+            }
+            if (!string.IsNullOrWhiteSpace(request.Prezime))
+            {
+                query = query.Where(k => k.Prezime.StartsWith(request.Prezime));
+            }
+            var list = query.ToList();
+           
+            return _mapper.Map<List<KupacModel>>(list);
         }
 
         public eAutobusModel.KupacModel GetByID(int id)
@@ -46,15 +58,7 @@ namespace SeminarskiWebAPI.Services
         public eAutobusModel.KupacModel Insert(KupacInsertRequest request)
         {
             var entity = _mapper.Map<Database.Kupac>(request);
-            //if (request.Password!=request.ConfirmPassword)
-            //{
-            //    throw new Exception("Passwordi nisu isti!");
-            //}
-            //entity.PasswordSalt = GenerisiSalt();
-            //entity.PasswordHash = GenerisiHash();
             _context.Kupac.Add(entity);
-            _context.SaveChanges();
-            
             _context.SaveChanges();
             return _mapper.Map<eAutobusModel.KupacModel>(entity);
 
@@ -64,18 +68,8 @@ namespace SeminarskiWebAPI.Services
         public eAutobusModel.KupacModel Update(KupacInsertRequest request,int id)
         {
             var entity = _context.Kupac.Find(id);
-            _context.Kupac.Attach(entity);
-            _context.Kupac.Update(entity);
-            if (!string.IsNullOrWhiteSpace(request.Password))
-            {
-                if (request.Password!=request.ConfirmPassword)
-                {
-                    throw new Exception("Passwordi nisu isti!");
-                }
-                //entity.PasswordSalt = GenerisiSalt();
-                //entity.PasswordHash = GenerisiHash();
-            }
             _mapper.Map(request, entity);
+            _context.Kupac.Update(entity);
             _context.SaveChanges();
             return _mapper.Map<eAutobusModel.KupacModel>(entity);
 

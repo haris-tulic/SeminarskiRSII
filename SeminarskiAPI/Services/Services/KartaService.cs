@@ -15,13 +15,13 @@ namespace SeminarskiWebAPI.Services
     {
         private readonly eAutobus _context;
         private readonly IMapper _mapper;
-        private readonly IKorisnikService _korisnik;
+        private readonly IKupacService _kupac;
 
-        public KartaService(eAutobus context,IMapper mapper,IKorisnikService korisnik)
+        public KartaService(eAutobus context,IMapper mapper, IKupacService kupac)
         {
             _context = context;
             _mapper = mapper;
-            _korisnik = korisnik;
+            _kupac = kupac;
         }
         public eAutobusModel.KartaModel Delete(int id)
         {
@@ -34,7 +34,7 @@ namespace SeminarskiWebAPI.Services
         public List<KartaModel> Get(KartaGetRequest request)
         {
             var query = _context.Karta.Include(v => v.VrstaKarte)
-                                    .Include(k => k.Korisnik)
+                                    .Include(k => k.Kupac)
                                     .Include(t => t.TipKarte)
                                     .AsQueryable();
             var list = query.ToList();
@@ -51,19 +51,20 @@ namespace SeminarskiWebAPI.Services
 
         public KartaModel Insert(KartaUpsertRequest request)
         {
-            var kupac = new KorisnikUpsertRequest
+            
+            var entity = _mapper.Map<Karta>(request);
+            _context.Karta.Add(entity);
+            _context.SaveChanges();
+            var kupac = new KupacInsertRequest()
             {
                 Ime = request.Ime,
                 Prezime = request.Prezime,
                 AdresaStanovanja = request.AdresaStanovanja,
-               
-                
+                BrojTelefona = request.BrojTelefona,
+                KartaID = entity.KartaID,
             };
-            KorisnikModel newKupac=_korisnik.Insert(kupac);
-            request.KorisnikID = newKupac.KorisnikID;
-            var entity = _mapper.Map<Karta>(request);
-            _context.Karta.Add(entity);
-            _context.SaveChanges();
+
+            KupacModel newKupac = _kupac.Insert(kupac);
             return _mapper.Map<KartaModel>(entity);
         }
 

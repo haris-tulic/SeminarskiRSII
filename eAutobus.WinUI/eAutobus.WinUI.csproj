@@ -102,11 +102,23 @@
     <Compile Include="Korisnici\frmKorisniciDodaj.Designer.cs">
       <DependentUpon>frmKorisniciDodaj.cs</DependentUpon>
     </Compile>
+    <Compile Include="Korisnici\frmKorisniciDodajRegistracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\frmKorisniciDodajRegistracija.Designer.cs">
+      <DependentUpon>frmKorisniciDodajRegistracija.cs</DependentUpon>
+    </Compile>
     <Compile Include="Korisnici\frmKorisniciPrikaz.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Korisnici\frmKorisniciPrikaz.Designer.cs">
       <DependentUpon>frmKorisniciPrikaz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -143,8 +155,14 @@
     <EmbeddedResource Include="Korisnici\frmKorisniciDodaj.resx">
       <DependentUpon>frmKorisniciDodaj.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\frmKorisniciDodajRegistracija.resx">
+      <DependentUpon>frmKorisniciDodajRegistracija.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Korisnici\frmKorisniciPrikaz.resx">
       <DependentUpon>frmKorisniciPrikaz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

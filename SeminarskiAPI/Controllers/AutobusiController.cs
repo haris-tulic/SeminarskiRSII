@@ -1,4 +1,5 @@
-﻿using eAutobusModel.Requests;
+﻿using eAutobusModel;
+using eAutobusModel.Requests;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SeminarskiWebAPI.Services;
@@ -39,6 +40,11 @@ namespace SeminarskiAPI.Controllers
         public eAutobusModel.AutobusiModel Delete(int id)
         {
             return _service.Delete(id);
+        }
+        [HttpGet("{id}")]
+        public async Task<AutobusiModel> GetById(int id)
+        {
+            return await _service.GetById(id);
         }
     }
 }

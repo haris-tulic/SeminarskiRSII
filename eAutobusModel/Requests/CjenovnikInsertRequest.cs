@@ -8,7 +8,6 @@ namespace eAutobusModel.Requests
     public class CjenovnikInsertRequest
     {
 
-        public int CjenovnikID { get; set; }
         [Required]
         public int ZonaID { get; set; }
      
@@ -19,6 +18,10 @@ namespace eAutobusModel.Requests
         public int VrstakarteID { get; set; }
 
         [Required]
-        public float Cijena { get; set; }
+        public double Cijena { get; set; }
+        [Required]
+        public int OdredisteID { get; set; }
+        [Required]
+        public int PolazisteID { get; set; }
     }
 }

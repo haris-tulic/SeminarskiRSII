@@ -18,17 +18,44 @@ namespace eAutobus.WinUI.Karte
         private readonly APIService _vrstaKarte = new APIService("VrstaKarte");
         private readonly APIService _zona = new APIService("Zona");
         private readonly APIService _cjenovnik = new APIService("Cjenovnik");
-
-        public frmDodajKartu()
+        private readonly APIService _stanice = new APIService("Stanica");
+        private int? id;
+        public frmDodajKartu(int ?kartaID=null)
         {
             InitializeComponent();
+            id = kartaID;
         }
 
-        private async void frmDodajKartu_Load(object sender, EventArgs e)
+        private async void frmDodajKartu_Load(object sender, EventArgs e) 
         {
             await LoadTipKarte();
             await LoadVrstuKarte();
             await LoadZonu();
+            await LoadPolazisteIOdrediste();
+            if (id.HasValue)
+            {
+                var karta=await _cjenovnik.GetById<CjenovnikModel>(id);
+                cbTipKarte.SelectedValue = karta.TipkarteID;
+                cbVrstaKarte.SelectedValue = karta.VrstaKarteID;
+                cbZona.SelectedValue = karta.VrstaKarteID;
+                txtCijena.Text = karta.Cijena.ToString();
+                cmbPolaziste.SelectedValue = karta.PolazisteID;
+                cmbOdrediste.SelectedValue = karta.OdredisteID;
+            }
+        }
+
+        private async Task LoadPolazisteIOdrediste()
+        {
+            var result = await _stanice.Get<List<StanicaModel>>(null);
+            cmbPolaziste.DataSource = result;
+            cmbPolaziste.ValueMember = "StanicaID";
+            cmbPolaziste.DisplayMember = "NazivLokacijeStanice";
+
+            var entity = await _stanice.Get<List<StanicaModel>>(null);
+            cmbOdrediste.DataSource = entity;
+            cmbOdrediste.ValueMember = "StanicaID";
+            cmbOdrediste.DisplayMember = "NazivLokacijeStanice";
+
         }
 
         private async Task LoadZonu()
@@ -60,14 +87,25 @@ namespace eAutobus.WinUI.Karte
             if (this.ValidateChildren())
             {
                 var newKarta = new CjenovnikInsertRequest();
-                newKarta.TipkarteID = int.Parse(cbTipKarte.SelectedItem.ToString());
-                newKarta.VrstakarteID = int.Parse(cbVrstaKarte.SelectedItem.ToString());
-                newKarta.ZonaID = int.Parse(cbZona.SelectedItem.ToString());
-                newKarta.Cijena = float.Parse(txtCijena.Text);
+                newKarta.TipkarteID = int.Parse(cbTipKarte.SelectedValue.ToString());
+                newKarta.VrstakarteID = int.Parse(cbVrstaKarte.SelectedValue.ToString());
+                newKarta.ZonaID = int.Parse(cbZona.SelectedValue.ToString());
+                newKarta.Cijena = double.Parse(txtCijena.Text);
+                newKarta.PolazisteID = int.Parse(cmbPolaziste.SelectedValue.ToString());
+                newKarta.OdredisteID = int.Parse(cmbOdrediste.SelectedValue.ToString());
+                if (id.HasValue)
+                {
+                    await _cjenovnik.Update<CjenovnikModel>(id, newKarta);
+                    MessageBox.Show("Izmjenjena karta!");
 
-                await _cjenovnik.Insert<CjenovnikModel>(newKarta);
+                }
+                else
+                {
+                    await _cjenovnik.Insert<CjenovnikModel>(newKarta);
+                    MessageBox.Show("Dodana nova karta!");
+
+                }
             }
-            MessageBox.Show("Dodana nova karta!");
         }
 
         private void cbTipKarte_Validating(object sender, CancelEventArgs e)
@@ -119,6 +157,32 @@ namespace eAutobus.WinUI.Karte
             else
             {
                 errorProvider.SetError(txtCijena, null);
+            }
+        }
+
+        private void cmbPolaziste_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(cmbPolaziste.SelectedItem.ToString()))
+            {
+                errorProvider.SetError(cbZona, "Obavezno polje!");
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider.SetError(cbZona, null);
+            }
+        }
+
+        private void cmbOdrediste_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(cmbOdrediste.SelectedItem.ToString()))
+            {
+                errorProvider.SetError(cbZona, "Obavezno polje!");
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider.SetError(cbZona, null);
             }
         }
     }

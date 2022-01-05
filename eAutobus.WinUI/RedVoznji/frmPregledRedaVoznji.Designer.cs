@@ -34,9 +34,6 @@ namespace eAutobus.WinUI.RedVoznji
             this.label3 = new System.Windows.Forms.Label();
             this.btnSnimi = new System.Windows.Forms.Button();
             this.dgvLinije = new System.Windows.Forms.DataGridView();
-            this.cbPolaziste = new System.Windows.Forms.ComboBox();
-            this.cbOdrediste = new System.Windows.Forms.ComboBox();
-            this.dtpDatum = new System.Windows.Forms.DateTimePicker();
             this.RasporedVoznjeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BrojLinije = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BrojAutobusa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +42,9 @@ namespace eAutobus.WinUI.RedVoznji
             this.VrijemeDolaska = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Odlazak = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbPolaziste = new System.Windows.Forms.ComboBox();
+            this.cbOdrediste = new System.Windows.Forms.ComboBox();
+            this.dtpDatum = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLinije)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +60,7 @@ namespace eAutobus.WinUI.RedVoznji
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(535, 57);
+            this.label2.Location = new System.Drawing.Point(524, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 1;
@@ -105,31 +105,10 @@ namespace eAutobus.WinUI.RedVoznji
             this.dgvLinije.Location = new System.Drawing.Point(12, 228);
             this.dgvLinije.Name = "dgvLinije";
             this.dgvLinije.ReadOnly = true;
-            this.dgvLinije.Size = new System.Drawing.Size(746, 210);
+            this.dgvLinije.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLinije.Size = new System.Drawing.Size(743, 210);
             this.dgvLinije.TabIndex = 4;
-            // 
-            // cbPolaziste
-            // 
-            this.cbPolaziste.FormattingEnabled = true;
-            this.cbPolaziste.Location = new System.Drawing.Point(119, 54);
-            this.cbPolaziste.Name = "cbPolaziste";
-            this.cbPolaziste.Size = new System.Drawing.Size(138, 21);
-            this.cbPolaziste.TabIndex = 5;
-            // 
-            // cbOdrediste
-            // 
-            this.cbOdrediste.FormattingEnabled = true;
-            this.cbOdrediste.Location = new System.Drawing.Point(596, 54);
-            this.cbOdrediste.Name = "cbOdrediste";
-            this.cbOdrediste.Size = new System.Drawing.Size(138, 21);
-            this.cbOdrediste.TabIndex = 6;
-            // 
-            // dtpDatum
-            // 
-            this.dtpDatum.Location = new System.Drawing.Point(326, 128);
-            this.dtpDatum.Name = "dtpDatum";
-            this.dtpDatum.Size = new System.Drawing.Size(200, 20);
-            this.dtpDatum.TabIndex = 7;
+            this.dgvLinije.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvLinije_MouseDoubleClick);
             // 
             // RasporedVoznjeID
             // 
@@ -191,12 +170,34 @@ namespace eAutobus.WinUI.RedVoznji
             this.Datum.ReadOnly = true;
             this.Datum.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // cbPolaziste
+            // 
+            this.cbPolaziste.FormattingEnabled = true;
+            this.cbPolaziste.Location = new System.Drawing.Point(119, 54);
+            this.cbPolaziste.Name = "cbPolaziste";
+            this.cbPolaziste.Size = new System.Drawing.Size(138, 21);
+            this.cbPolaziste.TabIndex = 5;
+            // 
+            // cbOdrediste
+            // 
+            this.cbOdrediste.FormattingEnabled = true;
+            this.cbOdrediste.Location = new System.Drawing.Point(585, 54);
+            this.cbOdrediste.Name = "cbOdrediste";
+            this.cbOdrediste.Size = new System.Drawing.Size(138, 21);
+            this.cbOdrediste.TabIndex = 6;
+            // 
+            // dtpDatum
+            // 
+            this.dtpDatum.Location = new System.Drawing.Point(326, 128);
+            this.dtpDatum.Name = "dtpDatum";
+            this.dtpDatum.Size = new System.Drawing.Size(200, 20);
+            this.dtpDatum.TabIndex = 7;
+            // 
             // frmPregledRedaVoznji
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(773, 495);
             this.Controls.Add(this.dtpDatum);
             this.Controls.Add(this.cbOdrediste);
             this.Controls.Add(this.cbPolaziste);

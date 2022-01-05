@@ -15,7 +15,7 @@ namespace eAutobus.WinUI.Korisnici
     public partial class frmKorisniciPrikaz : Form
     {
         private APIService _korisnici = new APIService("Korisnik");
-        private APIService _korisniciTip = new APIService("TipKorisnik");
+        private APIService _korisniciTip = new APIService("Uloge");
 
         public frmKorisniciPrikaz()
         {
@@ -28,7 +28,7 @@ namespace eAutobus.WinUI.Korisnici
             {
                 Ime = txtIme.Text,
                 Prezime = txtPrezime.Text,
-                TipKorisnikaID= int.Parse(cbTipKorisnika.SelectedValue.ToString())
+                UlogaID= int.Parse(cbUloga.SelectedValue.ToString())
             };
             var entity = await _korisnici.Get<List<KorisnikModel>>(search);
             dgvPrikaz.AutoGenerateColumns = false;
@@ -37,7 +37,7 @@ namespace eAutobus.WinUI.Korisnici
 
         private async void frmKorisniciPrikaz_Load(object sender, EventArgs e)
         {
-            await LoadTipKorisnika();
+            await LoadUloge();
             await LoadKorisnike();
         }
 
@@ -48,19 +48,21 @@ namespace eAutobus.WinUI.Korisnici
             dgvPrikaz.DataSource = list;
         }
 
-        private async Task LoadTipKorisnika()
+        private async Task LoadUloge()
         {
-            var list = await _korisniciTip.Get<List<TipKorisnikaModel>>(null);
-            list.Insert(0, new TipKorisnikaModel { });
-            cbTipKorisnika.DataSource = list;
-            cbTipKorisnika.DisplayMember = "Naziv";
-            cbTipKorisnika.ValueMember = "TipKorisnikaID";
+            var list = await _korisniciTip.Get<List<UlogeModel>>(null);
+            list.Insert(0, new UlogeModel{});
+            cbUloga.DataSource = list;
+            cbUloga.DisplayMember = "Naziv";
+            cbUloga.ValueMember = "UlogeID";
 
         }
 
-        private void dgvPrikaz_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvPrikaz_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-
+            var IdKorisnik = dgvPrikaz.SelectedRows[0].Cells[0].Value;
+            frmKorisniciDodaj frm = new frmKorisniciDodaj(int.Parse(IdKorisnik.ToString()));
+            frm.Show();
         }
     }
 }

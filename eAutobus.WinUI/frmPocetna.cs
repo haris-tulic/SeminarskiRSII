@@ -125,6 +125,8 @@ namespace eAutobus.WinUI
         private void pregledKorisnikaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmKorisniciPrikaz frm =  new frmKorisniciPrikaz();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
 
@@ -136,6 +138,8 @@ namespace eAutobus.WinUI
         private void pregledRasporedaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPregledRedaVoznji frm = new frmPregledRedaVoznji();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
 
@@ -159,7 +163,22 @@ namespace eAutobus.WinUI
         private void cjenovnikToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPrikazKarata frm = new frmPrikazKarata();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
             frm.Show();
+        }
+
+        private void dodajNovuKartuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDodajKartu frm = new frmDodajKartu();
+            frm.Show();
+        }
+
+        private void izdajKartuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIzdajKartu frm = new frmIzdajKartu();
+            frm.Show();
+           
         }
     }
 }

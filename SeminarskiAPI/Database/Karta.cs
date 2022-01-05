@@ -9,8 +9,8 @@ namespace SeminarskiWebAPI.Database
     {
         public int KartaID { get; set; }
 
-        public int KorisnikID { get; set; }
-        public Korisnik Korisnik { get; set; }
+       
+        public List<Kupac> Kupac { get; set; }
 
         public TipKarte TipKarte { get; set; }
         public int TipKarteID { get; set; }
@@ -18,12 +18,12 @@ namespace SeminarskiWebAPI.Database
         public Stanica Polaziste { get; set; }
         public int OdredisteID { get; set; }
         public Stanica Odrediste { get; set; }
-        public VrstaKarte VrstaKarte { get; set; }
         public int VrstaKarteID { get; set; }
+        public VrstaKarte VrstaKarte { get; set; }
         public DateTime DatumVadjenjaKarte { get; set; }
         public DateTime DatumVazenjaKarte { get; set; }
-       
         public bool Pravac { get; set; }
-     
+        public double  Cijena { get; set; }
+
     }
 }

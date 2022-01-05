@@ -35,11 +35,13 @@ namespace eAutobus.WinUI.Karte
             this.cbZona = new System.Windows.Forms.ComboBox();
             this.btnPretraga = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.KartaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CjenovnikID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipKarte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Zona = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vrsta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VrstaKarte = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Polaziste = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Odrediste = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CijenaPrikaz = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,47 +91,85 @@ namespace eAutobus.WinUI.Karte
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.KartaID,
+            this.CjenovnikID,
             this.TipKarte,
             this.Zona,
-            this.Vrsta,
-            this.Cijena});
+            this.VrstaKarte,
+            this.Polaziste,
+            this.Odrediste,
+            this.CijenaPrikaz});
             this.dataGridView1.Location = new System.Drawing.Point(12, 241);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(765, 197);
             this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
             // 
-            // KartaID
+            // CjenovnikID
             // 
-            this.KartaID.HeaderText = "KartaID";
-            this.KartaID.Name = "KartaID";
-            this.KartaID.Visible = false;
+            this.CjenovnikID.DataPropertyName = "CjenovnikID";
+            this.CjenovnikID.HeaderText = "CjenovnikID";
+            this.CjenovnikID.MinimumWidth = 6;
+            this.CjenovnikID.Name = "CjenovnikID";
+            this.CjenovnikID.ReadOnly = true;
+            this.CjenovnikID.Visible = false;
+            this.CjenovnikID.Width = 125;
             // 
             // TipKarte
             // 
             this.TipKarte.DataPropertyName = "TipKarte";
             this.TipKarte.HeaderText = "Tip karte";
+            this.TipKarte.MinimumWidth = 6;
             this.TipKarte.Name = "TipKarte";
+            this.TipKarte.ReadOnly = true;
+            this.TipKarte.Width = 125;
             // 
             // Zona
             // 
             this.Zona.DataPropertyName = "Zona";
             this.Zona.HeaderText = "Zona";
+            this.Zona.MinimumWidth = 6;
             this.Zona.Name = "Zona";
+            this.Zona.ReadOnly = true;
+            this.Zona.Width = 125;
             // 
-            // Vrsta
+            // VrstaKarte
             // 
-            this.Vrsta.DataPropertyName = "Zona";
-            this.Vrsta.HeaderText = "Vrsta";
-            this.Vrsta.Name = "Vrsta";
+            this.VrstaKarte.DataPropertyName = "VrstaKarte";
+            this.VrstaKarte.HeaderText = "Vrsta";
+            this.VrstaKarte.MinimumWidth = 6;
+            this.VrstaKarte.Name = "VrstaKarte";
+            this.VrstaKarte.ReadOnly = true;
+            this.VrstaKarte.Width = 125;
             // 
-            // Cijena
+            // Polaziste
             // 
-            this.Cijena.DataPropertyName = "Cijena";
-            this.Cijena.HeaderText = "Cijena";
-            this.Cijena.Name = "Cijena";
+            this.Polaziste.DataPropertyName = "Polaziste";
+            this.Polaziste.HeaderText = "Polazište";
+            this.Polaziste.Name = "Polaziste";
+            this.Polaziste.ReadOnly = true;
+            // 
+            // Odrediste
+            // 
+            this.Odrediste.DataPropertyName = "Odrediste";
+            this.Odrediste.HeaderText = "Odredište";
+            this.Odrediste.Name = "Odrediste";
+            this.Odrediste.ReadOnly = true;
+            // 
+            // CijenaPrikaz
+            // 
+            this.CijenaPrikaz.DataPropertyName = "CijenaPrikaz";
+            this.CijenaPrikaz.HeaderText = "Cijena";
+            this.CijenaPrikaz.MinimumWidth = 6;
+            this.CijenaPrikaz.Name = "CijenaPrikaz";
+            this.CijenaPrikaz.ReadOnly = true;
+            this.CijenaPrikaz.Width = 125;
             // 
             // frmPrikazKarata
             // 
@@ -159,10 +199,12 @@ namespace eAutobus.WinUI.Karte
         private System.Windows.Forms.ComboBox cbZona;
         private System.Windows.Forms.Button btnPretraga;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn KartaID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CjenovnikID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipKarte;
         private System.Windows.Forms.DataGridViewTextBoxColumn Zona;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Vrsta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cijena;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VrstaKarte;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Polaziste;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Odrediste;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CijenaPrikaz;
     }
 }

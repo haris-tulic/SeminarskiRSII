@@ -174,7 +174,6 @@ namespace eAutobus.WinUI.Autobusi
             // dgvPrikazAutobusa
             // 
             this.dgvPrikazAutobusa.AllowUserToAddRows = false;
-            this.dgvPrikazAutobusa.AllowUserToDeleteRows = false;
             this.dgvPrikazAutobusa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrikazAutobusa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AutobusID,
@@ -184,10 +183,10 @@ namespace eAutobus.WinUI.Autobusi
             this.BrojSjedista,
             this.NazivGaraze,
             this.Ispravan});
-            this.dgvPrikazAutobusa.Location = new System.Drawing.Point(12, 335);
+            this.dgvPrikazAutobusa.Location = new System.Drawing.Point(12, 331);
             this.dgvPrikazAutobusa.Name = "dgvPrikazAutobusa";
             this.dgvPrikazAutobusa.ReadOnly = true;
-            this.dgvPrikazAutobusa.Size = new System.Drawing.Size(766, 255);
+            this.dgvPrikazAutobusa.Size = new System.Drawing.Size(745, 259);
             this.dgvPrikazAutobusa.TabIndex = 18;
             // 
             // AutobusID
@@ -246,7 +245,7 @@ namespace eAutobus.WinUI.Autobusi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 602);
+            this.ClientSize = new System.Drawing.Size(779, 602);
             this.Controls.Add(this.dgvPrikazAutobusa);
             this.Controls.Add(this.cbGaraza);
             this.Controls.Add(this.btnSpremi);

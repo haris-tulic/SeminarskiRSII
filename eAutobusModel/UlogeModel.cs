@@ -4,11 +4,11 @@ using System.Text;
 
 namespace eAutobusModel
 {
-    public class TipKorisnikaModel
+    public class UlogeModel
     {
-        public int TipKorisnikaID { get; set; }
+        public int UlogeID { get; set; }
         public string Naziv { get; set; }
-   
+        public string Opis { get; set; }
 
     }
 }

@@ -15,7 +15,11 @@ namespace eAutobusModel
 
         public string Tipkarte { get; set; }
         public int TipkarteID { get; set; }
-
-        public float Cijena { get; set; }
+        public int OdredisteID { get; set; }
+        public int PolazisteID { get; set; }
+        public string Odrediste { get; set; }
+        public string Polaziste { get; set; }
+        public double Cijena { get; set; }
+        public string CijenaPrikaz { get; set; }
     }
 }

@@ -31,6 +31,19 @@ namespace eAutobus.WinUI.RedVoznji
             await LoadAutobuse();
             await LoadVozaceIKonduktere();
             await LoadPolazisteIOdrediste();
+            if (id.HasValue)
+            {
+               var redVoznje = await _redVoznje.GetById<RasporedVoznjeModel>(id);
+                txtBrLinije.Text = redVoznje.BrojLinije.ToString();
+                cbPolaziste.SelectedValue = redVoznje.PolazisteID;
+                cbOdrediste.SelectedValue = redVoznje.OdredisteID;
+                dtpDatum.Value = redVoznje.Datum;
+                cbBrAutobusa.SelectedValue = redVoznje.AutobusID;
+                cbKondukter.SelectedValue = redVoznje.KondukterID;
+                cbVozac.SelectedValue = redVoznje.VozacID;
+                dtpDolazak.Value = redVoznje.VrijemeDolaska;
+                dtpPolazak.Value = redVoznje.VrijemePolaska;
+            }
             
         }
 
@@ -70,18 +83,19 @@ namespace eAutobus.WinUI.RedVoznji
 
         private async Task LoadAutobuse()
         {
-            try
-            {
+            var listIspravnih = new List<AutobusiModel>();
                 var list = await _autobusi.Get<List<eAutobusModel.AutobusiModel>>(null);
-                cbBrAutobusa.DataSource = list;
+               foreach (var ispravan in list)
+                {
+                    if (ispravan.Ispravan)
+                    {
+                     listIspravnih.Add(ispravan);
+                    }
+                }
+                cbBrAutobusa.DataSource = listIspravnih;
                 cbBrAutobusa.DisplayMember = "BrojAutobusa";
                 cbBrAutobusa.ValueMember = "AutobusID";
-            }
-            catch (Exception e)
-            {
-
-                throw new Exception(e.Message);
-            }
+           
     
         }
 

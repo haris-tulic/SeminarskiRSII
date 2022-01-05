@@ -29,41 +29,47 @@ namespace SeminarskiWebAPI.Services
         public List<eAutobusModel.RasporedVoznjeModel> Get(RasporedVoznjeGetRequest search)
         {
             var query = _context.RasporedVoznje.Include(a=>a.Autobus).Include(o=>o.Odrediste).Include(d=>d.Polaziste).Include(v=>v.Vozac).Include(k=>k.Kondukter).AsQueryable();
-            if (search.OdredisteID.HasValue)
+            if (search.OdredisteID.ToString()!="0")
             {
                 query = query.Where(r => r.OdredisteID == search.OdredisteID);
             }
-            if (search.PolazisteID.HasValue)
+            if (search.PolazisteID.ToString()!="0")
             {
                 query = query.Where(r => r.PolazisteID == search.PolazisteID);
             }
-            //if (!string.IsNullOrEmpty(search.Datum.ToString()))
-            //{
-            //    query = query.Where(r => r.Datum == search.Datum);
-            //}
-            query = query.OrderBy(x => x.VrijemePolaska);
+            if (!string.IsNullOrEmpty(search.Datum.ToString()))
+            {
+                query = query.Where(r => r.Datum == search.Datum);
+            }
             var list = query.ToList();
-            var listm = list.Select(x => Add(x)).ToList();
-            return listm;
+            var listR = new List<RasporedVoznjeModel>();
+            _mapper.Map(list, listR);
+            for (int i = 0; i <list.Count; i++)
+            {
+                listR[i].Odlazak = list[i].Odrediste.NazivLokacijeStanice;
+                listR[i].Polazak = list[i].Polaziste.NazivLokacijeStanice;
+               
+            }
+            return listR;
         }
 
-        private RasporedVoznjeModel Add(RasporedVoznje x)
+        private RasporedVoznjeModel Convert(RasporedVoznje x)
         {
             RasporedVoznjeModel entity = new RasporedVoznjeModel
             {
                 Polazak = x.Polaziste.NazivLokacijeStanice,
                 Odlazak = x.Odrediste.NazivLokacijeStanice,
                 BrojAutobusa = x.Autobus.BrojAutobusa,
-                BrojLinije=x.BrojLinije,
-                AutobusID=x.AutobusID,
-                Datum=x.Datum.ToString(),
-                OdredisteID=x.OdredisteID,
-                PolazisteID=x.PolazisteID,
-                RasporedVoznjeID=x.RasporedVoznjeID,
-                VozacID=x.VozacID,
-                VrijemeDolaska=x.VrijemeDolaska.ToString(),
-                VrijemePolaska=x.VrijemePolaska.ToString(),
-                KondukterID=x.KondukterID,
+                BrojLinije = x.BrojLinije,
+                AutobusID = x.AutobusID,
+                Datum = x.Datum,
+                OdredisteID = x.OdredisteID,
+                PolazisteID = x.PolazisteID,
+                RasporedVoznjeID = x.RasporedVoznjeID,
+                VozacID = x.VozacID,
+                VrijemeDolaska = x.VrijemeDolaska,
+                VrijemePolaska = x.VrijemePolaska,
+                KondukterID = x.KondukterID,
             };
             return entity;
         }

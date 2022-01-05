@@ -1,4 +1,5 @@
-﻿using eAutobusModel.Requests;
+﻿using eAutobusModel;
+using eAutobusModel.Requests;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SeminarskiWebAPI.Services.Interfaces;
@@ -42,6 +43,12 @@ namespace SeminarskiWebAPI.Controllers
         public eAutobusModel.GarazaModel Update(GarazaUpsertRequest update,int id)
         {
             return _service.Update(update,id);
+        }
+
+        [HttpDelete("{id}")]
+        public GarazaModel Delete(int id)
+        {
+            return _service.Delete(id);
         }
     }
 }

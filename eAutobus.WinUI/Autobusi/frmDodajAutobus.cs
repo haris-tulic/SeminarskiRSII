@@ -38,13 +38,15 @@ namespace eAutobus.WinUI.Autobusi
                 if (id.HasValue)
                 {
                     await _service.Update<eAutobusModel.AutobusiModel>(id, request);
+                    MessageBox.Show("Novo vozilo uspjesno izmjenjeno!");
                 }
                 else
                 {
                     await _service.Insert<eAutobusModel.AutobusiModel>(request);
+                    MessageBox.Show("Novo vozilo uspjesno dodano!");
                 }
             }
-            MessageBox.Show("Novo vozilo uspjesno dodano!");
+  
             await LoadAutobuse();
         }
 
@@ -60,6 +62,7 @@ namespace eAutobus.WinUI.Autobusi
                 txtMarkaAutobusa.Text = autobus.MarkaAutobusa;
                 cbIspravan.Checked = autobus.Ispravan;
                 cbGaraza.SelectedValue =autobus.GarazaID;
+                dtpDatumProizvodnje.Value = autobus.DatumProizvodnje;
 
             }
         }
@@ -125,7 +128,8 @@ namespace eAutobus.WinUI.Autobusi
             try
             {
                 var result = await _service.Get<List<eAutobusModel.AutobusiModel>>(null);
-                dgvPrikazAutobusa.DataSource = result;   
+                dgvPrikazAutobusa.AutoGenerateColumns = false;
+                dgvPrikazAutobusa.DataSource = result;
             }
             catch (Exception e)            
             {

@@ -1,5 +1,6 @@
 ﻿using eAutobusModel;
 using eAutobusModel.Requests;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SeminarskiWebAPI.Services.Interfaces;
@@ -33,9 +34,10 @@ namespace SeminarskiWebAPI.Controllers
         }
 
         [HttpPost]
-        public KorisnikModel Insert(KorisnikUpsertRequest request)
+        
+        public async Task<KorisnikModel> Insert(KorisnikUpsertRequest request)
         {
-            return _service.Insert(request);
+            return await _service.Insert(request);
         }
 
         [HttpPut("{id}")]

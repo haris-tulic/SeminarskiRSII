@@ -11,9 +11,10 @@ namespace SeminarskiWebAPI.Services.Interfaces
     {
         List<KorisnikModel> Get(KorisnikGetRequest search);
         KorisnikModel GetByID(int id);
-        KorisnikModel Insert(KorisnikUpsertRequest request);
+        Task<KorisnikModel> Insert(KorisnikUpsertRequest request);
         KorisnikModel Update(KorisnikUpsertRequest request,int id);
         KorisnikModel Delete(int id);
+        //Task<KorisnikModel> Login(string username, string password);
 
     }
 }

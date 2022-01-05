@@ -40,6 +40,10 @@ namespace eAutobus.WinUI.Karte
             this.txtCijena = new System.Windows.Forms.TextBox();
             this.btnSnimi = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbPolaziste = new System.Windows.Forms.ComboBox();
+            this.cmbOdrediste = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,7 +120,7 @@ namespace eAutobus.WinUI.Karte
             // 
             // btnSnimi
             // 
-            this.btnSnimi.Location = new System.Drawing.Point(338, 268);
+            this.btnSnimi.Location = new System.Drawing.Point(337, 341);
             this.btnSnimi.Name = "btnSnimi";
             this.btnSnimi.Size = new System.Drawing.Size(75, 23);
             this.btnSnimi.TabIndex = 8;
@@ -128,11 +132,51 @@ namespace eAutobus.WinUI.Karte
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(249, 258);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Polazište:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(246, 294);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Odredište:";
+            // 
+            // cmbPolaziste
+            // 
+            this.cmbPolaziste.FormattingEnabled = true;
+            this.cmbPolaziste.Location = new System.Drawing.Point(307, 255);
+            this.cmbPolaziste.Name = "cmbPolaziste";
+            this.cmbPolaziste.Size = new System.Drawing.Size(140, 21);
+            this.cmbPolaziste.TabIndex = 11;
+            this.cmbPolaziste.Validating += new System.ComponentModel.CancelEventHandler(this.cmbPolaziste_Validating);
+            // 
+            // cmbOdrediste
+            // 
+            this.cmbOdrediste.FormattingEnabled = true;
+            this.cmbOdrediste.Location = new System.Drawing.Point(307, 291);
+            this.cmbOdrediste.Name = "cmbOdrediste";
+            this.cmbOdrediste.Size = new System.Drawing.Size(140, 21);
+            this.cmbOdrediste.TabIndex = 12;
+            this.cmbOdrediste.Validating += new System.ComponentModel.CancelEventHandler(this.cmbOdrediste_Validating);
+            // 
             // frmDodajKartu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbOdrediste);
+            this.Controls.Add(this.cmbPolaziste);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnSnimi);
             this.Controls.Add(this.txtCijena);
             this.Controls.Add(this.cbZona);
@@ -163,5 +207,9 @@ namespace eAutobus.WinUI.Karte
         private System.Windows.Forms.TextBox txtCijena;
         private System.Windows.Forms.Button btnSnimi;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.ComboBox cmbOdrediste;
+        private System.Windows.Forms.ComboBox cmbPolaziste;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }

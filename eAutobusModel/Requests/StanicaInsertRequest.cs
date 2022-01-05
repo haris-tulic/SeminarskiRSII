@@ -8,5 +8,7 @@ namespace eAutobusModel.Requests
     public class StanicaInsertRequest
     {   [Required]
         public string nazivLokacijeStanice { get; set; }
+
+        public int GradID { get; set; }
     }
 }

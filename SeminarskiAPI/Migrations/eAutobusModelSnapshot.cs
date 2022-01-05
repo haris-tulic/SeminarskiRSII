@@ -75,7 +75,11 @@ namespace SeminarskiWebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<float>("Cijena");
+                    b.Property<double>("Cijena");
+
+                    b.Property<int>("OdredisteID");
+
+                    b.Property<int>("PolazisteID");
 
                     b.Property<int>("TipkarteID");
 
@@ -84,6 +88,10 @@ namespace SeminarskiWebAPI.Migrations
                     b.Property<int>("ZonaID");
 
                     b.HasKey("CjenovnikID");
+
+                    b.HasIndex("OdredisteID");
+
+                    b.HasIndex("PolazisteID");
 
                     b.HasIndex("TipkarteID");
 
@@ -109,6 +117,8 @@ namespace SeminarskiWebAPI.Migrations
                     b.Property<bool>("IsPopunjeno");
 
                     b.Property<string>("NazivGaraze");
+
+                    b.Property<int>("TrenutnoAutobusa");
 
                     b.HasKey("GarazaID");
 
@@ -138,15 +148,17 @@ namespace SeminarskiWebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<double>("Cijena");
+
                     b.Property<DateTime>("DatumVadjenjaKarte");
 
                     b.Property<DateTime>("DatumVazenjaKarte");
 
-                    b.Property<int>("KupacID");
+                    b.Property<int>("OdredisteID");
+
+                    b.Property<int>("PolazisteID");
 
                     b.Property<bool>("Pravac");
-
-                    b.Property<int>("RasporedVoznjeID");
 
                     b.Property<int>("TipKarteID");
 
@@ -154,15 +166,36 @@ namespace SeminarskiWebAPI.Migrations
 
                     b.HasKey("KartaID");
 
-                    b.HasIndex("KupacID");
+                    b.HasIndex("OdredisteID");
 
-                    b.HasIndex("RasporedVoznjeID");
+                    b.HasIndex("PolazisteID");
 
                     b.HasIndex("TipKarteID");
 
                     b.HasIndex("VrstaKarteID");
 
                     b.ToTable("Karta");
+                });
+
+            modelBuilder.Entity("SeminarskiWebAPI.Database.KorisniciUloge", b =>
+                {
+                    b.Property<int>("KorisniciUlogeID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("DatumIzmjene");
+
+                    b.Property<int>("KorisnikID");
+
+                    b.Property<int>("UlogaID");
+
+                    b.HasKey("KorisniciUlogeID");
+
+                    b.HasIndex("KorisnikID");
+
+                    b.HasIndex("UlogaID");
+
+                    b.ToTable("KorisniciUloge");
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Korisnik", b =>
@@ -183,23 +216,21 @@ namespace SeminarskiWebAPI.Migrations
 
                     b.Property<string>("Ime");
 
-                    b.Property<int>("KupacID");
+                    b.Property<string>("KorisnickoIme");
 
-                    b.Property<string>("Naziv");
+                    b.Property<string>("LozinkaHash");
+
+                    b.Property<string>("LozinkaSalt");
 
                     b.Property<string>("Prezime");
 
-                    b.Property<int>("TipKorisnikaID");
-
-                    b.Property<int>("UpravaID");
-
-                    b.Property<int>("VozacID");
+                    b.Property<int>("UlogeID");
 
                     b.HasKey("KorisnikID");
 
                     b.HasIndex("GradID");
 
-                    b.HasIndex("TipKorisnikaID");
+                    b.HasIndex("UlogeID");
 
                     b.ToTable("Korisnik");
                 });
@@ -210,17 +241,19 @@ namespace SeminarskiWebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("PasswordHash");
+                    b.Property<string>("AdresaStanovanja");
 
-                    b.Property<string>("PasswordSalt");
+                    b.Property<string>("BrojTelefona");
 
-                    b.Property<bool?>("Prisutan");
+                    b.Property<string>("Ime");
 
-                    b.Property<int>("TipKorisnikaID");
+                    b.Property<int>("KartaID");
+
+                    b.Property<string>("Prezime");
 
                     b.HasKey("KupacID");
 
-                    b.HasIndex("TipKorisnikaID");
+                    b.HasIndex("KartaID");
 
                     b.ToTable("Kupac");
                 });
@@ -316,9 +349,13 @@ namespace SeminarskiWebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("GradID");
+
                     b.Property<string>("NazivLokacijeStanice");
 
                     b.HasKey("StanicaID");
+
+                    b.HasIndex("GradID");
 
                     b.ToTable("Stanica");
                 });
@@ -338,38 +375,21 @@ namespace SeminarskiWebAPI.Migrations
                     b.ToTable("TipKarte");
                 });
 
-            modelBuilder.Entity("SeminarskiWebAPI.Database.TipKorisnika", b =>
+            modelBuilder.Entity("SeminarskiWebAPI.Database.Uloge", b =>
                 {
-                    b.Property<int>("TipKorisnikaID")
+                    b.Property<int>("UlogeID")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("KorisnikID");
 
                     b.Property<string>("Naziv");
 
-                    b.HasKey("TipKorisnikaID");
+                    b.Property<string>("Opis");
 
-                    b.ToTable("TipKorisnika");
-                });
+                    b.HasKey("UlogeID");
 
-            modelBuilder.Entity("SeminarskiWebAPI.Database.Uprava", b =>
-                {
-                    b.Property<int>("UpravaID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("PasswordHash");
-
-                    b.Property<string>("PasswordSalt");
-
-                    b.Property<bool?>("Prisutan");
-
-                    b.Property<int>("TipKorisnikaID");
-
-                    b.HasKey("UpravaID");
-
-                    b.HasIndex("TipKorisnikaID");
-
-                    b.ToTable("Uprava");
+                    b.ToTable("Uloge");
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Vozac", b =>
@@ -378,13 +398,13 @@ namespace SeminarskiWebAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("TipKorisnikaID");
+                    b.Property<int>("KorisnikID");
 
                     b.Property<string>("VozackaKategorija");
 
                     b.HasKey("VozacID");
 
-                    b.HasIndex("TipKorisnikaID");
+                    b.HasIndex("KorisnikID");
 
                     b.ToTable("Vozac");
                 });
@@ -440,6 +460,16 @@ namespace SeminarskiWebAPI.Migrations
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Cjenovnik", b =>
                 {
+                    b.HasOne("SeminarskiWebAPI.Database.Stanica", "Odrediste")
+                        .WithMany()
+                        .HasForeignKey("OdredisteID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("SeminarskiWebAPI.Database.Stanica", "Polaziste")
+                        .WithMany()
+                        .HasForeignKey("PolazisteID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("SeminarskiWebAPI.Database.TipKarte", "Tipkarte")
                         .WithMany()
                         .HasForeignKey("TipkarteID")
@@ -459,21 +489,21 @@ namespace SeminarskiWebAPI.Migrations
             modelBuilder.Entity("SeminarskiWebAPI.Database.Garaza", b =>
                 {
                     b.HasOne("SeminarskiWebAPI.Database.Grad", "Grad")
-                        .WithMany()
+                        .WithMany("Garaze")
                         .HasForeignKey("GradID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Karta", b =>
                 {
-                    b.HasOne("SeminarskiWebAPI.Database.Kupac", "Kupac")
+                    b.HasOne("SeminarskiWebAPI.Database.Stanica", "Odrediste")
                         .WithMany()
-                        .HasForeignKey("KupacID")
+                        .HasForeignKey("OdredisteID")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("SeminarskiWebAPI.Database.RasporedVoznje", "RasporedVoznje")
+                    b.HasOne("SeminarskiWebAPI.Database.Stanica", "Polaziste")
                         .WithMany()
-                        .HasForeignKey("RasporedVoznjeID")
+                        .HasForeignKey("PolazisteID")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("SeminarskiWebAPI.Database.TipKarte", "TipKarte")
@@ -487,24 +517,37 @@ namespace SeminarskiWebAPI.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("SeminarskiWebAPI.Database.KorisniciUloge", b =>
+                {
+                    b.HasOne("SeminarskiWebAPI.Database.Korisnik", "Korisnik")
+                        .WithMany()
+                        .HasForeignKey("KorisnikID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("SeminarskiWebAPI.Database.Uloge", "Uloga")
+                        .WithMany()
+                        .HasForeignKey("UlogaID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("SeminarskiWebAPI.Database.Korisnik", b =>
                 {
                     b.HasOne("SeminarskiWebAPI.Database.Grad", "Grad")
-                        .WithMany()
+                        .WithMany("Korisnici")
                         .HasForeignKey("GradID")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("SeminarskiWebAPI.Database.TipKorisnika", "TipKorisnika")
-                        .WithMany()
-                        .HasForeignKey("TipKorisnikaID")
+                    b.HasOne("SeminarskiWebAPI.Database.Uloge", "Uloge")
+                        .WithMany("Korisnik")
+                        .HasForeignKey("UlogeID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Kupac", b =>
                 {
-                    b.HasOne("SeminarskiWebAPI.Database.Korisnik", "TipKorisnika")
+                    b.HasOne("SeminarskiWebAPI.Database.Karta", "Karta")
                         .WithMany("Kupac")
-                        .HasForeignKey("TipKorisnikaID")
+                        .HasForeignKey("KartaID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -559,19 +602,19 @@ namespace SeminarskiWebAPI.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("SeminarskiWebAPI.Database.Uprava", b =>
+            modelBuilder.Entity("SeminarskiWebAPI.Database.Stanica", b =>
                 {
-                    b.HasOne("SeminarskiWebAPI.Database.Korisnik", "TipKorisnika")
-                        .WithMany("Uprava")
-                        .HasForeignKey("TipKorisnikaID")
+                    b.HasOne("SeminarskiWebAPI.Database.Grad", "Grad")
+                        .WithMany("Stanice")
+                        .HasForeignKey("GradID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Vozac", b =>
                 {
-                    b.HasOne("SeminarskiWebAPI.Database.Korisnik", "TipKorisnika")
-                        .WithMany("Vozac")
-                        .HasForeignKey("TipKorisnikaID")
+                    b.HasOne("SeminarskiWebAPI.Database.Korisnik", "Korisnik")
+                        .WithMany()
+                        .HasForeignKey("KorisnikID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

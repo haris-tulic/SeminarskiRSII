@@ -8,14 +8,13 @@ namespace SeminarskiWebAPI.Database
 {
     public partial class Kupac
     {
-     
-
             public int KupacID { get; set; }
-            public int KorisnikID { get; set; }
-            public Korisnik Korisnik  { get; set; }
-            public string PasswordHash { get; set; }
-            public string PasswordSalt { get; set; }
-            public bool ?Prisutan { get; set; }
-
+            public string Ime { get; set; }
+            public string Prezime { get; set; }
+            public string AdresaStanovanja { get; set; }
+            public string BrojTelefona { get; set; }
+            public int KartaID { get; set; }
+            public Karta Karta { get; set; }
     }
+
 }

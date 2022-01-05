@@ -19,6 +19,8 @@ using System.Threading.Tasks;
 using AutoMapper;
 using SeminarskiWebAPI.Services.Interfaces;
 using SeminarskiWebAPI.Services.Services;
+using SeminarskiWebAPI.Security;
+using SeminarskiWebAPI.Filters;
 
 namespace SeminarskiAPI
 {
@@ -34,6 +36,7 @@ namespace SeminarskiAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc(x => x.Filters.Add<ErrorFilter>()).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddAutoMapper(typeof(Startup));
@@ -56,16 +59,17 @@ namespace SeminarskiAPI
             services.AddScoped<IRasporedVoznjeService, RasporedVoznjeService>();
             services.AddScoped<IStanicaService, StanicaService>();
             services.AddScoped<ITipKarteService, TipKarteService>();
-            services.AddScoped<IUpravaService, UpravaService>();
             services.AddScoped<IVozacService, VozacService>();
             services.AddScoped<IVrstaKarteService, VrstaKarteService>();
             services.AddScoped<IZonaService, ZonaService>();
             services.AddScoped<IAutobusService, AutobusService>();
             services.AddScoped<IGarazaService, GarazaService>();
-            services.AddScoped<ITipKorisnikaService, TipKorisnikaService>();
+            services.AddScoped<IUlogeService, UlogeService>();
             services.AddScoped<IKorisnikService, KorisnikService>();
+            services.AddScoped<ILoginService, LoginService>();
             //services.AddScoped<IService<TModel,TSearch>,BaseService<TModel,TSearch,TDatabase>>();
-
+            services.AddAuthentication("BasicAuthentication")
+                .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication",null);
 
 
 
@@ -93,11 +97,10 @@ namespace SeminarskiAPI
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
                 
             });
-
-          
-            app.UseAuthentication();
-
+            app.UseDeveloperExceptionPage();
             app.UseHttpsRedirection();
+            app.UseAuthentication();
+             
             app.UseMvc();
         }
 

@@ -1,4 +1,5 @@
-﻿using eAutobusModel.Requests;
+﻿using eAutobusModel;
+using eAutobusModel.Requests;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SeminarskiWebAPI.Services;
@@ -34,14 +35,15 @@ namespace SeminarskiWebAPI.Controllers
             return _service.Insert(request);
         }
         [HttpPut("{id}")]
-        public eAutobusModel.CjenovnikModel Update(CjenovnikInsertRequest request, int id)
+        public eAutobusModel.CjenovnikModel Update(int id, CjenovnikInsertRequest request)
         {
-            return _service.Update(request, id);
+            return _service.Update(id, request) ;
         }
         [HttpDelete]
         public eAutobusModel.CjenovnikModel Delete(int id)
         {
             return _service.Delete(id);
         }
+       
     }
 }

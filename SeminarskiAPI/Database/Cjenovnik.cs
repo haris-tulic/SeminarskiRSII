@@ -13,11 +13,13 @@ namespace SeminarskiWebAPI.Database
         public int ZonaID { get; set; }
         public VrstaKarte VrstaKarte { get; set; }
         public int VrstaKarteID { get; set; }
-
         public TipKarte Tipkarte { get; set; }
         public int TipkarteID { get; set; }
-
-        public float Cijena { get; set; }
+        public int PolazisteID { get; set; }
+        public Stanica Polaziste { get; set; }
+        public int OdredisteID { get; set; }
+        public Stanica Odrediste { get; set; }
+        public double Cijena { get; set; }
 
        
     }

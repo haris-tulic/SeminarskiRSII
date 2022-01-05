@@ -14,7 +14,7 @@ namespace eAutobus.WinUI.Korisnici
 {
     public partial class frmKorisniciDodaj : Form
     {
-        private readonly APIService _tipK = new APIService("TipKorisnik");
+        private readonly APIService _uloge = new APIService("Uloge");
         private readonly APIService _korisnik = new APIService("Korisnik");
         private readonly APIService _grad = new APIService("Grad");
         private int? id = null;
@@ -29,6 +29,18 @@ namespace eAutobus.WinUI.Korisnici
        
             await LoadKorisnika();
             await LoadGrad();
+            if (id.HasValue)
+            {
+                var entity = await _korisnik.GetById<KorisnikModel>(id);
+                txtIme.Text = entity.Ime;
+                txtPrezime.Text = entity.Prezime;
+                txtEmail.Text = entity.Email;
+                dtpDatumRodjenja.Value = entity.DatumRodjenja;
+                txtBrojTelefona.Text = entity.BrojTelefona;
+                txtAdresaStanovanja.Text = entity.AdresaStanovanja;
+                cmbGrad.SelectedValue= entity.GradID;
+                cmbUloga.SelectedValue=entity.UlogeID;
+            }
         }
 
         private async Task LoadGrad()
@@ -41,10 +53,10 @@ namespace eAutobus.WinUI.Korisnici
 
         private async Task LoadKorisnika()
         {
-            var listTipK = await _tipK.Get<List<TipKorisnikaModel>>(null);
-            cmbTipKorisnika.DataSource = listTipK;
-            cmbTipKorisnika.ValueMember = "TipKorisnikaID";
-            cmbTipKorisnika.DisplayMember = "Naziv";
+            var listUloge = await _uloge.Get<List<UlogeModel>>(null);
+            cmbUloga.DataSource = listUloge;
+            cmbUloga.ValueMember = "UlogeID";
+            cmbUloga.DisplayMember = "Naziv";
         }
 
         
@@ -115,7 +127,7 @@ namespace eAutobus.WinUI.Korisnici
             }
         }
 
-        private async void btnSnimi_Click(object sender, EventArgs e)
+        private  void btnSnimi_Click(object sender, EventArgs e)
         {
             var entity = new KorisnikUpsertRequest();
             if (this.ValidateChildren())
@@ -127,17 +139,24 @@ namespace eAutobus.WinUI.Korisnici
                 entity.BrojTelefona = txtBrojTelefona.Text;
                 entity.AdresaStanovanja = txtAdresaStanovanja.Text;
                 entity.GradID = int.Parse(cmbGrad.SelectedValue.ToString());
-                entity.TipKorisnikaID = int.Parse(cmbTipKorisnika.SelectedValue.ToString());
+                entity.UlogeID = int.Parse(cmbUloga.SelectedValue.ToString());
             }
             if (id.HasValue)
             {
-                await _korisnik.Update<KorisnikModel>(entity,id);
-                MessageBox.Show("Korisnik je izmjenjen!");
+                entity.KorisnikID = id;
+                frmKorisniciDodajRegistracija frm = new frmKorisniciDodajRegistracija(entity);
+                frm.Show();
+
+                //await _korisnik.Update<KorisnikModel>(entity,id);
+                //MessageBox.Show("Korisnik je izmjenjen!");
             }
             else
             {
-                await _korisnik.Insert<KorisnikModel>(entity);
-                MessageBox.Show("Novi korisnik uspjesno dodan!");
+                frmKorisniciDodajRegistracija frm = new frmKorisniciDodajRegistracija(entity); 
+                frm.Show();
+               
+                //await _korisnik.Insert<KorisnikModel>(entity);
+                //MessageBox.Show("Novi korisnik uspjesno dodan!");
             }
         }
     }

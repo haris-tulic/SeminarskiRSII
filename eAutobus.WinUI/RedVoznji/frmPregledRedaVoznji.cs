@@ -24,26 +24,29 @@ namespace eAutobus.WinUI.RedVoznji
 
         private async void frmPregledRedaVoznji_Load(object sender, EventArgs e)
         {
+            await LoadStanice();
             await LoadRedVoznje();
         }
 
         private async Task LoadRedVoznje()
         {
-            await LoadStanice();
             var result = await _linije.Get<List<RasporedVoznjeModel>>(null);
             dgvLinije.AutoGenerateColumns = false;
             dgvLinije.DataSource = result;
+           
 
         }
 
         private async Task LoadStanice()
         {
             var result = await _stanice.Get<List<StanicaModel>>(null);
+            result.Insert(0, new StanicaModel { });
             cbPolaziste.DataSource = result;
             cbPolaziste.ValueMember = "StanicaID";
             cbPolaziste.DisplayMember = "NazivLokacijeStanice";
 
             var entity = await _stanice.Get<List<StanicaModel>>(null);
+            entity.Insert(0, new StanicaModel { });
             cbOdrediste.DataSource = entity;
             cbOdrediste.ValueMember = "StanicaID";
             cbOdrediste.DisplayMember = "NazivLokacijeStanice";
@@ -59,8 +62,15 @@ namespace eAutobus.WinUI.RedVoznji
                
             };
             var result = _linije.Get<List<RasporedVoznjeModel>>(search);
-            dgvLinije.DataSource = result;
             dgvLinije.AutoGenerateColumns = false;
+            dgvLinije.DataSource = result;
+        }
+
+        private void dgvLinije_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            var RedVoznjeID = dgvLinije.SelectedRows[0].Cells[0].Value;
+            frmDodavanjeRedaVoznje frm = new frmDodavanjeRedaVoznje(int.Parse(RedVoznjeID.ToString()));
+            frm.Show();
         }
     }
 }

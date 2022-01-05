@@ -8,6 +8,7 @@ namespace eAutobusModel.Requests
     {
         public string Ime { get; set; }
         public string  Prezime { get; set; }
-        public int? TipKorisnikaID { get; set; }
+        public string KorisnickoIme { get; set; }
+        public int UlogaID { get; set; }
     }
 }

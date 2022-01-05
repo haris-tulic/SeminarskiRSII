@@ -44,11 +44,10 @@ namespace SeminarskiWebAPI.Mapper
             CreateMap<Database.Korisnik, eAutobusModel.KorisnikModel>().ReverseMap();
             CreateMap<KorisnikUpsertRequest, Database.Korisnik>().ReverseMap();
 
-            CreateMap<Database.TipKorisnika, eAutobusModel.TipKorisnikaModel>().ReverseMap();
-            CreateMap<TipKorisnikaInsertRequest, Database.TipKorisnika>().ReverseMap();
+            CreateMap<Database.Uloge, eAutobusModel.UlogeModel>().ReverseMap();
+            CreateMap<UlogeInsertRequest, Database.Uloge>().ReverseMap();
 
-            CreateMap<Database.Uprava, eAutobusModel.UpravaModel>().ReverseMap();
-            CreateMap<UpravaUpsertRequest, Database.Uprava>().ReverseMap();
+
 
             CreateMap<Database.Vozac, eAutobusModel.VozacModel>().ReverseMap();
             CreateMap<VozacUpsertRequest, Database.Vozac>().ReverseMap();
@@ -58,6 +57,14 @@ namespace SeminarskiWebAPI.Mapper
 
             CreateMap<Database.Zona, eAutobusModel.ZonaModel>().ReverseMap();
             CreateMap<ZonaInsertRequest, Database.Zona>().ReverseMap();
+
+            CreateMap<Database.Korisnik, eAutobusModel.VozacModel>().ReverseMap();
+            CreateMap<Database.Korisnik, eAutobusModel.UpravaModel>().ReverseMap();
+            CreateMap<Database.Korisnik, eAutobusModel.KupacModel>().ReverseMap();
+
+            CreateMap<Database.KorisniciUloge, eAutobusModel.KorisniciUlogeModel>().ReverseMap();
+
+
         }
     }
 }

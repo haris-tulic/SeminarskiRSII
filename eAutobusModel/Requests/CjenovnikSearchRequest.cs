@@ -12,5 +12,8 @@ namespace eAutobusModel.Requests
         public int ZonaID { get; set; }
         public string Tipkarte { get; set; }
         public int TipkarteID { get; set; }
+        public int VrstaKarteID { get; set; }
+        public int PolazisteID { get; set; }
+        public int OdredisteID { get; set; }
     }
 }

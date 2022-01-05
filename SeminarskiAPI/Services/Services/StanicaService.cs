@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using eAutobusModel;
 using eAutobusModel.Requests;
+using Microsoft.EntityFrameworkCore;
 using SeminarskiWebAPI.Database;
 using System;
 using System.Collections.Generic;
@@ -29,8 +30,14 @@ namespace SeminarskiWebAPI.Services
 
         public List<eAutobusModel.StanicaModel> Get()
         {
-            var list = _context.Stanica.ToList();
-            return _mapper.Map<List<eAutobusModel.StanicaModel>>(list);
+            var list = _context.Stanica.Include(s=>s.Grad).ToList();
+            var listS = new List<StanicaModel>();
+            listS = _mapper.Map<List<eAutobusModel.StanicaModel>>(list);
+            for (int i = 0; i < list.Count; i++)
+            {
+                listS[i].Grad = list[i].Grad.NazivGrada;
+            }
+            return listS ;
         }
 
         public eAutobusModel.StanicaModel GetById(int id)

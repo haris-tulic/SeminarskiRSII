@@ -11,6 +11,7 @@ namespace eAutobusModel
         public int BrojGaraze { get; set; }
         public int BrojMjesta { get; set; }
         public bool IsPopunjeno { get; set; }
+        public int TrenutnoAutobusa { get; set; }
         public int GradID { get; set; }
     }
 }

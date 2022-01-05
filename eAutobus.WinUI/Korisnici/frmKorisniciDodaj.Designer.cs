@@ -43,7 +43,7 @@ namespace eAutobus.WinUI.Korisnici
             this.txtBrojTelefona = new System.Windows.Forms.TextBox();
             this.txtAdresaStanovanja = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.cmbTipKorisnika = new System.Windows.Forms.ComboBox();
+            this.cmbUloga = new System.Windows.Forms.ComboBox();
             this.btnSnimi = new System.Windows.Forms.Button();
             this.dtpDatumRodjenja = new System.Windows.Forms.DateTimePicker();
             this.errorKorisnik = new System.Windows.Forms.ErrorProvider(this.components);
@@ -156,19 +156,19 @@ namespace eAutobus.WinUI.Korisnici
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(168, 309);
+            this.label8.Location = new System.Drawing.Point(198, 312);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 13);
+            this.label8.Size = new System.Drawing.Size(38, 13);
             this.label8.TabIndex = 16;
-            this.label8.Text = "Tip korisnika:";
+            this.label8.Text = "Uloga:";
             // 
-            // cmbTipKorisnika
+            // cmbUloga
             // 
-            this.cmbTipKorisnika.FormattingEnabled = true;
-            this.cmbTipKorisnika.Location = new System.Drawing.Point(244, 309);
-            this.cmbTipKorisnika.Name = "cmbTipKorisnika";
-            this.cmbTipKorisnika.Size = new System.Drawing.Size(171, 21);
-            this.cmbTipKorisnika.TabIndex = 17;
+            this.cmbUloga.FormattingEnabled = true;
+            this.cmbUloga.Location = new System.Drawing.Point(244, 309);
+            this.cmbUloga.Name = "cmbUloga";
+            this.cmbUloga.Size = new System.Drawing.Size(171, 21);
+            this.cmbUloga.TabIndex = 17;
             // 
             // btnSnimi
             // 
@@ -208,7 +208,7 @@ namespace eAutobus.WinUI.Korisnici
             this.Controls.Add(this.cmbGrad);
             this.Controls.Add(this.dtpDatumRodjenja);
             this.Controls.Add(this.btnSnimi);
-            this.Controls.Add(this.cmbTipKorisnika);
+            this.Controls.Add(this.cmbUloga);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtAdresaStanovanja);
             this.Controls.Add(this.txtBrojTelefona);
@@ -246,7 +246,7 @@ namespace eAutobus.WinUI.Korisnici
         private System.Windows.Forms.TextBox txtBrojTelefona;
         private System.Windows.Forms.TextBox txtAdresaStanovanja;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cmbTipKorisnika;
+        private System.Windows.Forms.ComboBox cmbUloga;
         private System.Windows.Forms.Button btnSnimi;
         private System.Windows.Forms.DateTimePicker dtpDatumRodjenja;
         private System.Windows.Forms.ErrorProvider errorKorisnik;

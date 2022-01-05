@@ -3,6 +3,7 @@ using eAutobusModel;
 using eAutobusModel.Requests;
 using Microsoft.EntityFrameworkCore;
 using SeminarskiWebAPI.Database;
+using SeminarskiWebAPI.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,11 +15,13 @@ namespace SeminarskiWebAPI.Services
     {
         private readonly eAutobus _context;
         private readonly IMapper _mapper;
+        private readonly IGarazaService _garaza;
 
-        public AutobusService(eAutobus context, IMapper mapper)
+        public AutobusService(eAutobus context, IMapper mapper, IGarazaService garaza)
         {
             _context = context;
             _mapper = mapper;
+            _garaza = garaza;
         }
         public eAutobusModel.AutobusiModel Delete(int id)
         {
@@ -46,12 +49,34 @@ namespace SeminarskiWebAPI.Services
             return entityl;
         }
 
+        public async Task<AutobusiModel> GetById(int id)
+        {
+            var entity =await _context.Autobus.FindAsync(id);
+            return _mapper.Map<AutobusiModel>(entity);
+        }
+
         public eAutobusModel.AutobusiModel Insert(AutobusInsertRequest request)
         {
             var entity = _mapper.Map<Database.Autobus>(request);
-            _context.Autobus.Add(entity);
-            _context.SaveChanges();
-            return _mapper.Map<eAutobusModel.AutobusiModel>(entity);
+            var garaza = _garaza.GetByID(request.GarazaID);
+            var IsPopunjeno = garaza.IsPopunjeno;
+            if (!IsPopunjeno)
+            {
+                _context.Autobus.Add(entity);
+                _context.SaveChanges();
+                garaza.TrenutnoAutobusa++;
+                return _mapper.Map<eAutobusModel.AutobusiModel>(entity);
+            }
+            else
+            {
+                throw new Exception("Garaža je popunjena!");
+            }
+           
+        }
+
+        public bool Popunjeno(int GarazaId)
+        {
+            return _garaza.IsPopunjeno(GarazaId);
         }
 
         public eAutobusModel.AutobusiModel Update(AutobusInsertRequest request, int id)

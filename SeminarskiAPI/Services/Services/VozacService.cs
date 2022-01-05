@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using eAutobusModel;
 using eAutobusModel.Requests;
+using Microsoft.EntityFrameworkCore;
 using SeminarskiWebAPI.Database;
 using System;
 using System.Collections.Generic;
@@ -28,10 +30,19 @@ namespace SeminarskiWebAPI.Services
 
         public List<eAutobusModel.VozacModel> Get(VozacGetRequest request)
         {
-            var query = _context.Vozac.AsQueryable();
-         
+            var query = _context.Vozac.Include(v=>v.Korisnik).AsQueryable();
             var list = query.ToList();
-            return _mapper.Map<List<eAutobusModel.VozacModel>>(list);
+            var listM = new List<VozacModel>();
+            _mapper.Map(list, listM);
+            for (int i = 0; i < list.Count; i++)
+            {
+                listM[i].Ime = list[i].Korisnik.Ime;
+                listM[i].Prezime = list[i].Korisnik.Prezime;
+                listM[i].Email = list[i].Korisnik.Email;
+                listM[i].DatumRodjenja = list[i].Korisnik.DatumRodjenja;
+
+            }
+            return listM;
         }
 
         public eAutobusModel.VozacModel GetById(int id)

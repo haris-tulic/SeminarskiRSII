@@ -7,13 +7,20 @@ namespace eAutobusModel
     public class KorisnikModel
     {
         public int KorisnikID { get; set; }
-        public string Naziv { get; set; }
-
         public string Ime { get; set; }
         public string Prezime { get; set; }
+        public string Email { get; set; }
+        public string BrojTelefona { get; set; }
         public DateTime DatumRodjenja { get; set; }
         public string AdresaStanovanja { get; set; }
-        public int TipKorisnikaID { get; set; }
-        public string TipKorisnika { get; set; }
+        public string KorisnickoIme { get; set; }
+        public string LozinkaHash { get; set; }
+        public string LozinkaSalt { get; set; }
+        public int GradID { get; set; }
+        public int UlogeID { get; set; }
+        public string Uloge { get; set; }
+        public UlogeModel Uloga { get; set; }
+        public List<KorisniciUlogeModel> KorisnickeUloge { get; set; }
+        
     }
 }

@@ -11,6 +11,7 @@ namespace SeminarskiWebAPI.Database
         public string NazivGaraze { get; set; }
         public int BrojGaraze { get; set; }
         public int BrojMjesta { get; set; }
+        public int TrenutnoAutobusa { get; set; }
         public bool IsPopunjeno { get; set; }
         public int GradID { get; set; }
         public Grad Grad { get; set; }

@@ -28,11 +28,24 @@ namespace eAutobus.WinUI.Karte
         {
             await LoadTipKarte();
             await LoadZona();
+            await LoadCjenovnik();
+        }
+
+        private async Task LoadCjenovnik()
+        {
+            var listC = await _cjenovnik.Get<List<CjenovnikModel>>(null);
+            foreach (var item in listC)
+            {
+                item.CijenaPrikaz = item.Cijena.ToString() + " KM";
+            }
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.DataSource = listC;
         }
 
         private async Task LoadTipKarte()
         {
             var listT = await _tipKarte.Get<List<TipKarteModel>>(null);
+            listT.Insert(0, new TipKarteModel { });
             cbTip.DataSource = listT;
             cbTip.ValueMember = "TipKarteID";
             cbTip.DisplayMember = "Naziv";
@@ -41,6 +54,7 @@ namespace eAutobus.WinUI.Karte
         private async Task LoadZona()
         {
             var listZ = await _zone.Get<List<ZonaModel>>(null);
+            listZ.Insert(0, new ZonaModel { });
             cbZona.DataSource = listZ;
             cbZona.ValueMember = "ZonaID";
             cbZona.DisplayMember = "OznakaZone";
@@ -49,14 +63,25 @@ namespace eAutobus.WinUI.Karte
         private async void btnPretraga_Click(object sender, EventArgs e)
         {
             var search = new CjenovnikSearchRequest();
-            if (this.ValidateChildren())
-            {
-                search.ZonaID = int.Parse(cbZona.SelectedItem.ToString());
-                search.TipkarteID = int.Parse(cbTip.SelectedItem.ToString());
+           
+                search.ZonaID = int.Parse(cbZona.SelectedValue.ToString());
+                search.TipkarteID = int.Parse(cbTip.SelectedValue.ToString());
                                                
-                await _cjenovnik.Get<List<CjenovnikModel>>(search);
-                
+               var result=await _cjenovnik.Get<List<CjenovnikModel>>(search);
+            foreach (var item in result)
+            {
+                item.CijenaPrikaz = item.Cijena.ToString() + " KM";
             }
+            dataGridView1.AutoGenerateColumns = false;    
+            dataGridView1.DataSource = result;
+           
+        }
+
+        private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            var kartaID = dataGridView1.SelectedRows[0].Cells[0].Value;
+            frmDodajKartu frm = new frmDodajKartu(int.Parse(kartaID.ToString()));
+            frm.Show();
         }
     }
 }

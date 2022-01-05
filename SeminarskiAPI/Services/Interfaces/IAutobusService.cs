@@ -1,4 +1,5 @@
-﻿using eAutobusModel.Requests;
+﻿using eAutobusModel;
+using eAutobusModel.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,6 @@ namespace SeminarskiWebAPI.Services
         eAutobusModel.AutobusiModel Insert(AutobusInsertRequest request);
         eAutobusModel.AutobusiModel Update(AutobusInsertRequest request,int id);
         eAutobusModel.AutobusiModel Delete(int id);
+        Task<AutobusiModel> GetById(int id);
     }
 }
