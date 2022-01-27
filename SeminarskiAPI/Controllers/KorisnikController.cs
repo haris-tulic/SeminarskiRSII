@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace SeminarskiWebAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class KorisnikController : ControllerBase

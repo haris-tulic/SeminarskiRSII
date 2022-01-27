@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "eAutobus.Mobile": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    }
+  }
+}

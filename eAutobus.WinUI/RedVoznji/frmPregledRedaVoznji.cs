@@ -52,16 +52,16 @@ namespace eAutobus.WinUI.RedVoznji
             cbOdrediste.DisplayMember = "NazivLokacijeStanice";
         }
 
-        private void btnSnimi_Click(object sender, EventArgs e)
+        private async void btnSnimi_Click(object sender, EventArgs e)
         {
             var search = new RasporedVoznjeGetRequest()
             {
                 PolazisteID = int.Parse(cbPolaziste.SelectedValue.ToString()),
                 OdredisteID = int.Parse(cbOdrediste.SelectedValue.ToString()),
-                Datum = dtpDatum.Value
+                Datum= dtpDatum.Value.Date,
                
             };
-            var result = _linije.Get<List<RasporedVoznjeModel>>(search);
+            var result =await _linije.Get<List<RasporedVoznjeModel>>(search);
             dgvLinije.AutoGenerateColumns = false;
             dgvLinije.DataSource = result;
         }
@@ -71,6 +71,11 @@ namespace eAutobus.WinUI.RedVoznji
             var RedVoznjeID = dgvLinije.SelectedRows[0].Cells[0].Value;
             frmDodavanjeRedaVoznje frm = new frmDodavanjeRedaVoznje(int.Parse(RedVoznjeID.ToString()));
             frm.Show();
+        }
+
+        private void dtpDatum_ValueChanged(object sender, EventArgs e)
+        {
+            dtpDatum.CustomFormat = "dd/MM/yyyy";
         }
     }
 }

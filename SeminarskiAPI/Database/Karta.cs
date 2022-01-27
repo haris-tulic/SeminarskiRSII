@@ -24,6 +24,7 @@ namespace SeminarskiWebAPI.Database
         public DateTime DatumVazenjaKarte { get; set; }
         public bool Pravac { get; set; }
         public double  Cijena { get; set; }
+        public string PravacS { get; set; }
 
     }
 }

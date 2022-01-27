@@ -1,4 +1,5 @@
-﻿using eAutobusModel.Requests;
+﻿using eAutobusModel;
+using eAutobusModel.Requests;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SeminarskiWebAPI.Services;
@@ -18,32 +19,33 @@ namespace SeminarskiWebAPI.Controllers
         {
             _service = service;
         }
+
         [HttpGet]
-        public List<eAutobusModel.RasporedVoznjeModel> Get([FromQuery]RasporedVoznjeGetRequest search)
+        public List<RasporedVoznjeModel> Get([FromQuery]RasporedVoznjeGetRequest search)
         {
             return _service.Get(search);
         }
         
         [HttpGet("{id}")]
-        public eAutobusModel.RasporedVoznjeModel GetById(int id)
+        public RasporedVoznjeModel GetById(int id)
         {
             return _service.GetById(id);
         }
      
         [HttpPost]
-        public eAutobusModel.RasporedVoznjeModel Insert(RasporedVoznjeUpsertRequest request)
+        public RasporedVoznjeModel Insert(RasporedVoznjeUpsertRequest request)
         {
             return _service.Insert(request);
         }
         
         [HttpPut("{id}")]
-        public eAutobusModel.RasporedVoznjeModel Update(RasporedVoznjeUpsertRequest request, int id)
+        public RasporedVoznjeModel Update(RasporedVoznjeUpsertRequest request, int id)
         {
             return _service.Update(request, id);
         }
         
         [HttpDelete("{id}")]
-        public eAutobusModel.RasporedVoznjeModel Delete(int id)
+        public RasporedVoznjeModel Delete(int id)
         {
             return _service.Delete(id);
         }

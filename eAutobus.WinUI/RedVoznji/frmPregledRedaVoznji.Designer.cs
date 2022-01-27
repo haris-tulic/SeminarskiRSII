@@ -192,6 +192,7 @@ namespace eAutobus.WinUI.RedVoznji
             this.dtpDatum.Name = "dtpDatum";
             this.dtpDatum.Size = new System.Drawing.Size(200, 20);
             this.dtpDatum.TabIndex = 7;
+            this.dtpDatum.ValueChanged += new System.EventHandler(this.dtpDatum_ValueChanged);
             // 
             // frmPregledRedaVoznji
             // 

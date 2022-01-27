@@ -20,5 +20,6 @@ namespace eAutobusModel.Requests
         public bool? Pravac { get; set; }
         public double Cijena { get; set; }
         public int KartaID { get; set; }
+        public string PravacS { get; set; }
     }
 }

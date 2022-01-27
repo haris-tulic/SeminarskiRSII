@@ -29,25 +29,25 @@ namespace eAutobus.WinUI
                 url += "?";
                 url += await search.ToQueryString();
             }
-            var result = await url.GetJsonAsync<T>();
+            var result = await url.WithBasicAuth(Username,Password).GetJsonAsync<T>();
             return result;
         }
         public async Task<T> GetById<T>(object id)
         {
             var url = $"{Properties.Settings.Default.APIUrl}/{_route}/{id}";
-            return await url.GetJsonAsync<T>();
+            return await url.WithBasicAuth(Username,Password).GetJsonAsync<T>();
         }
 
         public async Task<T> Insert<T>(object request)
         {
             var url = $"{Properties.Settings.Default.APIUrl}/{_route}";
-            return await url.PostJsonAsync(request).ReceiveJson<T>();
+            return await url.WithBasicAuth(Username,Password).PostJsonAsync(request).ReceiveJson<T>();
         }
 
         public async Task<T> Update<T>(object id,object request)
         {
             var url = $"{Properties.Settings.Default.APIUrl}/{_route}/{id}";
-            return await url.PutJsonAsync(request).ReceiveJson<T>();
+            return await url.WithBasicAuth(Username,Password).PutJsonAsync(request).ReceiveJson<T>();
         }
         public async Task<T> GetCijena<T>(object search)
         {

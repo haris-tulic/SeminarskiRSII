@@ -112,7 +112,7 @@ namespace eAutobus.WinUI.RedVoznji
                 newLine.OdredisteID = int.Parse(cbOdrediste.SelectedValue.ToString());
                 newLine.PolazisteID = int.Parse(cbPolaziste.SelectedValue.ToString());
                 newLine.VozacID = int.Parse(cbVozac.SelectedValue.ToString());
-                newLine.Datum = dtpDatum.Value;
+                newLine.Datum = dtpDatum.Value.Date;
 
                 if (id.HasValue)
                 {
@@ -192,6 +192,11 @@ namespace eAutobus.WinUI.RedVoznji
             {
                 errorDodavanjeLinije.SetError(cbVozac, null);
             }
+        }
+
+        private void dtpDatum_ValueChanged(object sender, EventArgs e)
+        {
+            dtpDatum.CustomFormat = "dd/MM/yyyy";
         }
     }
 }

@@ -28,6 +28,7 @@ namespace SeminarskiWebAPI.Services
         }
         public List<eAutobusModel.RasporedVoznjeModel> Get(RasporedVoznjeGetRequest search)
         {
+            
             var query = _context.RasporedVoznje.Include(a=>a.Autobus).Include(o=>o.Odrediste).Include(d=>d.Polaziste).Include(v=>v.Vozac).Include(k=>k.Kondukter).AsQueryable();
             if (search.OdredisteID.ToString()!="0")
             {
@@ -37,10 +38,10 @@ namespace SeminarskiWebAPI.Services
             {
                 query = query.Where(r => r.PolazisteID == search.PolazisteID);
             }
-            if (!string.IsNullOrEmpty(search.Datum.ToString()))
-            {
-                query = query.Where(r => r.Datum == search.Datum);
-            }
+            //if (!string.IsNullOrEmpty(search.Datum.ToString()) && search.Datum.Year>1)
+            //{
+            //    query = query.Where(r => r.Datum == search.Datum);
+            //}
             var list = query.ToList();
             var listR = new List<RasporedVoznjeModel>();
             _mapper.Map(list, listR);
@@ -48,7 +49,7 @@ namespace SeminarskiWebAPI.Services
             {
                 listR[i].Odlazak = list[i].Odrediste.NazivLokacijeStanice;
                 listR[i].Polazak = list[i].Polaziste.NazivLokacijeStanice;
-               
+                listR[i].BrojAutobusa = list[i].Autobus.BrojAutobusa;
             }
             return listR;
         }

@@ -12,6 +12,9 @@ namespace eAutobusModel
         public string BrojTelefona { get; set; }
         public string Adresa { get; set; }
         public int KartaID { get; set; }
-        
+        public string KorisnickoIme { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
+
     }
 }

@@ -197,11 +197,14 @@ namespace eAutobus.WinUI.Karte
                 if (rbJedan.Checked)
                 {
                     insert.Pravac = rbJedan.Checked;
+                    insert.PravacS = rbJedan.Text;
 
                 }
                 else if(rbDva.Checked)
                 {
                     insert.Pravac = rbDva.Checked;
+                    insert.PravacS = rbDva.Text;
+
                     insert.Cijena*=1.67;
                 }
                 await _karta.Insert<KartaModel>(insert);

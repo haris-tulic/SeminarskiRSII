@@ -49,7 +49,6 @@ namespace SeminarskiAPI
             //var connection = Configuration.GetConnectionString("eAutobus");
             services.AddDbContext<eAutobus>(options => options.UseSqlServer(connection));
 
-            services.AddAuthentication("BasicAuthentication");
             services.AddScoped<IKupacService, KupacService>();
             services.AddScoped<IAutobusService, AutobusService>();
             services.AddScoped<IAutobusVozacService, AutobusVozacService>();
@@ -98,9 +97,9 @@ namespace SeminarskiAPI
                 
             });
             app.UseDeveloperExceptionPage();
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseAuthentication();
-             
+            
             app.UseMvc();
         }
 

@@ -173,7 +173,7 @@ namespace eAutobus.WinUI.RedVoznji
             this.dtpPolazak.Name = "dtpPolazak";
             this.dtpPolazak.Size = new System.Drawing.Size(178, 20);
             this.dtpPolazak.TabIndex = 20;
-            this.dtpPolazak.Value = new System.DateTime(2021, 10, 23, 16, 1, 0, 0);
+            this.dtpPolazak.Value = new System.DateTime(2022, 1, 6, 16, 1, 0, 0);
             // 
             // dtpDolazak
             // 
@@ -206,10 +206,12 @@ namespace eAutobus.WinUI.RedVoznji
             // 
             // dtpDatum
             // 
+            this.dtpDatum.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDatum.Location = new System.Drawing.Point(119, 258);
             this.dtpDatum.Name = "dtpDatum";
             this.dtpDatum.Size = new System.Drawing.Size(178, 20);
             this.dtpDatum.TabIndex = 24;
+            this.dtpDatum.ValueChanged += new System.EventHandler(this.dtpDatum_ValueChanged);
             // 
             // label9
             // 

@@ -26,8 +26,8 @@ namespace SeminarskiWebAPI.Security
 
 
         protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
-        {
-            if (!Request.Headers.ContainsKey("Authorization") )
+            {
+            if (!Request.Headers.ContainsKey("Authorization"))
             {
                 return AuthenticateResult.Fail("Missing authorization header");
             }
@@ -54,7 +54,7 @@ namespace SeminarskiWebAPI.Security
             };
             if (user!=null)
             {
-                claims.Add(new Claim(ClaimTypes.Role, user.Uloga.Naziv));
+                claims.Add(new Claim(ClaimTypes.Role, user.Uloge));
             }
 
             var identity = new ClaimsIdentity(claims, Scheme.Name);

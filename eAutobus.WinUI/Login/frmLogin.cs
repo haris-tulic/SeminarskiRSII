@@ -14,7 +14,7 @@ namespace eAutobus.WinUI.Login
 {
     public partial class frmLogin : Form
     {
-        private readonly APIService _api = new APIService("Korisnici");
+        private readonly APIService _api = new APIService("Korisnik");
         public frmLogin()
         {
             InitializeComponent();
@@ -29,6 +29,7 @@ namespace eAutobus.WinUI.Login
                 var result =await _api.Get<List<KorisnikModel>>(null);
                 frmPocetna frm = new frmPocetna();
                 frm.Show();
+                this.Hide();
             }
             catch 
             {

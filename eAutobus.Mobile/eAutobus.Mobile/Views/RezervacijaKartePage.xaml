@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewModels="clr-namespace:eAutobus.Mobile.ViewModels"
+             x:Class="eAutobus.Mobile.Views.RezervacijaKartePage">
+    <ContentPage.BindingContext>
+        <viewModels:RezervacijaKarteViewModel></viewModels:RezervacijaKarteViewModel>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+       
+            <Grid HorizontalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                
+                        <Label Text="Kupi kartu"
+                            VerticalOptions="CenterAndExpand" 
+                            HorizontalOptions="CenterAndExpand"
+                               Margin="20"
+                               Grid.Row="0"
+                               Grid.ColumnSpan="2"
+                               FontAttributes="Bold"/>
+                <StackLayout Margin="10" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="1" Grid.Column="0" WidthRequest="400">
+                    <Label Text="Ime:" />
+                    <Entry x:Name="Ime" Text="{Binding Ime}" Margin="5"></Entry>
+
+                    <Label Text="Prezime:" />
+                    <Entry x:Name="Prezime" Text="{Binding Prezime}" Margin="5"></Entry>
+
+                    <Label Text="Adresa stanovanja:" />
+                    <Entry x:Name="AdresaStanovanja" Text="{Binding AdresaStanovanja}" Margin="5"></Entry>
+
+                    <Label Text="Broj telefona:" />
+                    <Entry x:Name="BrojTelefona" Text="{Binding BrojTelefona}" Margin="5"></Entry>
+
+                    <Label Text="Polazište"/>
+                    <Picker ItemsSource="{Binding StanicaList}" SelectedItem="{Binding Polazak}" ItemDisplayBinding="{Binding NazivLokacijeStanice}" Margin="5"></Picker>
+
+                </StackLayout >
+
+                <StackLayout Margin="10" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="1" Grid.Column="1" WidthRequest="400">
+                        <Label Text="Odredište:"/>
+                        <Picker ItemsSource="{Binding StanicaList}" SelectedItem="{Binding Odrediste}" ItemDisplayBinding="{Binding NazivLokacijeStanice}" Margin="5"></Picker>
+
+                        <Label Text="Tip karte:"/>
+                        <Picker ItemsSource="{Binding TipKarteList}" SelectedItem="{Binding TipKarte}" ItemDisplayBinding="{Binding Naziv}" Margin="5"></Picker>
+
+                        <Label Text="Vrsta karte:"/>
+                        <Picker ItemsSource="{Binding VrstaKarteList}" SelectedItem="{Binding VrstaKarte}" ItemDisplayBinding="{Binding Naziv}" Margin="5"></Picker>
+
+                        <Label Text="Smjer:"/>
+                <Grid>
+                    <RadioButton Content="U jednom smjeru" Margin="5" IsChecked="True" HorizontalOptions="Start" CheckedChanged="PravacChanged" Value="U jednom smjeru"/>
+                    <RadioButton Content="U oba smjera"  Margin="5" CheckedChanged="PravacChanged" HorizontalOptions="End" Value="U oba smjera"/>
+                </Grid>
+                <Label Text="Cijena:"/>
+                        <Entry x:Name="Cijena" Text="{Binding Cijena}" IsReadOnly="True"></Entry>
+                </StackLayout>
+                
+                <StackLayout Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="20">
+                    <Button Text="Kupi kartu" Command="{Binding KupiKartu}"></Button>
+                </StackLayout>
+            </Grid>
+    </ContentPage.Content>
+</ContentPage>

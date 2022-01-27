@@ -15,6 +15,10 @@ namespace SeminarskiWebAPI.Database
             public string BrojTelefona { get; set; }
             public int KartaID { get; set; }
             public Karta Karta { get; set; }
+            public string KorisnickoIme { get; set; }
+            public string LozinkaHash { get; set; }
+            public string LozinkaSalt { get; set; }
+            public string Email { get; set; }
     }
 
 }

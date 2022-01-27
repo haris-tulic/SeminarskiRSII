@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewModels="clr-namespace:eAutobus.Mobile.ViewModels"
+             x:Class="eAutobus.Mobile.Views.CjenovnikPage">
+    <ContentPage.BindingContext>
+        <viewModels:CjenovnikViewModel></viewModels:CjenovnikViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+       
+        
+        
+        <StackLayout WidthRequest="150">
+            <Label Text="Cjenovnik"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Margin="20"/>
+            <Picker ItemsSource="{Binding TipKarataList}" SelectedItem="{Binding TipKarte}" HorizontalOptions="CenterAndExpand" ItemDisplayBinding="{Binding Naziv}" WidthRequest="250"></Picker>
+            <CollectionView x:Name="CjenovnikList"
+                            HorizontalOptions="CenterAndExpand"
+                            Margin="20"
+                ItemsSource="{Binding CjenovnikList}"
+                            SelectionMode="None">
+             
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+                            <Label Text="{Binding VrstaKarte}" 
+                                LineBreakMode="WordWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                            <Label Text="{Binding Tipkarte}" 
+                                LineBreakMode="WordWrap" 
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                            <Label Text="{Binding Zona}" 
+                                LineBreakMode="WordWrap" 
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                            <Label Text="{Binding Cijena}" 
+                                LineBreakMode="WordWrap" 
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                        </StackLayout> 
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

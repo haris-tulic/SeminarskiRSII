@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:eAutobus.Mobile.ViewModels"
+             x:Class="eAutobus.Mobile.Views.RegistracijaPage"
+                Title="Registracija">
+    <ContentPage.BindingContext>
+        <viewModels:RegistracijaViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid HorizontalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                
+            </Grid.ColumnDefinitions>
+            
+            <Label Text="Registracija!"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" 
+                   Grid.Row="0"
+                   Margin="15"
+                   FontFamily="Bold"
+                   Grid.ColumnSpan="2"/>
+            <StackLayout Margin="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="1">
+                
+                <Label Text="Ime:" Margin="0,10"/>
+                <Entry x:Name="Ime" Placeholder="Ime"  Text="{Binding Ime}" ></Entry>
+
+                <Label Text="Prezime:" Margin="0,10"/>
+                <Entry x:Name="Prezime" Placeholder="Prezime"  Text="{Binding Prezime}" ></Entry>
+
+                <Label Text="Email:" Margin="0,10"/>
+                <Entry x:Name="Email" Placeholder="Email"  Text="{Binding Email}" ></Entry>
+
+                <Label Text="AdresaStanovanja:" Margin="0,10"/>
+                <Entry x:Name="AdresaStanovanja" Placeholder="AdresaStanovanja"  Text="{Binding AdresaStanovanja}" ></Entry>
+            
+            </StackLayout>
+
+            <StackLayout Margin="10" HorizontalOptions="EndAndExpand"  VerticalOptions="CenterAndExpand" Grid.Column="1" Grid.Row="1">
+           
+                <Label Text="BrojTelefona:" Margin="0,10"/>
+                <Entry x:Name="BrojTelefona" Placeholder="BrojTelefona"  Text="{Binding BrojTelefona}" Keyboard="Numeric" ></Entry>
+
+                <Label Text="KorisnickoIme:" Margin="0,10"/>
+                <Entry x:Name="KorisnickoIme" Placeholder="KorisnickoIme" Text="{Binding KorisnickoIme}" ></Entry>
+
+                <Label Text="Password:" Margin="0,10"/>
+                <Entry x:Name="Password" Placeholder="Password" IsPassword="True" Text="{Binding Password}" ></Entry>
+
+                <Label Text="PotvrdaPassworda:" Margin="0,10"/>
+                <Entry x:Name="PotvrdaPassworda" Placeholder="PotvrdaPassworda"  IsPassword="True" Text="{Binding PotvrdaPassworda}" ></Entry>
+                
+            
+            </StackLayout>
+            <StackLayout  Grid.Row="2" HorizontalOptions="CenterAndExpand"  VerticalOptions="CenterAndExpand" Grid.ColumnSpan="2">
+                <Button x:Name="RegistrujSeBtn" Text="Registruj se" CornerRadius="5" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Command="{Binding RegistrujSeCommand}"  ></Button>
+                <Label Padding="20" Text="Imate korisnički račun?" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                <Button x:Name="PrijaviSeBtn" Text="Prijavi se" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" CornerRadius="5" Command="{Binding PrijaviSeCommand}"  ></Button>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

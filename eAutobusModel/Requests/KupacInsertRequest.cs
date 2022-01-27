@@ -30,7 +30,8 @@ namespace eAutobusModel.Requests
 
         public int KartaID { get; set; }
 
-
-
+        public string KorisnickoIme { get; set; }
+       
+        public string Password { get; set; }
     }
 }

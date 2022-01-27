@@ -160,6 +160,8 @@ namespace SeminarskiWebAPI.Migrations
 
                     b.Property<bool>("Pravac");
 
+                    b.Property<string>("PravacS");
+
                     b.Property<int>("TipKarteID");
 
                     b.Property<int>("VrstaKarteID");
@@ -245,9 +247,17 @@ namespace SeminarskiWebAPI.Migrations
 
                     b.Property<string>("BrojTelefona");
 
+                    b.Property<string>("Email");
+
                     b.Property<string>("Ime");
 
                     b.Property<int>("KartaID");
+
+                    b.Property<string>("KorisnickoIme");
+
+                    b.Property<string>("LozinkaHash");
+
+                    b.Property<string>("LozinkaSalt");
 
                     b.Property<string>("Prezime");
 
