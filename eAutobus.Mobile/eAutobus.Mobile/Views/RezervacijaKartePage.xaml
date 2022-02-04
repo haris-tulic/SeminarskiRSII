@@ -65,8 +65,9 @@
                     <RadioButton Content="U oba smjera"  Margin="5" CheckedChanged="PravacChanged" HorizontalOptions="End" Value="U oba smjera"/>
                 </Grid>
                 <Label Text="Cijena:"/>
-                        <Entry x:Name="Cijena" Text="{Binding Cijena}" IsReadOnly="True"></Entry>
-                </StackLayout>
+                        <Entry x:Name="Cijena" Text="{Binding Cijena} "  ClearButtonVisibility="WhileEditing" IsReadOnly="True" ></Entry>
+                
+            </StackLayout>
                 
                 <StackLayout Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="20">
                     <Button Text="Kupi kartu" Command="{Binding KupiKartu}"></Button>

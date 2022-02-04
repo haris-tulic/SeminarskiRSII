@@ -42,7 +42,7 @@ namespace eAutobus.Mobile
             {
                 if (ex.Call.HttpStatus == System.Net.HttpStatusCode.Unauthorized)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Greška", "Netačan username ili password!", "Uredu");
+                    await Application.Current.MainPage.DisplayAlert("Greška", "Neispravan username ili password!", "Uredu");
                 }
                 throw;
             }

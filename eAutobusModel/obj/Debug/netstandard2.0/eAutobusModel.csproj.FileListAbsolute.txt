@@ -11,7 +11,6 @@ C:\Users\x\source\repos\Seminarski\eAutobusModel\obj\Debug\netstandard2.0\eAutob
 D:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\bin\Debug\netstandard2.0\eAutobusModel.deps.json
 D:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\bin\Debug\netstandard2.0\eAutobusModel.dll
 D:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\bin\Debug\netstandard2.0\eAutobusModel.pdb
-D:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.csproj.AssemblyReference.cache
 D:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.GeneratedMSBuildEditorConfig.editorconfig
 D:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.AssemblyInfoInputs.cache
 D:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.AssemblyInfo.cs

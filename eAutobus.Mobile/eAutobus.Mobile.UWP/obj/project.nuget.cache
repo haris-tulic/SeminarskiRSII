@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "vX3Fcx4Ja8sVDzL7qSYx6pYb2Ol9ih0lgAVYq3sQRXpWRmw196aMzHToh0c55K82smLKiaQPvmRGvnz+Vw2f3Q==",
+  "dgSpecHash": "Cy7viHr6IOwnQWdjMEOcApDSRyQhjD7EZ3GuRdlfRBSqFeqdcVV2h7tVmggL65MNbtaPHVZ7RBArJHldccllmQ==",
   "success": true,
   "projectFilePath": "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile.UWP\\eAutobus.Mobile.UWP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\x\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\x\\.nuget\\packages\\cefsharp.common\\97.1.61\\cefsharp.common.97.1.61.nupkg.sha512",
     "C:\\Users\\x\\.nuget\\packages\\flurl\\2.8.2\\flurl.2.8.2.nupkg.sha512",
     "C:\\Users\\x\\.nuget\\packages\\flurl.http\\2.4.2\\flurl.http.2.4.2.nupkg.sha512",
     "C:\\Users\\x\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

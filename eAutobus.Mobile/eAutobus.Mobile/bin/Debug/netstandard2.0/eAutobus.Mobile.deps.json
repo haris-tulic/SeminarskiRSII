@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "eAutobus.Mobile/1.0.0": {
         "dependencies": {
+          "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
           "NETStandard.Library": "2.0.3",
@@ -32,6 +33,7 @@
           }
         }
       },
+      "CefSharp.Common/97.1.61": {},
       "Flurl/2.8.2": {
         "runtime": {
           "lib/netstandard2.0/Flurl.dll": {
@@ -379,6 +381,13 @@
       "sha512": "sha512-uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
       "path": "automapper/10.1.1",
       "hashPath": "automapper.10.1.1.nupkg.sha512"
+    },
+    "CefSharp.Common/97.1.61": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KZ8dvQtNxrws0UMIAEVnUlCKj4n6t7/fczOSyixfnBy9H4AtgismddeCgV1Z9GEK8Ts4Fml0W3w42AjfiwZoNg==",
+      "path": "cefsharp.common/97.1.61",
+      "hashPath": "cefsharp.common.97.1.61.nupkg.sha512"
     },
     "Flurl/2.8.2": {
       "type": "package",

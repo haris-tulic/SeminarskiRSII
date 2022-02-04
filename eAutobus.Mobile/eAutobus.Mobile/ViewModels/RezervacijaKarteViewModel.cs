@@ -23,7 +23,8 @@ namespace eAutobus.Mobile.ViewModels
         public ObservableCollection<TipKarteModel> TipKarteList { get; set; } = new ObservableCollection<TipKarteModel>();
         public ObservableCollection<VrstaKarteModel> VrstaKarteList { get; set; } = new ObservableCollection<VrstaKarteModel>();
         public ObservableCollection<StanicaModel> StanicaList { get; set; } = new ObservableCollection<StanicaModel>();
-        
+        public double ccijena;
+        public ICommand CijenaCommand { get; }
 
         public RezervacijaKarteViewModel()
         {
@@ -35,6 +36,22 @@ namespace eAutobus.Mobile.ViewModels
             if (_novaKarta!=null)
             {
                 await _serviceK.Insert<KartaModel>(_novaKarta);
+            }
+        }
+        public async Task DodajCijenu()
+        {
+            if (_cijenaKarte.OdredisteID.ToString()!="0" && 
+                _cijenaKarte.PolazisteID.ToString() != "0" && 
+                _cijenaKarte.VrstaKarteID.ToString() != "0" && 
+                _cijenaKarte.TipkarteID.ToString() != "0")
+            {
+
+                var cijenovnik = await _serviceC.Get<List<CjenovnikModel>>(_cijenaKarte);
+                foreach (var item in cijenovnik)
+                {
+                    Cijena = item.Cijena;
+                     ccijena = item.Cijena;    
+                }
             }
         }
         public async Task Ucitaj()
@@ -68,6 +85,8 @@ namespace eAutobus.Mobile.ViewModels
                 if (value!=null)
                 {
                     _novaKarta.PolazisteID = value.StanicaID;
+                    _cijenaKarte.PolazisteID = value.StanicaID;
+                    var t= DodajCijenu();
                 }
             }
         }
@@ -80,6 +99,8 @@ namespace eAutobus.Mobile.ViewModels
                 if (value!=null)
                 {
                     _novaKarta.OdredisteID = value.StanicaID;
+                    _cijenaKarte.OdredisteID = value.StanicaID;
+                    var t = DodajCijenu();
                 }
             }
         }
@@ -93,6 +114,7 @@ namespace eAutobus.Mobile.ViewModels
                 {
                     _novaKarta.TipKarteID = value.TipKarteID;
                     _cijenaKarte.TipkarteID = value.TipKarteID;
+                    var t = DodajCijenu();
                 }
             }
         }
@@ -102,12 +124,11 @@ namespace eAutobus.Mobile.ViewModels
         {
             get { return _vrstaKarte; }
             set { SetProperty(ref _vrstaKarte, value);
-                if (value!=null && TipKarte!=null)
+                if (value!=null)
                 {
                     _novaKarta.VrstaKarteID = value.VrstaKarteID;
                     _cijenaKarte.VrstaKarteID = value.VrstaKarteID;
-                    var cijena = _serviceC.Get<List<CjenovnikModel>>(_cijenaKarte);
-                    
+                    var t = DodajCijenu();
                 }
             } 
         }
@@ -161,10 +182,14 @@ namespace eAutobus.Mobile.ViewModels
         public double Cijena
         {
             get { return _cijena; }
-            set { SetProperty(ref _cijena, value);
+            set {
+                SetProperty(ref _cijena, value);
+
                 _novaKarta.Cijena = value;
             }
         }
+
+      
 
         private string _pravacS;
         public string PravacS

@@ -30,6 +30,16 @@ namespace eAutobus.Mobile.Views
             RadioButton pravac = sender as RadioButton;
             model.Pravac =pravac.IsChecked;
             model.PravacS = pravac.Value.ToString();
+            if (model.PravacS=="U oba smjera" && model.Pravac==true)
+            {
+                var novaCijena = model.Cijena * 1.67;
+                model.Cijena = novaCijena;
+            }
+            else if(model.PravacS == "U jednom smjeru" && model.Pravac == true)
+            {
+                var staraCijena = model.Cijena/1.67;
+                model.Cijena = staraCijena;
+            }
         }
     }
 }

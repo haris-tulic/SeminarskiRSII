@@ -10,7 +10,7 @@ namespace eAutobus.Mobile.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        private readonly APIService _service = new APIService("Korisnik");
+        private readonly APIService _service = new APIService("Kupac");
         public ICommand LoginCommand { get; }
         public ICommand RegistrujSeCommand { get; }
         private string _userName;
@@ -29,12 +29,12 @@ namespace eAutobus.Mobile.ViewModels
         public LoginViewModel()
         {
             LoginCommand = new Command(OnLoginClicked);
-            RegistrujSeCommand = new Command(()=>Registruj());
+            RegistrujSeCommand = new Command(async()=> await Registruj());
         }
 
-        public  void Registruj()
+        public async Task Registruj()
         {
-            Application.Current.MainPage = new RegistracijaPage();
+           await  Application.Current.MainPage.Navigation.PushAsync(new RegistracijaPage());
 
         }
 
@@ -44,14 +44,14 @@ namespace eAutobus.Mobile.ViewModels
             //await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
             APIService.Username = UserName;
             APIService.Password = Password;
-            try
+            try 
             {
                 await _service.Get<dynamic>(null);
-                Application.Current.MainPage = new AppShell();
+                Application.Current.MainPage = new MainPage();
             }
             catch (Exception)
             {
-
+                await Application.Current.MainPage.DisplayAlert("Greška!", "Pogrešan username ili password!", "Uredu");
             }
         }
     }

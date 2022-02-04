@@ -11,8 +11,10 @@
         <viewModels:LoginViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" HorizontalOptions="Center" Margin="50" VerticalOptions="CenterAndExpand">
-            <Label FontSize="18" Text="Login"  Margin="10"/>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+        <Label FontSize="18" Text="Login"  Margin="10"/>
+
+        <StackLayout Padding="10,0,10,0" HorizontalOptions="CenterAndExpand" Margin="50" VerticalOptions="CenterAndExpand" WidthRequest="200" >
 
             <Label Text="Korisnicko ime:" />
             <Entry x:Name="KorisnickoIme" Placeholder="KorisnickoIme" Margin="20" Text="{Binding UserName}" ></Entry>
@@ -25,6 +27,7 @@
                 <Label Text="Nemate korisnički račun?" HorizontalOptions="FillAndExpand" />
                 <Button Margin="10" Text="Registruj se" Command="{Binding RegistrujSeCommand}"></Button>
             </StackLayout>
+        </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

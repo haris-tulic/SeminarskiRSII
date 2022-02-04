@@ -150,10 +150,6 @@ namespace SeminarskiWebAPI.Migrations
 
                     b.Property<double>("Cijena");
 
-                    b.Property<DateTime>("DatumVadjenjaKarte");
-
-                    b.Property<DateTime>("DatumVazenjaKarte");
-
                     b.Property<int>("OdredisteID");
 
                     b.Property<int>("PolazisteID");
@@ -177,6 +173,31 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasIndex("VrstaKarteID");
 
                     b.ToTable("Karta");
+                });
+
+            modelBuilder.Entity("SeminarskiWebAPI.Database.KartaKupac", b =>
+                {
+                    b.Property<int>("KartaKupacID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Aktivna");
+
+                    b.Property<DateTime>("DatumVadjenjaKarte");
+
+                    b.Property<DateTime>("DatumVazenjaKarte");
+
+                    b.Property<int>("KartaID");
+
+                    b.Property<int>("KupacID");
+
+                    b.HasKey("KartaKupacID");
+
+                    b.HasIndex("KartaID");
+
+                    b.HasIndex("KupacID");
+
+                    b.ToTable("KartaKupac");
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.KorisniciUloge", b =>
@@ -251,8 +272,6 @@ namespace SeminarskiWebAPI.Migrations
 
                     b.Property<string>("Ime");
 
-                    b.Property<int>("KartaID");
-
                     b.Property<string>("KorisnickoIme");
 
                     b.Property<string>("LozinkaHash");
@@ -262,8 +281,6 @@ namespace SeminarskiWebAPI.Migrations
                     b.Property<string>("Prezime");
 
                     b.HasKey("KupacID");
-
-                    b.HasIndex("KartaID");
 
                     b.ToTable("Kupac");
                 });
@@ -527,6 +544,19 @@ namespace SeminarskiWebAPI.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("SeminarskiWebAPI.Database.KartaKupac", b =>
+                {
+                    b.HasOne("SeminarskiWebAPI.Database.Karta", "Karta")
+                        .WithMany("KupacList")
+                        .HasForeignKey("KartaID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("SeminarskiWebAPI.Database.Kupac", "Kupac")
+                        .WithMany("KartaList")
+                        .HasForeignKey("KupacID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("SeminarskiWebAPI.Database.KorisniciUloge", b =>
                 {
                     b.HasOne("SeminarskiWebAPI.Database.Korisnik", "Korisnik")
@@ -550,14 +580,6 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasOne("SeminarskiWebAPI.Database.Uloge", "Uloge")
                         .WithMany("Korisnik")
                         .HasForeignKey("UlogeID")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("SeminarskiWebAPI.Database.Kupac", b =>
-                {
-                    b.HasOne("SeminarskiWebAPI.Database.Karta", "Karta")
-                        .WithMany("Kupac")
-                        .HasForeignKey("KartaID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

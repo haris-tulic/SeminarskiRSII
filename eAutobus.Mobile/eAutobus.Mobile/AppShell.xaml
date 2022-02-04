@@ -2,7 +2,6 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:eAutobus.Mobile.Views"
-       Title="eAutobus.Mobile"
        x:Class="eAutobus.Mobile.AppShell">
 
     <!--
@@ -37,6 +36,7 @@
         <ShellContent Title="Karta" Icon="icon_feed.png" Route="RezervacijaKartePage" ContentTemplate="{DataTemplate local:RezervacijaKartePage}" />
         <ShellContent Title="Prijavite se" Icon="icon_feed.png" Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
         <ShellContent Title="Ocjeni uslugu" Icon="icon_feed.png" Route="OcjenaPage" ContentTemplate="{DataTemplate local:OcjenaPage}"  />
+        
 
 
 

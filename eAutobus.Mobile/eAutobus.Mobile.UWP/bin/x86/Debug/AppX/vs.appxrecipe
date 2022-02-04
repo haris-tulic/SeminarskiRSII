@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-01-26T23:00:26.178</Modified>
+      <Modified>2022-02-04T17:55:52.008</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\eAutobus.Mobile.UWP.exe">
       <PackagePath>entrypoint\eAutobus.Mobile.UWP.exe</PackagePath>
-      <Modified>2022-01-26T23:00:23.063</Modified>
+      <Modified>2022-02-04T17:55:49.521</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\x\.nuget\packages\automapper\10.1.1\lib\netstandard2.0\AutoMapper.dll">
       <PackagePath>AutoMapper.dll</PackagePath>
@@ -148,11 +148,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\bin\Debug\netstandard2.0\eAutobus.Mobile.dll">
       <PackagePath>eAutobus.Mobile.dll</PackagePath>
-      <Modified>2022-01-27T00:17:47.287</Modified>
+      <Modified>2022-02-04T18:08:35.096</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\bin\Debug\netstandard2.0\eAutobusModel.dll">
       <PackagePath>eAutobusModel.dll</PackagePath>
-      <Modified>2022-01-25T17:25:09.631</Modified>
+      <Modified>2022-02-02T14:18:29.340</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\x\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -166,9 +166,49 @@
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
       <Modified>2021-02-12T02:08:38.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x64\CefSharp.Core.Runtime.xml">
+      <PackagePath>x64\CefSharp.Core.Runtime.xml</PackagePath>
+      <Modified>2022-01-29T23:17:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x86\CefSharp.BrowserSubprocess.Core.dll">
+      <PackagePath>CefSharp.BrowserSubprocess.Core.dll</PackagePath>
+      <Modified>2022-01-29T23:15:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x86\CefSharp.Core.Runtime.dll">
+      <PackagePath>CefSharp.Core.Runtime.dll</PackagePath>
+      <Modified>2022-01-29T23:16:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x86\CefSharp.BrowserSubprocess.exe">
+      <PackagePath>CefSharp.BrowserSubprocess.exe</PackagePath>
+      <Modified>2022-01-29T23:15:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x86\CefSharp.Core.Runtime.xml">
+      <PackagePath>CefSharp.Core.Runtime.xml</PackagePath>
+      <Modified>2022-01-29T23:16:12.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2022-01-10T17:20:53.431</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x64\CefSharp.BrowserSubprocess.Core.dll">
+      <PackagePath>x64\CefSharp.BrowserSubprocess.Core.dll</PackagePath>
+      <Modified>2022-01-29T23:16:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x64\CefSharp.Core.Runtime.dll">
+      <PackagePath>x64\CefSharp.Core.Runtime.dll</PackagePath>
+      <Modified>2022-01-29T23:17:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\lib\net452\CefSharp.dll">
+      <PackagePath>x86\CefSharp.dll</PackagePath>
+      <Modified>2022-01-29T23:16:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\lib\net452\CefSharp.dll">
+      <PackagePath>x64\CefSharp.dll</PackagePath>
+      <Modified>2022-01-29T23:16:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x64\CefSharp.BrowserSubprocess.exe">
+      <PackagePath>x64\CefSharp.BrowserSubprocess.exe</PackagePath>
+      <Modified>2022-01-29T23:16:50.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
@@ -323,11 +363,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-01-26T23:00:22.916</Modified>
+      <Modified>2022-02-04T17:55:49.244</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-01-26T23:00:22.916</Modified>
+      <Modified>2022-02-04T17:55:49.244</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -343,11 +383,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-01-25T18:09:12.869</Modified>
+      <Modified>2022-02-02T14:20:02.699</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Core\eAutobus.Mobile.UWP.exe">
       <PackagePath>eAutobus.Mobile.UWP.exe</PackagePath>
-      <Modified>2022-01-26T23:00:26.172</Modified>
+      <Modified>2022-02-04T17:55:51.996</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

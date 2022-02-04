@@ -11,6 +11,7 @@ namespace eAutobus.Mobile
         public AppShell()
         {
             InitializeComponent();
+
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute(nameof(CjenovnikPage), typeof(CjenovnikPage));
@@ -18,6 +19,8 @@ namespace eAutobus.Mobile
             Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
             Routing.RegisterRoute(nameof(RegistracijaPage), typeof(RegistracijaPage));
             Routing.RegisterRoute(nameof(OcjenaPage), typeof(OcjenaPage));
+            Routing.RegisterRoute(nameof(RezervacijaKartePage), typeof(RezervacijaKartePage));
+
 
 
 

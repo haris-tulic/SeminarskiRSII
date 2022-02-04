@@ -37,6 +37,8 @@ namespace SeminarskiWebAPI.Database
             public virtual DbSet<KupacOcjena> KupacOcjena { get; set; }
             public virtual DbSet<Garaza> Garaza { get; set; }
             public virtual DbSet<Korisnik> Korisnik { get; set; }
+            public virtual DbSet<KartaKupac> KartaKupac { get; set; }
+
 
 
 

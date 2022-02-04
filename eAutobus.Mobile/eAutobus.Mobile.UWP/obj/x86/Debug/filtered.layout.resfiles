@@ -1,4 +1,11 @@
 WinMetadata\Windows.winmd
+CefSharp.BrowserSubprocess.Core.dll
+CefSharp.BrowserSubprocess.Core.pdb
+CefSharp.BrowserSubprocess.exe
+CefSharp.BrowserSubprocess.pdb
+CefSharp.Core.Runtime.dll
+CefSharp.Core.Runtime.pdb
+CefSharp.Core.Runtime.xml
 Assets\LargeTile.scale-100.png
 Assets\LargeTile.scale-200.png
 Assets\LargeTile.scale-400.png

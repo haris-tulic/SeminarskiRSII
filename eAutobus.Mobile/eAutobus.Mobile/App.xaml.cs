@@ -14,8 +14,7 @@ namespace eAutobus.Mobile
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
-            //MainPage = new LoginPage();
+            MainPage = new NavigationPage(new AppShell());
         }
 
         protected override void OnStart()

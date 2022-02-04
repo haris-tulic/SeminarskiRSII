@@ -24,7 +24,7 @@ namespace eAutobus.Mobile.Views
         {
             base.OnAppearing();
         }
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void Registracija_Clicked(object sender, EventArgs e)
         {
             bool postoji = false; 
             if (string.IsNullOrEmpty(Ime.Text))
@@ -85,7 +85,7 @@ namespace eAutobus.Mobile.Views
                 }
                 if (Password.Text != PotvrdaPassworda.Text)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Upozorenje", "Šifre se razlikuju", "OK");
+                    await Application.Current.MainPage.DisplayAlert("Upozorenje", "Password se ne poklapa", "OK");
                     ok = false;
                 }
                 if (ok)

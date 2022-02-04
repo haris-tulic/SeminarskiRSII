@@ -124,8 +124,38 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft\Xamarin\NuGet\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x64\CefSharp.Core.Runtime.xml">
+      <PackagePath>x64\CefSharp.Core.Runtime.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x86\CefSharp.BrowserSubprocess.Core.dll">
+      <PackagePath>CefSharp.BrowserSubprocess.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x86\CefSharp.Core.Runtime.dll">
+      <PackagePath>CefSharp.Core.Runtime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x86\CefSharp.BrowserSubprocess.exe">
+      <PackagePath>CefSharp.BrowserSubprocess.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x86\CefSharp.Core.Runtime.xml">
+      <PackagePath>CefSharp.Core.Runtime.xml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x64\CefSharp.BrowserSubprocess.Core.dll">
+      <PackagePath>x64\CefSharp.BrowserSubprocess.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x64\CefSharp.Core.Runtime.dll">
+      <PackagePath>x64\CefSharp.Core.Runtime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\lib\net452\CefSharp.dll">
+      <PackagePath>x86\CefSharp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\lib\net452\CefSharp.dll">
+      <PackagePath>x64\CefSharp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\x\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x64\CefSharp.BrowserSubprocess.exe">
+      <PackagePath>x64\CefSharp.BrowserSubprocess.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>

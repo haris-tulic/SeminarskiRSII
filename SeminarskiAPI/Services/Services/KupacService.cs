@@ -57,6 +57,7 @@ namespace SeminarskiWebAPI.Services
             return _mapper.Map<eAutobusModel.KupacModel>(entity);
         }
 
+
         public eAutobusModel.KupacModel Insert(KupacInsertRequest request)
         {
           

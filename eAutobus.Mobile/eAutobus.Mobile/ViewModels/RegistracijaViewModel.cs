@@ -18,20 +18,19 @@ namespace eAutobus.Mobile.ViewModels
 
         public RegistracijaViewModel()
         {
-            RegistrujSeCommand = new Command(async () => await RegistrujSe());
-            PrijaviSeCommand = new Command(() => PrijaviSe());
+            //RegistrujSeCommand = new Command(async () => await RegistrujSe());
+            PrijaviSeCommand = new Command(async() => await PrijaviSe());
         }
 
-        public  void PrijaviSe()
+        public async Task PrijaviSe()
         {
-            Application.Current.MainPage = new LoginPage();
-
+            await Application.Current.MainPage.Navigation.PushAsync(new LoginPage());
         }
 
         public async Task RegistrujSe()
         {
             if (Password==PotvrdaPassworda)
-            {
+            { 
                 KupacInsertRequest noviKupac = new KupacInsertRequest();
                 noviKupac.Ime = Ime;
                 noviKupac.Prezime = Prezime;
@@ -44,7 +43,7 @@ namespace eAutobus.Mobile.ViewModels
                 {
                     await _serviceK.Insert<KupacModel>(noviKupac);
                     await Application.Current.MainPage.DisplayAlert("Uspješno", "Uspješno ste se registrovali.", "Uredu");
-                    await AppShell.Current.GoToAsync($"{nameof(AboutPage)}");
+                    await Application.Current.MainPage.Navigation.PushAsync(new LoginPage());
                 }
                 catch (Exception)
                 {

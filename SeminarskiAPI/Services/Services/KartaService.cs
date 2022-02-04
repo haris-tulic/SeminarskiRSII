@@ -16,12 +16,14 @@ namespace SeminarskiWebAPI.Services
         private readonly eAutobus _context;
         private readonly IMapper _mapper;
         private readonly IKupacService _kupac;
+        private readonly IKartaKupacService _kartaKupac;
 
-        public KartaService(eAutobus context,IMapper mapper, IKupacService kupac)
+        public KartaService(eAutobus context, IMapper mapper, IKupacService kupac, IKartaKupacService kartaKupac)
         {
             _context = context;
             _mapper = mapper;
             _kupac = kupac;
+            _kartaKupac = kartaKupac;
         }
         public eAutobusModel.KartaModel Delete(int id)
         {
@@ -34,7 +36,7 @@ namespace SeminarskiWebAPI.Services
         public List<KartaModel> Get(KartaGetRequest request)
         {
             var query = _context.Karta.Include(v => v.VrstaKarte)
-                                    .Include(k => k.Kupac)
+                                    .Include("KartaKupac.Kupac")
                                     .Include(t => t.TipKarte)
                                     .AsQueryable();
             var list = query.ToList();
@@ -61,10 +63,23 @@ namespace SeminarskiWebAPI.Services
                 Prezime = request.Prezime,
                 AdresaStanovanja = request.AdresaStanovanja,
                 BrojTelefona = request.BrojTelefona,
-                KartaID = entity.KartaID,
             };
 
             KupacModel newKupac = _kupac.Insert(kupac);
+
+            var kupacKarta = new KartaKupacUpsertRequest()
+            {
+                Aktivna = true,
+                DatumVadjenjaKarte = request.DatumVadjenjaKarte,
+                DatumVazenjaKarte = request.DatumVazenjaKarte,
+                KartaID = entity.KartaID,
+                KupacID = newKupac.KupacID,
+                Pravac = request.Pravac,
+                PravacS = request.PravacS,
+            };
+
+            KartaKupacModel osobineKarte = _kartaKupac.Insert(kupacKarta);
+            
             return _mapper.Map<KartaModel>(entity);
         }
 
