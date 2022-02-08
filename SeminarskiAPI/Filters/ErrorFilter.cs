@@ -20,7 +20,7 @@ namespace SeminarskiWebAPI.Filters
             }
             else
             {
-                context.ModelState.AddModelError("ERROR", "Greška na serveru");
+                context.ModelState.AddModelError("ERROR", "Greška na serveru!");
                 context.HttpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
             }
 

@@ -39,13 +39,16 @@ namespace eAutobus.Mobile.Views
                     case (int)MenuItemsType.RedVoznje:
                         Menu.Add(id, new NavigationPage(new RedVoznjePage()));
                         break;
+                    case (int)MenuItemsType.HistorijaKarata:
+                        Menu.Add(id, new NavigationPage(new HistorijaKarataPage()));
+                        break;
                     case (int)MenuItemsType.RezervacijaKarte:
                         Menu.Add(id, new NavigationPage(new RezervacijaKartePage()));
                         break;
-                    //case (int)MenuItemsType.OdjaviSe:
-                    //    Menu.Add(id, new NavigationPage(new OdjaviSePage()));
-                    //    break;
-                  
+                    case (int)MenuItemsType.OdjaviSe:
+                        Menu.Add(id, new NavigationPage(new OdjaviSePage()));
+                        break;
+
                 }
             }
 

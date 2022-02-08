@@ -1,4 +1,6 @@
-﻿using eAutobusModel.Requests;
+﻿using eAutobusModel;
+using eAutobusModel.Requests;
+using SeminarskiWebAPI.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +15,6 @@ namespace SeminarskiWebAPI.Services
         eAutobusModel.KupacModel Insert(KupacInsertRequest request);
         eAutobusModel.KupacModel Update(KupacInsertRequest request,int id);
         eAutobusModel.KupacModel Delete(int id);
+        Kupac PronadjiKupca(KupacInsertRequest kupac);
     }
 }

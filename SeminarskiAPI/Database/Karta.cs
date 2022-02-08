@@ -21,7 +21,6 @@ namespace SeminarskiWebAPI.Database
         public int VrstaKarteID { get; set; }
         public VrstaKarte VrstaKarte { get; set; }
         public double  Cijena { get; set; }
-   
 
     }
 }

@@ -29,8 +29,9 @@ namespace eAutobus.Mobile.Views
                 new HomeMenuItem{Id=MenuItemsType.Cjenovnik, Title="Cjenovnik" },
                 new HomeMenuItem{Id=MenuItemsType.Ocjena, Title="Ocjena" },
                 new HomeMenuItem{Id=MenuItemsType.RedVoznje, Title="Red vožnje" },
+                new HomeMenuItem{Id=MenuItemsType.HistorijaKarata, Title="Historija kupovine"},
                 new HomeMenuItem{Id=MenuItemsType.RezervacijaKarte, Title="Karta" },
-                //new HomeMenuItem{Id=MenuItemsType.OdjaviSe, Title="Odjavi se" },
+                new HomeMenuItem{Id=MenuItemsType.OdjaviSe, Title="Odjavi se" },
 
 
             };
@@ -45,6 +46,7 @@ namespace eAutobus.Mobile.Views
                         return;
 
                     var id = (int)((HomeMenuItem)e.SelectedItem).Id;
+                  
                     await  RootPage.NavigateFromMenu(id);
                 };
             }

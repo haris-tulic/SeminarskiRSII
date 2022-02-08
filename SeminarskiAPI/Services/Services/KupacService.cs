@@ -103,5 +103,14 @@ namespace SeminarskiWebAPI.Services
             return Convert.ToBase64String(inArray);
 
         }
+        public Kupac PronadjiKupca(KupacInsertRequest kupac)
+        {
+            var pronadji = _context.Kupac.Where(k => k.Ime == kupac.Ime && k.Prezime == kupac.Prezime && k.Email == kupac.Email && k.BrojTelefona == kupac.BrojTelefona).FirstOrDefault() ;
+            if (pronadji!=null)
+            {
+                return pronadji;
+            }
+            return null;
+        }
     }
 }

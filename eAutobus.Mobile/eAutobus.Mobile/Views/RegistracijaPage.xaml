@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:eAutobus.Mobile.ViewModels"
              x:Class="eAutobus.Mobile.Views.RegistracijaPage"
+             Shell.NavBarIsVisible="True"
+             
                 Title="Registracija">
     <ContentPage.BindingContext>
         <viewModels:RegistracijaViewModel/>

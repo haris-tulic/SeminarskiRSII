@@ -20,6 +20,8 @@ namespace eAutobus.Mobile
             Routing.RegisterRoute(nameof(RegistracijaPage), typeof(RegistracijaPage));
             Routing.RegisterRoute(nameof(OcjenaPage), typeof(OcjenaPage));
             Routing.RegisterRoute(nameof(RezervacijaKartePage), typeof(RezervacijaKartePage));
+            Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
+            Routing.RegisterRoute(nameof(MenuPage), typeof(MenuPage));
 
 
 

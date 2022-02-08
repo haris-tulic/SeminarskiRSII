@@ -10,8 +10,10 @@ namespace eAutobus.Mobile.Models
         Cjenovnik,
         Ocjena,
         RedVoznje,
+       HistorijaKarata,
         RezervacijaKarte,
         OdjaviSe
+       
     }
     public class HomeMenuItem
     {

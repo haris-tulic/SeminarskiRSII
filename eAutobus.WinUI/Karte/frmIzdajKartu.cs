@@ -223,6 +223,11 @@ namespace eAutobus.WinUI.Karte
                 rbJedan.Enabled = false;
                 rbDva.Enabled = false;
             }
+            else
+            {
+                rbJedan.Enabled = true;
+                rbDva.Enabled = true;
+            }
 
         }
 

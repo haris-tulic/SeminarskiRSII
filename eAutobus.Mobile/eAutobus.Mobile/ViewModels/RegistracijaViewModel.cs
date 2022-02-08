@@ -44,6 +44,7 @@ namespace eAutobus.Mobile.ViewModels
                     await _serviceK.Insert<KupacModel>(noviKupac);
                     await Application.Current.MainPage.DisplayAlert("Uspješno", "Uspješno ste se registrovali.", "Uredu");
                     await Application.Current.MainPage.Navigation.PushAsync(new LoginPage());
+              
                 }
                 catch (Exception)
                 {

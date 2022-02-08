@@ -57,6 +57,7 @@ namespace SeminarskiWebAPI.Services
             var entity = _mapper.Map<Karta>(request);
             _context.Karta.Add(entity);
             _context.SaveChanges();
+            
             var kupac = new KupacInsertRequest()
             {
                 Ime = request.Ime,
@@ -64,9 +65,17 @@ namespace SeminarskiWebAPI.Services
                 AdresaStanovanja = request.AdresaStanovanja,
                 BrojTelefona = request.BrojTelefona,
             };
-
-            KupacModel newKupac = _kupac.Insert(kupac);
-
+            KupacModel newKupac = new KupacModel();
+            Kupac pronadjeni = _kupac.PronadjiKupca(kupac);
+            if (pronadjeni==null)
+            {
+                newKupac = _kupac.Insert(kupac);
+              
+            }
+            else
+            {
+                newKupac.KupacID = pronadjeni.KupacID;
+            }
             var kupacKarta = new KartaKupacUpsertRequest()
             {
                 Aktivna = true,

@@ -34,8 +34,8 @@ namespace eAutobus.Mobile.ViewModels
 
         public async Task Registruj()
         {
-           await  Application.Current.MainPage.Navigation.PushAsync(new RegistracijaPage());
-
+            var route = $"{nameof(RegistracijaPage)}";
+            await Application.Current.MainPage.Navigation.PushAsync(new RegistracijaPage());
         }
 
         private async void OnLoginClicked(object obj)
@@ -47,7 +47,7 @@ namespace eAutobus.Mobile.ViewModels
             try 
             {
                 await _service.Get<dynamic>(null);
-                Application.Current.MainPage = new MainPage();
+                Application.Current.MainPage= new MainPage();
             }
             catch (Exception)
             {

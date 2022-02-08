@@ -45,3 +45,5 @@ D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netst
 D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\eAutobus.Mobile.csproj.CopyComplete
 D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
 D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\Views\PocetnaPage.xaml.g.cs
+D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\Views\OdjaviSePage.xaml.g.cs
+D:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\Views\HistorijaKarataPage.xaml.g.cs
