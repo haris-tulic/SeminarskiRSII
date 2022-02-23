@@ -39,6 +39,7 @@ namespace eAutobus.Mobile.ViewModels
                 noviKupac.AdresaStanovanja = AdresaStanovanja;
                 noviKupac.KorisnickoIme = KorisnickoIme;
                 noviKupac.Password = Password;
+                noviKupac.PotrvrdaPassworda = PotvrdaPassworda;
                 try
                 {
                     await _serviceK.Insert<KupacModel>(noviKupac);

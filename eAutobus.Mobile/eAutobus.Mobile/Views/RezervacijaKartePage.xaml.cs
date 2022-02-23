@@ -1,4 +1,5 @@
 ﻿using eAutobus.Mobile.ViewModels;
+using eAutobusModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +41,29 @@ namespace eAutobus.Mobile.Views
                 var staraCijena = model.Cijena/1.67;
                 model.Cijena = staraCijena;
             }
+        }
+
+        private void VrstaKarteChanged(object sender, EventArgs e)
+        {
+            var vrsta = sender as Picker;
+            var odabrana = vrsta.SelectedItem.ToString();
+            var o = model.VrstaKarte.Naziv;
+            if (o.StartsWith("Mjesečna") || o.StartsWith("Godišnja"))
+            {
+                this.PravacG.IsEnabled = false;
+                this.PravacG.Opacity = 0.5;
+            }
+            else
+            {
+                this.PravacG.IsEnabled = true;
+                this.PravacG.Opacity = 1;
+            }
+        }
+
+        private void DatePicker_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            var datum = sender as DatePicker;
+            datum.MinimumDate = DateTime.Now;
         }
     }
 }

@@ -46,31 +46,39 @@
 
                     <Label Text="Polazište"/>
                     <Picker ItemsSource="{Binding StanicaList}" SelectedItem="{Binding Polazak}" ItemDisplayBinding="{Binding NazivLokacijeStanice}" Margin="5"></Picker>
-
-                </StackLayout >
+                
+                    <Label Text="Odredište:"/>
+                    <Picker ItemsSource="{Binding StanicaList}" SelectedItem="{Binding Odrediste}" ItemDisplayBinding="{Binding NazivLokacijeStanice}" Margin="5"></Picker>
+                    
+            </StackLayout >
 
                 <StackLayout Margin="10" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Grid.Row="1" Grid.Column="1" WidthRequest="400">
-                        <Label Text="Odredište:"/>
-                        <Picker ItemsSource="{Binding StanicaList}" SelectedItem="{Binding Odrediste}" ItemDisplayBinding="{Binding NazivLokacijeStanice}" Margin="5"></Picker>
+                       
+                    <Label Text="Tip karte:"/>
+                    <Picker ItemsSource="{Binding TipKarteList}" SelectedItem="{Binding TipKarte}" ItemDisplayBinding="{Binding Naziv}" Margin="5"></Picker>
 
-                        <Label Text="Tip karte:"/>
-                        <Picker ItemsSource="{Binding TipKarteList}" SelectedItem="{Binding TipKarte}" ItemDisplayBinding="{Binding Naziv}" Margin="5"></Picker>
+                    <Label Text="Vrsta karte:"/>
+                    <Picker ItemsSource="{Binding VrstaKarteList}" SelectedItem="{Binding VrstaKarte}" SelectedIndexChanged="VrstaKarteChanged" ItemDisplayBinding="{Binding Naziv}" Margin="5"></Picker>
+                    
+                    <Label Text="Datum polaska:"  />
+                    <DatePicker Date="{Binding DatumPolaska}"   MaximumDate="1/1/2025"  WidthRequest="400"  HorizontalOptions="CenterAndExpand" Margin="5" PropertyChanged="DatePicker_PropertyChanged"/>
+                    
+                    <Label Text="Datum vazenja"/>
+                    <DatePicker Date="{Binding DatumDolaska}"   MaximumDate="1/1/2025"  WidthRequest="400"  HorizontalOptions="CenterAndExpand" Margin="5" PropertyChanged="DatePicker_PropertyChanged"/>
 
-                        <Label Text="Vrsta karte:"/>
-                        <Picker ItemsSource="{Binding VrstaKarteList}" SelectedItem="{Binding VrstaKarte}" ItemDisplayBinding="{Binding Naziv}" Margin="5"></Picker>
-
-                        <Label Text="Smjer:"/>
-                <Grid>
-                    <RadioButton Content="U jednom smjeru" Margin="5" IsChecked="True" HorizontalOptions="Start" CheckedChanged="PravacChanged" Value="U jednom smjeru"/>
-                    <RadioButton Content="U oba smjera"  Margin="5" CheckedChanged="PravacChanged" HorizontalOptions="End" Value="U oba smjera"/>
+                <Label Text="Smjer:"/>
+                <Grid x:Name="PravacG">
+                    <RadioButton x:Name="PravacJedan" Content="U jednom smjeru" Margin="5" IsChecked="True" HorizontalOptions="Start" CheckedChanged="PravacChanged" Value="U jednom smjeru"/>
+                    <RadioButton x:Name="PravacDva" Content="U oba smjera"  Margin="5" CheckedChanged="PravacChanged" HorizontalOptions="End" Value="U oba smjera"/>
                 </Grid>
+                <Label x:Name="Poruka" Text="*Mjesečna i godišnja karta važe u oba smjera!" TextColor="MediumVioletRed"/>
                 <Label Text="Cijena:"/>
                         <Entry x:Name="Cijena" Text="{Binding Cijena} "  ClearButtonVisibility="WhileEditing" IsReadOnly="True" ></Entry>
                 
             </StackLayout>
                 
                 <StackLayout Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="20">
-                    <Button Text="Kupi kartu" Command="{Binding KupiKartu}"></Button>
+                <Button Text="Kupi kartu" Command="{Binding KupiCommand}"></Button>
                 </StackLayout>
             </Grid>
     </ContentPage.Content>

@@ -186,6 +186,7 @@ namespace eAutobus.WinUI.Karte
                 insert.Ime = txtIme.Text;
                 insert.Prezime = txtPrezime.Text;
                 insert.AdresaStanovanja = txtAdresa.Text;
+                insert.Email = txtEmail.Text;
                 insert.VrstaKarteID = int.Parse(cbVrstaKarte.SelectedValue.ToString());
                 insert.TipKarteID = int.Parse(cbTipKarte.SelectedValue.ToString());
                 insert.PolazisteID = int.Parse(cbPolaziste.SelectedValue.ToString());
@@ -275,6 +276,17 @@ namespace eAutobus.WinUI.Karte
             }
         }
 
-        
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtEmail.Text))
+            {
+                errorProvider.SetError(txtEmail, "Obavezno polje!");
+                e.Cancel = true;
+            }
+            else
+            {
+                errorProvider.SetError(txtEmail, null);
+            }
+        }
     }
 }

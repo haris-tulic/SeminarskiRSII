@@ -45,7 +45,7 @@ namespace SeminarskiAPI
             services.AddSwaggerGen();
             //services.AddAuthentication("BasicAuthentication")
             //   .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
-            var connection = @"Server=.;Database=Seminarski_RSII_170025;Trusted_Connection=True;ConnectRetryCount=0";
+            var connection = @"Server=DESKTOP-LS4U25L\MSSQLSERVER_OLAP;Database=Seminarski_RSII_170025;Trusted_Connection=True;ConnectRetryCount=0";
             //var connection = Configuration.GetConnectionString("eAutobus");
             services.AddDbContext<eAutobus>(options => options.UseSqlServer(connection));
 
@@ -67,6 +67,7 @@ namespace SeminarskiAPI
             services.AddScoped<IKorisnikService, KorisnikService>();
             services.AddScoped<ILoginService, LoginService>();
             services.AddScoped<IKartaKupacService, KartaKupacService>();
+            services.AddScoped<IRecenzijaService, RecenzijaService>();
             //services.AddScoped<IService<TModel,TSearch>,BaseService<TModel,TSearch,TDatabase>>();
             services.AddAuthentication("BasicAuthentication")
                 .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication",null);

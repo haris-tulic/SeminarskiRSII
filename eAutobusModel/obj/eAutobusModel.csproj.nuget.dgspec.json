@@ -1,25 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobusModel\\eAutobusModel.csproj": {}
+    "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobusModel\\eAutobusModel.csproj": {}
   },
   "projects": {
-    "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobusModel\\eAutobusModel.csproj": {
+    "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobusModel\\eAutobusModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobusModel\\eAutobusModel.csproj",
+        "projectUniqueName": "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobusModel\\eAutobusModel.csproj",
         "projectName": "eAutobusModel",
-        "projectPath": "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobusModel\\eAutobusModel.csproj",
-        "packagesPath": "C:\\Users\\x\\.nuget\\packages\\",
-        "outputPath": "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobusModel\\obj\\",
+        "projectPath": "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobusModel\\eAutobusModel.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobusModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\x\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -92,7 +92,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -13,7 +13,9 @@ namespace eAutobusModel
         public int VrstaKarteID { get; set; }
         public DateTime DatumVadjenjaKarte { get; set; }
         public DateTime DatumVazenjaKarte { get; set; }
-        public int RasporedVoznjeID { get; set; }
-        public bool Pravac { get; set; }
+        public int PolazisteID { get; set; }
+        public int OdredisteID { get; set; }
+        public double Cijena { get; set; }
+
     }
 }

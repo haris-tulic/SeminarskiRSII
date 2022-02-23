@@ -10,16 +10,16 @@ using Xamarin.Forms;
 
 namespace eAutobus.Mobile.ViewModels
 {
-    public class RezervacijaKarteViewModel:BaseViewModel
+    public class RezervacijaKarteViewModel : BaseViewModel
     {
         private readonly APIService _serviceK = new APIService("Karta");
         private readonly APIService _serviceTK = new APIService("TipKarte");
         private readonly APIService _serviceVK = new APIService("VrstaKarte");
         private readonly APIService _serviceS = new APIService("Stanica");
         private readonly APIService _serviceC = new APIService("Cjenovnik");
-        public ICommand Kupi { get; set; }
-        public CjenovnikSearchRequest _cijenaKarte=new CjenovnikSearchRequest();
-        public KartaUpsertRequest _novaKarta=new KartaUpsertRequest();
+        public ICommand KupiCommand { get; set; }
+        public CjenovnikSearchRequest _cijenaKarte = new CjenovnikSearchRequest();
+        public KartaUpsertRequest _novaKarta = new KartaUpsertRequest();
         public ObservableCollection<TipKarteModel> TipKarteList { get; set; } = new ObservableCollection<TipKarteModel>();
         public ObservableCollection<VrstaKarteModel> VrstaKarteList { get; set; } = new ObservableCollection<VrstaKarteModel>();
         public ObservableCollection<StanicaModel> StanicaList { get; set; } = new ObservableCollection<StanicaModel>();
@@ -28,14 +28,23 @@ namespace eAutobus.Mobile.ViewModels
 
         public RezervacijaKarteViewModel()
         {
-            Kupi = new Command(async () => await KupiKartu());
+            KupiCommand = new Command(async () => await KupiKartu());
         }
 
         public async Task KupiKartu()
         {
-            if (_novaKarta!=null)
+             if (_novaKarta!=null)
             {
-                await _serviceK.Insert<KartaModel>(_novaKarta);
+                try
+                {
+                    await _serviceK.Insert<KartaModel>(_novaKarta);
+                    await Application.Current.MainPage.DisplayAlert("Uspješno!", "Uspješno ste kupili kartu.", "Uredu");
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
             }
         }
         public async Task DodajCijenu()
@@ -146,7 +155,7 @@ namespace eAutobus.Mobile.ViewModels
         public string Ime
         {
             get { return _ime; }
-            set { SetProperty(ref _ime, value);
+            set{ SetProperty(ref _ime, value);
                 _novaKarta.Ime = value;
             }
         }
@@ -200,5 +209,42 @@ namespace eAutobus.Mobile.ViewModels
               }
         }
 
+        private DateTime _datumPolaska;
+        public DateTime DatumPolaska
+        {
+            get { return _datumPolaska; }
+            set
+            {
+                SetProperty(ref _datumPolaska, value);
+                _novaKarta.DatumVadjenjaKarte = value;
+            }
+        }
+
+        private DateTime _datumDolaska;
+        public DateTime DatumDolaska
+        {
+            get { return _datumDolaska; }
+            set
+            {
+                SetProperty(ref _datumDolaska, value);
+                _novaKarta.DatumVazenjaKarte = value;
+            }
+        }
+
+        
+
+        private string _email;
+        public string Email
+        {
+            get { return _email; }
+            set { SetProperty(ref _email, value);
+                _novaKarta.Email = value;
+            }
+        }
     }
+
+
+   
+
 }
+

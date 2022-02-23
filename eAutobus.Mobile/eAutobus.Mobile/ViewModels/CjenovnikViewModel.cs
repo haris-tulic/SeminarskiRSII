@@ -50,6 +50,7 @@ namespace eAutobus.Mobile.ViewModels
                 foreach (var item in listTK)
                 {
                     TipKarataList.Add(item);
+                    
                 }
             }
             if (_tipKarte!=null)
@@ -61,6 +62,7 @@ namespace eAutobus.Mobile.ViewModels
 
                 foreach (var item in list)
                 {
+                    item.CijenaPrikaz = item.Cijena.ToString() + " KM";
                     CjenovnikList.Add(item);
                 }
             }
@@ -71,6 +73,7 @@ namespace eAutobus.Mobile.ViewModels
 
                 foreach (var item in list)
                 {
+                    item.CijenaPrikaz = item.Cijena.ToString() + " KM";
                     CjenovnikList.Add(item);
                 }
             }

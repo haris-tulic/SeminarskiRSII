@@ -57,13 +57,14 @@ namespace SeminarskiWebAPI.Services
             var entity = _mapper.Map<Karta>(request);
             _context.Karta.Add(entity);
             _context.SaveChanges();
-            
+
             var kupac = new KupacInsertRequest()
             {
                 Ime = request.Ime,
                 Prezime = request.Prezime,
                 AdresaStanovanja = request.AdresaStanovanja,
                 BrojTelefona = request.BrojTelefona,
+                Email = request.Email,
             };
             KupacModel newKupac = new KupacModel();
             Kupac pronadjeni = _kupac.PronadjiKupca(kupac);

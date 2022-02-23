@@ -50,6 +50,7 @@ namespace SeminarskiWebAPI.Services
                 listR[i].Odlazak = list[i].Odrediste.NazivLokacijeStanice;
                 listR[i].Polazak = list[i].Polaziste.NazivLokacijeStanice;
                 listR[i].BrojAutobusa = list[i].Autobus.BrojAutobusa;
+                listR[i].NazivLinije = list[i].Polaziste.NazivLokacijeStanice + "-" + list[i].Odrediste.NazivLokacijeStanice;
             }
             return listR;
         }

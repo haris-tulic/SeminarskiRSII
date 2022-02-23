@@ -24,18 +24,22 @@ namespace SeminarskiWebAPI.Services.Services
         public List<KartaKupacModel> Get(KartaKupacGetRequest search)
         {
             var list = _context.KartaKupac.Include(k=>k.Karta)
+                .Include("Karta.Odrediste")
+                .Include("Karta.Polaziste")
                 .Include(u=>u.Kupac)
                 .Include(t=>t.Karta.TipKarte)
                 .Include(v=>v.Karta.VrstaKarte)
                 .Where(x=>x.KupacID==search.KupacID)
                 .ToList();
-          
             var listM = new List<KartaKupacModel>();
             _mapper.Map(list, listM);
             for (int i = 0; i < list.Count; i++)
             {
                 listM[i].Karta = list[i].Karta.TipKarte.Naziv+" "+ list[i].Karta.VrstaKarte.Naziv;
                 listM[i].Kupac = list[i].Kupac.Ime + " " + list[i].Kupac.Prezime;
+                listM[i].Polaziste = list[i].Karta.Polaziste.NazivLokacijeStanice;
+                listM[i].Odrediste = list[i].Karta.Odrediste.NazivLokacijeStanice;
+
             }
             return listM;
         }

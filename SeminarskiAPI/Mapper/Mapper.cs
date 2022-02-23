@@ -67,6 +67,8 @@ namespace SeminarskiWebAPI.Mapper
             CreateMap<Database.KartaKupac, eAutobusModel.KartaKupacModel>().ReverseMap();
             CreateMap<KartaKupacUpsertRequest, Database.KartaKupac>().ReverseMap();
 
+            CreateMap<RecenzijaUpsertRequest, Database.Recenzija>().ReverseMap();
+            CreateMap<Database.Recenzija, eAutobusModel.RecenzijaModel>().ReverseMap();
         }
     }
 }

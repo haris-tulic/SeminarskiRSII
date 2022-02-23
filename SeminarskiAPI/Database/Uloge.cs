@@ -10,7 +10,6 @@ namespace SeminarskiWebAPI.Database
         public int UlogeID { get; set; }
         public string Naziv { get; set; }
         public string Opis { get; set; }
-        public int KorisnikID { get; set; }
         public List<Korisnik> Korisnik { get; set; }
     }
 }

@@ -20,13 +20,15 @@ namespace SeminarskiWebAPI.Services
         private readonly eAutobus _context;
         private readonly IMapper _mapper;
         private readonly IKorisnikService _korisnik;
-        public KupacService(eAutobus context,IMapper mapper, IKorisnikService korisnik)
+        private readonly IKartaKupacService _kartaKupac;
+        public KupacService(eAutobus context, IMapper mapper, IKorisnikService korisnik, IKartaKupacService kartaKupac = null)
         {
             _context = context;
             _mapper = mapper;
             _korisnik = korisnik;
+            _kartaKupac = kartaKupac;
         }
-        
+
         public eAutobusModel.KupacModel Delete(int id)
         {
             var entity = _context.Kupac.Find(id);
@@ -37,7 +39,7 @@ namespace SeminarskiWebAPI.Services
 
         public List<eAutobusModel.KupacModel> Get(KupacGetRequest request)
         {
-            var query = _context.Kupac.AsQueryable();
+            var query = _context.Kupac.Include(k=>k.KartaList).Include(k=>k.Recnzija).AsQueryable();
             if (!string.IsNullOrWhiteSpace(request.Ime))
             {
                 query = query.Where(k => k.Ime.StartsWith(request.Ime));
@@ -46,9 +48,31 @@ namespace SeminarskiWebAPI.Services
             {
                 query = query.Where(k => k.Prezime.StartsWith(request.Prezime));
             }
+            if (!string.IsNullOrWhiteSpace(request.UserName))
+            {
+                query = query.Where(k => k.KorisnickoIme == request.UserName);
+            }
+
             var list = query.ToList();
+            var listM = new List<KupacModel>();
+            _mapper.Map(list, listM);
+            if (list.Count==1)
+            {
+                var search = new KartaKupacGetRequest();
+                foreach (var item in list)
+                {
+                    search.KupacID = item.KupacID;
+                }
+                List<KartaKupacModel> listaKarata = _kartaKupac.Get(search);
+                for (int i = 0; i < listM.Count; i++)
+                {
+                    listM[i].KartaKupacs = listaKarata;
+                }
+            }
+            
            
-            return _mapper.Map<List<KupacModel>>(list);
+           
+            return listM;
         }
 
         public eAutobusModel.KupacModel GetByID(int id)
@@ -62,10 +86,24 @@ namespace SeminarskiWebAPI.Services
         {
           
             var entity = _mapper.Map<Database.Kupac>(request);
-            entity.LozinkaSalt=GenerateSalt();
-            entity.LozinkaHash = GenerateHash(entity.LozinkaSalt, request.Password);
-            _context.Kupac.Add(entity);
-            _context.SaveChanges();
+            if (!string.IsNullOrEmpty(request.KorisnickoIme) && request.Password==request.PotrvrdaPassworda)
+            {
+                //entity.KorisnickoIme = entity.Ime.ToLower() + "." + entity.Prezime.ToLower();
+                //request.Password = entity.Ime.ToLower() + "" + entity.Prezime.ToLower() + "123";
+                entity.LozinkaSalt = GenerateSalt();
+                entity.LozinkaHash = GenerateHash(entity.LozinkaSalt, request.Password);
+            }
+            var pronadji = PronadjiKupca(request);
+            if (pronadji!=null)
+            {
+                Update(request,pronadji.KupacID);
+            }
+            else
+            {
+                _context.Kupac.Add(entity);
+                _context.SaveChanges();
+            }
+           
             return _mapper.Map<eAutobusModel.KupacModel>(entity);
 
           
@@ -75,6 +113,13 @@ namespace SeminarskiWebAPI.Services
         {
             var entity = _context.Kupac.Find(id);
             _mapper.Map(request, entity);
+            if (!string.IsNullOrEmpty(entity.KorisnickoIme) && request.Password == request.PotrvrdaPassworda)
+            {
+                //entity.KorisnickoIme = entity.Ime.ToLower() + "." + entity.Prezime.ToLower();
+                //request.Password = entity.Ime.ToLower() + "" + entity.Prezime.ToLower() + "123";
+                entity.LozinkaSalt = GenerateSalt();
+                entity.LozinkaHash = GenerateHash(entity.LozinkaSalt, request.Password);
+            }
             _context.Kupac.Update(entity);
             _context.SaveChanges();
             return _mapper.Map<eAutobusModel.KupacModel>(entity);
@@ -105,7 +150,7 @@ namespace SeminarskiWebAPI.Services
         }
         public Kupac PronadjiKupca(KupacInsertRequest kupac)
         {
-            var pronadji = _context.Kupac.Where(k => k.Ime == kupac.Ime && k.Prezime == kupac.Prezime && k.Email == kupac.Email && k.BrojTelefona == kupac.BrojTelefona).FirstOrDefault() ;
+            var pronadji = _context.Kupac.Where(k => k.Ime == kupac.Ime && k.Prezime == kupac.Prezime  && k.BrojTelefona == kupac.BrojTelefona).FirstOrDefault() ;
             if (pronadji!=null)
             {
                 return pronadji;

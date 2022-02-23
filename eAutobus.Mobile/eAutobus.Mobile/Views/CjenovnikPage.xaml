@@ -12,29 +12,31 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
-
-
             </Grid.RowDefinitions>
+            
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-
             </Grid.ColumnDefinitions>
 
 
-            <StackLayout WidthRequest="300" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.ColumnSpan="2">
-            <Label Text="Cjenovnik"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
+            <StackLayout WidthRequest="1000" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.ColumnSpan="2">
+                <Label Text="Cjenovnik"
+                   HorizontalOptions="CenterAndExpand"
                    Margin="20"/>
-            <Picker ItemsSource="{Binding TipKarataList}" SelectedItem="{Binding TipKarte}" HorizontalOptions="CenterAndExpand" ItemDisplayBinding="{Binding Naziv}" WidthRequest="300"></Picker>
-                <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="10,0" HorizontalOptions="CenterAndExpand" WidthRequest="300">
+                <Picker ItemsSource="{Binding TipKarataList}" SelectedItem="{Binding TipKarte}" HorizontalOptions="CenterAndExpand" ItemDisplayBinding="{Binding Naziv}" WidthRequest="500"></Picker>
+            </StackLayout>
+            <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="10" HorizontalOptions="CenterAndExpand" WidthRequest="1000">
                     <Label Text="Vrsta karte" Grid.Column="0" Margin="5"/>
                     <Label Text="Tip karte" Grid.Column="1" Margin="5"/>
                     <Label Text="Zona" Grid.Column="2" Margin="5"/>
-                    <Label Text="Cijena" Grid.Column="3" Margin="5"/>
-                </Grid>
+                    <Label Text="Polazište" Grid.Column="3" Margin="5"/>
+                    <Label Text="Odredište" Grid.Column="4" Margin="5"/>
+                <Label Text="Cijena" Grid.Column="5" Margin="5"/>
+            </Grid>
             
             <CollectionView x:Name="CjenovnikList"
                             HorizontalOptions="CenterAndExpand"
@@ -42,30 +44,51 @@
                 ItemsSource="{Binding CjenovnikList}"
                             SelectionMode="None"
                             Grid.Row="2" Grid.ColumnSpan="2"
-                            WidthRequest="300">
+                            >
              
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout  Orientation="Horizontal" HorizontalOptions="CenterAndExpand" WidthRequest="300">
+                        <Grid   >
                             <Label Text="{Binding VrstaKarte}" 
                                 LineBreakMode="WordWrap" 
-                              
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                Grid.Row="2" Grid.Column="0"
                                 FontSize="15" Margin="10" />
                             <Label Text="{Binding Tipkarte}" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                Grid.Row="2" Grid.Column="1"
+                                   
                                 LineBreakMode="WordWrap" 
-                               
                                 FontSize="15" Margin="10" />
-                            <Label Text="{Binding Zona}" 
+                            <Label Text="{Binding Zona}"
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                Grid.Row="2" Grid.Column="2"
+                                   
                                 LineBreakMode="WordWrap" 
                                 FontSize="15"  Margin="10"/>
-                            <Label Text="{Binding Cijena}" 
+                            <Label Text="{Binding Polaziste}"
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                Grid.Row="2" Grid.Column="3"
+                                   
                                 LineBreakMode="WordWrap" 
                                 FontSize="15" Margin="10" />
-                        </StackLayout> 
+                            <Label Text="{Binding Odrediste}"
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                Grid.Row="2" Grid.Column="4"
+                                   
+                                LineBreakMode="WordWrap" 
+                                FontSize="15" Margin="10" />
+                                <Label Text="{Binding CijenaPrikaz}"
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                Grid.Row="2" Grid.Column="5"
+                                   
+                                LineBreakMode="WordWrap" 
+                                FontSize="15" Margin="10" />
+                        </Grid> 
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        </StackLayout>
+   
         </Grid>
     </ContentPage.Content>
 </ContentPage>

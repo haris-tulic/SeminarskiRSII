@@ -27,18 +27,42 @@ namespace SeminarskiWebAPI.Services.Services
         public async Task<KorisnikModel> Autentificiraj(string userName, string password)
         {
             var entity = await  _context.Korisnik.Include(x => x.Uloge).FirstOrDefaultAsync(u => u.KorisnickoIme == userName);
-            if (entity == null)
+            var entityK = await _context.Kupac.FirstOrDefaultAsync(k => k.KorisnickoIme == userName);
+            if (entity == null && entityK==null)
             {
                 throw new UserException("Pogresan username ili password");
             }
-
-            var hash = GenerateHash(entity.LozinkaSalt, password);
-            if (hash != entity.LozinkaHash)
+            if (entity!=null)
             {
-                throw new UserException("Pogresan username ili password");
-            }
+                var hash = GenerateHash(entity.LozinkaSalt, password);
+                if (hash != entity.LozinkaHash)
+                {
+                    throw new UserException("Pogresan username ili password");
+                }
 
-            return _mapper.Map<KorisnikModel>(entity);
+                return _mapper.Map<KorisnikModel>(entity);
+            }
+            else
+            {
+                var hash = GenerateHash(entityK.LozinkaSalt, password);
+                if (hash != entityK.LozinkaHash)
+                {
+                    throw new UserException("Pogresan username ili password");
+                }
+                KorisnikModel kupac = new KorisnikModel
+                {
+                    KorisnikID = entityK.KupacID,
+                    Ime = entityK.Ime,
+                    KorisnickoIme = entityK.KorisnickoIme,
+                    Prezime = entityK.Prezime,
+                    Uloge = "Kupac",
+                    BrojTelefona = entityK.BrojTelefona,
+                    AdresaStanovanja = entityK.AdresaStanovanja,
+                };
+                return kupac;
+                
+            }
+            
         }
         public static string GenerateSalt()
         {

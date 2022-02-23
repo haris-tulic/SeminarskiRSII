@@ -51,12 +51,14 @@ namespace eAutobus.WinUI.Karte
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.dtpDatumVazenja = new System.Windows.Forms.DateTimePicker();
-            this.txtPrezime = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.labelPrezime = new System.Windows.Forms.Label();
             this.txtCijena = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtBrojTelefona = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.txtPrezime = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +83,7 @@ namespace eAutobus.WinUI.Karte
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(266, 219);
+            this.label3.Location = new System.Drawing.Point(266, 253);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 2;
@@ -90,7 +92,7 @@ namespace eAutobus.WinUI.Karte
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(302, 259);
+            this.label4.Location = new System.Drawing.Point(302, 290);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 3;
@@ -99,7 +101,7 @@ namespace eAutobus.WinUI.Karte
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(272, 335);
+            this.label5.Location = new System.Drawing.Point(272, 368);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 4;
@@ -108,7 +110,7 @@ namespace eAutobus.WinUI.Karte
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(275, 300);
+            this.label6.Location = new System.Drawing.Point(275, 331);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 5;
@@ -117,7 +119,7 @@ namespace eAutobus.WinUI.Karte
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(217, 376);
+            this.label7.Location = new System.Drawing.Point(217, 412);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(110, 13);
             this.label7.TabIndex = 6;
@@ -126,7 +128,7 @@ namespace eAutobus.WinUI.Karte
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(283, 481);
+            this.label8.Location = new System.Drawing.Point(283, 540);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 13);
             this.label8.TabIndex = 7;
@@ -135,7 +137,7 @@ namespace eAutobus.WinUI.Karte
             // cbVrstaKarte
             // 
             this.cbVrstaKarte.FormattingEnabled = true;
-            this.cbVrstaKarte.Location = new System.Drawing.Point(333, 216);
+            this.cbVrstaKarte.Location = new System.Drawing.Point(333, 250);
             this.cbVrstaKarte.Name = "cbVrstaKarte";
             this.cbVrstaKarte.Size = new System.Drawing.Size(157, 21);
             this.cbVrstaKarte.TabIndex = 8;
@@ -145,7 +147,7 @@ namespace eAutobus.WinUI.Karte
             // cbTipKarte
             // 
             this.cbTipKarte.FormattingEnabled = true;
-            this.cbTipKarte.Location = new System.Drawing.Point(333, 256);
+            this.cbTipKarte.Location = new System.Drawing.Point(333, 287);
             this.cbTipKarte.Name = "cbTipKarte";
             this.cbTipKarte.Size = new System.Drawing.Size(157, 21);
             this.cbTipKarte.TabIndex = 9;
@@ -155,7 +157,7 @@ namespace eAutobus.WinUI.Karte
             // cbPolaziste
             // 
             this.cbPolaziste.FormattingEnabled = true;
-            this.cbPolaziste.Location = new System.Drawing.Point(333, 297);
+            this.cbPolaziste.Location = new System.Drawing.Point(333, 328);
             this.cbPolaziste.Name = "cbPolaziste";
             this.cbPolaziste.Size = new System.Drawing.Size(157, 21);
             this.cbPolaziste.TabIndex = 10;
@@ -165,7 +167,7 @@ namespace eAutobus.WinUI.Karte
             // cbOdrediste
             // 
             this.cbOdrediste.FormattingEnabled = true;
-            this.cbOdrediste.Location = new System.Drawing.Point(333, 332);
+            this.cbOdrediste.Location = new System.Drawing.Point(333, 365);
             this.cbOdrediste.Name = "cbOdrediste";
             this.cbOdrediste.Size = new System.Drawing.Size(157, 21);
             this.cbOdrediste.TabIndex = 11;
@@ -190,7 +192,7 @@ namespace eAutobus.WinUI.Karte
             // 
             // dtpDatumVadjenja
             // 
-            this.dtpDatumVadjenja.Location = new System.Drawing.Point(333, 370);
+            this.dtpDatumVadjenja.Location = new System.Drawing.Point(333, 405);
             this.dtpDatumVadjenja.Name = "dtpDatumVadjenja";
             this.dtpDatumVadjenja.Size = new System.Drawing.Size(157, 20);
             this.dtpDatumVadjenja.TabIndex = 14;
@@ -199,7 +201,7 @@ namespace eAutobus.WinUI.Karte
             // rbJedan
             // 
             this.rbJedan.AutoSize = true;
-            this.rbJedan.Location = new System.Drawing.Point(333, 477);
+            this.rbJedan.Location = new System.Drawing.Point(333, 538);
             this.rbJedan.Name = "rbJedan";
             this.rbJedan.Size = new System.Drawing.Size(106, 17);
             this.rbJedan.TabIndex = 15;
@@ -210,7 +212,7 @@ namespace eAutobus.WinUI.Karte
             // rbDva
             // 
             this.rbDva.AutoSize = true;
-            this.rbDva.Location = new System.Drawing.Point(445, 477);
+            this.rbDva.Location = new System.Drawing.Point(454, 538);
             this.rbDva.Name = "rbDva";
             this.rbDva.Size = new System.Drawing.Size(90, 17);
             this.rbDva.TabIndex = 16;
@@ -220,7 +222,7 @@ namespace eAutobus.WinUI.Karte
             // 
             // btnIzdajKartu
             // 
-            this.btnIzdajKartu.Location = new System.Drawing.Point(367, 522);
+            this.btnIzdajKartu.Location = new System.Drawing.Point(367, 579);
             this.btnIzdajKartu.Name = "btnIzdajKartu";
             this.btnIzdajKartu.Size = new System.Drawing.Size(82, 28);
             this.btnIzdajKartu.TabIndex = 17;
@@ -235,7 +237,7 @@ namespace eAutobus.WinUI.Karte
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(222, 414);
+            this.label9.Location = new System.Drawing.Point(222, 447);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(108, 13);
             this.label9.TabIndex = 18;
@@ -243,30 +245,23 @@ namespace eAutobus.WinUI.Karte
             // 
             // dtpDatumVazenja
             // 
-            this.dtpDatumVazenja.Location = new System.Drawing.Point(333, 408);
+            this.dtpDatumVazenja.Location = new System.Drawing.Point(333, 442);
             this.dtpDatumVazenja.Name = "dtpDatumVazenja";
             this.dtpDatumVazenja.Size = new System.Drawing.Size(157, 20);
             this.dtpDatumVazenja.TabIndex = 19;
             // 
-            // txtPrezime
+            // labelPrezime
             // 
-            this.txtPrezime.AutoSize = true;
-            this.txtPrezime.Location = new System.Drawing.Point(280, 91);
-            this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(47, 13);
-            this.txtPrezime.TabIndex = 20;
-            this.txtPrezime.Text = "Prezime:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(333, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 20);
-            this.textBox1.TabIndex = 21;
+            this.labelPrezime.AutoSize = true;
+            this.labelPrezime.Location = new System.Drawing.Point(280, 91);
+            this.labelPrezime.Name = "labelPrezime";
+            this.labelPrezime.Size = new System.Drawing.Size(47, 13);
+            this.labelPrezime.TabIndex = 20;
+            this.labelPrezime.Text = "Prezime:";
             // 
             // txtCijena
             // 
-            this.txtCijena.Location = new System.Drawing.Point(333, 444);
+            this.txtCijena.Location = new System.Drawing.Point(333, 481);
             this.txtCijena.Name = "txtCijena";
             this.txtCijena.Size = new System.Drawing.Size(157, 20);
             this.txtCijena.TabIndex = 22;
@@ -275,7 +270,7 @@ namespace eAutobus.WinUI.Karte
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(288, 447);
+            this.label10.Location = new System.Drawing.Point(283, 488);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(39, 13);
             this.label10.TabIndex = 23;
@@ -297,17 +292,43 @@ namespace eAutobus.WinUI.Karte
             this.label11.TabIndex = 25;
             this.label11.Text = "Broj telefona:";
             // 
+            // txtPrezime
+            // 
+            this.txtPrezime.Location = new System.Drawing.Point(333, 88);
+            this.txtPrezime.Name = "txtPrezime";
+            this.txtPrezime.Size = new System.Drawing.Size(157, 20);
+            this.txtPrezime.TabIndex = 26;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(286, 212);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(32, 13);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(333, 209);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(157, 20);
+            this.txtEmail.TabIndex = 28;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
+            // 
             // frmIzdajKartu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(838, 590);
+            this.ClientSize = new System.Drawing.Size(1047, 737);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtPrezime);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtBrojTelefona);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtCijena);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtPrezime);
+            this.Controls.Add(this.labelPrezime);
             this.Controls.Add(this.dtpDatumVazenja);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnIzdajKartu);
@@ -361,11 +382,13 @@ namespace eAutobus.WinUI.Karte
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtpDatumVazenja;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label txtPrezime;
+        private System.Windows.Forms.Label labelPrezime;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtCijena;
         private System.Windows.Forms.TextBox txtBrojTelefona;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtPrezime;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label12;
     }
 }

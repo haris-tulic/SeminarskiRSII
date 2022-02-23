@@ -3298,26 +3298,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\x\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile.iOS\\eAutobus.Mobile.iOS.csproj",
+      "projectUniqueName": "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile.iOS\\eAutobus.Mobile.iOS.csproj",
       "projectName": "eAutobus.Mobile.iOS",
-      "projectPath": "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile.iOS\\eAutobus.Mobile.iOS.csproj",
-      "packagesPath": "C:\\Users\\x\\.nuget\\packages\\",
-      "outputPath": "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile.iOS\\obj\\",
+      "projectPath": "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile.iOS\\eAutobus.Mobile.iOS.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\x\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -3332,8 +3332,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile\\eAutobus.Mobile.csproj": {
-              "projectPath": "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile\\eAutobus.Mobile.csproj"
+            "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile\\eAutobus.Mobile.csproj": {
+              "projectPath": "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile\\eAutobus.Mobile.csproj"
             }
           }
         }

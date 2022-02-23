@@ -16,5 +16,7 @@ namespace eAutobusModel
         public DateTime DatumVazenjaKarte { get; set; }
         public bool Pravac { get; set; }
         public string PravacS { get; set; }
+        public string Polaziste { get; set; }
+        public string Odrediste { get; set; }
     }
 }

@@ -37,7 +37,7 @@ namespace eAutobus.WinUI.Karte
                 var karta=await _cjenovnik.GetById<CjenovnikModel>(id);
                 cbTipKarte.SelectedValue = karta.TipkarteID;
                 cbVrstaKarte.SelectedValue = karta.VrstaKarteID;
-                cbZona.SelectedValue = karta.VrstaKarteID;
+                cbZona.SelectedValue = karta.ZonaID;
                 txtCijena.Text = karta.Cijena.ToString();
                 cmbPolaziste.SelectedValue = karta.PolazisteID;
                 cmbOdrediste.SelectedValue = karta.OdredisteID;

@@ -26,10 +26,10 @@ namespace eAutobus.WinUI.Login
             APIService.Password = txtPassword.Text;
             try
             {
+                this.Hide();
                 var result =await _api.Get<List<KorisnikModel>>(null);
                 frmPocetna frm = new frmPocetna();
                 frm.Show();
-                this.Hide();
             }
             catch 
             {

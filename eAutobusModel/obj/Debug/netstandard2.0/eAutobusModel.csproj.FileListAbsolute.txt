@@ -17,3 +17,14 @@ D:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\obj\Debug\netstandard2.0\eAutobus
 D:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.csproj.CoreCompileInputs.cache
 D:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.dll
 D:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.pdb
+D:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.csproj.AssemblyReference.cache
+E:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\bin\Debug\netstandard2.0\eAutobusModel.deps.json
+E:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\bin\Debug\netstandard2.0\eAutobusModel.dll
+E:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\bin\Debug\netstandard2.0\eAutobusModel.pdb
+E:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.csproj.AssemblyReference.cache
+E:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.GeneratedMSBuildEditorConfig.editorconfig
+E:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.AssemblyInfoInputs.cache
+E:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.AssemblyInfo.cs
+E:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.csproj.CoreCompileInputs.cache
+E:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.dll
+E:\SeminarskiRSII\SeminarskiRSII\eAutobusModel\obj\Debug\netstandard2.0\eAutobusModel.pdb

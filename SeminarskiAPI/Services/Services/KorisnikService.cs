@@ -71,7 +71,7 @@ namespace SeminarskiWebAPI.Services.Services
             _context.Korisnik.Add(entity);
             await _context.SaveChangesAsync();
             var uloga = await _uloga.GetById(request.UlogeID);
-            if (uloga.Naziv=="Vozac" || uloga.Naziv=="Kondukter")
+            if (uloga.Naziv=="Vozač" || uloga.Naziv=="Kondukter")
             {
                 var vozac = new VozacUpsertRequest()
                 {
@@ -98,7 +98,7 @@ namespace SeminarskiWebAPI.Services.Services
             _mapper.Map(request, entity);
             if (!string.IsNullOrEmpty(request.Password))
             {
-                if ((request.Password == request.PasswordPotrvda))
+                if (request.Password == request.PasswordPotrvda)
                 {
                     entity.LozinkaSalt = GenerateSalt();
                     entity.LozinkaHash = GenerateHash(entity.LozinkaSalt, request.Password);

@@ -51,7 +51,7 @@ namespace eAutobus.Mobile.ViewModels
             }
             catch (Exception)
             {
-                await Application.Current.MainPage.DisplayAlert("Greška!", "Pogrešan username ili password!", "Uredu");
+                //await Application.Current.MainPage.DisplayAlert("Greška!", "Pogrešan username ili password!", "Uredu");
             }
         }
     }

@@ -38,6 +38,7 @@ namespace eAutobus.WinUI.Korisnici
                 {
                     await _korisnikService.Insert<KorisnikModel>(_korisnik);
                     MessageBox.Show("Novi korisnik uspjesno dodan!");
+                    this.Close();
                 }
             }
         }

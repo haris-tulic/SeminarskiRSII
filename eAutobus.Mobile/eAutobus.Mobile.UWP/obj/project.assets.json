@@ -15322,28 +15322,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\x\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile.UWP\\eAutobus.Mobile.UWP.csproj",
+      "projectUniqueName": "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile.UWP\\eAutobus.Mobile.UWP.csproj",
       "projectName": "eAutobus.Mobile.UWP",
-      "projectPath": "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile.UWP\\eAutobus.Mobile.UWP.csproj",
-      "packagesPath": "C:\\Users\\x\\.nuget\\packages\\",
-      "outputPath": "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile.UWP\\obj\\",
+      "projectPath": "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile.UWP\\eAutobus.Mobile.UWP.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\x\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -15358,8 +15358,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile\\eAutobus.Mobile.csproj": {
-              "projectPath": "D:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile\\eAutobus.Mobile.csproj"
+            "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile\\eAutobus.Mobile.csproj": {
+              "projectPath": "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile\\eAutobus.Mobile.csproj"
             }
           }
         }

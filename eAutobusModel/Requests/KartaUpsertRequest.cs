@@ -10,6 +10,7 @@ namespace eAutobusModel.Requests
         public string Ime { get; set; }
         public string Prezime { get; set; }
         public string AdresaStanovanja { get; set; }
+        public string Email { get; set; }
         public string BrojTelefona { get; set; }
         public int TipKarteID { get; set; }
         public int VrstaKarteID { get; set; }

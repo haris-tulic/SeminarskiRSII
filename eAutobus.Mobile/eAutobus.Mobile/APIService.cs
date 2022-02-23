@@ -25,7 +25,7 @@ namespace eAutobus.Mobile
             _route = route;
         }
         public async Task<T> Get<T>(object search)
-         {
+        {
             var url = $"{_apiUrl}/{_route}";
 
             try

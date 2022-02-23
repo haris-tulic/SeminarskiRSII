@@ -33,5 +33,6 @@ namespace eAutobusModel.Requests
         public string KorisnickoIme { get; set; }
        
         public string Password { get; set; }
+        public string PotrvrdaPassworda { get; set; }
     }
 }
