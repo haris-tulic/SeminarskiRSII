@@ -21,10 +21,11 @@ namespace SeminarskiWebAPI.Controllers
             _service = service;
         }
         [HttpGet]
-        public List<RecenzijaModel> Get(RecenzijaGetRequest search)
+        public List<RecenzijaModel> Get([FromQuery] RecenzijaGetRequest search)
         {
             return _service.Get(search);
         }
+
         [HttpPost]
         public RecenzijaModel Insert(RecenzijaUpsertRequest request)
         {

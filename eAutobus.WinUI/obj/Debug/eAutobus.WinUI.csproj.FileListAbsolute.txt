@@ -123,6 +123,7 @@ E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\eAutobus.WinUI.Korisni
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\eAutobus.WinUI.Korisnici.frmKorisniciPrikaz.resources
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\eAutobus.WinUI.Login.frmLogin.resources
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\eAutobus.WinUI.Properties.Resources.resources
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\eAutobus.WinUI.Recenzija.frmRecenzija.resources
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\eAutobus.WinUI.RedVoznji.frmDodavanjeRedaVoznje.resources
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\eAutobus.WinUI.RedVoznji.frmPregledRedaVoznji.resources
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\eAutobus.WinUI.csproj.GenerateResource.cache

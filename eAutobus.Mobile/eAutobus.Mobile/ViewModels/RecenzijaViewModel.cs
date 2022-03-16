@@ -27,7 +27,7 @@ namespace eAutobus.Mobile.ViewModels
 
         private async Task Ocijeni()
         { 
-            if (_recenzija==null)
+             if (_recenzija==null)
             {
                 _recenzija = new RecenzijaUpsertRequest
                 {
@@ -41,11 +41,13 @@ namespace eAutobus.Mobile.ViewModels
                 try
                 {
                     await _service.Insert<RecenzijaModel>(_recenzija);
-                    await Application.Current.MainPage.DisplayAlert("Uspješno!","Hvala vam na vašoj ocjeni!","Uredu")
+                    _recenzija = null;
+                    await Application.Current.MainPage.DisplayAlert("Uspješno!", "Hvala vam na vašoj ocjeni!", "Uredu");
+                   
                 }
                 catch (Exception)
                 {
-
+                    _recenzija = null;
                     throw;
                 }
             }
@@ -87,7 +89,7 @@ namespace eAutobus.Mobile.ViewModels
         }
         private string _svrha;
         public string Svrha
-        {
+        { 
             get { return _svrha; }
             set { SetProperty(ref _svrha, value); }
         }

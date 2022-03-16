@@ -22,6 +22,7 @@ namespace eAutobusModel
         public string Polazak { get; set; }
         public string Odlazak { get; set; }
         public int BrojAutobusa { get; set; }
-        public string  NazivLinije { get; set; }
+        public string NazivLinije { get; set; }
+        public decimal FinalOcjena { get; set; }
     }
 }

@@ -22,5 +22,7 @@ namespace SeminarskiWebAPI.Database
         public int KondukterID { get; set; }
         public Vozac Kondukter { get; set; }
         public DateTime Datum { get; set; }
+        public List<Recenzija> Recenzija { get; set; }
+        public decimal FinalOcjena { get; set; }
     }
 }

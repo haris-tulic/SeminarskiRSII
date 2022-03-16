@@ -297,6 +297,8 @@ namespace SeminarskiWebAPI.Migrations
 
                     b.Property<DateTime>("Datum");
 
+                    b.Property<decimal>("FinalOcjena");
+
                     b.Property<int>("KondukterID");
 
                     b.Property<int>("OdredisteID");
@@ -598,7 +600,7 @@ namespace SeminarskiWebAPI.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("SeminarskiWebAPI.Database.RasporedVoznje", "RasporedVoznje")
-                        .WithMany()
+                        .WithMany("Recenzija")
                         .HasForeignKey("RasporedVoznjeID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

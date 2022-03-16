@@ -1,6 +1,7 @@
 ﻿using eAutobus.WinUI.Autobusi;
 using eAutobus.WinUI.Karte;
 using eAutobus.WinUI.Korisnici;
+using eAutobus.WinUI.Recenzija;
 using eAutobus.WinUI.RedVoznji;
 using System;
 using System.Collections.Generic;
@@ -179,6 +180,14 @@ namespace eAutobus.WinUI
             frmIzdajKartu frm = new frmIzdajKartu();
             frm.Show();
            
+        }
+
+        private void recenzijeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRecenzija frm = new frmRecenzija();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
         }
     }
 }

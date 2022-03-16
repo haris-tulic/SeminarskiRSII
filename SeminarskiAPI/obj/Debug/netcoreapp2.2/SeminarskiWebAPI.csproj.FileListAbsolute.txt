@@ -42,6 +42,7 @@ D:\SeminarskiRSII\SeminarskiRSII\SeminarskiAPI\obj\Debug\netcoreapp2.2\Seminarsk
 D:\SeminarskiRSII\SeminarskiRSII\SeminarskiAPI\obj\Debug\netcoreapp2.2\SeminarskiWebAPI.genruntimeconfig.cache
 E:\SeminarskiRSII\SeminarskiRSII\SeminarskiAPI\bin\Debug\netcoreapp2.2\appsettings.Development.json
 E:\SeminarskiRSII\SeminarskiRSII\SeminarskiAPI\bin\Debug\netcoreapp2.2\appsettings.json
+E:\SeminarskiRSII\SeminarskiRSII\SeminarskiAPI\bin\Debug\netcoreapp2.2\libman.json
 E:\SeminarskiRSII\SeminarskiRSII\SeminarskiAPI\bin\Debug\netcoreapp2.2\SeminarskiWebAPI.deps.json
 E:\SeminarskiRSII\SeminarskiRSII\SeminarskiAPI\bin\Debug\netcoreapp2.2\SeminarskiWebAPI.runtimeconfig.json
 E:\SeminarskiRSII\SeminarskiRSII\SeminarskiAPI\bin\Debug\netcoreapp2.2\SeminarskiWebAPI.runtimeconfig.dev.json
@@ -61,4 +62,3 @@ E:\SeminarskiRSII\SeminarskiRSII\SeminarskiAPI\obj\Debug\netcoreapp2.2\Seminarsk
 E:\SeminarskiRSII\SeminarskiRSII\SeminarskiAPI\obj\Debug\netcoreapp2.2\SeminarskiWebAPI.dll
 E:\SeminarskiRSII\SeminarskiRSII\SeminarskiAPI\obj\Debug\netcoreapp2.2\SeminarskiWebAPI.pdb
 E:\SeminarskiRSII\SeminarskiRSII\SeminarskiAPI\obj\Debug\netcoreapp2.2\SeminarskiWebAPI.genruntimeconfig.cache
-E:\SeminarskiRSII\SeminarskiRSII\SeminarskiAPI\bin\Debug\netcoreapp2.2\libman.json

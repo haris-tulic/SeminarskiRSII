@@ -43,7 +43,25 @@ namespace SeminarskiWebAPI.Services.Services
         public RecenzijaModel Insert(RecenzijaUpsertRequest request)
         {
             var entity = _mapper.Map<Recenzija>(request);
+           
             _context.Recenzija.Add(entity);
+            _context.SaveChanges();
+            var pronadji = _context.RasporedVoznje.Include(r => r.Recenzija).Where(v => v.RasporedVoznjeID == request.RasporedVoznjeID).FirstOrDefault();
+            if (pronadji.Recenzija!=null)
+            {
+                decimal ocjena = 0;
+                foreach (var recenzija in pronadji.Recenzija)
+                {
+                    ocjena += recenzija.Ocjena;
+                }
+                decimal brojOcjena = pronadji.Recenzija.Count();
+                pronadji.FinalOcjena = ocjena / brojOcjena;
+               
+            }
+            else
+            {
+                pronadji.FinalOcjena = request.Ocjena;
+            }
             _context.SaveChanges();
             return _mapper.Map<RecenzijaModel>(entity);
         }

@@ -11,6 +11,7 @@ namespace eAutobusModel
         public DateTime DatumRecenzije { get; set; }
         public int Ocjena { get; set; }
         public string Komentar { get; set; }
+        public int RasporedVoznjeID { get; set; }
         public string RasporedVoznje { get; set; }
         public int KupacID { get; set; }
         public string ImePrezimeKupca { get; set; }

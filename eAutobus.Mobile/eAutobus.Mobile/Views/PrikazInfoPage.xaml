@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eAutobus.Mobile.Views.PrikazInfoPage">
+    <ContentPage.Content>
+        
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+
+                </Grid.ColumnDefinitions>
+                
+                <Label Text="Broj linije:" Grid.Row="0" Grid.Column="0"/>
+                <Label x:Name="BrojLinije"  Grid.Row="1" Grid.Column="0"/>
+
+                <Label Text="Naziv linije:"  Grid.Row="0" Grid.Column="1"/>
+                <Label x:Name="NazivLinije"  Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Broj autobusa:"  Grid.Row="0" Grid.Column="2"/>
+                <Label x:Name="Autobus"  Grid.Row="1" Grid.Column="2"/>
+
+                <Label Text="Polazak: "  Grid.Row="0" Grid.Column="3"/>
+                <Label x:Name="Polaziste"  Grid.Row="1" Grid.Column="3"/>
+
+                <Label Text="Vrijeme polaska: "  Grid.Row="0" Grid.Column="4"/>
+                <Label x:Name="VrijemePolaska"  Grid.Row="1" Grid.Column="4"/>
+
+                <Label Text="Odredište"  Grid.Row="0" Grid.Column="5"/>
+                <Label x:Name="Odrediste"  Grid.Row="1" Grid.Column="5"/>
+
+                <Label Text="Vrijeme dolaska:"  Grid.Row="0" Grid.Column="6"/>
+                <Label x:Name="VrijemeDolaska"  Grid.Row="1" Grid.Column="6"/>
+
+                <Label Text="Datum:"  Grid.Row="0" Grid.Column="7"/>
+                <Label x:Name="Datum"  Grid.Row="1" Grid.Column="7"/>
+
+                <Label Text="Ocjena: "  Grid.Row="0" Grid.Column="8"/>
+                <Label x:Name="FinalOcjena"  Grid.Row="1" Grid.Column="8"/>
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

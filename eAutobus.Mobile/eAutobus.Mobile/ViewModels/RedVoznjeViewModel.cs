@@ -1,4 +1,5 @@
-﻿using eAutobusModel;
+﻿using eAutobus.Mobile.Views;
+using eAutobusModel;
 using eAutobusModel.Requests;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,17 @@ namespace eAutobus.Mobile.ViewModels
     {
         private readonly APIService _polazisteService = new APIService("Stanica");
         private readonly APIService _redVoznjeService = new APIService("RasporedVoznje");
+        private readonly APIService _prikazOcjene = new APIService("Preporuke");
+
+        private RasporedVoznjeModel _linija;
+        public RasporedVoznjeModel Linija
+        {
+            get { return _linija; }
+            set
+            {
+                SetProperty(ref _linija, value);
+            }
+        }
 
         public StanicaModel _polaziste = null;
         public StanicaModel Polaziste
@@ -78,6 +90,11 @@ namespace eAutobus.Mobile.ViewModels
                     RedVoznjeList.Add(item);
                 }
             }
+        }
+        public async Task PrikazOcjene(int? RasporedVoznjeID)
+        {
+            var linija= await _prikazOcjene.Get <RasporedVoznjeModel>(RasporedVoznjeID);
+            await Application.Current.MainPage.Navigation.PushAsync(new PrikazInfoPage(linija));
         }
     }
 }

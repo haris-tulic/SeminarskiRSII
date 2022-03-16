@@ -29,7 +29,7 @@ namespace SeminarskiWebAPI.Services
         public List<eAutobusModel.RasporedVoznjeModel> Get(RasporedVoznjeGetRequest search)
         {
             
-            var query = _context.RasporedVoznje.Include(a=>a.Autobus).Include(o=>o.Odrediste).Include(d=>d.Polaziste).Include(v=>v.Vozac).Include(k=>k.Kondukter).AsQueryable();
+            var query = _context.RasporedVoznje.Include(a=>a.Autobus).Include(o=>o.Odrediste).Include(d=>d.Polaziste).Include(r=>r.Recenzija).Include(v=>v.Vozac).Include(k=>k.Kondukter).AsQueryable();
             if (search.OdredisteID.ToString()!="0")
             {
                 query = query.Where(r => r.OdredisteID == search.OdredisteID);
@@ -45,6 +45,7 @@ namespace SeminarskiWebAPI.Services
             var list = query.ToList();
             var listR = new List<RasporedVoznjeModel>();
             _mapper.Map(list, listR);
+            
             for (int i = 0; i <list.Count; i++)
             {
                 listR[i].Odlazak = list[i].Odrediste.NazivLokacijeStanice;
@@ -52,7 +53,7 @@ namespace SeminarskiWebAPI.Services
                 listR[i].BrojAutobusa = list[i].Autobus.BrojAutobusa;
                 listR[i].NazivLinije = list[i].Polaziste.NazivLokacijeStanice + "-" + list[i].Odrediste.NazivLokacijeStanice;
             }
-            return listR;
+            return listR.OrderByDescending(r=>r.FinalOcjena).ToList();
         }
 
         private RasporedVoznjeModel Convert(RasporedVoznje x)
