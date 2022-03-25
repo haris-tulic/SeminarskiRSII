@@ -31,6 +31,17 @@
           "buildTransitive/CefSharp.Common.targets": {}
         }
       },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        }
+      },
       "Flurl/2.8.2": {
         "type": "package",
         "compile": {
@@ -565,6 +576,15 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/Splat.dll": {}
+        }
+      },
       "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
@@ -913,6 +933,7 @@
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
+          "Splat": "1.6.2",
           "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
@@ -935,6 +956,7 @@
           "Microsoft.ML": "1.7.0",
           "Microsoft.ML.Recommender": "0.19.0",
           "Newtonsoft.Json": "13.0.1",
+          "Splat": "1.6.2",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -973,6 +995,17 @@
         "build": {
           "buildTransitive/CefSharp.Common.props": {},
           "buildTransitive/CefSharp.Common.targets": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Flurl/2.8.2": {
@@ -1676,6 +1709,15 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/Splat.dll": {}
+        }
+      },
       "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
@@ -2000,6 +2042,7 @@
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
+          "Splat": "1.6.2",
           "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
@@ -2022,6 +2065,7 @@
           "Microsoft.ML": "1.7.0",
           "Microsoft.ML.Recommender": "0.19.0",
           "Newtonsoft.Json": "13.0.1",
+          "Splat": "1.6.2",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -2060,6 +2104,17 @@
         "build": {
           "buildTransitive/CefSharp.Common.props": {},
           "buildTransitive/CefSharp.Common.targets": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Flurl/2.8.2": {
@@ -2794,6 +2849,15 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/Splat.dll": {}
+        }
+      },
       "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
@@ -3162,6 +3226,7 @@
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
+          "Splat": "1.6.2",
           "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
@@ -3184,6 +3249,7 @@
           "Microsoft.ML": "1.7.0",
           "Microsoft.ML.Recommender": "0.19.0",
           "Newtonsoft.Json": "13.0.1",
+          "Splat": "1.6.2",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -3222,6 +3288,17 @@
         "build": {
           "buildTransitive/CefSharp.Common.props": {},
           "buildTransitive/CefSharp.Common.targets": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Flurl/2.8.2": {
@@ -3956,6 +4033,15 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/Splat.dll": {}
+        }
+      },
       "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
@@ -4321,6 +4407,7 @@
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
+          "Splat": "1.6.2",
           "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
@@ -4343,6 +4430,7 @@
           "Microsoft.ML": "1.7.0",
           "Microsoft.ML.Recommender": "0.19.0",
           "Newtonsoft.Json": "13.0.1",
+          "Splat": "1.6.2",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -4381,6 +4469,17 @@
         "build": {
           "buildTransitive/CefSharp.Common.props": {},
           "buildTransitive/CefSharp.Common.targets": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Flurl/2.8.2": {
@@ -5093,6 +5192,15 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/Splat.dll": {}
+        }
+      },
       "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
@@ -5417,6 +5525,7 @@
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
+          "Splat": "1.6.2",
           "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
@@ -5439,6 +5548,7 @@
           "Microsoft.ML": "1.7.0",
           "Microsoft.ML.Recommender": "0.19.0",
           "Newtonsoft.Json": "13.0.1",
+          "Splat": "1.6.2",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -5477,6 +5587,17 @@
         "build": {
           "buildTransitive/CefSharp.Common.props": {},
           "buildTransitive/CefSharp.Common.targets": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Flurl/2.8.2": {
@@ -6220,6 +6341,15 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/Splat.dll": {}
+        }
+      },
       "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
@@ -6588,6 +6718,7 @@
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
+          "Splat": "1.6.2",
           "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
@@ -6610,6 +6741,7 @@
           "Microsoft.ML": "1.7.0",
           "Microsoft.ML.Recommender": "0.19.0",
           "Newtonsoft.Json": "13.0.1",
+          "Splat": "1.6.2",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -6648,6 +6780,17 @@
         "build": {
           "buildTransitive/CefSharp.Common.props": {},
           "buildTransitive/CefSharp.Common.targets": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Flurl/2.8.2": {
@@ -7360,6 +7503,15 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/Splat.dll": {}
+        }
+      },
       "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
@@ -7684,6 +7836,7 @@
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
+          "Splat": "1.6.2",
           "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
@@ -7706,6 +7859,7 @@
           "Microsoft.ML": "1.7.0",
           "Microsoft.ML.Recommender": "0.19.0",
           "Newtonsoft.Json": "13.0.1",
+          "Splat": "1.6.2",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -7744,6 +7898,17 @@
         "build": {
           "buildTransitive/CefSharp.Common.props": {},
           "buildTransitive/CefSharp.Common.targets": {}
+        }
+      },
+      "Coding4Fun.Toolkit.Controls/2.1.8": {
+        "type": "package",
+        "compile": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netcore451/Coding4Fun.Toolkit.Controls.dll": {},
+          "lib/netcore451/Coding4Fun.Toolkit.dll": {}
         }
       },
       "Flurl/2.8.2": {
@@ -8487,6 +8652,15 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/Splat.dll": {}
+        }
+      },
       "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
@@ -8855,6 +9029,7 @@
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
+          "Splat": "1.6.2",
           "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
@@ -8877,6 +9052,7 @@
           "Microsoft.ML": "1.7.0",
           "Microsoft.ML.Recommender": "0.19.0",
           "Newtonsoft.Json": "13.0.1",
+          "Splat": "1.6.2",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -9474,6 +9650,47 @@
         "src/CefSharp/WebBrowserExtensions.cs",
         "src/CefSharp/WebPluginInfo.cs",
         "src/CefSharp/obj/Release/.NETFramework,Version=v4.5.2.AssemblyAttributes.cs"
+      ]
+    },
+    "Coding4Fun.Toolkit.Controls/2.1.8": {
+      "sha512": "PCRWgCiW9H8qzT8xYxNtpq4ZWpvh2gtrKAnWtEOXzapyXTEt8esCt0cqRwvosW+bytyfohonmB7UxB0EGXmdsQ==",
+      "type": "package",
+      "path": "coding4fun.toolkit.controls/2.1.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "coding4fun.toolkit.controls.2.1.8.nupkg.sha512",
+        "coding4fun.toolkit.controls.nuspec",
+        "content/ReadMe.Coding4Fun.Toolkit.txt",
+        "content/windowsphone8/Toolkit.Content/ApplicationBar.Cancel.png",
+        "content/windowsphone8/Toolkit.Content/ApplicationBar.Check.png",
+        "lib/netcore451/Coding4Fun.Toolkit.Controls.dll",
+        "lib/netcore451/Coding4Fun.Toolkit.Controls.pri",
+        "lib/netcore451/Coding4Fun.Toolkit.Controls/Coding4Fun.Toolkit.Controls.xr.xml",
+        "lib/netcore451/Coding4Fun.Toolkit.Controls/Themes/Generic.xbf",
+        "lib/netcore451/Coding4Fun.Toolkit.dll",
+        "lib/netcore451/Coding4Fun.Toolkit.pri",
+        "lib/windowsphone8/Coding4Fun.Toolkit.Controls.dll",
+        "lib/windowsphone8/Coding4Fun.Toolkit.dll",
+        "lib/windowsphone8/cs/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/da/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/de/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/es/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/fr/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/fr/hu/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/it/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/ko/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/no/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/pl/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/pt/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/ru/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/windowsphone8/sk/Coding4Fun.Toolkit.Controls.resources.dll",
+        "lib/wpa81/Coding4Fun.Toolkit.Controls.dll",
+        "lib/wpa81/Coding4Fun.Toolkit.Controls.pri",
+        "lib/wpa81/Coding4Fun.Toolkit.Controls/Coding4Fun.Toolkit.Controls.xr.xml",
+        "lib/wpa81/Coding4Fun.Toolkit.Controls/Themes/Generic.xbf",
+        "lib/wpa81/Coding4Fun.Toolkit.dll",
+        "lib/wpa81/Coding4Fun.Toolkit.pri"
       ]
     },
     "Flurl/2.8.2": {
@@ -14534,6 +14751,39 @@
         "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll"
       ]
     },
+    "Splat/1.6.2": {
+      "sha512": "DeH0MxPU+D4JchkIDPYG4vUT+hsWs9S41cFle0/4K5EJMXWurx5DzAkj2366DfK14/XKNhsu6tCl4dZXJ3CD4w==",
+      "type": "package",
+      "path": "splat/1.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoMac/Splat.dll",
+        "lib/MonoMac/Splat.dll.mdb",
+        "lib/Net45/Splat.dll",
+        "lib/Net45/Splat.pdb",
+        "lib/NetCore45/Splat.dll",
+        "lib/NetCore45/Splat.pdb",
+        "lib/NetCore45/Splat.pri",
+        "lib/Portable-Win81+Wpa81/Splat.dll",
+        "lib/Portable-Win81+Wpa81/Splat.pdb",
+        "lib/Portable-Win81+Wpa81/Splat.pri",
+        "lib/Portable-net45+win+wpa81+wp80/Splat.dll",
+        "lib/Xamarin.Mac10/Splat-XamarinMac.csproj.FilesWrittenAbsolute.txt",
+        "lib/Xamarin.Mac10/Splat.dll",
+        "lib/Xamarin.Mac10/Splat.dll.mdb",
+        "lib/Xamarin.iOS10/Splat.dll",
+        "lib/Xamarin.iOS10/Splat.dll.mdb",
+        "lib/monoandroid/Splat.dll",
+        "lib/monoandroid/Splat.dll.mdb",
+        "lib/monotouch/Splat.dll",
+        "lib/monotouch/Splat.dll.mdb",
+        "lib/wp8/Splat.dll",
+        "lib/wp8/Splat.pdb",
+        "splat.1.6.2.nupkg.sha512",
+        "splat.nuspec"
+      ]
+    },
     "Stripe.net/39.28.0": {
       "sha512": "tu7q+u4GJzAr3VkY2+NdOZVVWpWFio/VULZH6YhkzRvG7kmpkQsQ/exluZ9SyTHsR9hIqEFdc5do/WeLWxyMIw==",
       "type": "package",
@@ -16042,7 +16292,9 @@
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.16299": [
       "Acr.UserDialogs >= 7.2.0.562",
+      "Coding4Fun.Toolkit.Controls >= 2.1.8",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.12",
+      "Splat >= 1.6.2",
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Forms >= 5.0.0.2012",
       "eAutobus.Mobile >= 1.0.0"
@@ -16099,9 +16351,17 @@
             "target": "Package",
             "version": "[7.2.0.562, )"
           },
+          "Coding4Fun.Toolkit.Controls": {
+            "target": "Package",
+            "version": "[2.1.8, )"
+          },
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.2.12, )"
+          },
+          "Splat": {
+            "target": "Package",
+            "version": "[1.6.2, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",

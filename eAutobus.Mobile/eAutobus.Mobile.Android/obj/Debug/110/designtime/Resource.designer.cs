@@ -2676,6 +2676,7 @@ namespace eAutobus.Mobile.Droid
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahText = global::eAutobus.Mobile.Droid.Resource.Styleable.ProgressWheel_ahText;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextColor = global::eAutobus.Mobile.Droid.Resource.Styleable.ProgressWheel_ahTextColor;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextSize = global::eAutobus.Mobile.Droid.Resource.Styleable.ProgressWheel_ahTextSize;
+			global::Splat.Resource.String.library_name = global::eAutobus.Mobile.Droid.Resource.String.library_name;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::eAutobus.Mobile.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::eAutobus.Mobile.Droid.Resource.Attribute.font;
 			global::Xamarin.Essentials.Resource.Attribute.fontProviderAuthority = global::eAutobus.Mobile.Droid.Resource.Attribute.fontProviderAuthority;

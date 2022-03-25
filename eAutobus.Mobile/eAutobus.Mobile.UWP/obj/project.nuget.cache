@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Sqh0P+nb1FU0o8UhW12PggRvUFQDUDVispEA9lex0OTfVSM4SVxB67drWvvxS+veDz7h4ZSHOe/rW6v11GEnVA==",
+  "dgSpecHash": "tZJDuO4hAyIcU8Ro1g/v9jww2dNecQ0IiOO/ApxbBLWbyfVHWl0rD2Q5EaU2Ryz9Vx/g0MAS3WPcniq/lNAg6A==",
   "success": true,
   "projectFilePath": "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile.UWP\\eAutobus.Mobile.UWP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\acr.userdialogs\\7.2.0.562\\acr.userdialogs.7.2.0.562.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\cefsharp.common\\97.1.61\\cefsharp.common.97.1.61.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\coding4fun.toolkit.controls\\2.1.8\\coding4fun.toolkit.controls.2.1.8.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\flurl\\2.8.2\\flurl.2.8.2.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\flurl.http\\2.4.2\\flurl.http.2.4.2.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
@@ -56,6 +57,7 @@
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\\2.2.12\\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk.2.2.12.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\\6.2.12\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform.6.2.12.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\runtime.win7.system.private.uri\\4.3.0\\runtime.win7.system.private.uri.4.3.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\splat\\1.6.2\\splat.1.6.2.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\stripe.net\\39.28.0\\stripe.net.39.28.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512",

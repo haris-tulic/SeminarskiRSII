@@ -152,6 +152,11 @@ namespace eAutobus.Mobile.Views
                 ErrorLabel_Cvv.IsVisible = false;
             }
         }
-    
-}
+
+        private async void PlatiKartuBtn_Clicked(object sender, EventArgs e)
+        {
+            await model.KupiKartuOnline();
+           
+        }
+    }
 }
