@@ -9,7 +9,7 @@ using SeminarskiWebAPI.Database;
 
 namespace SeminarskiWebAPI.Migrations
 {
-    [DbContext(typeof(eAutobus))]
+    [DbContext(typeof(Database.eAutobusi))]
     [Migration("20211026161454_New")]
     partial class New
     {

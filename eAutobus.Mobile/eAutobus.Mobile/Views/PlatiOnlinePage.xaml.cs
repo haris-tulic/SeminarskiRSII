@@ -1,4 +1,5 @@
 ﻿using eAutobus.Mobile.ViewModels;
+using eAutobusModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,19 +14,20 @@ namespace eAutobus.Mobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PlatiOnlinePage : ContentPage
     {
-        private PlatiOnlineVM model = null;
+        private PlatiOnlineViewModel model;
+        public KartaModel _karta = null;
 
-        public PlatiOnlinePage()
+        public PlatiOnlinePage(KartaModel karta)
         {
+            _karta = karta;
             InitializeComponent();
-            BindingContext = model = new PlatiOnlineVM();
+            BindingContext = model = new PlatiOnlineViewModel();
         }
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            
-            
-            model.Inicijalizuj();
+            model._novaKarta = _karta;
+            model.UcitajPodatke();
         }
         private void Number_changed(object sender, TextChangedEventArgs e)
         {

@@ -45,6 +45,10 @@
       "frameworks": {
         "uap10.0.16299": {
           "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[7.2.0.562, )"
+            },
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
               "version": "[6.2.12, )"
@@ -138,7 +142,7 @@
           "dependencies": {
             "Acr.UserDialogs": {
               "target": "Package",
-              "version": "[7.2.0.562, )"
+              "version": "[7.1.0.468, )"
             },
             "CefSharp.Common": {
               "target": "Package",
@@ -160,7 +164,7 @@
             },
             "Stripe.net": {
               "target": "Package",
-              "version": "[39.97.0, )"
+              "version": "[39.28.0, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

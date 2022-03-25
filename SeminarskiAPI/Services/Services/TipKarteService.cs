@@ -11,9 +11,9 @@ namespace SeminarskiWebAPI.Services
 {
     public class TipKarteService : ITipKarteService
     {
-        private readonly eAutobus _context;
+        private readonly Database.eAutobusi _context;
         private readonly IMapper _mapper;
-        public TipKarteService(eAutobus context, IMapper mapper)
+        public TipKarteService(Database.eAutobusi context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

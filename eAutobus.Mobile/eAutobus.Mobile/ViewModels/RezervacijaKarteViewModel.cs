@@ -1,4 +1,5 @@
-﻿using eAutobusModel;
+﻿using eAutobus.Mobile.Views;
+using eAutobusModel;
 using eAutobusModel.Requests;
 using System;
 using System.Collections.Generic;
@@ -25,10 +26,12 @@ namespace eAutobus.Mobile.ViewModels
         public ObservableCollection<StanicaModel> StanicaList { get; set; } = new ObservableCollection<StanicaModel>();
         public double ccijena;
         public ICommand CijenaCommand { get; }
-
+        public ICommand KupiKartuOnlineCommand { get; }
+        
         public RezervacijaKarteViewModel()
         {
             KupiCommand = new Command(async () => await KupiKartu());
+            KupiKartuOnlineCommand = new Command(async () => await KupiKartuOnline());
         }
 
         public async Task KupiKartu()
@@ -37,13 +40,89 @@ namespace eAutobus.Mobile.ViewModels
             {
                 try
                 {
+                    _novaKarta.DatumVadjenjaKarte = DatumPolaska;
+                    
+                    
+                    if (VrstaKarte.Naziv.StartsWith("Mjesečna"))
+                    {
+                        _novaKarta.DatumVazenjaKarte = DatumPolaska.AddMonths(1);
+                        _novaKarta.Pravac = true;
+                        _novaKarta.PravacS = "U oba smjera";
+                    }
+                    else if (VrstaKarte.Naziv.StartsWith("Godišnja"))
+                    {
+                        _novaKarta.DatumVazenjaKarte = DatumPolaska.AddYears(1);
+                        _novaKarta.Pravac = true;
+                        _novaKarta.PravacS = "U oba smjera";
+                    }
+                    else
+                    {
+                        _novaKarta.DatumVazenjaKarte = DatumDolaska;
+                        if (_novaKarta.Pravac==null && _novaKarta.PravacS==null)
+                        {
+                            _novaKarta.Pravac = true;
+                            _novaKarta.PravacS = "U jednom smjeru";
+                        }
+                    }
+                    
                     await _serviceK.Insert<KartaModel>(_novaKarta);
-                    await Application.Current.MainPage.DisplayAlert("Uspješno!", "Uspješno ste kupili kartu.", "Uredu");
+                    await Application.Current.MainPage.DisplayAlert("Uspješno!", "Uspješno ste kupili kartu. Vašu kartu ćete platiti prilikom preuzimanja na šalteru. Karta važi do: "+_novaKarta.DatumVazenjaKarte, "Uredu");
+                    
+                }
+                catch (Exception)
+                {
+                    
+                     await Application.Current.MainPage.DisplayAlert("Upozorenje!", "Nije izvršena kupovina!", "Ok");
+                }
+            }
+        }
+        public async Task KupiKartuOnline()
+        {
+            if (_novaKarta != null)
+            {
+                try
+                {
+                    _novaKarta.DatumVadjenjaKarte = DatumPolaska;
+                   
+                    if (VrstaKarte.Naziv.StartsWith("Mjesečna"))
+                    {
+                        _novaKarta.DatumVazenjaKarte = DatumPolaska.AddMonths(1);
+                        _novaKarta.Pravac = true;
+                        _novaKarta.PravacS = "U oba smjera";
+                    }
+                    else if (VrstaKarte.Naziv.StartsWith("Godišnja"))
+                    {
+                        _novaKarta.DatumVazenjaKarte = DatumPolaska.AddYears(1);
+                        _novaKarta.Pravac = true;
+                        _novaKarta.PravacS = "U oba smjera";
+                    }
+                    else
+                    {
+                        _novaKarta.DatumVazenjaKarte = DatumDolaska;
+                        if (_novaKarta.Pravac == null && _novaKarta.PravacS == null)
+                        {
+                            _novaKarta.Pravac = true;
+                            _novaKarta.PravacS = "U jednom smjeru";
+                        }
+                    }
+                    var onlineKarta = await _serviceK.Insert<KartaModel>(_novaKarta);
+                    if (onlineKarta!=null)
+                    {
+                            var popust = _novaKarta.Cijena * 5 / 100;
+                            onlineKarta.Cijena -= popust;
+                            await Application.Current.MainPage.Navigation.PushAsync(new PlatiOnlinePage(onlineKarta));
+                    }
+                    else
+                    {
+                           await Application.Current.MainPage.DisplayAlert("Upozorenje!", "Nije izvršena kupovina!", "Ok");
+                    }
+                    
                 }
                 catch (Exception)
                 {
 
-                    throw;
+                    await Application.Current.MainPage.DisplayAlert("Upozorenje!","Nije izvršena kupovina!","Ok");
+
                 }
             }
         }
@@ -55,12 +134,21 @@ namespace eAutobus.Mobile.ViewModels
                 _cijenaKarte.TipkarteID.ToString() != "0")
             {
 
-                var cijenovnik = await _serviceC.Get<List<CjenovnikModel>>(_cijenaKarte);
-                foreach (var item in cijenovnik)
+                var cjenovnik = await _serviceC.Get<List<CjenovnikModel>>(_cijenaKarte);
+                if (cjenovnik.Count == 0)
                 {
-                    Cijena = item.Cijena;
-                     ccijena = item.Cijena;    
+                    Cijena = 0;
+                    ccijena = 0;
                 }
+                else
+                {
+                    foreach (var item in cjenovnik)
+                    {
+                        Cijena = item.Cijena;
+                        ccijena = item.Cijena;
+                    }
+                }
+
             }
         }
         public async Task Ucitaj()
@@ -142,7 +230,7 @@ namespace eAutobus.Mobile.ViewModels
             } 
         }
 
-        public bool _pravac;
+        public bool _pravac=true;
         public bool Pravac
         {
             get { return _pravac; }
@@ -200,7 +288,7 @@ namespace eAutobus.Mobile.ViewModels
 
       
 
-        private string _pravacS;
+        private string _pravacS="U jednom smjeru";
         public string PravacS
         {
             get{ return _pravacS; }
@@ -209,25 +297,25 @@ namespace eAutobus.Mobile.ViewModels
               }
         }
 
-        private DateTime _datumPolaska;
+        private DateTime _datumPolaska = DateTime.Now;
         public DateTime DatumPolaska
         {
             get { return _datumPolaska; }
             set
             {
                 SetProperty(ref _datumPolaska, value);
-                _novaKarta.DatumVadjenjaKarte = value;
+                _novaKarta.DatumVadjenjaKarte = _datumPolaska;
             }
         }
 
-        private DateTime _datumDolaska;
+        private DateTime _datumDolaska = DateTime.Now;
         public DateTime DatumDolaska
         {
             get { return _datumDolaska; }
             set
             {
                 SetProperty(ref _datumDolaska, value);
-                _novaKarta.DatumVazenjaKarte = value;
+                _novaKarta.DatumVazenjaKarte = _datumDolaska;
             }
         }
 

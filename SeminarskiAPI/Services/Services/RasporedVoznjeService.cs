@@ -12,9 +12,9 @@ namespace SeminarskiWebAPI.Services
 {
     public class RasporedVoznjeService : IRasporedVoznjeService
     {
-        private readonly eAutobus _context;
+        private readonly Database.eAutobusi _context;
         private readonly IMapper _mapper;
-        public RasporedVoznjeService(eAutobus context, IMapper mapper)
+        public RasporedVoznjeService(Database.eAutobusi context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

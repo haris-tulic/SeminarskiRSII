@@ -13,11 +13,11 @@ namespace SeminarskiWebAPI.Services
 {
     public class AutobusService : IAutobusService
     {
-        private readonly eAutobus _context;
+        private readonly eAutobusi _context;
         private readonly IMapper _mapper;
         private readonly IGarazaService _garaza;
 
-        public AutobusService(eAutobus context, IMapper mapper, IGarazaService garaza)
+        public AutobusService(eAutobusi context, IMapper mapper, IGarazaService garaza)
         {
             _context = context;
             _mapper = mapper;
@@ -42,7 +42,7 @@ namespace SeminarskiWebAPI.Services
             var lista = query.ToList();
             var entityl = new List<AutobusiModel>();
             _mapper.Map(lista, entityl);
-            for (int i = 0; i < lista.Count; i++)
+            for (int i = 0; i < lista.Count(); i++)
             {
                 entityl[i].NazivGaraze = lista[i].Garaza.NazivGaraze;
             }

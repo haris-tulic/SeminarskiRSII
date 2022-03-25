@@ -12,9 +12,9 @@ namespace SeminarskiWebAPI.Services
 {
     public class StanicaService : IStanicaService
     {
-        private readonly eAutobus _context;
+        private readonly Database.eAutobusi _context;
         private readonly IMapper _mapper;
-        public StanicaService(eAutobus context, IMapper mapper)
+        public StanicaService(Database.eAutobusi context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
@@ -33,7 +33,7 @@ namespace SeminarskiWebAPI.Services
             var list = _context.Stanica.Include(s=>s.Grad).ToList();
             var listS = new List<StanicaModel>();
             listS = _mapper.Map<List<eAutobusModel.StanicaModel>>(list);
-            for (int i = 0; i < list.Count; i++)
+            for (int i = 0; i < list.Count(); i++)
             {
                 listS[i].Grad = list[i].Grad.NazivGrada;
             }

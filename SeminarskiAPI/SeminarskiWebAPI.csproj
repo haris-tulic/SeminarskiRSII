@@ -3,16 +3,23 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <RootNamespace>SeminarskiWebAPI</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="Migrations\20220103184833_ChangesInGaraza.cs" />
     <Compile Remove="Migrations\20220103184833_ChangesInGaraza.Designer.cs" />
+    <Compile Remove="Migrations\20220317141841_PlatiKartuOnlineTable.cs" />
+    <Compile Remove="Migrations\20220317141841_PlatiKartuOnlineTable.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Flurl" Version="3.0.2" />
     <PackageReference Include="Flurl.Http" Version="3.2.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
@@ -20,9 +27,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="3.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Primitives" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Primitives" Version="2.2.0" />
     <PackageReference Include="Microsoft.ML" Version="1.7.0" />
     <PackageReference Include="Microsoft.ML.Recommender" Version="0.19.0" />
     <PackageReference Include="Microsoft.OpenApi" Version="1.2.3" />
@@ -36,6 +43,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\eAutobus.Mobile\eAutobus.Mobile\eAutobus.Mobile.csproj" />
     <ProjectReference Include="..\eAutobusModel\eAutobusModel.csproj" />
   </ItemGroup>
 

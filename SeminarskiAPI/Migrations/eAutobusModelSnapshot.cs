@@ -8,7 +8,7 @@ using SeminarskiWebAPI.Database;
 
 namespace SeminarskiWebAPI.Migrations
 {
-    [DbContext(typeof(eAutobus))]
+    [DbContext(typeof(eAutobusi))]
     partial class eAutobusModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -283,6 +283,29 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasKey("KupacID");
 
                     b.ToTable("Kupac");
+                });
+
+            modelBuilder.Entity("SeminarskiWebAPI.Database.PlatiKartu", b =>
+                {
+                    b.Property<int>("PlatiKartuID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<double>("Cijena");
+
+                    b.Property<bool>("JeLiPlacena");
+
+                    b.Property<int>("KartaID");
+
+                    b.Property<int>("KupacID");
+
+                    b.HasKey("PlatiKartuID");
+
+                    b.HasIndex("KartaID");
+
+                    b.HasIndex("KupacID");
+
+                    b.ToTable("PlatiKartu");
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.RasporedVoznje", b =>
@@ -564,6 +587,19 @@ namespace SeminarskiWebAPI.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("SeminarskiWebAPI.Database.PlatiKartu", b =>
+                {
+                    b.HasOne("SeminarskiWebAPI.Database.Karta", "Karta")
+                        .WithMany("PlaceneKarte")
+                        .HasForeignKey("KartaID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("SeminarskiWebAPI.Database.Kupac", "Kupac")
+                        .WithMany("PlaceneKarte")
+                        .HasForeignKey("KupacID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("SeminarskiWebAPI.Database.RasporedVoznje", b =>
                 {
                     b.HasOne("SeminarskiWebAPI.Database.Autobus", "Autobus")
@@ -595,7 +631,7 @@ namespace SeminarskiWebAPI.Migrations
             modelBuilder.Entity("SeminarskiWebAPI.Database.Recenzija", b =>
                 {
                     b.HasOne("SeminarskiWebAPI.Database.Kupac", "Kupac")
-                        .WithMany("Recnzija")
+                        .WithMany("Recenzija")
                         .HasForeignKey("KupacID")
                         .OnDelete(DeleteBehavior.Cascade);
 

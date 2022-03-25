@@ -18,7 +18,8 @@ namespace SeminarskiWebAPI.Database
             public string LozinkaHash { get; set; }
             public string LozinkaSalt { get; set; }
             public string Email { get; set; }
-            public List<Recenzija> Recnzija { get; set; }
+            public List<Recenzija> Recenzija { get; set; }
+            public List<PlatiKartu> PlaceneKarte { get; set; }
     }
 
 }

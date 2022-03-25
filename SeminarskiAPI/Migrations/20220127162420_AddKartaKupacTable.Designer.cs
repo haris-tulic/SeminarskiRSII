@@ -9,7 +9,7 @@ using SeminarskiWebAPI.Database;
 
 namespace SeminarskiWebAPI.Migrations
 {
-    [DbContext(typeof(eAutobus))]
+    [DbContext(typeof(eAutobusi))]
     [Migration("20220127162420_AddKartaKupacTable")]
     partial class AddKartaKupacTable
     {

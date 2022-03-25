@@ -12,9 +12,9 @@ namespace SeminarskiWebAPI.Services
 {
     public class CjenovnikService : ICjenovnikService
     {
-        private readonly eAutobus _context;
+        private readonly Database.eAutobusi _context;
         private readonly IMapper _mapper;
-        public CjenovnikService(eAutobus context, IMapper mapper)
+        public CjenovnikService(Database.eAutobusi context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
@@ -54,7 +54,7 @@ namespace SeminarskiWebAPI.Services
             var list = query.ToList();
             var listC = new List<CjenovnikModel>();
             _mapper.Map(list,listC);
-            for (int i = 0; i < list.Count; i++)
+            for (int i = 0; i < list.Count(); i++)
             {
                 listC[i].Tipkarte = list[i].Tipkarte.Naziv;
                 listC[i].VrstaKarte = list[i].VrstaKarte.Naziv;

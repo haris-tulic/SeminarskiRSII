@@ -143,9 +143,11 @@ E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Deb
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Core\AppxManifest.xml
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Core\eAutobus.Mobile.UWP.exe
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\eAutobus.Mobile.UWP.build.appxrecipe
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Acr.UserDialogs.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\AutoMapper.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Flurl.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Flurl.Http.dll
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\LdaNative.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Microsoft.ML.Core.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Microsoft.ML.Data.dll
@@ -161,8 +163,12 @@ E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Deb
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Microsoft.ML.Recommender.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Newtonsoft.Json.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\System.Runtime.dll
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Stripe.net.dll
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Stripe.net.pdb
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\System.CodeDom.dll
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\System.Configuration.ConfigurationManager.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\System.Security.Cryptography.ProtectedData.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\System.Threading.Channels.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Microsoft.Graphics.Canvas.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Microsoft.Graphics.Canvas.winmd
@@ -201,6 +207,8 @@ E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Deb
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\ResourceHandlingTask.state
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\Microsoft.ML.Transforms\en-US\Microsoft.ML.Transforms.Properties.Resources.resw
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\FxResources.System.CodeDom.SR.resw
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\FxResources.System.Configuration.ConfigurationManager.SR.resw
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\FxResources.System.Security.Cryptography.ProtectedData.SR.resw
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\FxResources.System.Threading.Channels.SR.resw
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\priconfig.xml
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\priconfig.xml.intermediate
@@ -220,11 +228,3 @@ E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Deb
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\ProjectArchitectures.txt
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636160715180000000.json
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637425103200000000.json
-E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Acr.UserDialogs.dll
-E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Stripe.net.dll
-E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Stripe.net.pdb
-E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\System.Configuration.ConfigurationManager.dll
-E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\System.Security.Cryptography.ProtectedData.dll
-E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\FxResources.System.Configuration.ConfigurationManager.SR.resw
-E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\FxResources.System.Security.Cryptography.ProtectedData.SR.resw

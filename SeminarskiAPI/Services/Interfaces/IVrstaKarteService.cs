@@ -1,4 +1,5 @@
 ﻿using eAutobusModel.Requests;
+using SeminarskiWebAPI.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace SeminarskiWebAPI.Services
         eAutobusModel.VrstaKarteModel GetById(int id);
         eAutobusModel.VrstaKarteModel Insert(VrstaKarteInsertRequest request);
         eAutobusModel.VrstaKarteModel Delete(int id);
-
+        
 
     }
 }

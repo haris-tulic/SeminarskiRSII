@@ -10,8 +10,9 @@ namespace SeminarskiWebAPI.Database
         public int PlatiKartuID { get; set; }
         public int KartaID { get; set; }
         public int KupacID { get; set; }
-        public decimal Cijena { get; set; }
+        public double Cijena { get; set; }
         public Karta Karta { get; set; }
         public Kupac Kupac { get; set; }
+        public bool JeLiPlacena { get; set; }
     }
 }

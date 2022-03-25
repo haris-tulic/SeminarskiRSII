@@ -21,6 +21,8 @@ using SeminarskiWebAPI.Services.Interfaces;
 using SeminarskiWebAPI.Services.Services;
 using SeminarskiWebAPI.Security;
 using SeminarskiWebAPI.Filters;
+using Microsoft.EntityFrameworkCore;
+using SeminarskiWebAPI.Database;
 
 namespace SeminarskiAPI
 {
@@ -45,9 +47,9 @@ namespace SeminarskiAPI
             services.AddSwaggerGen();
             //services.AddAuthentication("BasicAuthentication")
             //   .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
-            var connection = @"Server=DESKTOP-LS4U25L\MSSQLSERVER_OLAP;Database=Seminarski_RSII_170025;Trusted_Connection=True;ConnectRetryCount=0";
+            var connection = @"Server=HP-250-G4\MSSQLSERVER_OLAP;Database=Seminarski_RSII_170025;Trusted_Connection=True;ConnectRetryCount=0";
             //var connection = Configuration.GetConnectionString("eAutobus");
-            services.AddDbContext<eAutobus>(options => options.UseSqlServer(connection));
+            services.AddDbContext<eAutobusi>(options => options.UseSqlServer(connection));
 
             services.AddScoped<IKupacService, KupacService>();
             services.AddScoped<IAutobusService, AutobusService>();

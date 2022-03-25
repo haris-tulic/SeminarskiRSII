@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-LS4U25L</Machine>
+    <Machine>HP-250-G4</Machine>
     <WindowsUser>HP</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
@@ -30,13 +30,17 @@
     <AppXManifest Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-09T16:51:00.406</Modified>
+      <Modified>2022-03-25T00:39:42.508</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\eAutobus.Mobile.UWP.exe">
       <PackagePath>entrypoint\eAutobus.Mobile.UWP.exe</PackagePath>
-      <Modified>2022-03-09T16:50:57.631</Modified>
+      <Modified>2022-03-25T00:39:40.910</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\acr.userdialogs\7.2.0.562\lib\netstandard2.0\Acr.UserDialogs.dll">
+      <PackagePath>Acr.UserDialogs.dll</PackagePath>
+      <Modified>2021-12-20T14:44:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\automapper\10.1.1\lib\netstandard2.0\AutoMapper.dll">
       <PackagePath>AutoMapper.dll</PackagePath>
@@ -49,6 +53,10 @@
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\flurl.http\2.4.2\lib\netstandard2.0\Flurl.Http.dll">
       <PackagePath>Flurl.Http.dll</PackagePath>
       <Modified>2019-04-28T17:14:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.bcl.asyncinterfaces\1.1.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
+      <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
+      <Modified>2019-11-15T08:36:44.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\microsoft.ml\1.7.0\runtimes\win-x86\native\LdaNative.dll">
       <PackagePath>LdaNative.dll</PackagePath>
@@ -110,13 +118,25 @@
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-02-05T09:15:46.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\stripe.net\39.28.0\lib\netstandard2.0\Stripe.net.dll">
+      <PackagePath>Stripe.net.dll</PackagePath>
+      <Modified>2020-11-24T17:39:06.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\system.codedom\4.4.0\lib\netstandard2.0\System.CodeDom.dll">
       <PackagePath>System.CodeDom.dll</PackagePath>
       <Modified>2017-07-19T10:01:30.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\system.configuration.configurationmanager\4.5.0\lib\netstandard2.0\System.Configuration.ConfigurationManager.dll">
+      <PackagePath>System.Configuration.ConfigurationManager.dll</PackagePath>
+      <Modified>2018-05-15T13:29:38.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\system.runtime.compilerservices.unsafe\4.5.3\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
       <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
       <Modified>2020-02-19T10:05:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\system.security.cryptography.protecteddata\4.5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll">
+      <PackagePath>System.Security.Cryptography.ProtectedData.dll</PackagePath>
+      <Modified>2018-05-15T13:29:44.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\system.threading.channels\4.7.1\lib\netstandard2.0\System.Threading.Channels.dll">
       <PackagePath>System.Threading.Channels.dll</PackagePath>
@@ -148,11 +168,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\bin\Debug\netstandard2.0\eAutobus.Mobile.dll">
       <PackagePath>eAutobus.Mobile.dll</PackagePath>
-      <Modified>2022-03-09T18:04:53.499</Modified>
+      <Modified>2022-03-25T00:39:23.120</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\bin\Debug\netstandard2.0\eAutobusModel.dll">
       <PackagePath>eAutobusModel.dll</PackagePath>
-      <Modified>2022-03-09T17:13:15.841</Modified>
+      <Modified>2022-03-24T23:52:00.812</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -363,11 +383,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-03-09T16:50:57.519</Modified>
+      <Modified>2022-03-25T00:39:40.810</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-03-09T16:50:57.519</Modified>
+      <Modified>2022-03-25T00:39:40.810</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -383,11 +403,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-03-04T17:46:31.830</Modified>
+      <Modified>2022-03-24T23:52:17.524</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Core\eAutobus.Mobile.UWP.exe">
       <PackagePath>eAutobus.Mobile.UWP.exe</PackagePath>
-      <Modified>2022-03-09T16:51:00.399</Modified>
+      <Modified>2022-03-25T00:39:42.502</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
