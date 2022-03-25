@@ -30,13 +30,13 @@
     <AppXManifest Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-25T00:39:42.508</Modified>
+      <Modified>2022-03-25T18:18:13.306</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\eAutobus.Mobile.UWP.exe">
       <PackagePath>entrypoint\eAutobus.Mobile.UWP.exe</PackagePath>
-      <Modified>2022-03-25T00:39:40.910</Modified>
+      <Modified>2022-03-25T18:18:10.876</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\acr.userdialogs\7.2.0.562\lib\netstandard2.0\Acr.UserDialogs.dll">
       <PackagePath>Acr.UserDialogs.dll</PackagePath>
@@ -45,6 +45,14 @@
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\automapper\10.1.1\lib\netstandard2.0\AutoMapper.dll">
       <PackagePath>AutoMapper.dll</PackagePath>
       <Modified>2020-10-16T15:36:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\coding4fun.toolkit.controls\2.1.8\lib\netcore451\Coding4Fun.Toolkit.Controls.dll">
+      <PackagePath>Coding4Fun.Toolkit.Controls.dll</PackagePath>
+      <Modified>2016-05-12T15:21:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\coding4fun.toolkit.controls\2.1.8\lib\netcore451\Coding4Fun.Toolkit.dll">
+      <PackagePath>Coding4Fun.Toolkit.dll</PackagePath>
+      <Modified>2016-05-12T15:21:28.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\flurl\2.8.2\lib\netstandard2.0\Flurl.dll">
       <PackagePath>Flurl.dll</PackagePath>
@@ -118,6 +126,10 @@
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-02-05T09:15:46.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\splat\1.6.2\lib\NetCore45\Splat.dll">
+      <PackagePath>Splat.dll</PackagePath>
+      <Modified>2015-03-21T21:07:40.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\stripe.net\39.28.0\lib\netstandard2.0\Stripe.net.dll">
       <PackagePath>Stripe.net.dll</PackagePath>
       <Modified>2020-11-24T17:39:06.000</Modified>
@@ -168,11 +180,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\bin\Debug\netstandard2.0\eAutobus.Mobile.dll">
       <PackagePath>eAutobus.Mobile.dll</PackagePath>
-      <Modified>2022-03-25T00:39:23.120</Modified>
+      <Modified>2022-03-25T18:18:03.725</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\bin\Debug\netstandard2.0\eAutobusModel.dll">
       <PackagePath>eAutobusModel.dll</PackagePath>
-      <Modified>2022-03-24T23:52:00.812</Modified>
+      <Modified>2022-03-25T18:18:00.104</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -182,6 +194,10 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T12:52:00.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\coding4fun.toolkit.controls\2.1.8\lib\netcore451\Coding4Fun.Toolkit.Controls\Coding4Fun.Toolkit.Controls.xr.xml">
+      <PackagePath>Coding4Fun.Toolkit.Controls\Coding4Fun.Toolkit.Controls.xr.xml</PackagePath>
+      <Modified>2016-05-12T15:21:28.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft\Xamarin\NuGet\xamarin.forms\5.0.0.2012\lib\uap10.0.16299\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml">
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
       <Modified>2021-02-12T12:08:38.000</Modified>
@@ -189,6 +205,10 @@
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x64\CefSharp.Core.Runtime.xml">
       <PackagePath>x64\CefSharp.Core.Runtime.xml</PackagePath>
       <Modified>2022-01-29T23:17:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\coding4fun.toolkit.controls\2.1.8\lib\netcore451\Coding4Fun.Toolkit.Controls\Themes\Generic.xbf">
+      <PackagePath>Coding4Fun.Toolkit.Controls\Themes\Generic.xbf</PackagePath>
+      <Modified>2016-05-12T15:21:28.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\cefsharp.common\97.1.61\CefSharp\x86\CefSharp.BrowserSubprocess.Core.dll">
       <PackagePath>CefSharp.BrowserSubprocess.Core.dll</PackagePath>
@@ -383,11 +403,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-03-25T00:39:40.810</Modified>
+      <Modified>2022-03-25T18:18:10.774</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-03-25T00:39:40.810</Modified>
+      <Modified>2022-03-25T18:18:10.774</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -403,11 +423,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-03-24T23:52:17.524</Modified>
+      <Modified>2022-03-25T18:18:12.028</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Core\eAutobus.Mobile.UWP.exe">
       <PackagePath>eAutobus.Mobile.UWP.exe</PackagePath>
-      <Modified>2022-03-25T00:39:42.502</Modified>
+      <Modified>2022-03-25T18:18:13.300</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "Acr.Support/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Acr.Support.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Acr.Support.iOS.dll": {}
+        }
+      },
       "Acr.UserDialogs/7.1.0.468": {
         "type": "package",
         "dependencies": {
@@ -255,6 +264,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Splat.dll": {}
         }
       },
       "Stripe.net/39.28.0": {
@@ -594,6 +612,7 @@
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
+          "Splat": "1.6.2",
           "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
@@ -616,6 +635,7 @@
           "Microsoft.ML": "1.7.0",
           "Microsoft.ML.Recommender": "0.19.0",
           "Newtonsoft.Json": "13.0.1",
+          "Splat": "1.6.2",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -627,6 +647,15 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "Acr.Support/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Acr.Support.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Acr.Support.iOS.dll": {}
+        }
+      },
       "Acr.UserDialogs/7.1.0.468": {
         "type": "package",
         "dependencies": {
@@ -802,6 +831,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Splat.dll": {}
         }
       },
       "Stripe.net/39.28.0": {
@@ -1123,6 +1161,7 @@
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
+          "Splat": "1.6.2",
           "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
@@ -1145,6 +1184,7 @@
           "Microsoft.ML": "1.7.0",
           "Microsoft.ML.Recommender": "0.19.0",
           "Newtonsoft.Json": "13.0.1",
+          "Splat": "1.6.2",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -1156,6 +1196,15 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "Acr.Support/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Acr.Support.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Acr.Support.iOS.dll": {}
+        }
+      },
       "Acr.UserDialogs/7.1.0.468": {
         "type": "package",
         "dependencies": {
@@ -1342,6 +1391,15 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Splat.dll": {}
+        }
+      },
       "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
@@ -1661,6 +1719,7 @@
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
+          "Splat": "1.6.2",
           "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
@@ -1683,6 +1742,7 @@
           "Microsoft.ML": "1.7.0",
           "Microsoft.ML.Recommender": "0.19.0",
           "Newtonsoft.Json": "13.0.1",
+          "Splat": "1.6.2",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -1694,6 +1754,15 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "Acr.Support/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Acr.Support.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Acr.Support.iOS.dll": {}
+        }
+      },
       "Acr.UserDialogs/7.1.0.468": {
         "type": "package",
         "dependencies": {
@@ -1880,6 +1949,15 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Splat/1.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Splat.dll": {}
+        }
+      },
       "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
@@ -2199,6 +2277,7 @@
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
+          "Splat": "1.6.2",
           "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
@@ -2221,6 +2300,7 @@
           "Microsoft.ML": "1.7.0",
           "Microsoft.ML.Recommender": "0.19.0",
           "Newtonsoft.Json": "13.0.1",
+          "Splat": "1.6.2",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
@@ -2233,6 +2313,23 @@
     }
   },
   "libraries": {
+    "Acr.Support/2.1.0": {
+      "sha512": "Kq/+sDIUxyEcDxwIB6ijtaUWzp/KV68rdYVLHQ26au7q3Y+7fqiqE0571VALlbYHlXMtFRd8ap3VeLw4lf/GWQ==",
+      "type": "package",
+      "path": "acr.support/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "acr.support.2.1.0.nupkg.sha512",
+        "acr.support.nuspec",
+        "lib/MonoAndroid10/Acr.Support.Android.dll",
+        "lib/MonoAndroid10/Acr.Support.Android.pdb",
+        "lib/Xamarin.iOS10/Acr.Support.iOS.dll",
+        "lib/Xamarin.tvOS10/Acr.Support.tvOS.dll",
+        "lib/Xamarin.tvOS10/Acr.Support.tvOS.dll.mdb",
+        "lib/Xamarin.tvOS10/Acr.Support.tvOS.pdb"
+      ]
+    },
     "Acr.UserDialogs/7.1.0.468": {
       "sha512": "NNWXx0zNXVJwNg7pSe0QJCvS+/fYCOV3rcBbgO92V+CyXz6XfEV18NaJUwAB5xYvJmMk/WYC/pmYRd+1q5XofA==",
       "type": "package",
@@ -3113,6 +3210,39 @@
         "packageIcon.png"
       ]
     },
+    "Splat/1.6.2": {
+      "sha512": "DeH0MxPU+D4JchkIDPYG4vUT+hsWs9S41cFle0/4K5EJMXWurx5DzAkj2366DfK14/XKNhsu6tCl4dZXJ3CD4w==",
+      "type": "package",
+      "path": "splat/1.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoMac/Splat.dll",
+        "lib/MonoMac/Splat.dll.mdb",
+        "lib/Net45/Splat.dll",
+        "lib/Net45/Splat.pdb",
+        "lib/NetCore45/Splat.dll",
+        "lib/NetCore45/Splat.pdb",
+        "lib/NetCore45/Splat.pri",
+        "lib/Portable-Win81+Wpa81/Splat.dll",
+        "lib/Portable-Win81+Wpa81/Splat.pdb",
+        "lib/Portable-Win81+Wpa81/Splat.pri",
+        "lib/Portable-net45+win+wpa81+wp80/Splat.dll",
+        "lib/Xamarin.Mac10/Splat-XamarinMac.csproj.FilesWrittenAbsolute.txt",
+        "lib/Xamarin.Mac10/Splat.dll",
+        "lib/Xamarin.Mac10/Splat.dll.mdb",
+        "lib/Xamarin.iOS10/Splat.dll",
+        "lib/Xamarin.iOS10/Splat.dll.mdb",
+        "lib/monoandroid/Splat.dll",
+        "lib/monoandroid/Splat.dll.mdb",
+        "lib/monotouch/Splat.dll",
+        "lib/monotouch/Splat.dll.mdb",
+        "lib/wp8/Splat.dll",
+        "lib/wp8/Splat.pdb",
+        "splat.1.6.2.nupkg.sha512",
+        "splat.nuspec"
+      ]
+    },
     "Stripe.net/39.28.0": {
       "sha512": "tu7q+u4GJzAr3VkY2+NdOZVVWpWFio/VULZH6YhkzRvG7kmpkQsQ/exluZ9SyTHsR9hIqEFdc5do/WeLWxyMIw==",
       "type": "package",
@@ -3984,6 +4114,8 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
+      "Acr.Support >= 2.1.0",
+      "Splat >= 1.6.2",
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Forms >= 5.0.0.2012",
       "eAutobus.Mobile >= 1.0.0"
@@ -4034,6 +4166,14 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "Acr.Support": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
+          "Splat": {
+            "target": "Package",
+            "version": "[1.6.2, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.6.1, )"

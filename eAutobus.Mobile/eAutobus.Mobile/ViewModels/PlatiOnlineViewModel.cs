@@ -38,20 +38,15 @@ namespace eAutobus.Mobile.ViewModels
             return true;
         }
         //private readonly INavigation Navigation;
-        public ICommand PlatiCommand { get;}
+        public ICommand PlatiCommand { get; set; }
         private readonly INavigation Navigation;
 
-        public PlatiOnlineViewModel(INavigation navigation)
+        public PlatiOnlineViewModel()
         {
-            this.Navigation = navigation;
             PlatiCommand = new Command(async () => await KupiKartuOnline());
 
         }
-        public PlatiOnlineViewModel()
-        {
-           ;
-
-        }
+        
 
 
         private string StripeTestApiKey = "pk_test_51KeOHDDgK4DOihzEMKoCVOhLxa7SXMmuxCzkG7muYEGV4a0SZX34DIWMefCFxDH3oYpTgICyWpVIvD9Qvf8kDo4s00XKS3XzSl";
@@ -207,7 +202,7 @@ namespace eAutobus.Mobile.ViewModels
         }
 
 
-        private async Task<string> CreateTokenAsync()
+        public async Task<string> CreateTokenAsync()
         {
             try
             {
@@ -265,7 +260,7 @@ namespace eAutobus.Mobile.ViewModels
 
                 var service = new ChargeService();
                 Charge charge = service.Create(options);
-                //UserDialogs.Instance.Alert("Plaćanje uspješno!"); // na bosanski
+                UserDialogs.Instance.Alert("Plaćanje uspješno!"); // na bosanski
                 return true;
             }
             catch (Exception ex)
@@ -343,7 +338,7 @@ namespace eAutobus.Mobile.ViewModels
                 else
                 {
                     UserDialogs.Instance.HideLoading();
-                    //UserDialogs.Instance.Alert("Oops, something went wrong", "Payment failed", "OK");
+                    UserDialogs.Instance.Alert("Oops, something went wrong", "Payment failed", "OK");
                     Console.Write(TipKarteNaziv + " " + VrstaKarteNaziv + "Uplata neuspješna "); // karta naziv
                 }
             }

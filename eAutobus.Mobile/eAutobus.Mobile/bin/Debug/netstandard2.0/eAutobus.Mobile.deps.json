@@ -14,6 +14,7 @@
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
           "NETStandard.Library": "2.0.3",
+          "Splat": "1.6.2",
           "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
@@ -172,6 +173,14 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "13.0.0.0",
             "fileVersion": "13.0.1.25517"
+          }
+        }
+      },
+      "Splat/1.6.2": {
+        "runtime": {
+          "lib/Net45/Splat.dll": {
+            "assemblyVersion": "1.6.2.0",
+            "fileVersion": "1.6.2.0"
           }
         }
       },
@@ -448,6 +457,7 @@
           "Microsoft.ML": "1.7.0",
           "Microsoft.ML.Recommender": "0.19.0",
           "Newtonsoft.Json": "13.0.1",
+          "Splat": "1.6.2",
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "runtime": {
@@ -566,6 +576,13 @@
       "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "path": "newtonsoft.json/13.0.1",
       "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+    },
+    "Splat/1.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DeH0MxPU+D4JchkIDPYG4vUT+hsWs9S41cFle0/4K5EJMXWurx5DzAkj2366DfK14/XKNhsu6tCl4dZXJ3CD4w==",
+      "path": "splat/1.6.2",
+      "hashPath": "splat.1.6.2.nupkg.sha512"
     },
     "Stripe.net/39.28.0": {
       "type": "package",

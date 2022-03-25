@@ -228,3 +228,12 @@ E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Deb
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\ProjectArchitectures.txt
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636160715180000000.json
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637425103200000000.json
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Coding4Fun.Toolkit.Controls\Coding4Fun.Toolkit.Controls.xr.xml
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Coding4Fun.Toolkit.Controls\Themes\Generic.xbf
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Coding4Fun.Toolkit.Controls.dll
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Coding4Fun.Toolkit.dll
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Splat.dll
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Splat.pdb
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\Coding4Fun.Toolkit.Controls.pri.xml
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\Coding4Fun.Toolkit.pri.xml
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\obj\x86\Debug\Splat.pri.xml

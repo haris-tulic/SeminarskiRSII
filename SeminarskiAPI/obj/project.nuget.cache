@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PxNYsQE33MWX+bzGlTFRoAh2x7oFIiXaAglsycsKBxjKdt5a8ta/uTFUhk5V18CxjseHyI57t5LWtq0VheRbOg==",
+  "dgSpecHash": "NoiT8gorD1wC3H6EhCrAAkrfFifpp9O52ZfOC1kiJ9vh01GaWPvq4kxFyAYzcPmhH/519xWwRLJBYk2drJTMqw==",
   "success": true,
   "projectFilePath": "E:\\SeminarskiRSII\\SeminarskiRSII\\SeminarskiAPI\\SeminarskiWebAPI.csproj",
   "expectedPackageFiles": [
@@ -212,6 +212,7 @@
     "C:\\Users\\HP\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\splat\\1.6.2\\splat.1.6.2.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\stripe.net\\39.28.0\\stripe.net.39.28.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\swashbuckle.aspnetcore\\6.1.5\\swashbuckle.aspnetcore.6.1.5.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.1.5\\swashbuckle.aspnetcore.swagger.6.1.5.nupkg.sha512",
@@ -312,5 +313,16 @@
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Splat 1.6.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "Splat",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    }
+  ]
 }

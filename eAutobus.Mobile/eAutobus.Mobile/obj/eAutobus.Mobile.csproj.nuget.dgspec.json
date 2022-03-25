@@ -73,6 +73,10 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Splat": {
+              "target": "Package",
+              "version": "[1.6.2, )"
+            },
             "Stripe.net": {
               "target": "Package",
               "version": "[39.28.0, )"
@@ -172,6 +176,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "Splat": {
+              "target": "Package",
+              "version": "[1.6.2, )"
             },
             "System.ComponentModel.Annotations": {
               "target": "Package",
