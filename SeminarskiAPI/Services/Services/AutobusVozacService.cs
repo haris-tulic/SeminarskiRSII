@@ -12,9 +12,9 @@ namespace SeminarskiWebAPI.Services
 {
     public class AutobusVozacService : IAutobusVozacService
     {
-        private readonly eAutobus _context;
+        private readonly Database.eAutobusi _context;
         private readonly IMapper _mapper;
-        public AutobusVozacService(eAutobus context, IMapper mapper)
+        public AutobusVozacService(Database.eAutobusi context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

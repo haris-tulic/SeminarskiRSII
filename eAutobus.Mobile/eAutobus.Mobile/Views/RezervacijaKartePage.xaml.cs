@@ -52,6 +52,7 @@ namespace eAutobus.Mobile.Views
             {
                 this.PravacG.IsEnabled = false;
                 this.PravacG.Opacity = 0.5;
+                this.PravacJedan.IsChecked = true;
             }
             else
             {
@@ -60,10 +61,31 @@ namespace eAutobus.Mobile.Views
             }
         }
 
-        private void DatePicker_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        private void DatumP_DateSelected(object sender, DateChangedEventArgs e)
         {
-            var datum = sender as DatePicker;
-            datum.MinimumDate = DateTime.Now;
+            string vrsta = string.Empty;
+            vrsta = model.VrstaKarte.Naziv;
+          
+            if (vrsta.StartsWith("Mjesečna"))
+            {
+                model.DatumDolaska = model.DatumPolaska.AddMonths(1);
+            }
+            else if (vrsta.StartsWith("Godišnja"))
+            {
+                model.DatumDolaska = model.DatumPolaska.AddYears(1);
+            }
         }
+
+
+
+
+        //private void DatePicker_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        //{
+        //    var datum = sender as DatePicker;
+        //    DatumP.MinimumDate = DateTime.Now;
+        //    DatumV.MinimumDate = DateTime.Now;
+
+
+        //}
     }
 }

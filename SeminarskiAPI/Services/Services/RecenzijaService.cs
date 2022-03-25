@@ -13,10 +13,10 @@ namespace SeminarskiWebAPI.Services.Services
 {
     public class RecenzijaService : IRecenzijaService
     {
-        private readonly eAutobus _context;
+        private readonly Database.eAutobusi _context;
         private readonly IMapper _mapper;
         
-        public RecenzijaService(eAutobus context, IMapper mapper)
+        public RecenzijaService(Database.eAutobusi context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

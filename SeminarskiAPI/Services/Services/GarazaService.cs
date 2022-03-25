@@ -9,13 +9,13 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace SeminarskiWebAPI.Services.Services
+namespace SeminarskiWebAPI.Services
 {
     public class GarazaService : IGarazaService
     {
-        private readonly eAutobus _context;
+        private readonly eAutobusi _context;
         private readonly IMapper _mapper;
-        public GarazaService(eAutobus context, IMapper mapper)
+        public GarazaService(Database.eAutobusi context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

@@ -11,9 +11,9 @@ namespace SeminarskiWebAPI.Services
 {
     public class ZonaService : IZonaService
     {
-        private readonly eAutobus _context;
+        private readonly Database.eAutobusi _context;
         private readonly IMapper _mapper;
-        public ZonaService(eAutobus context, IMapper mapper)
+        public ZonaService(Database.eAutobusi context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

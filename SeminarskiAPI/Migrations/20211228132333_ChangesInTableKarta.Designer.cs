@@ -9,7 +9,7 @@ using SeminarskiWebAPI.Database;
 
 namespace SeminarskiWebAPI.Migrations
 {
-    [DbContext(typeof(eAutobus))]
+    [DbContext(typeof(eAutobusi))]
     [Migration("20211228132333_ChangesInTableKarta")]
     partial class ChangesInTableKarta
     {

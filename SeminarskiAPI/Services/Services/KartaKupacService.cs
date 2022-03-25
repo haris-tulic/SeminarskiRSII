@@ -13,9 +13,9 @@ namespace SeminarskiWebAPI.Services.Services
 {
     public class KartaKupacService : IKartaKupacService
     {
-        private readonly eAutobus _context;
+        private readonly Database.eAutobusi _context;
         private readonly IMapper _mapper;
-        public KartaKupacService(eAutobus context, IMapper mapper)
+        public KartaKupacService(Database.eAutobusi context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

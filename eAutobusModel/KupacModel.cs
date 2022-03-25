@@ -16,7 +16,7 @@ namespace eAutobusModel
         public string Password { get; set; }
         public string Email { get; set; }
         public List<KartaKupacModel> KartaKupacs { get; set; }
-        public List <RecenzijaModel> Recenzije { get; set; }
+        public List<RecenzijaModel> Recenzije { get; set; }
 
     }
 }

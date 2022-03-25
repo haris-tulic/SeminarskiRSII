@@ -15,10 +15,10 @@ namespace SeminarskiWebAPI.Services.Services
 {
     public class LoginService : ILoginService
     {
-        private readonly eAutobus _context;
+        private readonly Database.eAutobusi _context;
         private readonly IMapper _mapper;
 
-        public LoginService(IMapper mapper, eAutobus context)
+        public LoginService(IMapper mapper, Database.eAutobusi context)
         {
             _mapper = mapper;
             _context = context;

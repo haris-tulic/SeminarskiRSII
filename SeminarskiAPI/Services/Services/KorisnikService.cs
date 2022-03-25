@@ -16,12 +16,12 @@ namespace SeminarskiWebAPI.Services.Services
 {
     public class KorisnikService : IKorisnikService
     {
-        private readonly eAutobus _context;
+        private readonly Database.eAutobusi _context;
         private readonly IMapper _mapper;
         private readonly IUlogeService _uloga;
         private readonly IVozacService _vozac;
 
-        public KorisnikService(eAutobus context, IMapper mapper, IUlogeService uloga, IVozacService vozac)
+        public KorisnikService(Database.eAutobusi context, IMapper mapper, IUlogeService uloga, IVozacService vozac)
         {
             _context = context;
             _mapper = mapper;

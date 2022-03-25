@@ -83,7 +83,9 @@ E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netst
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\Views\MenuPage.xaml.g.cs
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\Views\OdjaviSePage.xaml.g.cs
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\Views\PlatiOnlinePage.xaml.g.cs
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\Views\PocetnaPage.xaml.g.cs
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\Views\PrikazInfoPage.xaml.g.cs
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\Views\RecenzijaPage.xaml.g.cs
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\Views\RedVoznjePage.xaml.g.cs
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\Views\RegistracijaPage.xaml.g.cs
@@ -96,4 +98,3 @@ E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netst
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\eAutobus.Mobile.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\ref\eAutobus.Mobile.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\eAutobus.Mobile.pdb
-E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\Views\PrikazInfoPage.xaml.g.cs

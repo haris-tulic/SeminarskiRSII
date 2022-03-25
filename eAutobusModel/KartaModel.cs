@@ -16,6 +16,10 @@ namespace eAutobusModel
         public int PolazisteID { get; set; }
         public int OdredisteID { get; set; }
         public double Cijena { get; set; }
+        public string TipKarte { get; set; }
+        public string VrstaKarte { get; set; }
+        public List<KartaKupacModel> KupacList { get; set; }
+        public List<PlatiKartuModel> PlaceneKarte { get; set; }
 
     }
 }

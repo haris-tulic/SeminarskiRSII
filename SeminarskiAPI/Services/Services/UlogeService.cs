@@ -11,10 +11,10 @@ namespace SeminarskiWebAPI.Services
 {
     public class UlogeService : IUlogeService
     {
-        private readonly eAutobus _context;
+        private readonly Database.eAutobusi _context;
         private readonly IMapper _mapper;
 
-        public UlogeService(eAutobus context,IMapper mapper)
+        public UlogeService(Database.eAutobusi context,IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

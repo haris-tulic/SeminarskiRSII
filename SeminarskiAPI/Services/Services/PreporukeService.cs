@@ -12,10 +12,10 @@ namespace SeminarskiWebAPI.Services.Services
 {
     public class PreporukeService : IPreporukeService
     {
-        private readonly eAutobus _context;
+        private readonly Database.eAutobusi _context;
         private readonly IMapper _mapper;
 
-        public PreporukeService(eAutobus context, IMapper mapper)
+        public PreporukeService(Database.eAutobusi context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

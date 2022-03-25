@@ -17,11 +17,11 @@ namespace SeminarskiWebAPI.Services
     public class KupacService : IKupacService
     {
         
-        private readonly eAutobus _context;
+        private readonly Database.eAutobusi _context;
         private readonly IMapper _mapper;
         private readonly IKorisnikService _korisnik;
         private readonly IKartaKupacService _kartaKupac;
-        public KupacService(eAutobus context, IMapper mapper, IKorisnikService korisnik, IKartaKupacService kartaKupac = null)
+        public KupacService(Database.eAutobusi context, IMapper mapper, IKorisnikService korisnik, IKartaKupacService kartaKupac = null)
         {
             _context = context;
             _mapper = mapper;
@@ -39,7 +39,7 @@ namespace SeminarskiWebAPI.Services
 
         public List<eAutobusModel.KupacModel> Get(KupacGetRequest request)
         {
-            var query = _context.Kupac.Include(k=>k.KartaList).Include(k=>k.Recnzija).AsQueryable();
+            var query = _context.Kupac.Include(k=>k.KartaList).Include(k=>k.Recenzija).AsQueryable();
             if (!string.IsNullOrWhiteSpace(request.Ime))
             {
                 query = query.Where(k => k.Ime.StartsWith(request.Ime));
@@ -56,7 +56,7 @@ namespace SeminarskiWebAPI.Services
             var list = query.ToList();
             var listM = new List<KupacModel>();
             _mapper.Map(list, listM);
-            if (list.Count==1)
+            if (list.Count()==1)
             {
                 var search = new KartaKupacGetRequest();
                 foreach (var item in list)
@@ -69,15 +69,12 @@ namespace SeminarskiWebAPI.Services
                     listM[i].KartaKupacs = listaKarata;
                 }
             }
-            
-           
-           
             return listM;
         }
 
         public eAutobusModel.KupacModel GetByID(int id)
         {
-            var entity = _context.Kupac.Find(id);
+            var entity = _context.Kupac.Include(k=>k.KartaList).Include(k=>k.PlaceneKarte).Where(k=>k.KupacID==id).FirstOrDefault();
             return _mapper.Map<eAutobusModel.KupacModel>(entity);
         }
 
@@ -150,12 +147,15 @@ namespace SeminarskiWebAPI.Services
         }
         public Kupac PronadjiKupca(KupacInsertRequest kupac)
         {
-            var pronadji = _context.Kupac.Where(k => k.Ime == kupac.Ime && k.Prezime == kupac.Prezime  && k.BrojTelefona == kupac.BrojTelefona).FirstOrDefault() ;
+            var pronadji = _context.Kupac.Where(k => k.Ime == kupac.Ime && k.Prezime == kupac.Prezime  && k.BrojTelefona == kupac.BrojTelefona)
+                .Include(x=>x.KartaList).Include(x=>x.PlaceneKarte).Include(x=>x.Recenzija)
+                .Include("KartaList.Karta").Include("PlaceneKarte.Karta").FirstOrDefault();
             if (pronadji!=null)
             {
                 return pronadji;
             }
             return null;
         }
+
     }
 }

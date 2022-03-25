@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using eAutobusModel;
 using eAutobusModel.Requests;
+using SeminarskiWebAPI.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +13,10 @@ namespace SeminarskiWebAPI.Mapper
     {
         public Mapper() 
         {
-            CreateMap<Database.Autobus, eAutobusModel.AutobusiModel>().ReverseMap();
+            CreateMap<Autobus, AutobusiModel>().ReverseMap();
             CreateMap<AutobusInsertRequest, Database.Autobus>().ReverseMap();
 
-            CreateMap<Database.AutobusVozac, eAutobusModel.AutobusVozacModel>().ReverseMap();
+            CreateMap<Database.AutobusVozac, AutobusVozacModel>().ReverseMap();
             CreateMap<AutobusVozacUpsertRequest, Database.AutobusVozac>().ReverseMap();
 
             CreateMap<Database.Cjenovnik, eAutobusModel.CjenovnikModel>().ReverseMap();
@@ -28,6 +30,7 @@ namespace SeminarskiWebAPI.Mapper
             
             CreateMap<Database.Karta, eAutobusModel.KartaModel>().ReverseMap();
             CreateMap<KartaUpsertRequest, Database.Karta>().ReverseMap();
+            CreateMap<KartaUpsertRequest, eAutobusModel.KartaModel>().ReverseMap();
             
             CreateMap<Database.Kupac, eAutobusModel.KupacModel>().ReverseMap();
             CreateMap<KupacInsertRequest, Database.Kupac>().ReverseMap();
@@ -69,6 +72,9 @@ namespace SeminarskiWebAPI.Mapper
 
             CreateMap<Database.Recenzija, eAutobusModel.RecenzijaModel>().ReverseMap();
             CreateMap<RecenzijaUpsertRequest, Database.Recenzija>().ReverseMap();
+
+            CreateMap<Database.PlatiKartu, eAutobusModel.PlatiKartuModel>().ReverseMap();
+            CreateMap<PlatiKartuUpsertRequest, Database.PlatiKartu>().ReverseMap();
         }
     }
 }

@@ -2,14 +2,11 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
-      "Acr.UserDialogs/7.2.0.562": {
+      "Acr.UserDialogs/7.1.0.468": {
         "type": "package",
         "dependencies": {
-          "BTProgressHUD": "1.3.5"
+          "BTProgressHUD": "1.3.1"
         },
-        "frameworkAssemblies": [
-          "System.Drawing.Common.dll"
-        ],
         "compile": {
           "lib/xamarinios10/Acr.UserDialogs.dll": {}
         },
@@ -30,7 +27,7 @@
           "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
-      "BTProgressHUD/1.3.5": {
+      "BTProgressHUD/1.3.1": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Drawing.Common.dll"
@@ -260,7 +257,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Stripe.net/39.97.0": {
+      "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
@@ -593,11 +590,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.2.0.562",
+          "Acr.UserDialogs": "7.1.0.468",
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
-          "Stripe.net": "39.97.0",
+          "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "eAutobusModel": "1.0.0"
@@ -630,14 +627,11 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
-      "Acr.UserDialogs/7.2.0.562": {
+      "Acr.UserDialogs/7.1.0.468": {
         "type": "package",
         "dependencies": {
-          "BTProgressHUD": "1.3.5"
+          "BTProgressHUD": "1.3.1"
         },
-        "frameworkAssemblies": [
-          "System.Drawing.Common.dll"
-        ],
         "compile": {
           "lib/xamarinios10/Acr.UserDialogs.dll": {}
         },
@@ -658,7 +652,7 @@
           "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
-      "BTProgressHUD/1.3.5": {
+      "BTProgressHUD/1.3.1": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Drawing.Common.dll"
@@ -810,7 +804,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Stripe.net/39.97.0": {
+      "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
@@ -1125,11 +1119,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.2.0.562",
+          "Acr.UserDialogs": "7.1.0.468",
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
-          "Stripe.net": "39.97.0",
+          "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "eAutobusModel": "1.0.0"
@@ -1162,14 +1156,11 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
-      "Acr.UserDialogs/7.2.0.562": {
+      "Acr.UserDialogs/7.1.0.468": {
         "type": "package",
         "dependencies": {
-          "BTProgressHUD": "1.3.5"
+          "BTProgressHUD": "1.3.1"
         },
-        "frameworkAssemblies": [
-          "System.Drawing.Common.dll"
-        ],
         "compile": {
           "lib/xamarinios10/Acr.UserDialogs.dll": {}
         },
@@ -1190,7 +1181,7 @@
           "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
-      "BTProgressHUD/1.3.5": {
+      "BTProgressHUD/1.3.1": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Drawing.Common.dll"
@@ -1351,7 +1342,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Stripe.net/39.97.0": {
+      "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
@@ -1666,11 +1657,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.2.0.562",
+          "Acr.UserDialogs": "7.1.0.468",
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
-          "Stripe.net": "39.97.0",
+          "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "eAutobusModel": "1.0.0"
@@ -1703,14 +1694,11 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
-      "Acr.UserDialogs/7.2.0.562": {
+      "Acr.UserDialogs/7.1.0.468": {
         "type": "package",
         "dependencies": {
-          "BTProgressHUD": "1.3.5"
+          "BTProgressHUD": "1.3.1"
         },
-        "frameworkAssemblies": [
-          "System.Drawing.Common.dll"
-        ],
         "compile": {
           "lib/xamarinios10/Acr.UserDialogs.dll": {}
         },
@@ -1731,7 +1719,7 @@
           "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
-      "BTProgressHUD/1.3.5": {
+      "BTProgressHUD/1.3.1": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Drawing.Common.dll"
@@ -1892,7 +1880,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Stripe.net/39.97.0": {
+      "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
@@ -2207,11 +2195,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.2.0.562",
+          "Acr.UserDialogs": "7.1.0.468",
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
-          "Stripe.net": "39.97.0",
+          "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "eAutobusModel": "1.0.0"
@@ -2245,28 +2233,37 @@
     }
   },
   "libraries": {
-    "Acr.UserDialogs/7.2.0.562": {
-      "sha512": "AOx6gb2pHSjn38Li/4EAZdQYgKTas9kYXoVJxZJONMbWlrDEUynk7TnqdxhN+yZVLAQpKMqEE5Jw4stZb5m/5w==",
+    "Acr.UserDialogs/7.1.0.468": {
+      "sha512": "NNWXx0zNXVJwNg7pSe0QJCvS+/fYCOV3rcBbgO92V+CyXz6XfEV18NaJUwAB5xYvJmMk/WYC/pmYRd+1q5XofA==",
       "type": "package",
-      "path": "acr.userdialogs/7.2.0.562",
+      "path": "acr.userdialogs/7.1.0.468",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "acr.userdialogs.7.2.0.562.nupkg.sha512",
+        "acr.userdialogs.7.1.0.468.nupkg.sha512",
         "acr.userdialogs.nuspec",
         "lib/monoandroid10.0/Acr.UserDialogs.dll",
+        "lib/monoandroid10.0/Acr.UserDialogs.pdb",
         "lib/monoandroid10.0/Acr.UserDialogs.xml",
+        "lib/monoandroid90/Acr.UserDialogs.dll",
+        "lib/monoandroid90/Acr.UserDialogs.pdb",
+        "lib/monoandroid90/Acr.UserDialogs.xml",
         "lib/netstandard2.0/Acr.UserDialogs.dll",
+        "lib/netstandard2.0/Acr.UserDialogs.pdb",
         "lib/netstandard2.0/Acr.UserDialogs.xml",
-        "lib/uap10.0.19041/Acr.UserDialogs.dll",
-        "lib/uap10.0.19041/Acr.UserDialogs.pri",
-        "lib/uap10.0.19041/Acr.UserDialogs.xml",
-        "lib/uap10.0.19041/Acr.UserDialogs/Acr.UserDialogs.xr.xml",
+        "lib/uap10.0.16299/Acr.UserDialogs.dll",
+        "lib/uap10.0.16299/Acr.UserDialogs.pdb",
+        "lib/uap10.0.16299/Acr.UserDialogs.pri",
+        "lib/uap10.0.16299/Acr.UserDialogs.xml",
+        "lib/uap10.0.16299/Acr.UserDialogs/Acr.UserDialogs.xr.xml",
         "lib/xamarinios10/Acr.UserDialogs.dll",
+        "lib/xamarinios10/Acr.UserDialogs.pdb",
         "lib/xamarinios10/Acr.UserDialogs.xml",
         "lib/xamarinmac20/Acr.UserDialogs.dll",
+        "lib/xamarinmac20/Acr.UserDialogs.pdb",
         "lib/xamarinmac20/Acr.UserDialogs.xml",
         "lib/xamarintvos10/Acr.UserDialogs.dll",
+        "lib/xamarintvos10/Acr.UserDialogs.pdb",
         "lib/xamarintvos10/Acr.UserDialogs.xml",
         "readme.txt"
       ]
@@ -2287,18 +2284,17 @@
         "lib/netstandard2.0/AutoMapper.xml"
       ]
     },
-    "BTProgressHUD/1.3.5": {
-      "sha512": "ePARDST+mV/MISU9aLqeWRv7jNM5AGbAbB2ax+x1ctSPcQEAtOyXwjahLkJD1e6YRmuE4k0WiuCpkF44GZlVAw==",
+    "BTProgressHUD/1.3.1": {
+      "sha512": "3NLBJFd039vRplgww5tiGdlTU5ztLD5LvB6Fjr62y1Ov/cKRkpe7jEDWX/TwyYTKyLwk5BQ+Kzs4HVm72QyAvQ==",
       "type": "package",
-      "path": "btprogresshud/1.3.5",
+      "path": "btprogresshud/1.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
         "NOTICE",
-        "btprogresshud.1.3.5.nupkg.sha512",
+        "btprogresshud.1.3.1.nupkg.sha512",
         "btprogresshud.nuspec",
-        "icon.png",
         "lib/xamarinios10/BTProgressHUD.dll",
         "lib/xamarinios10/BTProgressHUD.pdb",
         "lib/xamarinios10/BTProgressHUD.xml"
@@ -3117,10 +3113,10 @@
         "packageIcon.png"
       ]
     },
-    "Stripe.net/39.97.0": {
-      "sha512": "HKSjX76S3m7LkdlplO2YxHHLMkPG3I4ohn8G24um3a2xGwRrA7zcnQMUXZNMj/mOO352UMR5j4ZphPjR5TJu4g==",
+    "Stripe.net/39.28.0": {
+      "sha512": "tu7q+u4GJzAr3VkY2+NdOZVVWpWFio/VULZH6YhkzRvG7kmpkQsQ/exluZ9SyTHsR9hIqEFdc5do/WeLWxyMIw==",
       "type": "package",
-      "path": "stripe.net/39.97.0",
+      "path": "stripe.net/39.28.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3129,19 +3125,10 @@
         "lib/net461/Stripe.net.dll",
         "lib/net461/Stripe.net.pdb",
         "lib/net461/Stripe.net.xml",
-        "lib/net5.0/Stripe.net.dll",
-        "lib/net5.0/Stripe.net.pdb",
-        "lib/net5.0/Stripe.net.xml",
-        "lib/net6.0/Stripe.net.dll",
-        "lib/net6.0/Stripe.net.pdb",
-        "lib/net6.0/Stripe.net.xml",
-        "lib/netcoreapp3.1/Stripe.net.dll",
-        "lib/netcoreapp3.1/Stripe.net.pdb",
-        "lib/netcoreapp3.1/Stripe.net.xml",
         "lib/netstandard2.0/Stripe.net.dll",
         "lib/netstandard2.0/Stripe.net.pdb",
         "lib/netstandard2.0/Stripe.net.xml",
-        "stripe.net.39.97.0.nupkg.sha512",
+        "stripe.net.39.28.0.nupkg.sha512",
         "stripe.net.nuspec"
       ]
     },

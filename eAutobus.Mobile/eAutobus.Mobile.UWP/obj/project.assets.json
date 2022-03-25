@@ -565,7 +565,7 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "Stripe.net/39.97.0": {
+      "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
@@ -909,11 +909,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.2.0.562",
+          "Acr.UserDialogs": "7.1.0.468",
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
-          "Stripe.net": "39.97.0",
+          "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "eAutobusModel": "1.0.0"
@@ -1676,7 +1676,7 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "Stripe.net/39.97.0": {
+      "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
@@ -1996,11 +1996,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.2.0.562",
+          "Acr.UserDialogs": "7.1.0.468",
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
-          "Stripe.net": "39.97.0",
+          "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "eAutobusModel": "1.0.0"
@@ -2794,7 +2794,7 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "Stripe.net/39.97.0": {
+      "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
@@ -3158,11 +3158,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.2.0.562",
+          "Acr.UserDialogs": "7.1.0.468",
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
-          "Stripe.net": "39.97.0",
+          "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "eAutobusModel": "1.0.0"
@@ -3956,7 +3956,7 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "Stripe.net/39.97.0": {
+      "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
@@ -4317,11 +4317,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.2.0.562",
+          "Acr.UserDialogs": "7.1.0.468",
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
-          "Stripe.net": "39.97.0",
+          "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "eAutobusModel": "1.0.0"
@@ -5093,7 +5093,7 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "Stripe.net/39.97.0": {
+      "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
@@ -5413,11 +5413,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.2.0.562",
+          "Acr.UserDialogs": "7.1.0.468",
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
-          "Stripe.net": "39.97.0",
+          "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "eAutobusModel": "1.0.0"
@@ -6220,7 +6220,7 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "Stripe.net/39.97.0": {
+      "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
@@ -6584,11 +6584,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.2.0.562",
+          "Acr.UserDialogs": "7.1.0.468",
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
-          "Stripe.net": "39.97.0",
+          "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "eAutobusModel": "1.0.0"
@@ -7360,7 +7360,7 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "Stripe.net/39.97.0": {
+      "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
@@ -7680,11 +7680,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.2.0.562",
+          "Acr.UserDialogs": "7.1.0.468",
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
-          "Stripe.net": "39.97.0",
+          "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "eAutobusModel": "1.0.0"
@@ -8487,7 +8487,7 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "Stripe.net/39.97.0": {
+      "Stripe.net/39.28.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
@@ -8851,11 +8851,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Acr.UserDialogs": "7.2.0.562",
+          "Acr.UserDialogs": "7.1.0.468",
           "CefSharp.Common": "97.1.61",
           "Flurl": "2.8.2",
           "Flurl.Http": "2.4.2",
-          "Stripe.net": "39.97.0",
+          "Stripe.net": "39.28.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
           "eAutobusModel": "1.0.0"
@@ -14534,10 +14534,10 @@
         "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll"
       ]
     },
-    "Stripe.net/39.97.0": {
-      "sha512": "HKSjX76S3m7LkdlplO2YxHHLMkPG3I4ohn8G24um3a2xGwRrA7zcnQMUXZNMj/mOO352UMR5j4ZphPjR5TJu4g==",
+    "Stripe.net/39.28.0": {
+      "sha512": "tu7q+u4GJzAr3VkY2+NdOZVVWpWFio/VULZH6YhkzRvG7kmpkQsQ/exluZ9SyTHsR9hIqEFdc5do/WeLWxyMIw==",
       "type": "package",
-      "path": "stripe.net/39.97.0",
+      "path": "stripe.net/39.28.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -14546,19 +14546,10 @@
         "lib/net461/Stripe.net.dll",
         "lib/net461/Stripe.net.pdb",
         "lib/net461/Stripe.net.xml",
-        "lib/net5.0/Stripe.net.dll",
-        "lib/net5.0/Stripe.net.pdb",
-        "lib/net5.0/Stripe.net.xml",
-        "lib/net6.0/Stripe.net.dll",
-        "lib/net6.0/Stripe.net.pdb",
-        "lib/net6.0/Stripe.net.xml",
-        "lib/netcoreapp3.1/Stripe.net.dll",
-        "lib/netcoreapp3.1/Stripe.net.pdb",
-        "lib/netcoreapp3.1/Stripe.net.xml",
         "lib/netstandard2.0/Stripe.net.dll",
         "lib/netstandard2.0/Stripe.net.pdb",
         "lib/netstandard2.0/Stripe.net.xml",
-        "stripe.net.39.97.0.nupkg.sha512",
+        "stripe.net.39.28.0.nupkg.sha512",
         "stripe.net.nuspec"
       ]
     },
@@ -16050,6 +16041,7 @@
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.16299": [
+      "Acr.UserDialogs >= 7.2.0.562",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.12",
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Forms >= 5.0.0.2012",
@@ -16103,6 +16095,10 @@
     "frameworks": {
       "uap10.0.16299": {
         "dependencies": {
+          "Acr.UserDialogs": {
+            "target": "Package",
+            "version": "[7.2.0.562, )"
+          },
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.2.12, )"

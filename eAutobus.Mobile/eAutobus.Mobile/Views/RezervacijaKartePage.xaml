@@ -61,10 +61,10 @@
                     <Picker ItemsSource="{Binding VrstaKarteList}" SelectedItem="{Binding VrstaKarte}" SelectedIndexChanged="VrstaKarteChanged" ItemDisplayBinding="{Binding Naziv}" Margin="5"></Picker>
                     
                     <Label Text="Datum polaska:"  />
-                    <DatePicker Date="{Binding DatumPolaska}"   MaximumDate="1/1/2025"  WidthRequest="400"  HorizontalOptions="CenterAndExpand" Margin="5" PropertyChanged="DatePicker_PropertyChanged"/>
+                <DatePicker x:Name="DatumP" Date="{Binding DatumPolaska}" MaximumDate="1/1/2025"  WidthRequest="400"  HorizontalOptions="CenterAndExpand" Margin="5"  />
                     
-                    <Label Text="Datum vazenja"/>
-                    <DatePicker Date="{Binding DatumDolaska}"   MaximumDate="1/1/2025"  WidthRequest="400"  HorizontalOptions="CenterAndExpand" Margin="5" PropertyChanged="DatePicker_PropertyChanged"/>
+                    <!--<Label Text="Datum vazenja"/>
+                <DatePicker x:Name="DatumV" Date="{Binding DatumDolaska}"   MaximumDate="1/1/2025"  WidthRequest="400"  HorizontalOptions="CenterAndExpand" Margin="5" IsEnabled="False"/>-->
 
                 <Label Text="Smjer:"/>
                 <Grid x:Name="PravacG">
@@ -79,7 +79,10 @@
                 
                 <StackLayout Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="20">
                 <Button Text="Kupi kartu" Command="{Binding KupiCommand}"></Button>
-                </StackLayout>
+                <Label x:Name="Popust" Text="*Prilikom online kupovine, ostvarujete popust od 5%!" TextColor="MediumVioletRed"/>
+                <Button Text="Online plaćanje" Command="{Binding KupiKartuOnlineCommand}"></Button>
+
+            </StackLayout>
             </Grid>
     </ContentPage.Content>
 </ContentPage>

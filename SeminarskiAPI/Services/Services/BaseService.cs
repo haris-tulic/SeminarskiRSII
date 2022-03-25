@@ -10,10 +10,10 @@ namespace SeminarskiWebAPI.Services.Services
 {
     public class BaseService<TModel, TSearch,TDatabase> : IService<TModel, TSearch> where TDatabase: class
     {
-        private readonly eAutobus _context;
+        private readonly Database.eAutobusi _context;
         private readonly IMapper _mapper;
 
-        public BaseService(eAutobus context, IMapper mapper)
+        public BaseService(Database.eAutobusi context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
