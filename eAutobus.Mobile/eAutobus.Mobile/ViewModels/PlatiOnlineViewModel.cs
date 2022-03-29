@@ -323,7 +323,9 @@ namespace eAutobus.Mobile.ViewModels
                     {
                         KupacID = Kupac.KupacID,
                         KartaID = Karta.KartaID,
-                        CijenaSaPopustom = UkupnaCijena,
+                        Cijena = UkupnaCijena,
+                        JeLiPlacena = true,
+                       
                     };
 
                     //pozvati servis za add
