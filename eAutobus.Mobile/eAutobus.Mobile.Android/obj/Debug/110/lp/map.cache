@@ -90,3 +90,6 @@ androidx.legacy.legacy-support-v4.aar
 androidx.browser.browser.aar
 Splat.dll
 Acr.Support.Android.dll
+androidx.tracing.tracing.aar
+androidx.dynamicanimation.dynamicanimation.aar
+androidx.constraintlayout.constraintlayout.aar
