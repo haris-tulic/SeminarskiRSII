@@ -229,7 +229,7 @@ namespace eAutobus.Mobile.ViewModels
 
                 Tokenservice = new TokenService();
                 stripeToken = Tokenservice.Create(Tokenoptions);
-                return stripeToken.Id;
+                return await Task.FromResult(stripeToken.Id);
             }
             catch (Exception ex)
             {
@@ -261,7 +261,7 @@ namespace eAutobus.Mobile.ViewModels
                 var service = new ChargeService();
                 Charge charge = service.Create(options);
                 UserDialogs.Instance.Alert("Plaćanje uspješno!"); // na bosanski
-                return true;
+                return await Task.FromResult(true);
             }
             catch (Exception ex)
             {
