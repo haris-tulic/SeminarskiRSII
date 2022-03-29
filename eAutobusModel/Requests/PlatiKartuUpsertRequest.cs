@@ -9,6 +9,7 @@ namespace eAutobusModel.Requests
         public int PlatiKartuID { get; set; }
         public int KupacID { get; set; }
         public int KartaID { get; set; }
-        public double CijenaSaPopustom { get; set; }
+        public double Cijena { get; set; }
+        public bool JeLiPlacena { get; set; }
     }
 }

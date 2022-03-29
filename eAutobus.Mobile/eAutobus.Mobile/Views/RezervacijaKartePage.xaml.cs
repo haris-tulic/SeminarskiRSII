@@ -24,6 +24,8 @@ namespace eAutobus.Mobile.Views
         protected async override void OnAppearing()
         {
             base.OnAppearing();
+            this.PravacG.IsEnabled = false;
+            this.PravacG.Opacity=0.5;
             await model.Ucitaj();
         }
         void PravacChanged(object sender, EventArgs args)

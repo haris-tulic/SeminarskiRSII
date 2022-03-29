@@ -59,14 +59,14 @@
                 </StackLayout>
                 <StackLayout Grid.Row="5" Grid.Column="1" Margin="10" Padding="15" HorizontalOptions="EndAndExpand">
                     <Label Text="Datum izdavanja karte:"/>
-                    <Label Text="{Binding DatumIzdavanja}" FontAttributes="Bold"/>
+                    <Label Text="{Binding DatumVazenja}" FontAttributes="Bold"/>
                     
                 </StackLayout>
 
                 <StackLayout Grid.Row="6" Grid.ColumnSpan="2" Margin="10" Padding="15">
                     <Label Text="Cijena karte:"/>
                     <Label Text="{Binding UkupnaCijena}" FontAttributes="Bold"/>
-                    <Button x:Name="PlatiKartuBtn" Command="{Binding PlatiCommand}" Text="Plati kartu" CornerRadius="10" Margin="20" WidthRequest="100" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"  Clicked = "PlatiKartuBtn_Clicked"></Button>
+                    <Button x:Name="PlatiKartuBtn" Command="{Binding PlatiCommand}" Text="Plati kartu" CornerRadius="10" Margin="20" WidthRequest="100" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Button>
 
                 </StackLayout>
                 </Grid>

@@ -70,6 +70,8 @@ namespace SeminarskiAPI
             services.AddScoped<ILoginService, LoginService>();
             services.AddScoped<IKartaKupacService, KartaKupacService>();
             services.AddScoped<IRecenzijaService, RecenzijaService>();
+            services.AddScoped<IPlatiOnlineService, PlatiOnlineService>();
+
             //services.AddScoped<IService<TModel,TSearch>,BaseService<TModel,TSearch,TDatabase>>();
             services.AddAuthentication("BasicAuthentication")
                 .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication",null);
