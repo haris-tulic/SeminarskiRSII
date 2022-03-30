@@ -40,31 +40,32 @@ namespace eAutobus.Mobile.ViewModels
             {
                 try
                 {
-                    _novaKarta.DatumVadjenjaKarte = DatumPolaska;
+                    _novaKarta.DatumVadjenjaKarte = DatumIzdavanja;
                     
                     
                     if (VrstaKarte.Naziv.StartsWith("Mjesečna"))
                     {
-                        _novaKarta.DatumVazenjaKarte = DatumPolaska.AddMonths(1);
+                        _novaKarta.DatumVazenjaKarte = DatumIzdavanja.AddMonths(1);
                         _novaKarta.Pravac = true;
                         _novaKarta.PravacS = "U oba smjera";
                     }
                     else if (VrstaKarte.Naziv.StartsWith("Godišnja"))
                     {
-                        _novaKarta.DatumVazenjaKarte = DatumPolaska.AddYears(1);
+                        _novaKarta.DatumVazenjaKarte = DatumIzdavanja.AddYears(1);
                         _novaKarta.Pravac = true;
                         _novaKarta.PravacS = "U oba smjera";
                     }
                     else
                     {
-                        _novaKarta.DatumVazenjaKarte = DatumDolaska;
+                        var razlika = 23 - DatumIzdavanja.Hour;
+                        _novaKarta.DatumVazenjaKarte = DatumVazenja.AddHours(razlika);
                         if (_novaKarta.Pravac==null && _novaKarta.PravacS==null)
                         {
                             _novaKarta.Pravac = true;
                             _novaKarta.PravacS = "U jednom smjeru";
                         }
                     }
-                    
+                    _novaKarta.NacinPlacanja = "Preuzećem";
                     await _serviceK.Insert<KartaModel>(_novaKarta);
                     await Application.Current.MainPage.DisplayAlert("Uspješno!", "Uspješno ste kupili kartu. Vašu kartu ćete platiti prilikom preuzimanja na šalteru. Karta važi do: "+_novaKarta.DatumVazenjaKarte, "Uredu");
                     
@@ -82,30 +83,33 @@ namespace eAutobus.Mobile.ViewModels
             {
                 try
                 {
-                    _novaKarta.DatumVadjenjaKarte = DatumPolaska;
+                    _novaKarta.DatumVadjenjaKarte = DatumIzdavanja;
                    
                     if (VrstaKarte.Naziv.StartsWith("Mjesečna"))
                     {
-                        _novaKarta.DatumVazenjaKarte = DatumPolaska.AddMonths(1);
+                        _novaKarta.DatumVazenjaKarte = DatumIzdavanja.AddMonths(1);
                         _novaKarta.Pravac = true;
                         _novaKarta.PravacS = "U oba smjera";
                     }
                     else if (VrstaKarte.Naziv.StartsWith("Godišnja"))
                     {
-                        _novaKarta.DatumVazenjaKarte = DatumPolaska.AddYears(1);
+                        _novaKarta.DatumVazenjaKarte = DatumIzdavanja.AddYears(1);
                         _novaKarta.Pravac = true;
                         _novaKarta.PravacS = "U oba smjera";
                     }
                     else
                     {
-                        _novaKarta.DatumVazenjaKarte = DatumDolaska;
+                        var razlika = 23 - DatumIzdavanja.Hour;
+                        _novaKarta.DatumVazenjaKarte = DatumVazenja.AddHours(razlika);
                         if (_novaKarta.Pravac == null && _novaKarta.PravacS == null)
                         {
                             _novaKarta.Pravac = true;
                             _novaKarta.PravacS = "U jednom smjeru";
                         }
                     }
-                    var onlineKarta = await _serviceK.Insert<KartaModel>(_novaKarta);
+                    _novaKarta.NacinPlacanja = "Online";
+                   var onlineKarta = await _serviceK.Insert<KartaModel>(_novaKarta);
+                    
                     if (onlineKarta!=null)
                     {
                             var popust = _novaKarta.Cijena * 5 / 100;
@@ -297,25 +301,25 @@ namespace eAutobus.Mobile.ViewModels
               }
         }
 
-        private DateTime _datumPolaska = DateTime.Now;
-        public DateTime DatumPolaska
+        private DateTime _datumIzdavanja = DateTime.Now;
+        public DateTime DatumIzdavanja
         {
-            get { return _datumPolaska; }
+            get { return _datumIzdavanja; }
             set
             {
-                SetProperty(ref _datumPolaska, value);
-                _novaKarta.DatumVadjenjaKarte = _datumPolaska;
+                SetProperty(ref _datumIzdavanja, value);
+                _novaKarta.DatumVadjenjaKarte = _datumIzdavanja;
             }
         }
 
-        private DateTime _datumDolaska = DateTime.Now;
-        public DateTime DatumDolaska
+        private DateTime _datumVazenja = DateTime.Now;
+        public DateTime DatumVazenja
         {
-            get { return _datumDolaska; }
+            get { return _datumVazenja; }
             set
             {
-                SetProperty(ref _datumDolaska, value);
-                _novaKarta.DatumVazenjaKarte = _datumDolaska;
+                SetProperty(ref _datumVazenja, value);
+                _novaKarta.DatumVazenjaKarte = _datumVazenja;
             }
         }
 

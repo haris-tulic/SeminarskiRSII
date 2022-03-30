@@ -150,6 +150,8 @@ namespace SeminarskiWebAPI.Migrations
 
                     b.Property<double>("Cijena");
 
+                    b.Property<string>("NacinPlacanja");
+
                     b.Property<int>("OdredisteID");
 
                     b.Property<int>("PolazisteID");
@@ -292,6 +294,10 @@ namespace SeminarskiWebAPI.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<double>("Cijena");
+
+                    b.Property<DateTime>("DatumVadjenjaKarte");
+
+                    b.Property<DateTime>("DatumVazenjaKarte");
 
                     b.Property<bool>("JeLiPlacena");
 

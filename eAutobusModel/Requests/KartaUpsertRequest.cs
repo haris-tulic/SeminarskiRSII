@@ -22,5 +22,6 @@ namespace eAutobusModel.Requests
         public double Cijena { get; set; }
         public int KartaID { get; set; }
         public string PravacS { get; set; }
+        public string NacinPlacanja { get; set; }
     }
 }

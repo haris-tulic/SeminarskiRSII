@@ -30,13 +30,13 @@
     <AppXManifest Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-25T18:18:13.306</Modified>
+      <Modified>2022-03-30T16:12:47.739</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\eAutobus.Mobile.UWP.exe">
       <PackagePath>entrypoint\eAutobus.Mobile.UWP.exe</PackagePath>
-      <Modified>2022-03-25T18:18:10.876</Modified>
+      <Modified>2022-03-30T16:12:45.796</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\acr.userdialogs\7.2.0.562\lib\netstandard2.0\Acr.UserDialogs.dll">
       <PackagePath>Acr.UserDialogs.dll</PackagePath>
@@ -180,11 +180,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\bin\Debug\netstandard2.0\eAutobus.Mobile.dll">
       <PackagePath>eAutobus.Mobile.dll</PackagePath>
-      <Modified>2022-03-25T18:18:03.725</Modified>
+      <Modified>2022-03-30T17:48:31.174</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\bin\Debug\netstandard2.0\eAutobusModel.dll">
       <PackagePath>eAutobusModel.dll</PackagePath>
-      <Modified>2022-03-25T18:18:00.104</Modified>
+      <Modified>2022-03-30T15:18:55.275</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -403,11 +403,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-03-25T18:18:10.774</Modified>
+      <Modified>2022-03-30T16:12:45.706</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-03-25T18:18:10.774</Modified>
+      <Modified>2022-03-30T16:12:45.706</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -423,11 +423,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-03-25T18:18:12.028</Modified>
+      <Modified>2022-03-29T16:57:18.782</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile.UWP\bin\x86\Debug\Core\eAutobus.Mobile.UWP.exe">
       <PackagePath>eAutobus.Mobile.UWP.exe</PackagePath>
-      <Modified>2022-03-25T18:18:13.300</Modified>
+      <Modified>2022-03-30T16:12:47.733</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

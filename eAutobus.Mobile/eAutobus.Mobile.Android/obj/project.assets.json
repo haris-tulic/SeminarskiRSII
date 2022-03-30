@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "MonoAndroid,Version=v11.0": {
+    "MonoAndroid,Version=v10.0": {
       "Acr.Support/2.1.0": {
         "type": "package",
         "compile": {
@@ -4355,7 +4355,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "MonoAndroid,Version=v11.0": [
+    "MonoAndroid,Version=v10.0": [
       "Acr.Support >= 2.1.0",
       "AndHUD >= 1.4.3",
       "Splat >= 1.6.2",
@@ -4391,14 +4391,14 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "monoandroid11.0"
+        "monoandroid10.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "monoandroid11.0": {
+        "monoandroid10.0": {
           "projectReferences": {
             "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile\\eAutobus.Mobile.csproj": {
               "projectPath": "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile\\eAutobus.Mobile.csproj"
@@ -4408,7 +4408,7 @@
       }
     },
     "frameworks": {
-      "monoandroid11.0": {
+      "monoandroid10.0": {
         "dependencies": {
           "Acr.Support": {
             "target": "Package",

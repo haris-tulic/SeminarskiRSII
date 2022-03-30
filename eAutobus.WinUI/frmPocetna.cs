@@ -189,5 +189,26 @@ namespace eAutobus.WinUI
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
+
+        private void zahtjeviZaKartuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void onlineKarteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOnlineKarte frm = new frmOnlineKarte();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void preuzećemKarteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPreuzecemKarte frm = new frmPreuzecemKarte();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
     }
 }

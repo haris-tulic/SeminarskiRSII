@@ -191,3 +191,5 @@ E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\eAutobus.WinUI.exe
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\eAutobus.WinUI.pdb
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\bin\Debug\Splat.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\bin\Debug\Splat.pdb
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\eAutobus.WinUI.Karte.frmOnlineKarte.resources
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\eAutobus.WinUI.Karte.frmPreuzecemKarte.resources

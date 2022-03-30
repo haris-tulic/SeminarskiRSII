@@ -14,5 +14,9 @@ namespace SeminarskiWebAPI.Database
         public Karta Karta { get; set; }
         public Kupac Kupac { get; set; }
         public bool JeLiPlacena { get; set; }
+        public DateTime DatumVadjenjaKarte { get; set; }
+        public DateTime DatumVazenjaKarte { get; set; }
+
     }
 }
+                                                 

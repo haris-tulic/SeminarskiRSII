@@ -21,7 +21,7 @@ namespace SeminarskiWebAPI.Controllers
             _service = service;
         }
         [HttpGet]
-        public List<PlatiKartuModel> Get(PlatiKartuGetRequest search)
+        public List<PlatiKartuModel> Get([FromQuery]PlatiKartuGetRequest search)
         {
             return _service.Get(search);
         }
