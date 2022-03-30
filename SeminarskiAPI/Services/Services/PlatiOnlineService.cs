@@ -23,9 +23,24 @@ namespace SeminarskiWebAPI.Services.Services
 
         public List<PlatiKartuModel> Get(PlatiKartuGetRequest search)
         {
-            var query = _context.PlatiKartu.Include(x => x.Kupac).Include(x => x.Karta).AsQueryable();
+            var query = _context.PlatiKartu.Include(x => x.Kupac)
+                                            .Include(x => x.Karta)
+                                            .Include("Karta.TipKarte")
+                                            .Include("Karta.VrstaKarte")
+                                            .Include("Karta.Polaziste")
+                                            .Include("Karta.Odrediste")
+                                            .AsQueryable();
             var list = query.ToList();
-            return _mapper.Map<List<PlatiKartuModel>>(list);
+            var listM = new List<PlatiKartuModel>();
+            _mapper.Map(list, listM);
+            for (int i = 0; i < list.Count; i++)
+            {
+                listM[i].ImePrezimeKupca = list[i].Kupac.Ime + " " + list[i].Kupac.Prezime;
+                listM[i].TipKarteNaziv = list[i].Karta.TipKarte.Naziv;
+                listM[i].VrstaKarteNaziv = list[i].Karta.VrstaKarte.Naziv;
+                listM[i].PolazisteOdrediste = list[i].Karta.Polaziste.NazivLokacijeStanice + " - " + list[i].Karta.Odrediste.NazivLokacijeStanice;
+            }
+            return listM;
         }
 
         public PlatiKartuModel GetById(int id)

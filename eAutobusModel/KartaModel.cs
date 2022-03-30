@@ -7,7 +7,6 @@ namespace eAutobusModel
     public class KartaModel
     {
         public int KartaID { get; set; }
-
         public int KupacID { get; set; }
         public int TipKarteID { get; set; }
         public int VrstaKarteID { get; set; }
@@ -18,8 +17,9 @@ namespace eAutobusModel
         public double Cijena { get; set; }
         public string TipKarte { get; set; }
         public string VrstaKarte { get; set; }
-        public List<KartaKupacModel> KupacList { get; set; }
-        public List<PlatiKartuModel> PlaceneKarte { get; set; }
+        public string NacinPlacanja { get; set; }
+        public string ImePrezimeKupca { get; set; }
+        public string Relacija { get; set; }
 
     }
 }

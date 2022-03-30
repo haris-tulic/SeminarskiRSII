@@ -11,5 +11,8 @@ namespace eAutobusModel.Requests
         public int KartaID { get; set; }
         public double Cijena { get; set; }
         public bool JeLiPlacena { get; set; }
+        public DateTime DatumVadjenjaKarte { get; set; }
+        public DateTime DatumVazenjaKarte { get; set; }
+
     }
 }

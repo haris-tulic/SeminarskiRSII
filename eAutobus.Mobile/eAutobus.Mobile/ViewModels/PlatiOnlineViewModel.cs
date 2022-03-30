@@ -39,7 +39,6 @@ namespace eAutobus.Mobile.ViewModels
         }
         //private readonly INavigation Navigation;
         public ICommand PlatiCommand { get; set; }
-        private readonly INavigation Navigation;
 
         public PlatiOnlineViewModel()
         {
@@ -229,7 +228,7 @@ namespace eAutobus.Mobile.ViewModels
 
                 Tokenservice = new TokenService();
                 stripeToken = Tokenservice.Create(Tokenoptions);
-                return stripeToken.Id;
+                return await Task.FromResult(stripeToken.Id);
             }
             catch (Exception ex)
             {
@@ -260,8 +259,8 @@ namespace eAutobus.Mobile.ViewModels
 
                 var service = new ChargeService();
                 Charge charge = service.Create(options);
-                UserDialogs.Instance.Alert("Plaćanje uspješno!"); // na bosanski
-                return true;
+                //UserDialogs.Instance.Alert("Plaćanje uspješno!"); // na bosanski
+                return await Task.FromResult(true);
             }
             catch (Exception ex)
             {
@@ -274,14 +273,14 @@ namespace eAutobus.Mobile.ViewModels
         {
             if (ExpMonth == null || ExpMonth == "" || ExpYear == null || ExpYear == "" || Number == null || Number == "" || Cvc == null || Cvc == "")
             {
-                UserDialogs.Instance.Alert("You have to fill all fields!", "Payment failed", "OK");
+                //UserDialogs.Instance.Alert("You have to fill all fields!", "Payment failed", "OK");
                 return;
             }
             if (ExpMonth != null || ExpMonth != "" || ExpYear != null || ExpYear != "" || Number != null || Number != "" || Cvc != null || Cvc != "")
             {
                 if (!IsDigitsOnly(ExpMonth) || !IsDigitsOnly(ExpMonth) || !IsDigitsOnly(Number) || !IsDigitsOnly(Cvc))
                 {
-                    UserDialogs.Instance.Alert("You can't use letters!", "Payment failed", "OK");
+                   // UserDialogs.Instance.Alert("You can't use letters!", "Payment failed", "OK");
                     return;
                 }
             }
@@ -294,7 +293,7 @@ namespace eAutobus.Mobile.ViewModels
             CancellationToken token = tokenSource.Token;
             try
             {
-                UserDialogs.Instance.ShowLoading("Procesuiranje uplate ..."); // na bosanski
+                //UserDialogs.Instance.ShowLoading("Procesuiranje uplate ...",MaskType.Black); // na bosanski
                 await Task.Run(async () =>
                 {
                     var Token = CreateTokenAsync();
@@ -305,14 +304,14 @@ namespace eAutobus.Mobile.ViewModels
                     }
                     else
                     {
-                        UserDialogs.Instance.Alert("Loši kredencijali", null, "OK"); // na bosanski
-                                }
+                       // UserDialogs.Instance.Alert("Loši kredencijali", null, "OK"); // na bosanski
+                    }
                 });
             }
             catch (Exception ex)
             {
-                UserDialogs.Instance.HideLoading();
-                UserDialogs.Instance.Alert(ex.Message, null, "OK");
+               // UserDialogs.Instance.HideLoading();
+                //UserDialogs.Instance.Alert(ex.Message, null, "OK");
                 Console.Write(TipKarteNaziv + " " + VrstaKarteNaziv + ex.Message); // karza naziv
             }
             finally
@@ -325,22 +324,26 @@ namespace eAutobus.Mobile.ViewModels
                         KartaID = Karta.KartaID,
                         Cijena = UkupnaCijena,
                         JeLiPlacena = true,
-                       
+                        DatumVadjenjaKarte=DatumIzdavanja,
+                        DatumVazenjaKarte=DatumVazenja,
                     };
 
                     //pozvati servis za add
                     await _platiKartu.Insert<PlatiKartuModel>(request);
-                    await Xamarin.Forms.Application.Current.MainPage.Navigation.PushAsync(new RedVoznjePage());
+                    await Xamarin.Forms.Application.Current.MainPage.DisplayAlert("Uspješno","Zahvaljujemo vam se na uspješnoj kupovini!","Uredu");
+                    await Xamarin.Forms.Application.Current.MainPage.Navigation.PopToRootAsync();
                     // skontati gdje da te redirect nakon kupovine
                     Console.Write(TipKarteNaziv + " " + VrstaKarteNaziv + "Uplata uspješna"); // karta naziv
-
-                    UserDialogs.Instance.HideLoading();
+                    
+                    //UserDialogs.Instance.HideLoading();
 
                 }
                 else
                 {
-                    UserDialogs.Instance.HideLoading();
-                    UserDialogs.Instance.Alert("Oops, something went wrong", "Payment failed", "OK");
+                    //UserDialogs.Instance.HideLoading();
+                    //UserDialogs.Instance.Alert("Oops, something went wrong", "Payment failed", "OK");
+                    await Xamarin.Forms.Application.Current.MainPage.DisplayAlert("Upozorenje","Kartu nije moguće platiti!","Uredu");
+
                     Console.Write(TipKarteNaziv + " " + VrstaKarteNaziv + "Uplata neuspješna "); // karta naziv
                 }
             }

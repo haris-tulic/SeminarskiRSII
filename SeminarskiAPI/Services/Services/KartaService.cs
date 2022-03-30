@@ -39,6 +39,9 @@ namespace SeminarskiWebAPI.Services
                                     .Include(k=>k.KupacList)
                                     .Include(t => t.TipKarte)
                                     .Include(p=>p.PlaceneKarte)
+                                    .Include("KupacList.Kupac")
+                                    .Include(o=>o.Odrediste)
+                                    .Include(p=>p.Polaziste)
                                     .AsQueryable();
             var list = query.ToList();
             var listM = new List<KartaModel>();
@@ -47,10 +50,12 @@ namespace SeminarskiWebAPI.Services
             {
                 listM[i].VrstaKarte = list[i].VrstaKarte.Naziv;
                 listM[i].TipKarte = list[i].TipKarte.Naziv;
+                listM[i].Relacija = list[i].Polaziste.NazivLokacijeStanice + " - " + list[i].Odrediste.NazivLokacijeStanice;
                 foreach (var item in list[i].KupacList)
                 {
                     listM[i].DatumVadjenjaKarte = item.DatumVadjenjaKarte;
                     listM[i].DatumVazenjaKarte = item.DatumVazenjaKarte;
+                    listM[i].ImePrezimeKupca = item.Kupac.Ime + " " + item.Kupac.Prezime;
                 }
               
             }

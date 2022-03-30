@@ -70,11 +70,11 @@ namespace eAutobus.Mobile.Views
           
             if (vrsta.StartsWith("Mjesečna"))
             {
-                model.DatumDolaska = model.DatumPolaska.AddMonths(1);
+                model.DatumVazenja = model.DatumIzdavanja.AddMonths(1);
             }
             else if (vrsta.StartsWith("Godišnja"))
             {
-                model.DatumDolaska = model.DatumPolaska.AddYears(1);
+                model.DatumVazenja = model.DatumIzdavanja.AddYears(1);
             }
         }
 

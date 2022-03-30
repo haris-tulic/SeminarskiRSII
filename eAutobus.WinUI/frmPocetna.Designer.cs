@@ -45,8 +45,11 @@ namespace eAutobus.WinUI
             this.rasporedVoznjiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pregledRasporedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dodajNovuLinijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.recenzijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.zahtjeviZaKartuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.onlineKarteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preuzećemKarteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,8 +64,8 @@ namespace eAutobus.WinUI
             this.recenzijeToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(633, 24);
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip.Size = new System.Drawing.Size(844, 28);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -72,20 +75,20 @@ namespace eAutobus.WinUI
             this.pretragaToolStripMenuItem,
             this.novoVoziloToolStripMenuItem});
             this.autobusiToolStripMenuItem.Name = "autobusiToolStripMenuItem";
-            this.autobusiToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.autobusiToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.autobusiToolStripMenuItem.Text = "Autobusi";
             // 
             // pretragaToolStripMenuItem
             // 
             this.pretragaToolStripMenuItem.Name = "pretragaToolStripMenuItem";
-            this.pretragaToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.pretragaToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.pretragaToolStripMenuItem.Text = "Pretraga";
             this.pretragaToolStripMenuItem.Click += new System.EventHandler(this.pretragaToolStripMenuItem_Click);
             // 
             // novoVoziloToolStripMenuItem
             // 
             this.novoVoziloToolStripMenuItem.Name = "novoVoziloToolStripMenuItem";
-            this.novoVoziloToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.novoVoziloToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.novoVoziloToolStripMenuItem.Text = "Novo vozilo";
             this.novoVoziloToolStripMenuItem.Click += new System.EventHandler(this.novoVoziloToolStripMenuItem_Click);
             // 
@@ -95,20 +98,20 @@ namespace eAutobus.WinUI
             this.pregledKorisnikaToolStripMenuItem,
             this.noviKorsnikToolStripMenuItem});
             this.korisniciToolStripMenuItem.Name = "korisniciToolStripMenuItem";
-            this.korisniciToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.korisniciToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.korisniciToolStripMenuItem.Text = "Korisnici";
             // 
             // pregledKorisnikaToolStripMenuItem
             // 
             this.pregledKorisnikaToolStripMenuItem.Name = "pregledKorisnikaToolStripMenuItem";
-            this.pregledKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.pregledKorisnikaToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.pregledKorisnikaToolStripMenuItem.Text = "Pregled korisnika";
             this.pregledKorisnikaToolStripMenuItem.Click += new System.EventHandler(this.pregledKorisnikaToolStripMenuItem_Click);
             // 
             // noviKorsnikToolStripMenuItem
             // 
             this.noviKorsnikToolStripMenuItem.Name = "noviKorsnikToolStripMenuItem";
-            this.noviKorsnikToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.noviKorsnikToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.noviKorsnikToolStripMenuItem.Text = "Novi korsnik";
             this.noviKorsnikToolStripMenuItem.Click += new System.EventHandler(this.noviKorsnikToolStripMenuItem_Click);
             // 
@@ -116,9 +119,10 @@ namespace eAutobus.WinUI
             // 
             this.karteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pregledKarataToolStripMenuItem,
-            this.izdajKartuToolStripMenuItem});
+            this.izdajKartuToolStripMenuItem,
+            this.zahtjeviZaKartuToolStripMenuItem});
             this.karteToolStripMenuItem.Name = "karteToolStripMenuItem";
-            this.karteToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.karteToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             this.karteToolStripMenuItem.Text = "Karte";
             // 
             // pregledKarataToolStripMenuItem
@@ -127,28 +131,28 @@ namespace eAutobus.WinUI
             this.cjenovnikToolStripMenuItem,
             this.dodajNovuKartuToolStripMenuItem});
             this.pregledKarataToolStripMenuItem.Name = "pregledKarataToolStripMenuItem";
-            this.pregledKarataToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.pregledKarataToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.pregledKarataToolStripMenuItem.Text = "Pregled karata";
             this.pregledKarataToolStripMenuItem.Click += new System.EventHandler(this.pregledKarataToolStripMenuItem_Click);
             // 
             // cjenovnikToolStripMenuItem
             // 
             this.cjenovnikToolStripMenuItem.Name = "cjenovnikToolStripMenuItem";
-            this.cjenovnikToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.cjenovnikToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.cjenovnikToolStripMenuItem.Text = "Cjenovnik";
             this.cjenovnikToolStripMenuItem.Click += new System.EventHandler(this.cjenovnikToolStripMenuItem_Click);
             // 
             // dodajNovuKartuToolStripMenuItem
             // 
             this.dodajNovuKartuToolStripMenuItem.Name = "dodajNovuKartuToolStripMenuItem";
-            this.dodajNovuKartuToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.dodajNovuKartuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dodajNovuKartuToolStripMenuItem.Text = "Dodaj novu kartu";
             this.dodajNovuKartuToolStripMenuItem.Click += new System.EventHandler(this.dodajNovuKartuToolStripMenuItem_Click);
             // 
             // izdajKartuToolStripMenuItem
             // 
             this.izdajKartuToolStripMenuItem.Name = "izdajKartuToolStripMenuItem";
-            this.izdajKartuToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.izdajKartuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.izdajKartuToolStripMenuItem.Text = "Izdaj kartu";
             this.izdajKartuToolStripMenuItem.Click += new System.EventHandler(this.izdajKartuToolStripMenuItem_Click);
             // 
@@ -158,40 +162,65 @@ namespace eAutobus.WinUI
             this.pregledRasporedaToolStripMenuItem,
             this.dodajNovuLinijuToolStripMenuItem});
             this.rasporedVoznjiToolStripMenuItem.Name = "rasporedVoznjiToolStripMenuItem";
-            this.rasporedVoznjiToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.rasporedVoznjiToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
             this.rasporedVoznjiToolStripMenuItem.Text = "Raspored voznji";
             this.rasporedVoznjiToolStripMenuItem.Click += new System.EventHandler(this.rasporedVoznjiToolStripMenuItem_Click);
             // 
             // pregledRasporedaToolStripMenuItem
             // 
             this.pregledRasporedaToolStripMenuItem.Name = "pregledRasporedaToolStripMenuItem";
-            this.pregledRasporedaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.pregledRasporedaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.pregledRasporedaToolStripMenuItem.Text = "Pregled rasporeda ";
             this.pregledRasporedaToolStripMenuItem.Click += new System.EventHandler(this.pregledRasporedaToolStripMenuItem_Click);
             // 
             // dodajNovuLinijuToolStripMenuItem
             // 
             this.dodajNovuLinijuToolStripMenuItem.Name = "dodajNovuLinijuToolStripMenuItem";
-            this.dodajNovuLinijuToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.dodajNovuLinijuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dodajNovuLinijuToolStripMenuItem.Text = "Dodaj novu liniju";
             this.dodajNovuLinijuToolStripMenuItem.Click += new System.EventHandler(this.dodajNovuLinijuToolStripMenuItem_Click);
             // 
             // recenzijeToolStripMenuItem
             // 
             this.recenzijeToolStripMenuItem.Name = "recenzijeToolStripMenuItem";
-            this.recenzijeToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.recenzijeToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
             this.recenzijeToolStripMenuItem.Text = "Recenzije";
             this.recenzijeToolStripMenuItem.Click += new System.EventHandler(this.recenzijeToolStripMenuItem_Click);
             // 
+            // zahtjeviZaKartuToolStripMenuItem
+            // 
+            this.zahtjeviZaKartuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.onlineKarteToolStripMenuItem,
+            this.preuzećemKarteToolStripMenuItem});
+            this.zahtjeviZaKartuToolStripMenuItem.Name = "zahtjeviZaKartuToolStripMenuItem";
+            this.zahtjeviZaKartuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zahtjeviZaKartuToolStripMenuItem.Text = "Zahtjevi za kartu";
+            this.zahtjeviZaKartuToolStripMenuItem.Click += new System.EventHandler(this.zahtjeviZaKartuToolStripMenuItem_Click);
+            // 
+            // onlineKarteToolStripMenuItem
+            // 
+            this.onlineKarteToolStripMenuItem.Name = "onlineKarteToolStripMenuItem";
+            this.onlineKarteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.onlineKarteToolStripMenuItem.Text = "Online karte";
+            this.onlineKarteToolStripMenuItem.Click += new System.EventHandler(this.onlineKarteToolStripMenuItem_Click);
+            // 
+            // preuzećemKarteToolStripMenuItem
+            // 
+            this.preuzećemKarteToolStripMenuItem.Name = "preuzećemKarteToolStripMenuItem";
+            this.preuzećemKarteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.preuzećemKarteToolStripMenuItem.Text = "Preuzećem karte";
+            this.preuzećemKarteToolStripMenuItem.Click += new System.EventHandler(this.preuzećemKarteToolStripMenuItem_Click);
+            // 
             // frmPocetna
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(633, 449);
+            this.ClientSize = new System.Drawing.Size(844, 553);
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmPocetna";
             this.Text = "frmPocetna";
             this.menuStrip.ResumeLayout(false);
@@ -220,6 +249,9 @@ namespace eAutobus.WinUI
         private System.Windows.Forms.ToolStripMenuItem dodajNovuKartuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem izdajKartuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recenzijeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zahtjeviZaKartuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem onlineKarteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem preuzećemKarteToolStripMenuItem;
     }
 }
 

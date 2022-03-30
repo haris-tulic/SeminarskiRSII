@@ -60,8 +60,8 @@
                     <Label Text="Vrsta karte:"/>
                     <Picker ItemsSource="{Binding VrstaKarteList}" SelectedItem="{Binding VrstaKarte}" SelectedIndexChanged="VrstaKarteChanged" ItemDisplayBinding="{Binding Naziv}" Margin="5"></Picker>
                     
-                    <Label Text="Datum polaska:"  />
-                <DatePicker x:Name="DatumP" Date="{Binding DatumPolaska}" MaximumDate="1/1/2025"  WidthRequest="400"  HorizontalOptions="CenterAndExpand" Margin="5"  />
+                    <Label Text="Datum izdavanja:"  />
+                <DatePicker x:Name="DatumP" Date="{Binding DatumIzdavanja}" MaximumDate="1/1/2025"  WidthRequest="400"  HorizontalOptions="CenterAndExpand" Margin="5"  />
                     
                     <!--<Label Text="Datum vazenja"/>
                 <DatePicker x:Name="DatumV" Date="{Binding DatumDolaska}"   MaximumDate="1/1/2025"  WidthRequest="400"  HorizontalOptions="CenterAndExpand" Margin="5" IsEnabled="False"/>-->

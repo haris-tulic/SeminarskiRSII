@@ -24,7 +24,7 @@ namespace eAutobus.Mobile.ViewModels
 
         public async Task PrijaviSe()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new LoginPage());
+            await Application.Current.MainPage.Navigation.PopToRootAsync();
         }
 
         public async Task RegistrujSe()
@@ -44,7 +44,7 @@ namespace eAutobus.Mobile.ViewModels
                 {
                     await _serviceK.Insert<KupacModel>(noviKupac);
                     await Application.Current.MainPage.DisplayAlert("Uspješno", "Uspješno ste se registrovali.", "Uredu");
-                    await Application.Current.MainPage.Navigation.PushAsync(new LoginPage());
+                    await Application.Current.MainPage.Navigation.PopToRootAsync();
               
                 }
                 catch (Exception)
