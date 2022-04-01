@@ -42,6 +42,7 @@ namespace eAutobus.WinUI.Karte
             this.Polaziste = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Odrediste = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CijenaPrikaz = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPrintajKarte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,11 +172,22 @@ namespace eAutobus.WinUI.Karte
             this.CijenaPrikaz.ReadOnly = true;
             this.CijenaPrikaz.Width = 125;
             // 
+            // btnPrintajKarte
+            // 
+            this.btnPrintajKarte.Location = new System.Drawing.Point(338, 495);
+            this.btnPrintajKarte.Name = "btnPrintajKarte";
+            this.btnPrintajKarte.Size = new System.Drawing.Size(75, 23);
+            this.btnPrintajKarte.TabIndex = 6;
+            this.btnPrintajKarte.Text = "Printaj karte";
+            this.btnPrintajKarte.UseVisualStyleBackColor = true;
+            this.btnPrintajKarte.Click += new System.EventHandler(this.btnPrintajKarte_Click);
+            // 
             // frmPrikazKarata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(843, 606);
+            this.Controls.Add(this.btnPrintajKarte);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnPretraga);
             this.Controls.Add(this.cbZona);
@@ -206,5 +218,6 @@ namespace eAutobus.WinUI.Karte
         private System.Windows.Forms.DataGridViewTextBoxColumn Polaziste;
         private System.Windows.Forms.DataGridViewTextBoxColumn Odrediste;
         private System.Windows.Forms.DataGridViewTextBoxColumn CijenaPrikaz;
+        private System.Windows.Forms.Button btnPrintajKarte;
     }
 }

@@ -29,7 +29,13 @@ namespace SeminarskiWebAPI.Services
         public List<eAutobusModel.RasporedVoznjeModel> Get(RasporedVoznjeGetRequest search)
         {
             
-            var query = _context.RasporedVoznje.Include(a=>a.Autobus).Include(o=>o.Odrediste).Include(d=>d.Polaziste).Include(r=>r.Recenzija).Include(v=>v.Vozac).Include(k=>k.Kondukter).AsQueryable();
+            var query = _context.RasporedVoznje.Include(a=>a.Autobus)
+                .Include(o=>o.Odrediste)
+                .Include(d=>d.Polaziste)
+                .Include(r=>r.Recenzija)
+                .Include(v=>v.Vozac)
+                .Include(k=>k.Kondukter)
+                .Include("Vozac.Korisnik").AsQueryable();
             if (search.OdredisteID.ToString()!="0")
             {
                 query = query.Where(r => r.OdredisteID == search.OdredisteID);
@@ -52,6 +58,7 @@ namespace SeminarskiWebAPI.Services
                 listR[i].Polazak = list[i].Polaziste.NazivLokacijeStanice;
                 listR[i].BrojAutobusa = list[i].Autobus.BrojAutobusa;
                 listR[i].NazivLinije = list[i].Polaziste.NazivLokacijeStanice + "-" + list[i].Odrediste.NazivLokacijeStanice;
+                listR[i].VozacIme = list[i].Vozac.Korisnik.Ime;
             }
             return listR.OrderByDescending(r=>r.FinalOcjena).ToList();
         }

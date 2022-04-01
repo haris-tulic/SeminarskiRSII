@@ -83,5 +83,12 @@ namespace eAutobus.WinUI.Karte
             frmDodajKartu frm = new frmDodajKartu(int.Parse(kartaID.ToString()));
             frm.Show();
         }
+
+        private void btnPrintajKarte_Click(object sender, EventArgs e)
+        {
+            var cjenovinikPrikaz=dataGridView1.DataSource as List<CjenovnikModel>;
+            Reports.PregledCjenovnika rpt= new Reports.PregledCjenovnika(cjenovinikPrikaz);
+            rpt.Show();
+        }
     }
 }

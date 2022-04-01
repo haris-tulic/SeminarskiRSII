@@ -45,6 +45,7 @@ namespace eAutobus.WinUI.RedVoznji
             this.cbPolaziste = new System.Windows.Forms.ComboBox();
             this.cbOdrediste = new System.Windows.Forms.ComboBox();
             this.dtpDatum = new System.Windows.Forms.DateTimePicker();
+            this.btnIzvjestaj = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLinije)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,11 +195,22 @@ namespace eAutobus.WinUI.RedVoznji
             this.dtpDatum.TabIndex = 7;
             this.dtpDatum.ValueChanged += new System.EventHandler(this.dtpDatum_ValueChanged);
             // 
+            // btnIzvjestaj
+            // 
+            this.btnIzvjestaj.Location = new System.Drawing.Point(370, 480);
+            this.btnIzvjestaj.Name = "btnIzvjestaj";
+            this.btnIzvjestaj.Size = new System.Drawing.Size(75, 23);
+            this.btnIzvjestaj.TabIndex = 8;
+            this.btnIzvjestaj.Text = "Izvještaj";
+            this.btnIzvjestaj.UseVisualStyleBackColor = true;
+            this.btnIzvjestaj.Click += new System.EventHandler(this.btnIzvjestaj_Click);
+            // 
             // frmPregledRedaVoznji
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(773, 495);
+            this.ClientSize = new System.Drawing.Size(820, 556);
+            this.Controls.Add(this.btnIzvjestaj);
             this.Controls.Add(this.dtpDatum);
             this.Controls.Add(this.cbOdrediste);
             this.Controls.Add(this.cbPolaziste);
@@ -234,5 +246,6 @@ namespace eAutobus.WinUI.RedVoznji
         private System.Windows.Forms.DataGridViewTextBoxColumn VrijemeDolaska;
         private System.Windows.Forms.DataGridViewTextBoxColumn Odlazak;
         private System.Windows.Forms.DataGridViewTextBoxColumn Datum;
+        private System.Windows.Forms.Button btnIzvjestaj;
     }
 }
