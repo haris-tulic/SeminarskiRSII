@@ -16,6 +16,8 @@ namespace eAutobus.WinUI.Korisnici
     {
         private APIService _korisnici = new APIService("Korisnik");
         private APIService _korisniciTip = new APIService("Uloge");
+        public List<KorisnikModel> _korisniciList=new List<KorisnikModel>();
+        public KorisnikModel _prikazK { get; set;}
 
         public frmKorisniciPrikaz()
         {
@@ -31,6 +33,7 @@ namespace eAutobus.WinUI.Korisnici
                 UlogaID= int.Parse(cbUloga.SelectedValue.ToString())
             };
             var entity = await _korisnici.Get<List<KorisnikModel>>(search);
+            _korisniciList = entity;
             dgvPrikaz.AutoGenerateColumns = false;
             dgvPrikaz.DataSource = entity;
         }
@@ -44,6 +47,8 @@ namespace eAutobus.WinUI.Korisnici
         private async Task LoadKorisnike()
         {
             var list = await _korisnici.Get<List<KorisnikModel>>(null);
+            _korisniciList = list;
+          
             dgvPrikaz.AutoGenerateColumns = false;
             dgvPrikaz.DataSource = list;
         }
@@ -63,6 +68,13 @@ namespace eAutobus.WinUI.Korisnici
             var IdKorisnik = dgvPrikaz.SelectedRows[0].Cells[0].Value;
             frmKorisniciDodaj frm = new frmKorisniciDodaj(int.Parse(IdKorisnik.ToString()));
             frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var prikazKorisnika = dgvPrikaz.DataSource as List<KorisnikModel>;
+            Reports.PregledKorisnikaReportView rpt= new Reports.PregledKorisnikaReportView(prikazKorisnika);
+            rpt.Show();
         }
     }
 }

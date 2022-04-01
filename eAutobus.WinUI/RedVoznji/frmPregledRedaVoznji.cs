@@ -16,6 +16,7 @@ namespace eAutobus.WinUI.RedVoznji
     {
         private readonly APIService _linije = new APIService("RasporedVoznje");
         private readonly APIService _stanice = new APIService("Stanica");
+        public List<RasporedVoznjeModel> _prikazLinija;
 
         public frmPregledRedaVoznji()
         {
@@ -31,6 +32,7 @@ namespace eAutobus.WinUI.RedVoznji
         private async Task LoadRedVoznje()
         {
             var result = await _linije.Get<List<RasporedVoznjeModel>>(null);
+            _prikazLinija = result;
             dgvLinije.AutoGenerateColumns = false;
             dgvLinije.DataSource = result;
            
@@ -76,6 +78,12 @@ namespace eAutobus.WinUI.RedVoznji
         private void dtpDatum_ValueChanged(object sender, EventArgs e)
         {
             dtpDatum.CustomFormat = "dd/MM/yyyy";
+        }
+
+        private void btnIzvjestaj_Click(object sender, EventArgs e)
+        {
+            Reports.PregledLinijaReportView rpt = new Reports.PregledLinijaReportView(_prikazLinija);
+            rpt.Show();
         }
     }
 }

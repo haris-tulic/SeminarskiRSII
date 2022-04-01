@@ -42,6 +42,7 @@ namespace eAutobus.WinUI.Korisnici
             this.DatumRodjenja = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Uloge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbUloga = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrikaz)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,11 +108,11 @@ namespace eAutobus.WinUI.Korisnici
             this.Prezime,
             this.DatumRodjenja,
             this.Uloge});
-            this.dgvPrikaz.Location = new System.Drawing.Point(3, 227);
+            this.dgvPrikaz.Location = new System.Drawing.Point(128, 221);
             this.dgvPrikaz.Name = "dgvPrikaz";
             this.dgvPrikaz.ReadOnly = true;
             this.dgvPrikaz.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrikaz.Size = new System.Drawing.Size(795, 222);
+            this.dgvPrikaz.Size = new System.Drawing.Size(446, 222);
             this.dgvPrikaz.TabIndex = 7;
             this.dgvPrikaz.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvPrikaz_MouseDoubleClick);
             // 
@@ -159,11 +160,22 @@ namespace eAutobus.WinUI.Korisnici
             this.cbUloga.Size = new System.Drawing.Size(142, 21);
             this.cbUloga.TabIndex = 8;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(303, 486);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Izvještaj";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmKorisniciPrikaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(739, 551);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cbUloga);
             this.Controls.Add(this.dgvPrikaz);
             this.Controls.Add(this.txtPrezime);
@@ -196,5 +208,6 @@ namespace eAutobus.WinUI.Korisnici
         private System.Windows.Forms.DataGridViewTextBoxColumn Prezime;
         private System.Windows.Forms.DataGridViewTextBoxColumn DatumRodjenja;
         private System.Windows.Forms.DataGridViewTextBoxColumn Uloge;
+        private System.Windows.Forms.Button button1;
     }
 }

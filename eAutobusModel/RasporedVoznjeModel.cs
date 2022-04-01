@@ -16,6 +16,7 @@ namespace eAutobusModel
         public DateTime VrijemePolaska { get; set; }
         public DateTime VrijemeDolaska { get; set; }
         public VozacModel Vozac { get; set; }
+        public string VozacIme { get; set; }
         public int VozacID { get; set; }
         public int KondukterID { get; set; }
         public DateTime Datum { get; set; }
