@@ -59,6 +59,7 @@ namespace eAutobus.WinUI.Karte
             this.txtPrezime = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.btnPreuzmiPDF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -316,11 +317,22 @@ namespace eAutobus.WinUI.Karte
             this.txtEmail.TabIndex = 28;
             this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
+            // btnPreuzmiPDF
+            // 
+            this.btnPreuzmiPDF.Location = new System.Drawing.Point(518, 579);
+            this.btnPreuzmiPDF.Name = "btnPreuzmiPDF";
+            this.btnPreuzmiPDF.Size = new System.Drawing.Size(89, 28);
+            this.btnPreuzmiPDF.TabIndex = 29;
+            this.btnPreuzmiPDF.Text = "Preuzmi PDF";
+            this.btnPreuzmiPDF.UseVisualStyleBackColor = true;
+            this.btnPreuzmiPDF.Click += new System.EventHandler(this.btnPreuzmiPDF_Click);
+            // 
             // frmIzdajKartu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1047, 737);
+            this.Controls.Add(this.btnPreuzmiPDF);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtPrezime);
@@ -390,5 +402,6 @@ namespace eAutobus.WinUI.Karte
         private System.Windows.Forms.TextBox txtPrezime;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnPreuzmiPDF;
     }
 }
