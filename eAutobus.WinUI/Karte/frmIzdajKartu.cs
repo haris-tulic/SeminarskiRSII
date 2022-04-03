@@ -21,6 +21,8 @@ namespace eAutobus.WinUI.Karte
         private readonly APIService _cjenovnik = new APIService("Cjenovnik");
         private CjenovnikSearchRequest CijenaKarte = new CjenovnikSearchRequest();
         double CijenaK;
+        KartaUpsertRequest insert = new KartaUpsertRequest();
+
         public frmIzdajKartu()
         {
             InitializeComponent();
@@ -180,7 +182,6 @@ namespace eAutobus.WinUI.Karte
 
         private async void btnIzdajKartu_Click(object sender, EventArgs e)
         {
-            var insert = new KartaUpsertRequest();
             if (this.ValidateChildren())
             {
                 insert.Ime = txtIme.Text;
@@ -287,6 +288,29 @@ namespace eAutobus.WinUI.Karte
             {
                 errorProvider.SetError(txtEmail, null);
             }
+        }
+
+        private async void btnPreuzmiPDF_Click(object sender, EventArgs e)
+        {
+            var tipKarte = await _tipKarte.GetById<TipKarteModel>(insert.TipKarteID);
+            var vrstaKarte = await _vrstaKarte.GetById<VrstaKarteModel>(insert.VrstaKarteID);
+            var polaziste = await _stanice.GetById<StanicaModel>(insert.PolazisteID);
+            var odrediste = await _stanice.GetById<StanicaModel>(insert.OdredisteID);
+            var kartaPrikaz = new IzvjestajIzdanaKartaModel
+            {
+                ImePrezime = insert.Ime + " " + insert.Prezime,
+                AdresaStanovanja = insert.AdresaStanovanja,
+                VrstaKarte = vrstaKarte.Naziv,
+                TipKarte = tipKarte.Naziv,
+                DatumVadjenja = insert.DatumVadjenjaKarte,
+                DatumVazenja = insert.DatumVazenjaKarte,
+                Polaziste=polaziste.NazivLokacijeStanice,
+                Odrediste=odrediste.NazivLokacijeStanice,
+                Cijena=insert.Cijena.ToString()+" KM",
+                Pravac=insert.PravacS,
+            };
+            Reports.IzdanaKartaReportView rpt = new Reports.IzdanaKartaReportView(kartaPrikaz);
+            rpt.Show();
         }
     }
 }

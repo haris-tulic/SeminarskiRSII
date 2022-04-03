@@ -207,6 +207,12 @@
     <Compile Include="RedVoznji\frmPregledRedaVoznji.Designer.cs">
       <DependentUpon>frmPregledRedaVoznji.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\IzdanaKartaReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\IzdanaKartaReportView.Designer.cs">
+      <DependentUpon>IzdanaKartaReportView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PregledCjenovnika.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +286,9 @@
     <EmbeddedResource Include="RedVoznji\frmPregledRedaVoznji.resx">
       <DependentUpon>frmPregledRedaVoznji.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IzdanaKartaReportView.resx">
+      <DependentUpon>IzdanaKartaReportView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\PregledCjenovnika.resx">
       <DependentUpon>PregledCjenovnika.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,6 +298,7 @@
     <EmbeddedResource Include="Reports\PregledLinijaReportView.resx">
       <DependentUpon>PregledLinijaReportView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptIzdanaKarta.rdlc" />
     <EmbeddedResource Include="Reports\rptKorisnici.rdlc" />
     <EmbeddedResource Include="Reports\rptPregledKarata.rdlc" />
     <EmbeddedResource Include="Reports\rptPregledLinija.rdlc" />
