@@ -19,6 +19,8 @@ namespace SeminarskiWebAPI.Database
         public int OdredisteID { get; set; }
         public Stanica Odrediste { get; set; }
         public int VrstaKarteID { get; set; }
+        public bool IsDeleted { get; set; }
+
         public VrstaKarte VrstaKarte { get; set; }
         public double  Cijena { get; set; }
         public string NacinPlacanja { get; set; }

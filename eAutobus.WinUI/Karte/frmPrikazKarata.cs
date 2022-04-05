@@ -77,9 +77,16 @@ namespace eAutobus.WinUI.Karte
            
         }
 
-        private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        private async void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             var kartaID = dataGridView1.SelectedRows[0].Cells[0].Value;
+            var odabranaKarta = await _cjenovnik.GetById<CjenovnikModel>(kartaID);
+            if (dataGridView1.CurrentCell is DataGridViewButtonCell)
+            {
+                await _cjenovnik.Delete<CjenovnikModel>(kartaID);
+                MessageBox.Show("Izbrisali ste odabranu kartu: " + odabranaKarta.Tipkarte + " " + odabranaKarta.VrstaKarte);
+                await LoadCjenovnik();
+            }
             frmDodajKartu frm = new frmDodajKartu(int.Parse(kartaID.ToString()));
             frm.Show();
         }

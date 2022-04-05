@@ -28,7 +28,8 @@ namespace SeminarskiWebAPI.Services
         public eAutobusModel.KartaModel Delete(int id)
         {
             var entity = _context.Karta.Find(id);
-            _context.Karta.Remove(entity);
+            //_context.Karta.Remove(entity);
+            entity.IsDeleted = true;
             _context.SaveChanges();
             return _mapper.Map<KartaModel>(entity);
         }
@@ -42,6 +43,7 @@ namespace SeminarskiWebAPI.Services
                                     .Include("KupacList.Kupac")
                                     .Include(o=>o.Odrediste)
                                     .Include(p=>p.Polaziste)
+                                    .Where(k=>k.IsDeleted==false)
                                     .AsQueryable();
             var list = query.ToList();
             var listM = new List<KartaModel>();

@@ -36,37 +36,41 @@ namespace eAutobus.WinUI.Korisnici
             this.label3 = new System.Windows.Forms.Label();
             this.txtPrezime = new System.Windows.Forms.TextBox();
             this.dgvPrikaz = new System.Windows.Forms.DataGridView();
+            this.cbUloga = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.KorisnikID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DatumRodjenja = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Uloge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbUloga = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Akcija = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrikaz)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(247, 66);
+            this.label1.Location = new System.Drawing.Point(329, 81);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.Size = new System.Drawing.Size(34, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ime:";
             // 
             // txtIme
             // 
-            this.txtIme.Location = new System.Drawing.Point(280, 63);
+            this.txtIme.Location = new System.Drawing.Point(373, 78);
+            this.txtIme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(142, 20);
+            this.txtIme.Size = new System.Drawing.Size(188, 22);
             this.txtIme.TabIndex = 1;
             // 
             // btnPrikazi
             // 
-            this.btnPrikazi.Location = new System.Drawing.Point(303, 179);
+            this.btnPrikazi.Location = new System.Drawing.Point(404, 220);
+            this.btnPrikazi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPrikazi.Name = "btnPrikazi";
-            this.btnPrikazi.Size = new System.Drawing.Size(75, 23);
+            this.btnPrikazi.Size = new System.Drawing.Size(100, 28);
             this.btnPrikazi.TabIndex = 2;
             this.btnPrikazi.Text = "Pretraga";
             this.btnPrikazi.UseVisualStyleBackColor = true;
@@ -75,26 +79,29 @@ namespace eAutobus.WinUI.Korisnici
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(227, 101);
+            this.label2.Location = new System.Drawing.Point(303, 124);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Prezime:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(236, 137);
+            this.label3.Location = new System.Drawing.Point(315, 169);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(49, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Uloga:";
             // 
             // txtPrezime
             // 
-            this.txtPrezime.Location = new System.Drawing.Point(280, 98);
+            this.txtPrezime.Location = new System.Drawing.Point(373, 121);
+            this.txtPrezime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(142, 20);
+            this.txtPrezime.Size = new System.Drawing.Size(188, 22);
             this.txtPrezime.TabIndex = 6;
             // 
             // dgvPrikaz
@@ -107,74 +114,99 @@ namespace eAutobus.WinUI.Korisnici
             this.Ime,
             this.Prezime,
             this.DatumRodjenja,
-            this.Uloge});
-            this.dgvPrikaz.Location = new System.Drawing.Point(128, 221);
+            this.Uloge,
+            this.Akcija});
+            this.dgvPrikaz.Location = new System.Drawing.Point(123, 277);
+            this.dgvPrikaz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvPrikaz.Name = "dgvPrikaz";
             this.dgvPrikaz.ReadOnly = true;
+            this.dgvPrikaz.RowHeadersWidth = 51;
             this.dgvPrikaz.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrikaz.Size = new System.Drawing.Size(446, 222);
+            this.dgvPrikaz.Size = new System.Drawing.Size(680, 273);
             this.dgvPrikaz.TabIndex = 7;
             this.dgvPrikaz.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvPrikaz_MouseDoubleClick);
-            // 
-            // KorisnikID
-            // 
-            this.KorisnikID.DataPropertyName = "KorisnikID";
-            this.KorisnikID.HeaderText = "ID";
-            this.KorisnikID.Name = "KorisnikID";
-            this.KorisnikID.ReadOnly = true;
-            this.KorisnikID.Visible = false;
-            // 
-            // Ime
-            // 
-            this.Ime.DataPropertyName = "Ime";
-            this.Ime.HeaderText = "Ime";
-            this.Ime.Name = "Ime";
-            this.Ime.ReadOnly = true;
-            // 
-            // Prezime
-            // 
-            this.Prezime.DataPropertyName = "Prezime";
-            this.Prezime.HeaderText = "Prezime";
-            this.Prezime.Name = "Prezime";
-            this.Prezime.ReadOnly = true;
-            // 
-            // DatumRodjenja
-            // 
-            this.DatumRodjenja.DataPropertyName = "DatumRodjenja";
-            this.DatumRodjenja.HeaderText = "Datum rodjenja";
-            this.DatumRodjenja.Name = "DatumRodjenja";
-            this.DatumRodjenja.ReadOnly = true;
-            // 
-            // Uloge
-            // 
-            this.Uloge.DataPropertyName = "Uloge";
-            this.Uloge.HeaderText = "Uloga";
-            this.Uloge.Name = "Uloge";
-            this.Uloge.ReadOnly = true;
             // 
             // cbUloga
             // 
             this.cbUloga.FormattingEnabled = true;
-            this.cbUloga.Location = new System.Drawing.Point(280, 129);
+            this.cbUloga.Location = new System.Drawing.Point(373, 159);
+            this.cbUloga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbUloga.Name = "cbUloga";
-            this.cbUloga.Size = new System.Drawing.Size(142, 21);
+            this.cbUloga.Size = new System.Drawing.Size(188, 24);
             this.cbUloga.TabIndex = 8;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(303, 486);
+            this.button1.Location = new System.Drawing.Point(404, 598);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 9;
             this.button1.Text = "Izvještaj";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // KorisnikID
+            // 
+            this.KorisnikID.DataPropertyName = "KorisnikID";
+            this.KorisnikID.HeaderText = "ID";
+            this.KorisnikID.MinimumWidth = 6;
+            this.KorisnikID.Name = "KorisnikID";
+            this.KorisnikID.ReadOnly = true;
+            this.KorisnikID.Visible = false;
+            this.KorisnikID.Width = 125;
+            // 
+            // Ime
+            // 
+            this.Ime.DataPropertyName = "Ime";
+            this.Ime.HeaderText = "Ime";
+            this.Ime.MinimumWidth = 6;
+            this.Ime.Name = "Ime";
+            this.Ime.ReadOnly = true;
+            this.Ime.Width = 125;
+            // 
+            // Prezime
+            // 
+            this.Prezime.DataPropertyName = "Prezime";
+            this.Prezime.HeaderText = "Prezime";
+            this.Prezime.MinimumWidth = 6;
+            this.Prezime.Name = "Prezime";
+            this.Prezime.ReadOnly = true;
+            this.Prezime.Width = 125;
+            // 
+            // DatumRodjenja
+            // 
+            this.DatumRodjenja.DataPropertyName = "DatumRodjenja";
+            this.DatumRodjenja.HeaderText = "Datum rodjenja";
+            this.DatumRodjenja.MinimumWidth = 6;
+            this.DatumRodjenja.Name = "DatumRodjenja";
+            this.DatumRodjenja.ReadOnly = true;
+            this.DatumRodjenja.Width = 125;
+            // 
+            // Uloge
+            // 
+            this.Uloge.DataPropertyName = "Uloge";
+            this.Uloge.HeaderText = "Uloga";
+            this.Uloge.MinimumWidth = 6;
+            this.Uloge.Name = "Uloge";
+            this.Uloge.ReadOnly = true;
+            this.Uloge.Width = 125;
+            // 
+            // Akcija
+            // 
+            this.Akcija.HeaderText = "Akcija";
+            this.Akcija.MinimumWidth = 6;
+            this.Akcija.Name = "Akcija";
+            this.Akcija.ReadOnly = true;
+            this.Akcija.Text = "Obriši";
+            this.Akcija.UseColumnTextForButtonValue = true;
+            this.Akcija.Width = 125;
+            // 
             // frmKorisniciPrikaz
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 551);
+            this.ClientSize = new System.Drawing.Size(985, 678);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cbUloga);
             this.Controls.Add(this.dgvPrikaz);
@@ -184,6 +216,7 @@ namespace eAutobus.WinUI.Korisnici
             this.Controls.Add(this.btnPrikazi);
             this.Controls.Add(this.txtIme);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmKorisniciPrikaz";
             this.Text = "frmKorisniciPrikaz";
             this.Load += new System.EventHandler(this.frmKorisniciPrikaz_Load);
@@ -203,11 +236,12 @@ namespace eAutobus.WinUI.Korisnici
         private System.Windows.Forms.TextBox txtPrezime;
         private System.Windows.Forms.DataGridView dgvPrikaz;
         private System.Windows.Forms.ComboBox cbUloga;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn KorisnikID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prezime;
         private System.Windows.Forms.DataGridViewTextBoxColumn DatumRodjenja;
         private System.Windows.Forms.DataGridViewTextBoxColumn Uloge;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewButtonColumn Akcija;
     }
 }

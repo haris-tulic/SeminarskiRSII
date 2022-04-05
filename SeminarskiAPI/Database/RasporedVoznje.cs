@@ -17,6 +17,8 @@ namespace SeminarskiWebAPI.Database
         public int OdredisteID { get; set; }
         public DateTime VrijemePolaska { get; set; }
         public DateTime VrijemeDolaska { get; set; }
+        public bool IsDeleted { get; set; }
+
         public Vozac Vozac { get; set; }
         public int VozacID { get; set; }
         public int KondukterID { get; set; }

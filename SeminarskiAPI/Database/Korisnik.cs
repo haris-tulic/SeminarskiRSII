@@ -20,7 +20,7 @@ namespace SeminarskiWebAPI.Database
         public string LozinkaSalt { get; set; }
         public int GradID { get; set; }
         public Grad Grad { get; set; }
-
+        public bool IsDeleted { get; set; }
         public int UlogeID { get; set; }
         public Uloge Uloge { get; set; }
     }

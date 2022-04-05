@@ -187,7 +187,7 @@ namespace eAutobus.WinUI.Karte
                 insert.Ime = txtIme.Text;
                 insert.Prezime = txtPrezime.Text;
                 insert.AdresaStanovanja = txtAdresa.Text;
-                insert.Email = txtEmail.Text;
+                //insert.Email = txtEmail.Text;
                 insert.VrstaKarteID = int.Parse(cbVrstaKarte.SelectedValue.ToString());
                 insert.TipKarteID = int.Parse(cbTipKarte.SelectedValue.ToString());
                 insert.PolazisteID = int.Parse(cbPolaziste.SelectedValue.ToString());
@@ -277,38 +277,29 @@ namespace eAutobus.WinUI.Karte
             }
         }
 
-        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        private async void btnPreuzmiPDF_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtEmail.Text))
+            
+            var kartaPrikaz = new IzvjestajIzdanaKartaModel
             {
-                errorProvider.SetError(txtEmail, "Obavezno polje!");
-                e.Cancel = true;
+                ImePrezime = txtIme.Text + " " + txtPrezime.Text,
+                AdresaStanovanja = txtAdresa.Text,
+                VrstaKarte =cbVrstaKarte.Text,
+                TipKarte = cbTipKarte.Text,
+                DatumVadjenja = dtpDatumVadjenja.Value,
+                DatumVazenja = dtpDatumVazenja.Value,
+                Polaziste = cbPolaziste.Text ,
+                Odrediste = cbOdrediste.Text ,
+                Cijena =txtCijena.Text,
+            };
+            if (rbJedan.Checked)
+            {
+                kartaPrikaz.Pravac = rbJedan.Text;
             }
             else
             {
-                errorProvider.SetError(txtEmail, null);
+                kartaPrikaz.Pravac = rbDva.Text;
             }
-        }
-
-        private async void btnPreuzmiPDF_Click(object sender, EventArgs e)
-        {
-            var tipKarte = await _tipKarte.GetById<TipKarteModel>(insert.TipKarteID);
-            var vrstaKarte = await _vrstaKarte.GetById<VrstaKarteModel>(insert.VrstaKarteID);
-            var polaziste = await _stanice.GetById<StanicaModel>(insert.PolazisteID);
-            var odrediste = await _stanice.GetById<StanicaModel>(insert.OdredisteID);
-            var kartaPrikaz = new IzvjestajIzdanaKartaModel
-            {
-                ImePrezime = insert.Ime + " " + insert.Prezime,
-                AdresaStanovanja = insert.AdresaStanovanja,
-                VrstaKarte = vrstaKarte.Naziv,
-                TipKarte = tipKarte.Naziv,
-                DatumVadjenja = insert.DatumVadjenjaKarte,
-                DatumVazenja = insert.DatumVazenjaKarte,
-                Polaziste=polaziste.NazivLokacijeStanice,
-                Odrediste=odrediste.NazivLokacijeStanice,
-                Cijena=insert.Cijena.ToString()+" KM",
-                Pravac=insert.PravacS,
-            };
             Reports.IzdanaKartaReportView rpt = new Reports.IzdanaKartaReportView(kartaPrikaz);
             rpt.Show();
         }

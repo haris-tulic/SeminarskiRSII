@@ -22,7 +22,8 @@ namespace SeminarskiWebAPI.Services
         public eAutobusModel.RasporedVoznjeModel Delete(int id)
         {
             var entity = _context.RasporedVoznje.Find(id);
-            _context.RasporedVoznje.Remove(entity);
+            //_context.RasporedVoznje.Remove(entity);
+            entity.IsDeleted = true;
             _context.SaveChanges();
             return _mapper.Map<eAutobusModel.RasporedVoznjeModel>(entity);
         }
@@ -35,7 +36,8 @@ namespace SeminarskiWebAPI.Services
                 .Include(r=>r.Recenzija)
                 .Include(v=>v.Vozac)
                 .Include(k=>k.Kondukter)
-                .Include("Vozac.Korisnik").AsQueryable();
+                .Include("Vozac.Korisnik")
+                .Where(i=>i.IsDeleted==false).AsQueryable();
             if (search.OdredisteID.ToString()!="0")
             {
                 query = query.Where(r => r.OdredisteID == search.OdredisteID);

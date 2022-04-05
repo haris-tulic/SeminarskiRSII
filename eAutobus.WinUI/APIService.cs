@@ -49,6 +49,11 @@ namespace eAutobus.WinUI
             var url = $"{Properties.Settings.Default.APIUrl}/{_route}/{id}";
             return await url.WithBasicAuth(Username,Password).PutJsonAsync(request).ReceiveJson<T>();
         }
+        public async Task<T> Delete<T>(object id)
+        {
+            var url = $"{Properties.Settings.Default.APIUrl}/{_route}/{id}";
+            return await url.WithBasicAuth(Username, Password).DeleteAsync().ReceiveJson<T>();
+        }
         public async Task<T> GetCijena<T>(object search)
         {
             var url = $"{Properties.Settings.Default.APIUrl}/{_route}";

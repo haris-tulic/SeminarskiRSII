@@ -31,7 +31,7 @@ namespace SeminarskiWebAPI.Services.Services
 
         public List<KorisnikModel> Get(KorisnikGetRequest search)
         {
-            var query = _context.Korisnik.Include(x=>x.Uloge).AsQueryable();
+            var query = _context.Korisnik.Include(x=>x.Uloge).Where(k=>k.IsDeleted==false).AsQueryable();
             if (search.UlogaID.ToString()!="0" && !string.IsNullOrWhiteSpace(search.UlogaID.ToString()))
             {
                 query = query.Where(k=>k.UlogeID==search.UlogaID);
@@ -87,7 +87,8 @@ namespace SeminarskiWebAPI.Services.Services
         public KorisnikModel Delete(int id)
         {
             var entity = _context.Korisnik.Find(id);
-            _context.Korisnik.Remove(entity);
+            //_context.Korisnik.Remove(entity);
+            entity.IsDeleted = true;
             _context.SaveChanges();
             return _mapper.Map<KorisnikModel>(entity);
         }

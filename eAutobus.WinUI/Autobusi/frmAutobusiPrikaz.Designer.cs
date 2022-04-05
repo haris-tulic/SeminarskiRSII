@@ -31,6 +31,9 @@ namespace eAutobus.WinUI.Autobusi
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvAutobusi = new System.Windows.Forms.DataGridView();
+            this.btnPrikazi = new System.Windows.Forms.Button();
+            this.txtMarkaVozila = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.AutobusID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarkaAutobusa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BrojSjedista = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,9 +41,6 @@ namespace eAutobus.WinUI.Autobusi
             this.NazivGaraze = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ispravan = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Akcija = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnPrikazi = new System.Windows.Forms.Button();
-            this.txtMarkaVozila = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutobusi)).BeginInit();
             this.SuspendLayout();
@@ -48,11 +48,11 @@ namespace eAutobus.WinUI.Autobusi
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvAutobusi);
-            this.groupBox1.Location = new System.Drawing.Point(9, 188);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(138, 235);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(782, 298);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(811, 367);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Autobusi";
@@ -71,16 +71,44 @@ namespace eAutobus.WinUI.Autobusi
             this.Ispravan,
             this.Akcija});
             this.dgvAutobusi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAutobusi.Location = new System.Drawing.Point(2, 15);
-            this.dgvAutobusi.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvAutobusi.Location = new System.Drawing.Point(3, 17);
+            this.dgvAutobusi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvAutobusi.Name = "dgvAutobusi";
             this.dgvAutobusi.ReadOnly = true;
             this.dgvAutobusi.RowHeadersWidth = 51;
             this.dgvAutobusi.RowTemplate.Height = 24;
             this.dgvAutobusi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAutobusi.Size = new System.Drawing.Size(778, 281);
+            this.dgvAutobusi.Size = new System.Drawing.Size(805, 348);
             this.dgvAutobusi.TabIndex = 0;
             this.dgvAutobusi.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvAutobusi_MouseDoubleClick);
+            // 
+            // btnPrikazi
+            // 
+            this.btnPrikazi.Location = new System.Drawing.Point(499, 156);
+            this.btnPrikazi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPrikazi.Name = "btnPrikazi";
+            this.btnPrikazi.Size = new System.Drawing.Size(132, 39);
+            this.btnPrikazi.TabIndex = 1;
+            this.btnPrikazi.Text = "Pretraga";
+            this.btnPrikazi.UseVisualStyleBackColor = true;
+            this.btnPrikazi.Click += new System.EventHandler(this.btnPrikazi_Click);
+            // 
+            // txtMarkaVozila
+            // 
+            this.txtMarkaVozila.Location = new System.Drawing.Point(441, 94);
+            this.txtMarkaVozila.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMarkaVozila.Name = "txtMarkaVozila";
+            this.txtMarkaVozila.Size = new System.Drawing.Size(251, 22);
+            this.txtMarkaVozila.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(513, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Marka vozila:";
             // 
             // AutobusID
             // 
@@ -140,48 +168,23 @@ namespace eAutobus.WinUI.Autobusi
             // Akcija
             // 
             this.Akcija.HeaderText = "Akcija";
+            this.Akcija.MinimumWidth = 6;
             this.Akcija.Name = "Akcija";
             this.Akcija.ReadOnly = true;
-            // 
-            // btnPrikazi
-            // 
-            this.btnPrikazi.Location = new System.Drawing.Point(374, 127);
-            this.btnPrikazi.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPrikazi.Name = "btnPrikazi";
-            this.btnPrikazi.Size = new System.Drawing.Size(99, 32);
-            this.btnPrikazi.TabIndex = 1;
-            this.btnPrikazi.Text = "Pretraga";
-            this.btnPrikazi.UseVisualStyleBackColor = true;
-            this.btnPrikazi.Click += new System.EventHandler(this.btnPrikazi_Click);
-            // 
-            // txtMarkaVozila
-            // 
-            this.txtMarkaVozila.Location = new System.Drawing.Point(331, 76);
-            this.txtMarkaVozila.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMarkaVozila.Name = "txtMarkaVozila";
-            this.txtMarkaVozila.Size = new System.Drawing.Size(189, 20);
-            this.txtMarkaVozila.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(385, 49);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Marka vozila:";
+            this.Akcija.Text = "Obriši";
+            this.Akcija.UseColumnTextForButtonValue = true;
+            this.Akcija.Width = 125;
             // 
             // frmAutobusiPrikaz
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 531);
+            this.ClientSize = new System.Drawing.Size(1083, 654);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMarkaVozila);
             this.Controls.Add(this.btnPrikazi);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmAutobusiPrikaz";
             this.Text = "frmAutobusi";
             this.Load += new System.EventHandler(this.frmAutobusiPrikaz_Load);
