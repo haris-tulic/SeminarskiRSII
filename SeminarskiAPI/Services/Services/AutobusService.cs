@@ -26,14 +26,15 @@ namespace SeminarskiWebAPI.Services
         public eAutobusModel.AutobusiModel Delete(int id)
         {
             var entity = _context.Autobus.Find(id);
-            _context.Autobus.Remove(entity);
+            //_context.Autobus.Remove(entity);
+            entity.IsDeleted = true;
             _context.SaveChanges();
             return _mapper.Map<eAutobusModel.AutobusiModel>(entity);
         }
 
         public List<eAutobusModel.AutobusiModel> Get(AutobusGetRequest request)
         {
-            var query = _context.Autobus.Include(a=>a.Garaza).AsQueryable();
+            var query = _context.Autobus.Include(a=>a.Garaza).Where(a=>a.IsDeleted==false).AsQueryable();
             if (!string.IsNullOrEmpty(request.Marka))
             {
                 query = query.Where(x => x.MarkaAutobusa.StartsWith(request.Marka));

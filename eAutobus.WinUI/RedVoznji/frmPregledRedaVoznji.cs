@@ -68,11 +68,22 @@ namespace eAutobus.WinUI.RedVoznji
             dgvLinije.DataSource = result;
         }
 
-        private void dgvLinije_MouseDoubleClick(object sender, MouseEventArgs e)
+        private async void dgvLinije_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             var RedVoznjeID = dgvLinije.SelectedRows[0].Cells[0].Value;
-            frmDodavanjeRedaVoznje frm = new frmDodavanjeRedaVoznje(int.Parse(RedVoznjeID.ToString()));
-            frm.Show();
+            var odabranaLinija = await _linije.GetById<RasporedVoznjeModel>(RedVoznjeID);
+            if (dgvLinije.CurrentCell is DataGridViewButtonCell)
+            {
+                await _linije.Delete<RasporedVoznjeModel>(RedVoznjeID);
+                MessageBox.Show("Izbrisali ste liniju: "+odabranaLinija.Polazak+"-"+odabranaLinija.Odlazak);
+                await LoadRedVoznje();
+            }
+            else
+            {
+                frmDodavanjeRedaVoznje frm = new frmDodavanjeRedaVoznje(int.Parse(RedVoznjeID.ToString()));
+                frm.Show();
+            }
+           
         }
 
         private void dtpDatum_ValueChanged(object sender, EventArgs e)

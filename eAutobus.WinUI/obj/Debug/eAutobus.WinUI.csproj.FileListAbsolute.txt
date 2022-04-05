@@ -198,3 +198,4 @@ E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\RdlCompile.compiled
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\eAutobus.WinUI.Reports.PregledKorisnikaReportView.resources
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\eAutobus.WinUI.Reports.PregledLinijaReportView.resources
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\eAutobus.WinUI.Reports.PregledCjenovnika.resources
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.WinUI\obj\Debug\eAutobus.WinUI.Reports.IzdanaKartaReportView.resources

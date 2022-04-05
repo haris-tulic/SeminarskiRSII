@@ -16,6 +16,8 @@ namespace SeminarskiWebAPI.Database
             public string MarkaAutobusa { get; set; }
             public int GarazaID { get; set; }
             public Garaza Garaza { get; set; }
-            public List<AutobusVozac> Vozaci { get; set; }
+        public bool IsDeleted { get; set; }
+
+        public List<AutobusVozac> Vozaci { get; set; }
     }
 }
