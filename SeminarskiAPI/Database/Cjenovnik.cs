@@ -20,7 +20,8 @@ namespace SeminarskiWebAPI.Database
         public int OdredisteID { get; set; }
         public Stanica Odrediste { get; set; }
         public double Cijena { get; set; }
+        public bool IsDeleted { get; set; }
 
-       
+
     }
 }

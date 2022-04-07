@@ -41,14 +41,15 @@ namespace eAutobus.Mobile.ViewModels
         public RasporedVoznjeGetRequest search = new RasporedVoznjeGetRequest();
         public ObservableCollection<StanicaModel> PolazisteList { get; set; } = new ObservableCollection<StanicaModel>();
         public ObservableCollection<RasporedVoznjeModel> RedVoznjeList { get; set; } = new ObservableCollection<RasporedVoznjeModel>();
-        public DateTime _datumPolaska;
+       
+        private DateTime _datumPolaska=DateTime.Now;
         public DateTime DatumPolaska
         {
             get { return _datumPolaska; }
             set { SetProperty(ref _datumPolaska, value);
                 if (value!=null)
                 {
-                    Pretraga.Execute(null);
+                    Pretraga.Execute(DatumPolaska);
                 }        
             }
         }
@@ -70,10 +71,12 @@ namespace eAutobus.Mobile.ViewModels
                     PolazisteList.Add(item);
                 }
             }
-            if (_polaziste != null && _datumPolaska!=null)
+            if (Polaziste != null || DatumPolaska != null)
             {
-                
-                search.PolazisteID = Polaziste.StanicaID;
+                if (Polaziste != null)
+                {
+                    search.PolazisteID = Polaziste.StanicaID;
+                }
                 search.Datum = DatumPolaska;
                 var listRV = await _redVoznjeService.Get<List<RasporedVoznjeModel>>(search);
                 RedVoznjeList.Clear();

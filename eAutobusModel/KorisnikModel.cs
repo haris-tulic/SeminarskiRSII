@@ -18,8 +18,8 @@ namespace eAutobusModel
         public string LozinkaSalt { get; set; }
         public int GradID { get; set; }
         public int UlogeID { get; set; }
-        public string Uloge { get; set; }
-        public UlogeModel Uloga { get; set; }
+        public string Uloga { get; set; }
+        public UlogeModel Uloge { get; set; }
         public List<KorisniciUlogeModel> KorisnickeUloge { get; set; }
         
     }

@@ -46,10 +46,10 @@ namespace SeminarskiWebAPI.Services
             {
                 query = query.Where(r => r.PolazisteID == search.PolazisteID);
             }
-            //if (!string.IsNullOrEmpty(search.Datum.ToString()) && search.Datum.Year>1)
-            //{
-            //    query = query.Where(r => r.Datum == search.Datum);
-            //}
+            if (!string.IsNullOrEmpty(search.Datum.ToString()) && search.Datum.Year > 1)
+            {
+                query = query.Where(r => r.Datum.ToString("MM/dd/yyyy") == search.Datum.ToString("MM/dd/yyyy"));
+            }
             var list = query.ToList();
             var listR = new List<RasporedVoznjeModel>();
             _mapper.Map(list, listR);

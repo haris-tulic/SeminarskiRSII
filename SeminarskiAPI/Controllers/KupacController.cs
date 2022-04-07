@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace SeminarskiWebAPI.Controllers
 {
-    //[Authorize]
+   
     [Route("api/[controller]")]
     [ApiController]
     public class KupacController : ControllerBase
@@ -20,21 +20,26 @@ namespace SeminarskiWebAPI.Controllers
         {
             _service = service;
         }
-        [HttpGet("{id}")]
-        public eAutobusModel.KupacModel GetByID(int id)
-        {
-            return _service.GetByID(id);
-        }
+
+        [Authorize(Roles = "Kupac")]
         [HttpGet]
         public List<eAutobusModel.KupacModel> Get([FromQuery] KupacGetRequest request)
         {
             return _service.Get(request);
         }
+        [HttpGet("{id}")]
+        public eAutobusModel.KupacModel GetByID(int id)
+        {
+            return _service.GetByID(id);
+        }
+        [AllowAnonymous]
         [HttpPost]
         public eAutobusModel.KupacModel Insert(KupacInsertRequest request)
         {
             return _service.Insert(request);
         }
+
+       
         [HttpPut("{id}")]
         public eAutobusModel.KupacModel Update(KupacInsertRequest request, int id)
         {

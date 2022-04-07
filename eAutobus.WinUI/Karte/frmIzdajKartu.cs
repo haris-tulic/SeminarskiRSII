@@ -196,6 +196,7 @@ namespace eAutobus.WinUI.Karte
                 insert.DatumVazenjaKarte = dtpDatumVazenja.Value;
                 insert.Cijena = CijenaK;
                 insert.BrojTelefona = txtBrojTelefona.Text;
+                insert.NacinPlacanja = "Preuzećem";
                 if (rbJedan.Checked)
                 {
                     insert.Pravac = rbJedan.Checked;
@@ -220,15 +221,20 @@ namespace eAutobus.WinUI.Karte
             int.TryParse(obj.ToString(), out int id);
             CijenaKarte.VrstaKarteID = id;
             var check = this.cbVrstaKarte.GetItemText(this.cbVrstaKarte.SelectedItem);
-            if (check.Contains("Mjesecna") || check.Contains("Godisnja") )
+            if (check.Contains("Mjesečna") || check.Contains("Godišnja") )
             {
                 rbJedan.Enabled = false;
                 rbDva.Enabled = false;
+                //rbJedan.Visible = false;
+                //rbDva.Visible = false;
             }
             else
             {
                 rbJedan.Enabled = true;
                 rbDva.Enabled = true;
+                rbJedan.Visible = true;
+                rbDva.Visible = true;
+
             }
 
         }
@@ -277,7 +283,7 @@ namespace eAutobus.WinUI.Karte
             }
         }
 
-        private async void btnPreuzmiPDF_Click(object sender, EventArgs e)
+        private  void btnPreuzmiPDF_Click(object sender, EventArgs e)
         {
             
             var kartaPrikaz = new IzvjestajIzdanaKartaModel

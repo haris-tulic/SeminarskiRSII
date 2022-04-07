@@ -46,22 +46,27 @@ namespace SeminarskiWebAPI.Security
 
                 return AuthenticateResult.Fail("Incorrect username or password");
             }
+            if (user != null)
+            {
 
-            var claims = new List<Claim>
+
+                var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.KorisnickoIme),
                 new Claim(ClaimTypes.Name, user.Ime),
             };
-            if (user!=null)
-            {
-                claims.Add(new Claim(ClaimTypes.Role, user.Uloge));
-            }
+                if (user != null)
+                {
+                    claims.Add(new Claim(ClaimTypes.Role, user.Uloge.Naziv));
+                }
 
-            var identity = new ClaimsIdentity(claims, Scheme.Name);
-            var principal = new ClaimsPrincipal(identity);
-            var ticket = new AuthenticationTicket(principal, Scheme.Name);
-
+                var identity = new ClaimsIdentity(claims, Scheme.Name);
+                var principal = new ClaimsPrincipal(identity);
+                var ticket = new AuthenticationTicket(principal, Scheme.Name);
             return AuthenticateResult.Success(ticket);
+
+            }
+            return AuthenticateResult.Fail("");
         }
     }
 }

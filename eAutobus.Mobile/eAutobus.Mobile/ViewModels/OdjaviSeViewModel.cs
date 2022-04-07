@@ -15,7 +15,7 @@ namespace eAutobus.Mobile.ViewModels
             APIService.Password = string.Empty;
 
             //Application.Current.MainPage=new LoginPage();
-            Application.Current.MainPage = new NavigationPage(new AppShell());  
+            Application.Current.MainPage = new NavigationPage(new AppShell());
         }
     }
 }

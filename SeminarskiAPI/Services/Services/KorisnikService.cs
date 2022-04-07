@@ -48,7 +48,7 @@ namespace SeminarskiWebAPI.Services.Services
             var listM = _mapper.Map<List<KorisnikModel>>(list);
             for (int i = 0; i < list.Count(); i++)
             {
-                listM[i].Uloge = list[i].Uloge.Naziv;
+                listM[i].Uloga = list[i].Uloge.Naziv;
             }
             return listM;
         }

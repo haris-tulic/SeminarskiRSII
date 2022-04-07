@@ -47,8 +47,11 @@ namespace eAutobus.WinUI.Korisnici
         private async Task LoadKorisnike()
         {
             var list = await _korisnici.Get<List<KorisnikModel>>(null);
+            foreach (var item in list)
+            {
+                item.DatumRodjenja.ToString("MM/dd/yyyy");
+            }
             _korisniciList = list;
-          
             dgvPrikaz.AutoGenerateColumns = false;
             dgvPrikaz.DataSource = list;
         }

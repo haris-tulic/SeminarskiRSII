@@ -22,14 +22,20 @@ namespace SeminarskiWebAPI.Services
         public CjenovnikModel Delete(int id)
         {
             var entity = _context.Cjenovnik.Find(id);
-            _context.Cjenovnik.Remove(entity);
+            //_context.Cjenovnik.Remove(entity);
+            entity.IsDeleted = true;
             _context.SaveChanges();
             return _mapper.Map<eAutobusModel.CjenovnikModel>(entity);
         }
 
         public List<CjenovnikModel> Get(CjenovnikSearchRequest request)
         {
-            var query = _context.Cjenovnik.Include(t => t.Tipkarte).Include(v => v.VrstaKarte).Include(z=>z.Zona).Include(p=>p.Polaziste).Include(o=>o.Odrediste).AsQueryable();
+            var query = _context.Cjenovnik.Include(t => t.Tipkarte)
+                .Include(v => v.VrstaKarte)
+                .Include(z=>z.Zona)
+                .Include(p=>p.Polaziste)
+                .Include(o=>o.Odrediste)
+                .Where(c=>c.IsDeleted==false).AsQueryable();
             if (request.TipkarteID.ToString()!="0")
             {
                 query = query.Where(x => x.TipkarteID==request.TipkarteID);

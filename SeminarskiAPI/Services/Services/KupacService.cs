@@ -147,7 +147,7 @@ namespace SeminarskiWebAPI.Services
         }
         public Kupac PronadjiKupca(KupacInsertRequest kupac)
         {
-            var pronadji = _context.Kupac.Where(k => k.Ime == kupac.Ime && k.Prezime == kupac.Prezime  && k.BrojTelefona == kupac.BrojTelefona)
+            var pronadji = _context.Kupac.Where(k => k.Ime == kupac.Ime && k.Prezime == kupac.Prezime  && k.BrojTelefona == kupac.BrojTelefona && k.KorisnickoIme==kupac.KorisnickoIme)
                 .Include(x=>x.KartaList).Include(x=>x.PlaceneKarte).Include(x=>x.Recenzija)
                 .Include("KartaList.Karta").Include("PlaceneKarte.Karta").FirstOrDefault();
             if (pronadji!=null)

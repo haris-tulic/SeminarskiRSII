@@ -72,26 +72,27 @@ namespace eAutobus.Mobile.Views
             if (!postoji)
             {
                 bool ok = true;
-                if (await model.PostojiKorisnickoIme(KorisnickoIme.Text))
-                {
-                    await Application.Current.MainPage.DisplayAlert("Upozorenje", "Korisničko ime već postoji", "OK");
-                    KorisnickoIme.Text = "Korisničko ime već postoji";
-                    ok = false;
-                }
-                if (await model.PostojiEmail(Email.Text))
-                {
-                    await Application.Current.MainPage.DisplayAlert("Upozorenje", "Email već postoji", "OK");
-                    ok = false;
-                }
-                if (Password.Text != PotvrdaPassworda.Text)
-                {
-                    await Application.Current.MainPage.DisplayAlert("Upozorenje", "Password se ne poklapa", "OK");
-                    ok = false;
-                }
-                if (ok)
-                {
-                    await model.RegistrujSe();
-                }
+                //if (await model.PostojiKorisnickoIme(KorisnickoIme.Text))
+                //{
+                //    await Application.Current.MainPage.DisplayAlert("Upozorenje", "Korisničko ime već postoji", "OK");
+                //    KorisnickoIme.Text = "Korisničko ime već postoji";
+                //    ok = false;
+                //}
+                //if (await model.PostojiEmail(Email.Text))
+                //{
+                //    await Application.Current.MainPage.DisplayAlert("Upozorenje", "Email već postoji", "OK");
+                //    ok = false;
+                //}
+                //if (Password.Text != PotvrdaPassworda.Text)
+                //{
+                //    await Application.Current.MainPage.DisplayAlert("Upozorenje", "Password se ne poklapa", "OK");
+                //    ok = false;
+                //}
+                //if (ok)
+                //{
+                //    await model.RegistrujSe();
+                //}
+               await model.RegistrujSe();
             }
         }
     }
