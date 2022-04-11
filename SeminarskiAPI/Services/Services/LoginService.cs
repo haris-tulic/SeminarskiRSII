@@ -28,10 +28,8 @@ namespace SeminarskiWebAPI.Services.Services
         {
             var entity = await  _context.Korisnik.Include(x => x.Uloge).FirstOrDefaultAsync(u => u.KorisnickoIme == userName);
             var entityK = await _context.Kupac.FirstOrDefaultAsync(k => k.KorisnickoIme == userName);
-            //if (entity == null && entityK==null)
-            //{
-            //    throw new UserException("Pogresan username ili password");
-            //}
+           
+         
             if (entity!=null)
             {
                 var hash = GenerateHash(entity.LozinkaSalt, password);
@@ -42,37 +40,35 @@ namespace SeminarskiWebAPI.Services.Services
 
                 return _mapper.Map<KorisnikModel>(entity);
             }
-            else if(entityK!=null)
+            else if(entityK!=null )
             {
-                if (entityK!=null)
-                {
+               
+
+
                     var hash = GenerateHash(entityK.LozinkaSalt, password);
                     if (hash != entityK.LozinkaHash)
                     {
                         throw new UserException("Pogresan username ili password");
                     }
-
                     UlogeModel nova = new UlogeModel
                     {
                         Naziv = "Kupac",
                         Opis = "Kupovina karata",
 
                     };
+
                     KorisnikModel kupac = new KorisnikModel
                     {
                         KorisnikID = entityK.KupacID,
                         Ime = entityK.Ime,
                         KorisnickoIme = entityK.KorisnickoIme,
                         Prezime = entityK.Prezime,
-                        Uloga =nova.Naziv,
+                        Uloga = nova.Naziv,
                         Uloge = nova,
                         BrojTelefona = entityK.BrojTelefona,
                         AdresaStanovanja = entityK.AdresaStanovanja,
                     };
                     return kupac;
-                }
-                
-                
             }
             return null;
 

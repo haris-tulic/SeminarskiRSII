@@ -66,7 +66,12 @@ namespace eAutobus.Mobile
             var url = $"{_apiUrl}/{_route}/{id}";
             return await url.WithBasicAuth(Username, Password).PutJsonAsync(request).ReceiveJson<T>();
         }
-    
+
+        public async Task<T> RegistrujSe<T>(object request)
+        {
+            var url = $"{_apiUrl}/{_route}"+ "/RegistrujSe";
+            return await url.PostJsonAsync(request).ReceiveJson<T>();
+        }
     }
 }
 

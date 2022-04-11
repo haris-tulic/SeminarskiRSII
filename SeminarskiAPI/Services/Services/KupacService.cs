@@ -3,6 +3,7 @@ using eAutobusModel;
 using eAutobusModel.Requests;
 using Microsoft.EntityFrameworkCore;
 using SeminarskiWebAPI.Database;
+using SeminarskiWebAPI.Exceptions;
 using SeminarskiWebAPI.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -83,27 +84,69 @@ namespace SeminarskiWebAPI.Services
         {
           
             var entity = _mapper.Map<Database.Kupac>(request);
-            if (!string.IsNullOrEmpty(request.KorisnickoIme) && request.Password==request.PotrvrdaPassworda)
+            if (!string.IsNullOrEmpty(request.KorisnickoIme) && request.Password == request.PotrvrdaPassworda)
+            {
+                //entity.KorisnickoIme = entity.Ime.ToLower() + "." + entity.Prezime.ToLower();
+                //request.Password = entity.Ime.ToLower() + "" + entity.Prezime.ToLower() + "123";
+                entity.LozinkaSalt = GenerateSalt();
+                entity.LozinkaHash = GenerateHash(entity.LozinkaSalt, request.Password);
+                var pronadji = PronadjiKupca(request);
+                if (pronadji!=null)
+                {
+                    return null;
+                }
+                else
+                {
+                    _context.Kupac.Add(entity);
+                    _context.SaveChanges();
+                }
+
+                return _mapper.Map<eAutobusModel.KupacModel>(entity);
+            }
+            else
+            {
+
+
+                var pronadji = PronadjiKupca(request);
+                if (pronadji != null)
+                {
+                    Update(request, pronadji.KupacID);
+                }
+                else
+                {
+                    _context.Kupac.Add(entity);
+                    _context.SaveChanges();
+                }
+
+                return _mapper.Map<eAutobusModel.KupacModel>(entity);
+            }
+          
+        }
+        public eAutobusModel.KupacModel RegistrujSe(KupacInsertRequest request)
+        {
+
+            var entity = _mapper.Map<Database.Kupac>(request);
+            if (!string.IsNullOrEmpty(request.KorisnickoIme) && request.Password == request.PotrvrdaPassworda)
             {
                 //entity.KorisnickoIme = entity.Ime.ToLower() + "." + entity.Prezime.ToLower();
                 //request.Password = entity.Ime.ToLower() + "" + entity.Prezime.ToLower() + "123";
                 entity.LozinkaSalt = GenerateSalt();
                 entity.LozinkaHash = GenerateHash(entity.LozinkaSalt, request.Password);
             }
-            var pronadji = PronadjiKupca(request);
-            if (pronadji!=null)
+            var pronadji = PronadjiRegistrovanogKupca(request);
+            if (pronadji != null)
             {
-                Update(request,pronadji.KupacID);
+                throw new UserException("Korisnik već postoji!");
             }
             else
             {
                 _context.Kupac.Add(entity);
                 _context.SaveChanges();
             }
-           
+
             return _mapper.Map<eAutobusModel.KupacModel>(entity);
 
-          
+
         }
 
         public eAutobusModel.KupacModel Update(KupacInsertRequest request,int id)
@@ -151,6 +194,19 @@ namespace SeminarskiWebAPI.Services
                 .Include(x=>x.KartaList).Include(x=>x.PlaceneKarte).Include(x=>x.Recenzija)
                 .Include("KartaList.Karta").Include("PlaceneKarte.Karta").FirstOrDefault();
             if (pronadji!=null)
+            {
+                return pronadji;
+            }
+            return null;
+        }
+
+        public Kupac PronadjiRegistrovanogKupca(KupacInsertRequest kupac)
+        {
+            var pronadji = _context.Kupac
+                .Where(k => k.Ime == kupac.Ime && k.Prezime == kupac.Prezime && k.BrojTelefona == kupac.BrojTelefona && k.KorisnickoIme == kupac.KorisnickoIme && k.Email==kupac.Email)
+                .Include(x => x.KartaList).Include(x => x.PlaceneKarte).Include(x => x.Recenzija)
+                .Include("KartaList.Karta").Include("PlaceneKarte.Karta").FirstOrDefault();
+            if (pronadji != null)
             {
                 return pronadji;
             }

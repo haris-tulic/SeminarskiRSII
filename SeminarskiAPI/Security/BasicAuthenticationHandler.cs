@@ -24,7 +24,7 @@ namespace SeminarskiWebAPI.Security
             _loginService = loginService;
         }
 
-
+        bool _korisnik = false;
         protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
             {
             if (!Request.Headers.ContainsKey("Authorization"))
@@ -40,30 +40,32 @@ namespace SeminarskiWebAPI.Security
                 var userName = credentials[0];
                 var password = credentials[1];
                 user = await _loginService.Autentificiraj(userName, password);
+                //if (user==null)
+                //{
+                //    user = _loginService.AutentificirajKupca(userName, password);
+                //    _korisnik = true;
+                //}
             }
             catch 
-            { 
-
-                return AuthenticateResult.Fail("Incorrect username or password");
+            {
+                return AuthenticateResult.Fail("Invalid Authorization Header");
             }
             if (user != null)
             {
 
-
                 var claims = new List<Claim>
-            {
+                {
                 new Claim(ClaimTypes.NameIdentifier, user.KorisnickoIme),
                 new Claim(ClaimTypes.Name, user.Ime),
-            };
-                if (user != null)
-                {
-                    claims.Add(new Claim(ClaimTypes.Role, user.Uloge.Naziv));
-                }
+                };
+                
+                claims.Add(new Claim(ClaimTypes.Role, user.Uloge.Naziv));
+
 
                 var identity = new ClaimsIdentity(claims, Scheme.Name);
                 var principal = new ClaimsPrincipal(identity);
                 var ticket = new AuthenticationTicket(principal, Scheme.Name);
-            return AuthenticateResult.Success(ticket);
+                return AuthenticateResult.Success(ticket);
 
             }
             return AuthenticateResult.Fail("");

@@ -1,4 +1,5 @@
-﻿using eAutobusModel.Requests;
+﻿using eAutobusModel;
+using eAutobusModel.Requests;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,7 +22,7 @@ namespace SeminarskiWebAPI.Controllers
             _service = service;
         }
 
-        [Authorize(Roles = "Kupac")]
+        //[Authorize]
         [HttpGet]
         public List<eAutobusModel.KupacModel> Get([FromQuery] KupacGetRequest request)
         {
@@ -32,7 +33,7 @@ namespace SeminarskiWebAPI.Controllers
         {
             return _service.GetByID(id);
         }
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [HttpPost]
         public eAutobusModel.KupacModel Insert(KupacInsertRequest request)
         {
@@ -50,5 +51,12 @@ namespace SeminarskiWebAPI.Controllers
         {
             return _service.Delete(id);
         }
+
+        [HttpPost("{request}")]
+        public KupacModel RegistrujSe(KupacInsertRequest request)
+        {
+            return _service.RegistrujSe(request);
+        }
+
     }
 }

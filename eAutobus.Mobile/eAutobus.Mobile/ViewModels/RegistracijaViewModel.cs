@@ -30,7 +30,9 @@ namespace eAutobus.Mobile.ViewModels
         public async Task RegistrujSe()
         {
             if (Password==PotvrdaPassworda)
-            { 
+            {
+                //APIService.Username = KorisnickoIme;
+                //APIService.Password = Password;
                 KupacInsertRequest noviKupac = new KupacInsertRequest();
                 noviKupac.Ime = Ime;
                 noviKupac.Prezime = Prezime;
@@ -42,7 +44,7 @@ namespace eAutobus.Mobile.ViewModels
                 noviKupac.PotrvrdaPassworda = PotvrdaPassworda;
                 try
                 {
-                    await _serviceK.Insert<KupacModel>(noviKupac);
+                    await _serviceK.RegistrujSe<KupacModel>(noviKupac);
                     await Application.Current.MainPage.DisplayAlert("Uspješno", "Uspješno ste se registrovali.", "Uredu");
                     await Application.Current.MainPage.Navigation.PopToRootAsync();
               
@@ -50,7 +52,7 @@ namespace eAutobus.Mobile.ViewModels
                 catch (Exception)
                 {
 
-                    await Application.Current.MainPage.DisplayAlert("Greška!","Podaci nisu pravilno uneseni!", "Uredu");
+                    await Application.Current.MainPage.DisplayAlert("Greška!","Korisnik već postoji!", "Uredu");
                 }
                
             }
