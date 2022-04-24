@@ -72,7 +72,7 @@ namespace SeminarskiWebAPI.Database
             });
             modelBuilder.Entity<Cjenovnik>().HasData(new SeminarskiWebAPI.Database.Cjenovnik()
             {
-                CjenovnikID = 1,
+                CjenovnikID = 2,
                 Cijena = 40.00,
                 IsDeleted = false,
                 OdredisteID = 1,
@@ -83,7 +83,7 @@ namespace SeminarskiWebAPI.Database
             });
             modelBuilder.Entity<Cjenovnik>().HasData(new SeminarskiWebAPI.Database.Cjenovnik()
             {
-                CjenovnikID = 1,
+                CjenovnikID = 3,
                 Cijena = 8.00,
                 IsDeleted = false,
                 OdredisteID = 1,
@@ -94,7 +94,7 @@ namespace SeminarskiWebAPI.Database
             });
             modelBuilder.Entity<Cjenovnik>().HasData(new SeminarskiWebAPI.Database.Cjenovnik()
             {
-                CjenovnikID = 1,
+                CjenovnikID = 4,
                 Cijena = 60.00,
                 IsDeleted = false,
                 OdredisteID = 1,
@@ -105,7 +105,7 @@ namespace SeminarskiWebAPI.Database
             });
             modelBuilder.Entity<Cjenovnik>().HasData(new SeminarskiWebAPI.Database.Cjenovnik()
             {
-                CjenovnikID = 1,
+                CjenovnikID = 5,
                 Cijena = 6.00,
                 IsDeleted = false,
                 OdredisteID = 1,
@@ -116,7 +116,7 @@ namespace SeminarskiWebAPI.Database
             });
             modelBuilder.Entity<Cjenovnik>().HasData(new SeminarskiWebAPI.Database.Cjenovnik()
             {
-                CjenovnikID = 1,
+                CjenovnikID = 6,
                 Cijena = 50.00,
                 IsDeleted = false,
                 OdredisteID = 1,
@@ -374,6 +374,7 @@ namespace SeminarskiWebAPI.Database
             //kartakupac
             modelBuilder.Entity<KartaKupac>().HasData(new SeminarskiWebAPI.Database.KartaKupac()
             {
+                
                KartaID = 1,
                Aktivna=true,
                KartaKupacID=1,
@@ -387,7 +388,7 @@ namespace SeminarskiWebAPI.Database
             {
                 KartaID = 2,
                 Aktivna = true,
-                KartaKupacID = 1,
+                KartaKupacID = 2,
                 DatumVadjenjaKarte = DateTime.Now,
                 DatumVazenjaKarte = DateTime.Now.AddMonths(1),
                 KupacID = 2,

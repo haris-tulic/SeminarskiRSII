@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs" Version="7.1.0.468" />
-    <PackageReference Include="CefSharp.Common" Version="97.1.61" />
     <PackageReference Include="Flurl" Version="2.8.2" />
     <PackageReference Include="Flurl.Http" Version="2.4.2" />
     <PackageReference Include="Splat" Version="1.6.2" />

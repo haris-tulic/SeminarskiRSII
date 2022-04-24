@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  eautobus-sql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=QWElkj132!
+      - MSSQL_PID=Developer
+    ports:
+      - 1401:1433
+    networks:
+      - eautobusnet
+
+    
+  eautobus-api:
+    
+    restart: unless-stopped
+    build: 
+      context: .
+    environment:
+      - ConnectionStrings:eAutobus=Server=eautobus-sql,1433;Database=170025;User=sa;Password=QWElkj132!;ConnectRetryCount=0
+    ports:
+      -  5000:5050
+    networks:
+      - eautobusnet  
+    links:
+      - eautobus-sql
+    depends_on:
+      - eautobus-sql
+      
+networks:
+  eautobusnet:
+    driver: bridge
+
+        

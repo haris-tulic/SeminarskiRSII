@@ -44,11 +44,10 @@ namespace SeminarskiAPI
             services.AddAutoMapper(typeof(Startup));
 
 
-            services.AddSwaggerGen();
-            //services.AddAuthentication("BasicAuthentication")
-            //   .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
-            var connection = @"Server=HP-250-G4\MSSQLSERVER_OLAP;Database=Seminarski_RSII_170025;Trusted_Connection=True;ConnectRetryCount=0";
-            //var connection = Configuration.GetConnectionString("eAutobus");
+            //services.AddSwaggerGen();
+
+            //var connection = @"Server=HP-250-G4\MSSQLSERVER_OLAP;Database=Seminarski_RSII_170025;Trusted_Connection=True;ConnectRetryCount=0";
+            var connection = Configuration.GetConnectionString("eAutobus");
             services.AddDbContext<eAutobusi>(options => options.UseSqlServer(connection));
 
             services.AddScoped<IKupacService, KupacService>();
@@ -74,12 +73,38 @@ namespace SeminarskiAPI
 
             //services.AddScoped<IService<TModel,TSearch>,BaseService<TModel,TSearch,TDatabase>>();
             services.AddAuthentication("BasicAuthentication")
-                .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication",null);
+                .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
 
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1",
+                    new OpenApiInfo
+                    {
+                        Title = "Reader API",
+                        Version = "V1",
+                    });
+                c.AddSecurityDefinition("basic", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "basic",
+                    In = ParameterLocation.Header,
+                    Description = "Basic Authorization header."
+                });
 
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                        {
+                            {
+                                new OpenApiSecurityScheme
+                                {
+                                    Reference = new OpenApiReference {
+                                        Type = ReferenceType.SecurityScheme,
+                                        Id = "basic" }
+                                }, new string[] { } }
+                        });
 
+            });
 
-            services.AddSwaggerGen();
         } 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -88,11 +113,7 @@ namespace SeminarskiAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
+           
             app.UseSwagger(c =>
             {
                 c.SerializeAsV2 = true;
@@ -102,6 +123,7 @@ namespace SeminarskiAPI
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
                 
             });
+           
             app.UseDeveloperExceptionPage();
             //app.UseHttpsRedirection();
             app.UseAuthentication();

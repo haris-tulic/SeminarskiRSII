@@ -15,7 +15,7 @@ namespace eAutobus.Mobile
         public static string Username { get; set; }
         public static string Password { get; set; }
 #if DEBUG
-        string _apiUrl = "http://localhost:19070/api";
+        string _apiUrl = "http://localhost:5000/api";
 #endif
 #if RELEASE
         private string _apiUrl="https://mywebsite.com";

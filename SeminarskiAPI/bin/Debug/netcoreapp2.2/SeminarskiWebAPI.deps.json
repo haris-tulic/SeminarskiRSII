@@ -38,7 +38,13 @@
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6",
+          "Microsoft.Extensions.Configuration": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection": "2.2.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
+          "Microsoft.Extensions.FileProviders.Physical": "2.2.0",
+          "Microsoft.Extensions.Hosting": "2.2.0",
+          "Microsoft.Extensions.Hosting.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Logging": "2.2.0",
           "Microsoft.Extensions.Options": "2.2.0",
           "Microsoft.Extensions.Primitives": "2.2.0",
           "Microsoft.ML": "1.7.0",
@@ -103,7 +109,6 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
-      "CefSharp.Common/97.1.61": {},
       "Flurl/3.0.2": {
         "runtime": {
           "lib/netstandard2.0/Flurl.dll": {
@@ -595,7 +600,6 @@
       "eAutobus.Mobile/1.0.0": {
         "dependencies": {
           "Acr.UserDialogs": "7.1.0.468",
-          "CefSharp.Common": "97.1.61",
           "Flurl": "3.0.2",
           "Flurl.Http": "3.2.0",
           "Splat": "1.6.2",
@@ -3803,13 +3807,6 @@
       "sha512": "sha512-szI4yeRIM7GWe9JyekW0dKYehPB0t6M+I55fPeCebN6PhS7zQZa0eG3bgOnOx+eP3caSNoE7KEJs2rk7MLsh8w==",
       "path": "automapper.extensions.microsoft.dependencyinjection/7.0.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512"
-    },
-    "CefSharp.Common/97.1.61": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-KZ8dvQtNxrws0UMIAEVnUlCKj4n6t7/fczOSyixfnBy9H4AtgismddeCgV1Z9GEK8Ts4Fml0W3w42AjfiwZoNg==",
-      "path": "cefsharp.common/97.1.61",
-      "hashPath": "cefsharp.common.97.1.61.nupkg.sha512"
     },
     "Flurl/3.0.2": {
       "type": "package",

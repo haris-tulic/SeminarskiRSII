@@ -180,11 +180,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\bin\Debug\netstandard2.0\eAutobus.Mobile.dll">
       <PackagePath>eAutobus.Mobile.dll</PackagePath>
-      <Modified>2022-04-08T16:05:29.304</Modified>
+      <Modified>2022-04-20T01:02:18.225</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\bin\Debug\netstandard2.0\eAutobusModel.dll">
       <PackagePath>eAutobusModel.dll</PackagePath>
-      <Modified>2022-04-06T16:24:53.033</Modified>
+      <Modified>2022-04-18T12:43:47.452</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\HP\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
