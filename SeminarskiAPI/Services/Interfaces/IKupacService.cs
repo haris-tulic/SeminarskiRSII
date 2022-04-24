@@ -16,5 +16,6 @@ namespace SeminarskiWebAPI.Services
         eAutobusModel.KupacModel Update(KupacInsertRequest request,int id);
         eAutobusModel.KupacModel Delete(int id);
         Kupac PronadjiKupca(KupacInsertRequest kupac);
+        KupacModel RegistrujSe(KupacInsertRequest request);
     }
 }

@@ -302,14 +302,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Cijena">
+                    <Textbox Name="CijenaPrikaz">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Cijena.Value)</Value>
+                              <Value>=Fields!CijenaPrikaz.Value</Value>
                               <Style>
                                 <FontWeight>Normal</FontWeight>
                                 <Color>#333333</Color>
@@ -321,7 +321,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Cijena</rd:DefaultName>
+                      <rd:DefaultName>CijenaPrikaz</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>

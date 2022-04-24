@@ -11,9 +11,11 @@ using System.Threading.Tasks;
 
 namespace SeminarskiWebAPI.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
+    
+
     public class KorisnikController : ControllerBase
     {
         private readonly IKorisnikService _service;
@@ -34,13 +36,14 @@ namespace SeminarskiWebAPI.Controllers
             return _service.GetByID(id);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
-        
         public async Task<KorisnikModel> Insert(KorisnikUpsertRequest request)
         {
             return await _service.Insert(request);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public KorisnikModel Update(KorisnikUpsertRequest request, int id)
         {

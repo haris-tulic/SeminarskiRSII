@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "tZJDuO4hAyIcU8Ro1g/v9jww2dNecQ0IiOO/ApxbBLWbyfVHWl0rD2Q5EaU2Ryz9Vx/g0MAS3WPcniq/lNAg6A==",
+  "dgSpecHash": "wiHv5Byn4KMg2gH8jtbBwpuecVKGcceDJMjysxZSDmn5m2S/KPQGSClwZMb3ClxJ6Ww58CJNCHbK4OQchUm+xQ==",
   "success": true,
   "projectFilePath": "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile.UWP\\eAutobus.Mobile.UWP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\acr.userdialogs\\7.2.0.562\\acr.userdialogs.7.2.0.562.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\cefsharp.common\\97.1.61\\cefsharp.common.97.1.61.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\coding4fun.toolkit.controls\\2.1.8\\coding4fun.toolkit.controls.2.1.8.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\flurl\\2.8.2\\flurl.2.8.2.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\flurl.http\\2.4.2\\flurl.http.2.4.2.nupkg.sha512",

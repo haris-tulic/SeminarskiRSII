@@ -19,7 +19,7 @@ namespace eAutobusModel
         public DateTime DatumVadjenjaKarte { get; set; }
         public DateTime DatumVazenjaKarte { get; set; }
         public bool JeLiPlacena { get; set; }
-
+        public string CijenaString { get; set; }
 
     }
 }

@@ -14,5 +14,6 @@ namespace eAutobusModel
         public string MarkaAutobusa { get; set; }
         public int GarazaID { get; set; }
         public string NazivGaraze { get; set; }
+        public string PrikazAutobusa { get; set; }
     }
 }

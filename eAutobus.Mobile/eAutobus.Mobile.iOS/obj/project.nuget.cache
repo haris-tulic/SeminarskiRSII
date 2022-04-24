@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xKuBOdmiJODImNbQx+3d9HqvE4GwxTe70nLnjhvWPlZd2py9LDKSZtP9XCZSn5IDb899doyyXSBR66cscOEE2w==",
+  "dgSpecHash": "OlBrzAOpvjGRV6gPZEXOegm1l9+3vMvQiEqLceH5/B8OdWzwBRiGuzSMLXVk7BeShblFcmOOlK5H/VoZhf7Baw==",
   "success": true,
   "projectFilePath": "E:\\SeminarskiRSII\\SeminarskiRSII\\eAutobus.Mobile\\eAutobus.Mobile.iOS\\eAutobus.Mobile.iOS.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,6 @@
     "C:\\Users\\HP\\.nuget\\packages\\acr.userdialogs\\7.1.0.468\\acr.userdialogs.7.1.0.468.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\btprogresshud\\1.3.1\\btprogresshud.1.3.1.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\cefsharp.common\\97.1.61\\cefsharp.common.97.1.61.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\flurl\\2.8.2\\flurl.2.8.2.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\flurl.http\\2.4.2\\flurl.http.2.4.2.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",

@@ -86,7 +86,7 @@ namespace eAutobus.WinUI.RedVoznji
             this.btnSnimi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSnimi.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSnimi.Location = new System.Drawing.Point(493, 214);
-            this.btnSnimi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSnimi.Margin = new System.Windows.Forms.Padding(4);
             this.btnSnimi.Name = "btnSnimi";
             this.btnSnimi.Size = new System.Drawing.Size(100, 28);
             this.btnSnimi.TabIndex = 3;
@@ -110,7 +110,7 @@ namespace eAutobus.WinUI.RedVoznji
             this.Datum,
             this.Akcija});
             this.dgvLinije.Location = new System.Drawing.Point(16, 281);
-            this.dgvLinije.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvLinije.Margin = new System.Windows.Forms.Padding(4);
             this.dgvLinije.Name = "dgvLinije";
             this.dgvLinije.ReadOnly = true;
             this.dgvLinije.RowHeadersWidth = 51;
@@ -123,7 +123,7 @@ namespace eAutobus.WinUI.RedVoznji
             // 
             this.cbPolaziste.FormattingEnabled = true;
             this.cbPolaziste.Location = new System.Drawing.Point(159, 66);
-            this.cbPolaziste.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbPolaziste.Margin = new System.Windows.Forms.Padding(4);
             this.cbPolaziste.Name = "cbPolaziste";
             this.cbPolaziste.Size = new System.Drawing.Size(183, 24);
             this.cbPolaziste.TabIndex = 5;
@@ -132,7 +132,7 @@ namespace eAutobus.WinUI.RedVoznji
             // 
             this.cbOdrediste.FormattingEnabled = true;
             this.cbOdrediste.Location = new System.Drawing.Point(780, 66);
-            this.cbOdrediste.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbOdrediste.Margin = new System.Windows.Forms.Padding(4);
             this.cbOdrediste.Name = "cbOdrediste";
             this.cbOdrediste.Size = new System.Drawing.Size(183, 24);
             this.cbOdrediste.TabIndex = 6;
@@ -140,7 +140,7 @@ namespace eAutobus.WinUI.RedVoznji
             // dtpDatum
             // 
             this.dtpDatum.Location = new System.Drawing.Point(435, 158);
-            this.dtpDatum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDatum.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDatum.Name = "dtpDatum";
             this.dtpDatum.Size = new System.Drawing.Size(265, 22);
             this.dtpDatum.TabIndex = 7;
@@ -149,7 +149,7 @@ namespace eAutobus.WinUI.RedVoznji
             // btnIzvjestaj
             // 
             this.btnIzvjestaj.Location = new System.Drawing.Point(493, 591);
-            this.btnIzvjestaj.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIzvjestaj.Margin = new System.Windows.Forms.Padding(4);
             this.btnIzvjestaj.Name = "btnIzvjestaj";
             this.btnIzvjestaj.Size = new System.Drawing.Size(100, 28);
             this.btnIzvjestaj.TabIndex = 8;
@@ -239,7 +239,7 @@ namespace eAutobus.WinUI.RedVoznji
             this.Akcija.MinimumWidth = 6;
             this.Akcija.Name = "Akcija";
             this.Akcija.ReadOnly = true;
-            this.Akcija.Text = "Akcija";
+            this.Akcija.Text = "Obriši";
             this.Akcija.UseColumnTextForButtonValue = true;
             this.Akcija.Width = 125;
             // 
@@ -257,7 +257,7 @@ namespace eAutobus.WinUI.RedVoznji
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPregledRedaVoznji";
             this.Text = "frmPregledRedaVoznji";
             this.Load += new System.EventHandler(this.frmPregledRedaVoznji_Load);

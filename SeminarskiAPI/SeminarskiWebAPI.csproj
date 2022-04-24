@@ -15,6 +15,8 @@
     <Compile Remove="Migrations\20220103184833_ChangesInGaraza.Designer.cs" />
     <Compile Remove="Migrations\20220317141841_PlatiKartuOnlineTable.cs" />
     <Compile Remove="Migrations\20220317141841_PlatiKartuOnlineTable.Designer.cs" />
+    <Compile Remove="Migrations\20220421000627_Final1.cs" />
+    <Compile Remove="Migrations\20220421000627_Final1.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,7 +29,13 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Physical" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Primitives" Version="2.2.0" />
     <PackageReference Include="Microsoft.ML" Version="1.7.0" />

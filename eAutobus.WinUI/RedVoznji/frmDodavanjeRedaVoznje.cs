@@ -31,6 +31,7 @@ namespace eAutobus.WinUI.RedVoznji
             await LoadAutobuse();
             await LoadVozaceIKonduktere();
             await LoadPolazisteIOdrediste();
+            
             if (id.HasValue)
             {
                var redVoznje = await _redVoznje.GetById<RasporedVoznjeModel>(id);
@@ -87,13 +88,14 @@ namespace eAutobus.WinUI.RedVoznji
                 var list = await _autobusi.Get<List<eAutobusModel.AutobusiModel>>(null);
                foreach (var ispravan in list)
                 {
+                ispravan.PrikazAutobusa = ispravan.BrojAutobusa.ToString() +"-"+ ispravan.MarkaAutobusa;
                     if (ispravan.Ispravan)
                     {
                      listIspravnih.Add(ispravan);
                     }
                 }
                 cbBrAutobusa.DataSource = listIspravnih;
-                cbBrAutobusa.DisplayMember = "BrojAutobusa";
+                cbBrAutobusa.DisplayMember = "PrikazAutobusa";
                 cbBrAutobusa.ValueMember = "AutobusID";
            
     

@@ -36,7 +36,7 @@
                         HorizontalOptions="CenterAndExpand" WidthRequest="300"/>
 
                 <Label Text="Datum polaska:" Margin="20" HorizontalOptions="CenterAndExpand" />
-                <DatePicker Date="{Binding DatumPolaska}"   MaximumDate="1.1.2025"  WidthRequest="300"  HorizontalOptions="CenterAndExpand" PropertyChanged="DatePicker_PropertyChanged"/>
+                <DatePicker Date="{Binding DatumPolaska}"   MaximumDate="1.1.2025"  WidthRequest="300"  HorizontalOptions="CenterAndExpand"/>
             </StackLayout>
 
             <Grid Grid.Row="2"  Grid.ColumnSpan="2" Margin="20" HeightRequest="100" HorizontalOptions="CenterAndExpand" WidthRequest="1000">
@@ -54,7 +54,7 @@
             
             <CollectionView x:Name="RedVoznjeList" HorizontalOptions="CenterAndExpand"
                             ItemsSource="{Binding RedVoznjeList}" Grid.Row="3" Grid.ColumnSpan="2" Margin="5" 
-                            SelectionMode="Single" SelectedItem="{Binding Linija}" SelectionChanged="RedVoznjeList_SelectionChanged" >
+                            SelectionMode="Single" SelectedItem="{Binding Linija}">
                
                 <CollectionView.ItemTemplate>
                         <DataTemplate>

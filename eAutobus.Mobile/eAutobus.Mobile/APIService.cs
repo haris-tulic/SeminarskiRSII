@@ -15,7 +15,7 @@ namespace eAutobus.Mobile
         public static string Username { get; set; }
         public static string Password { get; set; }
 #if DEBUG
-        string _apiUrl = "http://localhost:19070/api";
+        string _apiUrl = "http://localhost:5000/api";
 #endif
 #if RELEASE
         private string _apiUrl="https://mywebsite.com";
@@ -66,7 +66,12 @@ namespace eAutobus.Mobile
             var url = $"{_apiUrl}/{_route}/{id}";
             return await url.WithBasicAuth(Username, Password).PutJsonAsync(request).ReceiveJson<T>();
         }
-    
+
+        public async Task<T> RegistrujSe<T>(object request)
+        {
+            var url = $"{_apiUrl}/{_route}"+ "/RegistrujSe";
+            return await url.PostJsonAsync(request).ReceiveJson<T>();
+        }
     }
 }
 

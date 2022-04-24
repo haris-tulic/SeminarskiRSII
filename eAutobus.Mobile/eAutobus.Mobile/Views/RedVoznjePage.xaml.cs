@@ -14,7 +14,7 @@ namespace eAutobus.Mobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RedVoznjePage : ContentPage
     {
-        RedVoznjeViewModel raspored = null;
+        RedVoznjeViewModel raspored;
         public RedVoznjePage()
         {
             InitializeComponent();
@@ -27,17 +27,17 @@ namespace eAutobus.Mobile.Views
              await raspored.Pretrazi();
         }
 
-        private async void  RedVoznjeList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var trenutni = (e.CurrentSelection.FirstOrDefault() as RasporedVoznjeModel)?.RasporedVoznjeID;
-            await raspored.PrikazOcjene(trenutni);
+        //private async void  RedVoznjeList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    var trenutni = (e.CurrentSelection.FirstOrDefault() as RasporedVoznjeModel)?.RasporedVoznjeID;
+        //    await raspored.PrikazOcjene(trenutni);
             
-        }
+        //}
 
-        private void DatePicker_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-        {
-            var datum = sender as DatePicker;
-            datum.MinimumDate = DateTime.Now;
-        }
+        //private void DatePicker_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        //{
+        //    var datum = sender as DatePicker;
+        //    datum.MinimumDate = DateTime.Now;
+        //}
     }
 }

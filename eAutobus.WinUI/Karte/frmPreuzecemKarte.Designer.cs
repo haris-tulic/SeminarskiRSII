@@ -58,23 +58,22 @@ namespace eAutobus.WinUI.Karte
             this.DatumVazenja,
             this.Cijena,
             this.JeLiPlacena});
-            this.dgvPrikazKarata.Location = new System.Drawing.Point(48, 173);
-            this.dgvPrikazKarata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPrikazKarata.Location = new System.Drawing.Point(64, 213);
+            this.dgvPrikazKarata.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvPrikazKarata.Name = "dgvPrikazKarata";
             this.dgvPrikazKarata.ReadOnly = true;
             this.dgvPrikazKarata.RowHeadersWidth = 51;
             this.dgvPrikazKarata.RowTemplate.Height = 24;
-            this.dgvPrikazKarata.Size = new System.Drawing.Size(1057, 387);
+            this.dgvPrikazKarata.Size = new System.Drawing.Size(1058, 476);
             this.dgvPrikazKarata.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(311, 64);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(415, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 26);
+            this.label1.Size = new System.Drawing.Size(300, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Plaćanje preuzećem:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -145,7 +144,7 @@ namespace eAutobus.WinUI.Karte
             // 
             // Cijena
             // 
-            this.Cijena.DataPropertyName = "Cijena";
+            this.Cijena.DataPropertyName = "CijenaString";
             this.Cijena.HeaderText = "Cijena";
             this.Cijena.MinimumWidth = 6;
             this.Cijena.Name = "Cijena";
@@ -163,12 +162,12 @@ namespace eAutobus.WinUI.Karte
             // 
             // frmPreuzecemKarte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1142, 638);
+            this.ClientSize = new System.Drawing.Size(1230, 785);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPrikazKarata);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmPreuzecemKarte";
             this.Text = "frmPreuzecemKarte";
             this.Load += new System.EventHandler(this.frmPreuzecemKarte_Load);

@@ -25,15 +25,19 @@ namespace eAutobus.WinUI.Karte
             List<KartaModel> list = await _karte.Get<List<KartaModel>>(null);
             foreach (var item in list)
             {
-                if (!string.IsNullOrEmpty(item.NacinPlacanja) && item.NacinPlacanja.StartsWith("Preuzećem"))
-                {
-                    listPrikaz.Add(item);
-                }
+                item.CijenaString = item.Cijena.ToString() + " KM";
+                //if (!string.IsNullOrEmpty(item.NacinPlacanja) && item.NacinPlacanja.StartsWith("Preuzećem"))
+                //{
+                //    listPrikaz.Add(item);
+
+                //}
             }
+            dgvPrikazKarata.AutoGenerateColumns = false;
+            dgvPrikazKarata.DataSource = list;
             if (listPrikaz.Count>0)
             {
-                dgvPrikazKarata.AutoGenerateColumns = false;
-                dgvPrikazKarata.DataSource = listPrikaz;
+                //dgvPrikazKarata.AutoGenerateColumns = false;
+                //dgvPrikazKarata.DataSource = listPrikaz;
             }
         }
     }

@@ -87,8 +87,11 @@ namespace eAutobus.WinUI.Karte
                 MessageBox.Show("Izbrisali ste odabranu kartu: " + odabranaKarta.Tipkarte + " " + odabranaKarta.VrstaKarte);
                 await LoadCjenovnik();
             }
-            frmDodajKartu frm = new frmDodajKartu(int.Parse(kartaID.ToString()));
-            frm.Show();
+            else
+            {
+                frmDodajKartu frm = new frmDodajKartu(int.Parse(kartaID.ToString()));
+                frm.Show();
+            }
         }
 
         private void btnPrintajKarte_Click(object sender, EventArgs e)

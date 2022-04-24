@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SeminarskiWebAPI.Database
 {
-    public class eAutobusi : DbContext
+    public partial class eAutobusi : DbContext
     {
 
         public eAutobusi()
@@ -43,10 +43,9 @@ namespace SeminarskiWebAPI.Database
 
         protected override void OnModelCreating(ModelBuilder bilder)
         {
-            base.OnModelCreating(bilder);
+            //base.OnModelCreating(bilder);
+           OnModelCreatingPartial(bilder);
         }
-
-
-
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

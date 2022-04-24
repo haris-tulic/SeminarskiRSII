@@ -39,7 +39,7 @@ namespace SeminarskiWebAPI.Controllers
         {
             return _service.Update(id, request) ;
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public eAutobusModel.CjenovnikModel Delete(int id)
         {
             return _service.Delete(id);

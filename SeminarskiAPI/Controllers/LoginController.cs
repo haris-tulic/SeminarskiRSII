@@ -21,7 +21,7 @@ namespace SeminarskiWebAPI.Controllers
             _service = service;
         }
 
-        [HttpPost]
+        [HttpGet]
         public Task<KorisnikModel> Autentificiraj(string userName,string password)
         {
             return _service.Autentificiraj(userName, password);

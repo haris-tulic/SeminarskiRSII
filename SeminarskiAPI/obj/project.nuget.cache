@@ -1,13 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "NoiT8gorD1wC3H6EhCrAAkrfFifpp9O52ZfOC1kiJ9vh01GaWPvq4kxFyAYzcPmhH/519xWwRLJBYk2drJTMqw==",
+  "dgSpecHash": "V6bjTDgHB+mgpXfkAuQjMA64bwl/Cf+Kz35v396gLhoKP58LNLmcH2WyTdVPjjQ/1zn1bevKHp+BOKpXaHchYw==",
   "success": true,
   "projectFilePath": "E:\\SeminarskiRSII\\SeminarskiRSII\\SeminarskiAPI\\SeminarskiWebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\acr.userdialogs\\7.1.0.468\\acr.userdialogs.7.1.0.468.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\cefsharp.common\\97.1.61\\cefsharp.common.97.1.61.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\flurl\\3.0.2\\flurl.3.0.2.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\flurl.http\\3.2.0\\flurl.http.3.2.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",

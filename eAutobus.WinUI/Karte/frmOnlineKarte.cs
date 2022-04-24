@@ -22,6 +22,10 @@ namespace eAutobus.WinUI.Karte
         private async void frmOnlineKarte_Load(object sender, EventArgs e)
         {
             var listKarte = await _onlineKarte.Get<List<PlatiKartuModel>>(null);
+            foreach (var item in listKarte)
+            {
+                item.CijenaString = item.Cijena.ToString() + " KM";
+            }
             dgvPrikazKarata.AutoGenerateColumns = false;
             dgvPrikazKarata.DataSource = listKarte;
         }
