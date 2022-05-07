@@ -6,7 +6,8 @@ using System.Text;
 namespace eAutobusModel.Requests
 {
     public class StanicaInsertRequest
-    {   [Required]
+    {   
+        [Required]
         public string nazivLokacijeStanice { get; set; }
 
         public int GradID { get; set; }

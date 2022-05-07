@@ -267,7 +267,9 @@ namespace eAutobus.WinUI.Karte
             {
                 CijenaK = x.Cijena;
                 txtCijena.Text = x.Cijena.ToString()+" KM";
+            
             }
+          
         }
 
         private void frmIzdajKartu_Validating(object sender, CancelEventArgs e)
@@ -301,6 +303,7 @@ namespace eAutobus.WinUI.Karte
             if (rbJedan.Checked)
             {
                 kartaPrikaz.Pravac = rbJedan.Text;
+
             }
             else
             {
@@ -308,6 +311,18 @@ namespace eAutobus.WinUI.Karte
             }
             Reports.IzdanaKartaReportView rpt = new Reports.IzdanaKartaReportView(kartaPrikaz);
             rpt.Show();
+        }
+
+        private void rbDva_MouseClick(object sender, MouseEventArgs e)
+        {
+            var cijenaPrikaz=CijenaK * 1.67;
+            txtCijena.Text = cijenaPrikaz.ToString() + " KM";
+        }
+
+        private void rbJedan_MouseClick(object sender, MouseEventArgs e)
+        {
+            var cijenaPrikaz = CijenaK;
+            txtCijena.Text = cijenaPrikaz.ToString() + " KM";
         }
     }
 }

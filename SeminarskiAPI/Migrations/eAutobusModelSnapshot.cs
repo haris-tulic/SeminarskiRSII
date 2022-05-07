@@ -51,7 +51,7 @@ namespace SeminarskiWebAPI.Migrations
                             AutobusID = 1,
                             BrojAutobusa = 6,
                             BrojSjedista = 55,
-                            DatumProizvodnje = new DateTime(2022, 4, 21, 2, 14, 21, 696, DateTimeKind.Local).AddTicks(8507),
+                            DatumProizvodnje = new DateTime(2022, 4, 25, 16, 27, 14, 964, DateTimeKind.Local).AddTicks(5787),
                             GarazaID = 1,
                             IsDeleted = false,
                             Ispravan = true,
@@ -62,7 +62,7 @@ namespace SeminarskiWebAPI.Migrations
                             AutobusID = 2,
                             BrojAutobusa = 10,
                             BrojSjedista = 55,
-                            DatumProizvodnje = new DateTime(2022, 4, 21, 2, 14, 21, 699, DateTimeKind.Local).AddTicks(3424),
+                            DatumProizvodnje = new DateTime(2022, 4, 25, 16, 27, 14, 967, DateTimeKind.Local).AddTicks(6225),
                             GarazaID = 2,
                             IsDeleted = false,
                             Ispravan = true,
@@ -99,8 +99,8 @@ namespace SeminarskiWebAPI.Migrations
                         {
                             AutobusVozacID = 1,
                             AutobusID = 1,
-                            Kraj = new DateTime(2022, 4, 21, 10, 14, 21, 699, DateTimeKind.Local).AddTicks(5289),
-                            Pocetak = new DateTime(2022, 4, 21, 2, 14, 21, 699, DateTimeKind.Local).AddTicks(4988),
+                            Kraj = new DateTime(2022, 4, 26, 0, 27, 14, 967, DateTimeKind.Local).AddTicks(8105),
+                            Pocetak = new DateTime(2022, 4, 25, 16, 27, 14, 967, DateTimeKind.Local).AddTicks(7805),
                             Smjena = 1,
                             VozacID = 1
                         },
@@ -108,8 +108,8 @@ namespace SeminarskiWebAPI.Migrations
                         {
                             AutobusVozacID = 2,
                             AutobusID = 2,
-                            Kraj = new DateTime(2022, 4, 21, 10, 14, 21, 699, DateTimeKind.Local).AddTicks(5923),
-                            Pocetak = new DateTime(2022, 4, 21, 2, 14, 21, 699, DateTimeKind.Local).AddTicks(5912),
+                            Kraj = new DateTime(2022, 4, 26, 0, 27, 14, 967, DateTimeKind.Local).AddTicks(8652),
+                            Pocetak = new DateTime(2022, 4, 25, 16, 27, 14, 967, DateTimeKind.Local).AddTicks(8641),
                             Smjena = 1,
                             VozacID = 2
                         });
@@ -390,8 +390,8 @@ namespace SeminarskiWebAPI.Migrations
                         {
                             KartaKupacID = 1,
                             Aktivna = true,
-                            DatumVadjenjaKarte = new DateTime(2022, 4, 21, 2, 14, 21, 701, DateTimeKind.Local).AddTicks(7723),
-                            DatumVazenjaKarte = new DateTime(2022, 4, 21, 14, 14, 21, 701, DateTimeKind.Local).AddTicks(7995),
+                            DatumVadjenjaKarte = new DateTime(2022, 4, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(1010),
+                            DatumVazenjaKarte = new DateTime(2022, 4, 26, 4, 27, 14, 970, DateTimeKind.Local).AddTicks(1279),
                             KartaID = 1,
                             KupacID = 1,
                             Pravac = true,
@@ -401,8 +401,8 @@ namespace SeminarskiWebAPI.Migrations
                         {
                             KartaKupacID = 2,
                             Aktivna = true,
-                            DatumVadjenjaKarte = new DateTime(2022, 4, 21, 2, 14, 21, 701, DateTimeKind.Local).AddTicks(9060),
-                            DatumVazenjaKarte = new DateTime(2022, 5, 21, 2, 14, 21, 701, DateTimeKind.Local).AddTicks(9071),
+                            DatumVadjenjaKarte = new DateTime(2022, 4, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(2351),
+                            DatumVazenjaKarte = new DateTime(2022, 5, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(2362),
                             KartaID = 2,
                             KupacID = 2,
                             Pravac = true,
@@ -434,21 +434,21 @@ namespace SeminarskiWebAPI.Migrations
                         new
                         {
                             KorisniciUlogeID = 1,
-                            DatumIzmjene = new DateTime(2022, 4, 21, 2, 14, 21, 701, DateTimeKind.Local).AddTicks(245),
+                            DatumIzmjene = new DateTime(2022, 4, 25, 16, 27, 14, 969, DateTimeKind.Local).AddTicks(3245),
                             KorisnikID = 1,
                             UlogaID = 1
                         },
                         new
                         {
                             KorisniciUlogeID = 2,
-                            DatumIzmjene = new DateTime(2022, 4, 21, 2, 14, 21, 701, DateTimeKind.Local).AddTicks(902),
+                            DatumIzmjene = new DateTime(2022, 4, 25, 16, 27, 14, 969, DateTimeKind.Local).AddTicks(3891),
                             KorisnikID = 2,
                             UlogaID = 2
                         },
                         new
                         {
                             KorisniciUlogeID = 3,
-                            DatumIzmjene = new DateTime(2022, 4, 21, 2, 14, 21, 701, DateTimeKind.Local).AddTicks(932),
+                            DatumIzmjene = new DateTime(2022, 4, 25, 16, 27, 14, 969, DateTimeKind.Local).AddTicks(3923),
                             KorisnikID = 3,
                             UlogaID = 2
                         });
@@ -627,8 +627,8 @@ namespace SeminarskiWebAPI.Migrations
                         {
                             PlatiKartuID = 1,
                             Cijena = 10.0,
-                            DatumVadjenjaKarte = new DateTime(2022, 4, 21, 2, 14, 21, 702, DateTimeKind.Local).AddTicks(435),
-                            DatumVazenjaKarte = new DateTime(2022, 5, 21, 2, 14, 21, 702, DateTimeKind.Local).AddTicks(690),
+                            DatumVadjenjaKarte = new DateTime(2022, 4, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(3768),
+                            DatumVazenjaKarte = new DateTime(2022, 5, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(4022),
                             JeLiPlacena = true,
                             KartaID = 2,
                             KupacID = 2
@@ -683,15 +683,15 @@ namespace SeminarskiWebAPI.Migrations
                             RasporedVoznjeID = 1,
                             AutobusID = 1,
                             BrojLinije = 6,
-                            Datum = new DateTime(2022, 4, 21, 2, 14, 21, 702, DateTimeKind.Local).AddTicks(2025),
+                            Datum = new DateTime(2022, 4, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(5387),
                             FinalOcjena = 5m,
                             IsDeleted = false,
                             KondukterID = 1,
                             OdredisteID = 2,
                             PolazisteID = 1,
                             VozacID = 1,
-                            VrijemeDolaska = new DateTime(2022, 4, 21, 2, 14, 21, 702, DateTimeKind.Local).AddTicks(3935),
-                            VrijemePolaska = new DateTime(2022, 4, 21, 2, 14, 21, 702, DateTimeKind.Local).AddTicks(3694)
+                            VrijemeDolaska = new DateTime(2022, 4, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(7349),
+                            VrijemePolaska = new DateTime(2022, 4, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(7102)
                         },
                         new
                         {
@@ -740,7 +740,7 @@ namespace SeminarskiWebAPI.Migrations
                         new
                         {
                             RecenzijaID = 1,
-                            DatumRecenzije = new DateTime(2022, 4, 21, 2, 14, 21, 702, DateTimeKind.Local).AddTicks(5372),
+                            DatumRecenzije = new DateTime(2022, 4, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(8795),
                             Komentar = "Sve pohvale!",
                             KupacID = 1,
                             Ocjena = 5,
@@ -750,7 +750,7 @@ namespace SeminarskiWebAPI.Migrations
                         new
                         {
                             RecenzijaID = 2,
-                            DatumRecenzije = new DateTime(2022, 4, 21, 2, 14, 21, 702, DateTimeKind.Local).AddTicks(6677),
+                            DatumRecenzije = new DateTime(2022, 4, 25, 16, 27, 14, 971, DateTimeKind.Local).AddTicks(36),
                             Komentar = "Nije očišćeno!",
                             KupacID = 2,
                             Ocjena = 3,

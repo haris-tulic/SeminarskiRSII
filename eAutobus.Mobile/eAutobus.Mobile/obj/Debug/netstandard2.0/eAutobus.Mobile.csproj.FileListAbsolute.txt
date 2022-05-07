@@ -53,6 +53,7 @@ E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\bin\Debug\netst
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\bin\Debug\netstandard2.0\eAutobus.Mobile.pdb
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\bin\Debug\netstandard2.0\eAutobusModel.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\bin\Debug\netstandard2.0\eAutobusModel.pdb
+E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\eAutobus.Mobile.csproj.AssemblyReference.cache
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\eAutobus.Mobile.GeneratedMSBuildEditorConfig.editorconfig
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\App.xaml.g.cs
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
@@ -81,4 +82,3 @@ E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netst
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\eAutobus.Mobile.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\ref\eAutobus.Mobile.dll
 E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\eAutobus.Mobile.pdb
-E:\SeminarskiRSII\SeminarskiRSII\eAutobus.Mobile\eAutobus.Mobile\obj\Debug\netstandard2.0\eAutobus.Mobile.csproj.AssemblyReference.cache

@@ -33,7 +33,6 @@ namespace eAutobus.WinUI.Login
             }
             catch 
             {
-
                 MessageBox.Show("Pogrešan username ili password!");
             }
         }

@@ -29,10 +29,12 @@ namespace eAutobusModel.Requests
         public string AdresaStanovanja { get; set; }
 
         public int KartaID { get; set; }
-
+        [Required]
         public string KorisnickoIme { get; set; }
-       
+        [Required]
         public string Password { get; set; }
+        [Required]
+
         public string PotrvrdaPassworda { get; set; }
     }
 }

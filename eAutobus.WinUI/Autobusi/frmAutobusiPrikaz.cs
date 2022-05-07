@@ -61,9 +61,7 @@ namespace eAutobus.WinUI.Autobusi
 
         private async void frmAutobusiPrikaz_Load(object sender, EventArgs e)
         {
-
             await LoadAutobuse();
-
         }
 
        

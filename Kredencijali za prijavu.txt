@@ -1,0 +1,11 @@
+Desktop dio:
+
+Username: desktop
+Password: test
+
+-------------------------------
+
+Mobile dio:
+
+Username:kupac1
+Password:test
