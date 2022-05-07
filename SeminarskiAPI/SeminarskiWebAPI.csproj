@@ -8,6 +8,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <PlatformTarget>x64</PlatformTarget>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,6 +18,14 @@
     <Compile Remove="Migrations\20220317141841_PlatiKartuOnlineTable.Designer.cs" />
     <Compile Remove="Migrations\20220421000627_Final1.cs" />
     <Compile Remove="Migrations\20220421000627_Final1.Designer.cs" />
+    <Compile Remove="Migrations\20220425140454_InitDataDocker.cs" />
+    <Compile Remove="Migrations\20220425140454_InitDataDocker.Designer.cs" />
+    <Compile Remove="Migrations\20220425140744_InitDataDocker.cs" />
+    <Compile Remove="Migrations\20220425140744_InitDataDocker.Designer.cs" />
+    <Compile Remove="Migrations\20220425140905_InitDataFinal.cs" />
+    <Compile Remove="Migrations\20220425140905_InitDataFinal.Designer.cs" />
+    <Compile Remove="Migrations\20220425142639_InitData.cs" />
+    <Compile Remove="Migrations\20220425142639_InitData.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

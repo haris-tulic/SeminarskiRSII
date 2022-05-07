@@ -146,17 +146,11 @@ namespace eAutobus.WinUI.Korisnici
                 entity.KorisnikID = id;
                 frmKorisniciDodajRegistracija frm = new frmKorisniciDodajRegistracija(entity);
                 frm.Show();
-
-                //await _korisnik.Update<KorisnikModel>(entity,id);
-                //MessageBox.Show("Korisnik je izmjenjen!");
             }
             else
             {
                 frmKorisniciDodajRegistracija frm = new frmKorisniciDodajRegistracija(entity); 
                 frm.Show();
-               
-                //await _korisnik.Insert<KorisnikModel>(entity);
-                //MessageBox.Show("Novi korisnik uspjesno dodan!");
             }
         }
     }

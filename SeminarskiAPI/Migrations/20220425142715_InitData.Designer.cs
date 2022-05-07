@@ -10,8 +10,8 @@ using SeminarskiWebAPI.Database;
 namespace SeminarskiWebAPI.Migrations
 {
     [DbContext(typeof(eAutobusi))]
-    [Migration("20220421000332_Final")]
-    partial class Final
+    [Migration("20220425142715_InitData")]
+    partial class InitData
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,6 +46,30 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasIndex("GarazaID");
 
                     b.ToTable("Autobus");
+
+                    b.HasData(
+                        new
+                        {
+                            AutobusID = 1,
+                            BrojAutobusa = 6,
+                            BrojSjedista = 55,
+                            DatumProizvodnje = new DateTime(2022, 4, 25, 16, 27, 14, 964, DateTimeKind.Local).AddTicks(5787),
+                            GarazaID = 1,
+                            IsDeleted = false,
+                            Ispravan = true,
+                            MarkaAutobusa = "MAN"
+                        },
+                        new
+                        {
+                            AutobusID = 2,
+                            BrojAutobusa = 10,
+                            BrojSjedista = 55,
+                            DatumProizvodnje = new DateTime(2022, 4, 25, 16, 27, 14, 967, DateTimeKind.Local).AddTicks(6225),
+                            GarazaID = 2,
+                            IsDeleted = false,
+                            Ispravan = true,
+                            MarkaAutobusa = "Volvo"
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.AutobusVozac", b =>
@@ -71,6 +95,26 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasIndex("VozacID");
 
                     b.ToTable("AutobusVozac");
+
+                    b.HasData(
+                        new
+                        {
+                            AutobusVozacID = 1,
+                            AutobusID = 1,
+                            Kraj = new DateTime(2022, 4, 26, 0, 27, 14, 967, DateTimeKind.Local).AddTicks(8105),
+                            Pocetak = new DateTime(2022, 4, 25, 16, 27, 14, 967, DateTimeKind.Local).AddTicks(7805),
+                            Smjena = 1,
+                            VozacID = 1
+                        },
+                        new
+                        {
+                            AutobusVozacID = 2,
+                            AutobusID = 2,
+                            Kraj = new DateTime(2022, 4, 26, 0, 27, 14, 967, DateTimeKind.Local).AddTicks(8652),
+                            Pocetak = new DateTime(2022, 4, 25, 16, 27, 14, 967, DateTimeKind.Local).AddTicks(8641),
+                            Smjena = 1,
+                            VozacID = 2
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Cjenovnik", b =>
@@ -106,6 +150,74 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasIndex("ZonaID");
 
                     b.ToTable("Cjenovnik");
+
+                    b.HasData(
+                        new
+                        {
+                            CjenovnikID = 1,
+                            Cijena = 5.0,
+                            IsDeleted = false,
+                            OdredisteID = 1,
+                            PolazisteID = 2,
+                            TipkarteID = 1,
+                            VrstaKarteID = 1,
+                            ZonaID = 1
+                        },
+                        new
+                        {
+                            CjenovnikID = 2,
+                            Cijena = 40.0,
+                            IsDeleted = false,
+                            OdredisteID = 1,
+                            PolazisteID = 2,
+                            TipkarteID = 1,
+                            VrstaKarteID = 2,
+                            ZonaID = 1
+                        },
+                        new
+                        {
+                            CjenovnikID = 3,
+                            Cijena = 8.0,
+                            IsDeleted = false,
+                            OdredisteID = 1,
+                            PolazisteID = 2,
+                            TipkarteID = 2,
+                            VrstaKarteID = 1,
+                            ZonaID = 1
+                        },
+                        new
+                        {
+                            CjenovnikID = 4,
+                            Cijena = 60.0,
+                            IsDeleted = false,
+                            OdredisteID = 1,
+                            PolazisteID = 2,
+                            TipkarteID = 2,
+                            VrstaKarteID = 2,
+                            ZonaID = 1
+                        },
+                        new
+                        {
+                            CjenovnikID = 5,
+                            Cijena = 6.0,
+                            IsDeleted = false,
+                            OdredisteID = 1,
+                            PolazisteID = 2,
+                            TipkarteID = 3,
+                            VrstaKarteID = 1,
+                            ZonaID = 1
+                        },
+                        new
+                        {
+                            CjenovnikID = 6,
+                            Cijena = 50.0,
+                            IsDeleted = false,
+                            OdredisteID = 1,
+                            PolazisteID = 2,
+                            TipkarteID = 3,
+                            VrstaKarteID = 2,
+                            ZonaID = 1
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Garaza", b =>
@@ -131,6 +243,28 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasIndex("GradID");
 
                     b.ToTable("Garaza");
+
+                    b.HasData(
+                        new
+                        {
+                            GarazaID = 1,
+                            BrojGaraze = 1,
+                            BrojMjesta = 10,
+                            GradID = 1,
+                            IsPopunjeno = false,
+                            NazivGaraze = "Garaža-Mostar",
+                            TrenutnoAutobusa = 1
+                        },
+                        new
+                        {
+                            GarazaID = 2,
+                            BrojGaraze = 2,
+                            BrojMjesta = 10,
+                            GradID = 2,
+                            IsPopunjeno = false,
+                            NazivGaraze = "Garaža-Sarajevo",
+                            TrenutnoAutobusa = 1
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Grad", b =>
@@ -146,6 +280,26 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasKey("GradID");
 
                     b.ToTable("Grad");
+
+                    b.HasData(
+                        new
+                        {
+                            GradID = 1,
+                            NazivGrada = "Sarajevo",
+                            PostanskiBroj = 88000
+                        },
+                        new
+                        {
+                            GradID = 2,
+                            NazivGrada = "Mostar",
+                            PostanskiBroj = 87000
+                        },
+                        new
+                        {
+                            GradID = 3,
+                            NazivGrada = "Konjic",
+                            PostanskiBroj = 88400
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Karta", b =>
@@ -179,6 +333,30 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasIndex("VrstaKarteID");
 
                     b.ToTable("Karta");
+
+                    b.HasData(
+                        new
+                        {
+                            KartaID = 1,
+                            Cijena = 5.0,
+                            IsDeleted = false,
+                            NacinPlacanja = "Preuzećem",
+                            OdredisteID = 1,
+                            PolazisteID = 2,
+                            TipKarteID = 1,
+                            VrstaKarteID = 1
+                        },
+                        new
+                        {
+                            KartaID = 2,
+                            Cijena = 10.0,
+                            IsDeleted = false,
+                            NacinPlacanja = "Online",
+                            OdredisteID = 2,
+                            PolazisteID = 1,
+                            TipKarteID = 1,
+                            VrstaKarteID = 2
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.KartaKupac", b =>
@@ -208,6 +386,30 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasIndex("KupacID");
 
                     b.ToTable("KartaKupac");
+
+                    b.HasData(
+                        new
+                        {
+                            KartaKupacID = 1,
+                            Aktivna = true,
+                            DatumVadjenjaKarte = new DateTime(2022, 4, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(1010),
+                            DatumVazenjaKarte = new DateTime(2022, 4, 26, 4, 27, 14, 970, DateTimeKind.Local).AddTicks(1279),
+                            KartaID = 1,
+                            KupacID = 1,
+                            Pravac = true,
+                            PravacS = "U jednom pravcu"
+                        },
+                        new
+                        {
+                            KartaKupacID = 2,
+                            Aktivna = true,
+                            DatumVadjenjaKarte = new DateTime(2022, 4, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(2351),
+                            DatumVazenjaKarte = new DateTime(2022, 5, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(2362),
+                            KartaID = 2,
+                            KupacID = 2,
+                            Pravac = true,
+                            PravacS = "U oba pravca"
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.KorisniciUloge", b =>
@@ -229,6 +431,29 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasIndex("UlogaID");
 
                     b.ToTable("KorisniciUloge");
+
+                    b.HasData(
+                        new
+                        {
+                            KorisniciUlogeID = 1,
+                            DatumIzmjene = new DateTime(2022, 4, 25, 16, 27, 14, 969, DateTimeKind.Local).AddTicks(3245),
+                            KorisnikID = 1,
+                            UlogaID = 1
+                        },
+                        new
+                        {
+                            KorisniciUlogeID = 2,
+                            DatumIzmjene = new DateTime(2022, 4, 25, 16, 27, 14, 969, DateTimeKind.Local).AddTicks(3891),
+                            KorisnikID = 2,
+                            UlogaID = 2
+                        },
+                        new
+                        {
+                            KorisniciUlogeID = 3,
+                            DatumIzmjene = new DateTime(2022, 4, 25, 16, 27, 14, 969, DateTimeKind.Local).AddTicks(3923),
+                            KorisnikID = 3,
+                            UlogaID = 2
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Korisnik", b =>
@@ -268,6 +493,56 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasIndex("UlogeID");
 
                     b.ToTable("Korisnik");
+
+                    b.HasData(
+                        new
+                        {
+                            KorisnikID = 1,
+                            AdresaStanovanja = "Zalik BB",
+                            BrojTelefona = "061222333",
+                            DatumRodjenja = new DateTime(1995, 11, 1, 14, 29, 18, 167, DateTimeKind.Local).AddTicks(8190),
+                            Email = "admin@gmail.com",
+                            GradID = 2,
+                            Ime = "Admin",
+                            IsDeleted = false,
+                            KorisnickoIme = "desktop",
+                            LozinkaHash = "/VEfw6wmtify1fOTuLBJrXHXo0I=",
+                            LozinkaSalt = "ZneRfhOqwq8zu13rCRCrIQ==",
+                            Prezime = "Admin",
+                            UlogeID = 1
+                        },
+                        new
+                        {
+                            KorisnikID = 2,
+                            AdresaStanovanja = "Zalik BB",
+                            BrojTelefona = "061444555",
+                            DatumRodjenja = new DateTime(1995, 11, 1, 14, 29, 18, 167, DateTimeKind.Local).AddTicks(8190),
+                            Email = "vozac1@gmail.com",
+                            GradID = 2,
+                            Ime = "Vozač1",
+                            IsDeleted = false,
+                            KorisnickoIme = "vozac1",
+                            LozinkaHash = "/VEfw6wmtify1fOTuLBJrXHXo0I=",
+                            LozinkaSalt = "ZneRfhOqwq8zu13rCRCrIQ==",
+                            Prezime = "Vozač1",
+                            UlogeID = 2
+                        },
+                        new
+                        {
+                            KorisnikID = 3,
+                            AdresaStanovanja = "Dolina Sunca BB",
+                            BrojTelefona = "061014555",
+                            DatumRodjenja = new DateTime(1990, 10, 1, 14, 29, 18, 167, DateTimeKind.Local).AddTicks(8190),
+                            Email = "vozac3@gmail.com",
+                            GradID = 2,
+                            Ime = "Vozač3",
+                            IsDeleted = false,
+                            KorisnickoIme = "vozac3",
+                            LozinkaHash = "/VEfw6wmtify1fOTuLBJrXHXo0I=",
+                            LozinkaSalt = "ZneRfhOqwq8zu13rCRCrIQ==",
+                            Prezime = "Vozač3",
+                            UlogeID = 3
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Kupac", b =>
@@ -295,6 +570,32 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasKey("KupacID");
 
                     b.ToTable("Kupac");
+
+                    b.HasData(
+                        new
+                        {
+                            KupacID = 1,
+                            AdresaStanovanja = "Zalik BB",
+                            BrojTelefona = "062333444",
+                            Email = "kupac1@edu.fit.ba",
+                            Ime = "Kupac1",
+                            KorisnickoIme = "kupac1",
+                            LozinkaHash = "/VEfw6wmtify1fOTuLBJrXHXo0I=",
+                            LozinkaSalt = "ZneRfhOqwq8zu13rCRCrIQ==",
+                            Prezime = "Kupac1"
+                        },
+                        new
+                        {
+                            KupacID = 2,
+                            AdresaStanovanja = "Zalik BB",
+                            BrojTelefona = "062333555",
+                            Email = "kupac2@edu.fit.ba",
+                            Ime = "Kupac2",
+                            KorisnickoIme = "kupac2",
+                            LozinkaHash = "/VEfw6wmtify1fOTuLBJrXHXo0I=",
+                            LozinkaSalt = "ZneRfhOqwq8zu13rCRCrIQ==",
+                            Prezime = "Kupac2"
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.PlatiKartu", b =>
@@ -322,6 +623,18 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasIndex("KupacID");
 
                     b.ToTable("PlatiKartu");
+
+                    b.HasData(
+                        new
+                        {
+                            PlatiKartuID = 1,
+                            Cijena = 10.0,
+                            DatumVadjenjaKarte = new DateTime(2022, 4, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(3768),
+                            DatumVazenjaKarte = new DateTime(2022, 5, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(4022),
+                            JeLiPlacena = true,
+                            KartaID = 2,
+                            KupacID = 2
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.RasporedVoznje", b =>
@@ -365,6 +678,38 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasIndex("VozacID");
 
                     b.ToTable("RasporedVoznje");
+
+                    b.HasData(
+                        new
+                        {
+                            RasporedVoznjeID = 1,
+                            AutobusID = 1,
+                            BrojLinije = 6,
+                            Datum = new DateTime(2022, 4, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(5387),
+                            FinalOcjena = 5m,
+                            IsDeleted = false,
+                            KondukterID = 1,
+                            OdredisteID = 2,
+                            PolazisteID = 1,
+                            VozacID = 1,
+                            VrijemeDolaska = new DateTime(2022, 4, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(7349),
+                            VrijemePolaska = new DateTime(2022, 4, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(7102)
+                        },
+                        new
+                        {
+                            RasporedVoznjeID = 2,
+                            AutobusID = 2,
+                            BrojLinije = 10,
+                            Datum = new DateTime(2022, 3, 1, 14, 29, 18, 167, DateTimeKind.Local).AddTicks(8190),
+                            FinalOcjena = 4m,
+                            IsDeleted = false,
+                            KondukterID = 2,
+                            OdredisteID = 1,
+                            PolazisteID = 2,
+                            VozacID = 2,
+                            VrijemeDolaska = new DateTime(2022, 3, 1, 14, 30, 0, 0, DateTimeKind.Local).AddTicks(8190),
+                            VrijemePolaska = new DateTime(2022, 3, 1, 12, 15, 0, 0, DateTimeKind.Local).AddTicks(8190)
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Recenzija", b =>
@@ -392,6 +737,28 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasIndex("RasporedVoznjeID");
 
                     b.ToTable("Recenzija");
+
+                    b.HasData(
+                        new
+                        {
+                            RecenzijaID = 1,
+                            DatumRecenzije = new DateTime(2022, 4, 25, 16, 27, 14, 970, DateTimeKind.Local).AddTicks(8795),
+                            Komentar = "Sve pohvale!",
+                            KupacID = 1,
+                            Ocjena = 5,
+                            RasporedVoznjeID = 1,
+                            VrstaUsluga = "Osoblje"
+                        },
+                        new
+                        {
+                            RecenzijaID = 2,
+                            DatumRecenzije = new DateTime(2022, 4, 25, 16, 27, 14, 971, DateTimeKind.Local).AddTicks(36),
+                            Komentar = "Nije očišćeno!",
+                            KupacID = 2,
+                            Ocjena = 3,
+                            RasporedVoznjeID = 2,
+                            VrstaUsluga = "Vozilo"
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Stanica", b =>
@@ -409,6 +776,20 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasIndex("GradID");
 
                     b.ToTable("Stanica");
+
+                    b.HasData(
+                        new
+                        {
+                            StanicaID = 1,
+                            GradID = 1,
+                            NazivLokacijeStanice = "Stanica-Sarajevo"
+                        },
+                        new
+                        {
+                            StanicaID = 2,
+                            GradID = 2,
+                            NazivLokacijeStanice = "Stanica-Mostar"
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.TipKarte", b =>
@@ -424,6 +805,26 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasKey("TipKarteID");
 
                     b.ToTable("TipKarte");
+
+                    b.HasData(
+                        new
+                        {
+                            TipKarteID = 1,
+                            Informacije = "Važi samo za studente uz priloženu potvrdu!",
+                            Naziv = "Studentska"
+                        },
+                        new
+                        {
+                            TipKarteID = 2,
+                            Informacije = "Važi samo za radnike uz priloženu potvrdu!",
+                            Naziv = "Radnička"
+                        },
+                        new
+                        {
+                            TipKarteID = 3,
+                            Informacije = "Važi samo za penzionere uz priloženu potvrdu!",
+                            Naziv = "Penzionerska"
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Uloge", b =>
@@ -439,6 +840,23 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasKey("UlogeID");
 
                     b.ToTable("Uloge");
+
+                    b.HasData(
+                        new
+                        {
+                            UlogeID = 1,
+                            Naziv = "Admin"
+                        },
+                        new
+                        {
+                            UlogeID = 2,
+                            Naziv = "Vozač"
+                        },
+                        new
+                        {
+                            UlogeID = 3,
+                            Naziv = "Kondukter"
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Vozac", b =>
@@ -456,6 +874,20 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasIndex("KorisnikID");
 
                     b.ToTable("Vozac");
+
+                    b.HasData(
+                        new
+                        {
+                            VozacID = 1,
+                            KorisnikID = 2,
+                            VozackaKategorija = "B,C,D,D1"
+                        },
+                        new
+                        {
+                            VozacID = 2,
+                            KorisnikID = 3,
+                            VozackaKategorija = "B,C,D,D1"
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.VrstaKarte", b =>
@@ -471,6 +903,26 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasKey("VrstaKarteID");
 
                     b.ToTable("VrstaKarte");
+
+                    b.HasData(
+                        new
+                        {
+                            VrstaKarteID = 1,
+                            Informacije = "Traje jedan dan!",
+                            Naziv = "Dnevna"
+                        },
+                        new
+                        {
+                            VrstaKarteID = 2,
+                            Informacije = "Traje jedan mjesec!",
+                            Naziv = "Mjesečna"
+                        },
+                        new
+                        {
+                            VrstaKarteID = 3,
+                            Informacije = "Traje jednu godinu!",
+                            Naziv = "Godišnja"
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Zona", b =>
@@ -484,6 +936,23 @@ namespace SeminarskiWebAPI.Migrations
                     b.HasKey("ZonaID");
 
                     b.ToTable("Zona");
+
+                    b.HasData(
+                        new
+                        {
+                            ZonaID = 1,
+                            OznakaZone = "Zona I"
+                        },
+                        new
+                        {
+                            ZonaID = 2,
+                            OznakaZone = "Zona II"
+                        },
+                        new
+                        {
+                            ZonaID = 3,
+                            OznakaZone = "Zona III"
+                        });
                 });
 
             modelBuilder.Entity("SeminarskiWebAPI.Database.Autobus", b =>
